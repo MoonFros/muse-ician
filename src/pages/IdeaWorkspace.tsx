@@ -30,6 +30,10 @@ import { ideaContext } from '../lib/aiContext';
 import { parseCoachAssessment, describeAiError } from '../lib/aiSchemas';
 import { runOperation, isAbortError } from '../services/apiClient';
 import { newId, nowIso, parseNumberInput, relativeTime, truncate } from '../lib/utils';
+import { scoreLatestVersion } from '../lib/history';
+import { VariantLab } from '../components/idea/VariantLab';
+import { ReusePanel } from '../components/idea/ReusePanel';
+import { ReadinessHistory } from '../components/idea/ReadinessHistory';
 
 interface Draft {
   title: string;
@@ -115,7 +119,7 @@ export default function IdeaWorkspacePage() {
   const { toast } = useToast();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const tab = (searchParams.get('tab') as 'plan' | 'coach' | 'versions') ?? 'plan';
+  const tab = (searchParams.get('tab') as 'plan' | 'coach' | 'variants' | 'reuse' | 'versions') ?? 'plan';
 
   const idea = data.content_ideas.find((item) => item.id === ideaId) ?? null;
   const song = useMemo(() => data.songs.find((item) => item.id === idea?.song_id) ?? null, [data.songs, idea?.song_id]);
@@ -223,7 +227,11 @@ export default function IdeaWorkspacePage() {
     const withAssessment: ContentIdea = {
       ...draftIdea,
       coach_assessment: next,
-      versions: [makeVersion(idea, 'Before assessment'), ...(idea.versions ?? [])].slice(0, 25),
+      versions: scoreLatestVersion(
+        [makeVersion(idea, 'Before assessment'), ...(idea.versions ?? [])].slice(0, 25),
+        next.readiness.score,
+        next.source,
+      ),
       updated_at: nowIso(),
     };
     await upsertIdeas([withAssessment]);
@@ -307,6 +315,13 @@ export default function IdeaWorkspacePage() {
     navigate(`/ideas/${copy.id}`);
   };
 
+  function appendCaptionToNotes(text: string) {
+    const heading = 'Caption option — ' + new Date().toLocaleDateString();
+    const next = [draft.notes, heading, text].filter(Boolean).join('\n\n');
+    update('notes', next);
+    toast('Caption saved into notes', { tone: 'success', description: 'Save the idea to keep it.' });
+  }
+
   const aiConfigured = Boolean(integration.ai.configured);
 
   return (
@@ -372,6 +387,8 @@ export default function IdeaWorkspacePage() {
           options={[
             { value: 'plan', label: 'Plan', icon: 'edit' },
             { value: 'coach', label: 'Creative coach', icon: 'coach' },
+            { value: 'variants', label: 'A/B variants', icon: 'spark' },
+            { value: 'reuse', label: 'Reuse', icon: 'exchange' },
             { value: 'versions', label: 'Versions', icon: 'undo', count: (idea.versions ?? []).length },
           ]}
         />
@@ -575,6 +592,50 @@ export default function IdeaWorkspacePage() {
         />
       ) : null}
 
+      {tab === 'variants' ? (
+        <div className="space-y-4">
+          <VariantLab
+            idea={draftIdea}
+            song={song}
+            preset={preset}
+            onUseHook={(text) => {
+              update('hook', text);
+              toast('Hook updated in the editor', {
+                tone: 'success',
+                description: 'Save the idea to keep it. The previous version stays in Versions after you save.',
+              });
+            }}
+            onUseCaption={appendCaptionToNotes}
+          />
+          <ReadinessHistory idea={idea} />
+        </div>
+      ) : null}
+
+      {tab === 'reuse' ? (
+        <div className="grid gap-4 lg:grid-cols-2">
+          <ReusePanel idea={draftIdea} song={song} preset={preset} />
+          <div className="space-y-4">
+            <SectionCard title="How to reuse without repeating yourself" description="Three rules that keep reposts from feeling like spam.">
+              <ul className="space-y-2 text-sm leading-relaxed text-slate-muted">
+                <li>
+                  <span className="text-slate-text">Change the frame, not the footage.</span> A carousel asks for a swipe,
+                  a Story asks for a tap — the same clip can serve both if the words change.
+                </li>
+                <li>
+                  <span className="text-slate-text">Space it out.</span> Wait at least a week before the same clip
+                  reappears on the same platform.
+                </li>
+                <li>
+                  <span className="text-slate-text">Log it separately.</span> Record a result for each surface so your
+                  comparatives stay honest.
+                </li>
+              </ul>
+            </SectionCard>
+            <ReadinessHistory idea={idea} />
+          </div>
+        </div>
+      ) : null}
+
       {tab === 'versions' ? (
         <SectionCard
           title="Saved versions"
@@ -615,6 +676,8 @@ export default function IdeaWorkspacePage() {
           )}
         </SectionCard>
       ) : null}
+
+      {tab === 'versions' ? <ReadinessHistory idea={idea} /> : null}
 
       {dirty ? (
         <div className="sticky bottom-20 z-30 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-warn/30 bg-white/[0.06] px-3.5 py-2.5 shadow-panel backdrop-blur lg:bottom-4">

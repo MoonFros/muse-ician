@@ -81,11 +81,14 @@ export function SongFormModal({
   onClose,
   song = null,
   onSaved,
+  initial,
 }: {
   open: boolean;
   onClose: () => void;
   song?: Song | null;
   onSaved?: (song: Song) => void;
+  /** Prefill used by the PWA share target and quick-add links. */
+  initial?: { title?: string; streamingUrl?: string };
 }) {
   const { preferences, saveSong } = useWorkspace();
   const { toast } = useToast();
@@ -95,9 +98,14 @@ export function SongFormModal({
 
   useEffect(() => {
     if (open) {
-      setDraft(toDraft(song, preferences));
+      const next = toDraft(song, preferences);
+      if (!song && initial?.title) next.title = initial.title;
+      if (!song && initial?.streamingUrl) next.streaming_url = initial.streamingUrl;
+      setDraft(next);
       setAdvanced(Boolean(song));
     }
+    // `initial` is intentionally excluded: it only applies when the modal opens.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, preferences, song]);
 
   const update = <K extends keyof Draft>(key: K, value: Draft[K]) => setDraft((current) => ({ ...current, [key]: value }));

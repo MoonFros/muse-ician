@@ -24,6 +24,7 @@ import {
   parseHashtags,
 } from '../lib/metadataTemplates';
 import { buildMetadataExport, downloadPayload, exportFilename } from '../lib/interchange';
+import { BatchStudio } from '../components/metadata/BatchStudio';
 import { metadataContext } from '../lib/aiContext';
 import { parseMetadataPlatforms, describeAiError } from '../lib/aiSchemas';
 import { runOperation, isAbortError } from '../services/apiClient';
@@ -125,6 +126,7 @@ export default function MetadataStudioPage() {
   const [draft, setDraft] = useState<Draft | null>(null);
   const [dirty, setDirty] = useState(false);
   const [generating, setGenerating] = useState(false);
+  const [mode, setMode] = useState<'single' | 'batch'>('single');
   const [aiError, setAiError] = useState<string | null>(null);
 
   const ideas = useMemo(() => {
@@ -371,7 +373,16 @@ export default function MetadataStudioPage() {
         description="Three different packages, not one caption copied three times. Written from your saved idea — no invented links, trends or statistics."
         actions={
           <>
-            <button type="button" className="btn-secondary" onClick={exportPackages} disabled={!idea}>
+            <SegmentedControl
+              ariaLabel="Metadata mode"
+              value={mode}
+              onChange={(value) => setMode(value)}
+              options={[
+                { value: 'single', label: 'One idea' },
+                { value: 'batch', label: 'Batch' },
+              ]}
+            />
+            <button type="button" className="btn-secondary" onClick={exportPackages} disabled={!idea || mode === 'batch'}>
               <Icon name="download" size={15} />
               Export packages
             </button>
@@ -397,6 +408,9 @@ export default function MetadataStudioPage() {
           }
         />
       ) : (
+        mode === 'batch' ? (
+          <BatchStudio />
+        ) : (
         <div className="grid gap-4 lg:grid-cols-[300px_minmax(0,1fr)]">
           <div className="space-y-2">
             <SearchField value={query} onChange={setQuery} label="Search ideas" placeholder="Find an idea…" />
@@ -768,6 +782,7 @@ export default function MetadataStudioPage() {
             )}
           </div>
         </div>
+        )
       )}
 
       <p className="text-2xs text-slate-faint">

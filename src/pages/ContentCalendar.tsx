@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useWorkspace } from '../state/workspace';
 import { useToast } from '../components/ui/Toast';
@@ -25,6 +25,7 @@ import {
   pluralize,
 } from '../lib/utils';
 import { calendarWarnings } from '../lib/campaignPlan';
+import { useSearchParams } from 'react-router-dom';
 import { buildCampaignExport, downloadPayload, exportFilename } from '../lib/interchange';
 
 type ViewMode = 'month' | 'week' | 'list';
@@ -59,6 +60,7 @@ export default function ContentCalendarPage() {
   const [editingPost, setEditingPost] = useState<PlannedPost | null>(null);
   const [defaultDate, setDefaultDate] = useState(today);
   const [planOpen, setPlanOpen] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
   const [confirmDelete, setConfirmDelete] = useState<PlannedPost | null>(null);
   const [dragging, setDragging] = useState<string | null>(null);
 
@@ -81,6 +83,15 @@ export default function ContentCalendarPage() {
 
   const monthStart = cursor;
   const monthLabel = monthStart.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+  useEffect(() => {
+    if (searchParams.get('plan') === '1') {
+      setPlanOpen(true);
+      const next = new URLSearchParams(searchParams);
+      next.delete('plan');
+      setSearchParams(next, { replace: true });
+    }
+  }, [searchParams, setSearchParams]);
+
   const gridStart = addDays(toDateKey(monthStart), -parseDateKey(toDateKey(monthStart)).getDay());
   const days = Array.from({ length: 42 }, (_, index) => addDays(gridStart, index));
 
@@ -102,6 +113,12 @@ export default function ContentCalendarPage() {
     if (!post || post.scheduled_date === newDate) return;
     await upsertPosts([{ ...post, scheduled_date: newDate, updated_at: new Date().toISOString() }]);
     toast('Post moved', { tone: 'success', description: `${post.title} → ${formatShortDate(newDate)}` });
+  };
+
+  /** Keyboard equivalent of drag-and-drop: Alt + ← / → moves a post one day. */
+  const nudgePost = async (post: PlannedPost, deltaDays: number) => {
+    const next = addDays(post.scheduled_date, deltaDays);
+    await movePost(post.id, next);
   };
 
   const changeStatus = async (post: PlannedPost, status: WorkflowStatus) => {
@@ -361,8 +378,18 @@ export default function ContentCalendarPage() {
                             setEditingPost(post);
                             setPostOpen(true);
                           }}
+                          onKeyDown={(event) => {
+                            if (!event.altKey) return;
+                            if (event.key === 'ArrowRight') {
+                              event.preventDefault();
+                              void nudgePost(post, 1);
+                            } else if (event.key === 'ArrowLeft') {
+                              event.preventDefault();
+                              void nudgePost(post, -1);
+                            }
+                          }}
                           className={`w-full truncate rounded border px-1.5 py-1 text-left text-[11px] leading-tight ${PLATFORM_COLORS[post.platform]}`}
-                          title={`${post.title} · ${PLATFORM_LABELS[post.platform]} · ${WORKFLOW_LABELS[post.status]}`}
+                          title={`${post.title} · ${PLATFORM_LABELS[post.platform]} · ${WORKFLOW_LABELS[post.status]} — drag, or Alt + ←/→ to move a day`}
                         >
                           {post.title}
                         </button>

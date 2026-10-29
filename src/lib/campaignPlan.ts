@@ -164,6 +164,26 @@ export function calendarWarnings(
     }
   }
 
+  // Two posts landing on the same day can be deliberate (different platforms),
+  // but three or more on one date usually means a scheduling mistake.
+  const byDate = new Map<string, PlannedPost[]>();
+  for (const post of posts) {
+    if (post.status === 'archived') continue;
+    const list = byDate.get(post.scheduled_date) ?? [];
+    list.push(post);
+    byDate.set(post.scheduled_date, list);
+  }
+  for (const [date, list] of byDate) {
+    if (list.length >= 3) {
+      warnings.push({
+        id: `clash-${date}`,
+        tone: 'warning',
+        message: `${list.length} posts are planned for ${date}. Unless these are different platforms posting the same day, space them out.`,
+        postIds: list.map((post) => post.id),
+      });
+    }
+  }
+
   const unfinished = posts.filter(
     (post) =>
       post.scheduled_date < today &&

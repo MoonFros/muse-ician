@@ -21,6 +21,8 @@ import { buildWorkspaceBackup, downloadPayload } from '../lib/interchange';
 import { APP_VERSION } from '../lib/interchange';
 import { SEED_PRESETS } from '../data/seedPresets';
 import { pluralize, readFileText } from '../lib/utils';
+import { AiSetup } from '../components/settings/AiSetup';
+import { InstallCard } from '../components/pwa/InstallCard';
 
 export default function SettingsPage() {
   const {
@@ -300,6 +302,10 @@ export default function SettingsPage() {
               </div>
             </div>
           </SectionCard>
+
+          <AiSetup />
+
+          <InstallCard />
 
           <SectionCard title="Data ownership" description="Everything below happens in this browser.">
             <div className="space-y-3">

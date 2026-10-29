@@ -14,6 +14,8 @@ import PerformanceJournalPage from './pages/PerformanceJournal';
 import TrendsPage from './pages/Trends';
 import ImportExportPage from './pages/ImportExport';
 import SettingsPage from './pages/Settings';
+import SeriesPage from './pages/Series';
+import RunwayPage from './pages/Runway';
 import { EmptyState } from './components/ui/primitives';
 import { LogoMark } from './components/ui/Icons';
 
@@ -87,6 +89,8 @@ export default function App() {
           <Route path="coach" element={<CreativeCoachPage />} />
           <Route path="metadata" element={<MetadataStudioPage />} />
           <Route path="calendar" element={<ContentCalendarPage />} />
+          <Route path="series" element={<SeriesPage />} />
+          <Route path="runway" element={<RunwayPage />} />
           <Route path="journal" element={<PerformanceJournalPage />} />
           <Route path="trends" element={<TrendsPage />} />
           <Route path="import-export" element={<ImportExportPage />} />

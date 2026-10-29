@@ -25,6 +25,7 @@ import { performanceContext } from '../lib/aiContext';
 import { parsePerformanceSummary, describeAiError, type AiPerformanceSummary } from '../lib/aiSchemas';
 import { runOperation, isAbortError } from '../services/apiClient';
 import { buildPerformanceExport, downloadPayload, exportFilename } from '../lib/interchange';
+import { ComparativesPanel } from '../components/journal/ComparativesPanel';
 import { compactNumber, formatNumber, formatShortDate, pluralize } from '../lib/utils';
 
 export default function PerformanceJournalPage() {
@@ -357,6 +358,8 @@ export default function PerformanceJournalPage() {
               </p>
             ) : null}
           </SectionCard>
+
+          <ComparativesPanel />
 
           <SectionCard title="Records" description="Compare each post against your own median.">
             <ul className="divide-y divide-ink-700/60">

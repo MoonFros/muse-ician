@@ -27,6 +27,7 @@ import {
   planImport,
   type DuplicateStrategy,
 } from '../lib/importPlan';
+import { MergeReview } from '../components/import/MergeReview';
 import {
   buildAiImportPrompt,
   buildCampaignExport,
@@ -551,6 +552,10 @@ export default function ImportExportPage() {
                       ) : null}
                     </div>
                   </div>
+
+                  {validation.payload ? (
+                    <MergeReview payload={validation.payload} current={data} strategy={strategy} />
+                  ) : null}
 
                   {plan.danglingReferences.length ? (
                     <div className="rounded-xl border border-warn/30 bg-warn/5 p-3">

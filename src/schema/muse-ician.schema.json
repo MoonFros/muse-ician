@@ -4,7 +4,11 @@
   "title": "muse-ician import/export format",
   "description": "Versioned interchange format for muse-ician. An export file always carries schema_version, export_type and a manifest. Records reference each other by stable id. Unknown fields are ignored with a warning; invalid records are rejected individually so that one bad record never destroys an import.",
   "type": "object",
-  "required": ["schema_version", "export_type", "manifest"],
+  "required": [
+    "schema_version",
+    "export_type",
+    "manifest"
+  ],
   "additionalProperties": false,
   "properties": {
     "schema_version": {
@@ -23,49 +27,146 @@
         "performance_snapshot"
       ]
     },
-    "manifest": { "$ref": "#/$defs/manifest" },
-    "preferences": { "anyOf": [{ "$ref": "#/$defs/preferences" }, { "type": "null" }] },
-    "presets": { "type": "array", "maxItems": 500, "items": { "$ref": "#/$defs/preset" } },
-    "songs": { "type": "array", "maxItems": 500, "items": { "$ref": "#/$defs/song" } },
+    "manifest": {
+      "$ref": "#/$defs/manifest"
+    },
+    "preferences": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/preferences"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "presets": {
+      "type": "array",
+      "maxItems": 500,
+      "items": {
+        "$ref": "#/$defs/preset"
+      }
+    },
+    "songs": {
+      "type": "array",
+      "maxItems": 500,
+      "items": {
+        "$ref": "#/$defs/song"
+      }
+    },
     "content_ideas": {
       "type": "array",
       "maxItems": 1000,
-      "items": { "$ref": "#/$defs/content_idea" }
+      "items": {
+        "$ref": "#/$defs/content_idea"
+      }
     },
     "metadata_packages": {
       "type": "array",
       "maxItems": 1000,
-      "items": { "$ref": "#/$defs/metadata_package" }
+      "items": {
+        "$ref": "#/$defs/metadata_package"
+      }
     },
-    "campaigns": { "type": "array", "maxItems": 200, "items": { "$ref": "#/$defs/campaign" } },
+    "campaigns": {
+      "type": "array",
+      "maxItems": 200,
+      "items": {
+        "$ref": "#/$defs/campaign"
+      }
+    },
     "planned_posts": {
       "type": "array",
       "maxItems": 2000,
-      "items": { "$ref": "#/$defs/planned_post" }
+      "items": {
+        "$ref": "#/$defs/planned_post"
+      }
     },
-    "trends": { "type": "array", "maxItems": 500, "items": { "$ref": "#/$defs/trend_record" } },
+    "trends": {
+      "type": "array",
+      "maxItems": 500,
+      "items": {
+        "$ref": "#/$defs/trend_record"
+      }
+    },
     "performance_records": {
       "type": "array",
       "maxItems": 5000,
-      "items": { "$ref": "#/$defs/performance_record" }
+      "items": {
+        "$ref": "#/$defs/performance_record"
+      }
     }
   },
   "$defs": {
     "isodate": {
-      "anyOf": [{ "type": "string", "format": "date" }, { "type": "string", "format": "date-time" }]
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "string",
+          "format": "date-time"
+        }
+      ]
     },
-    "nullableIsodate": { "anyOf": [{ "$ref": "#/$defs/isodate" }, { "type": "null" }] },
-    "nullableString": { "type": ["string", "null"], "maxLength": 20000 },
-    "shortString": { "type": "string", "minLength": 1, "maxLength": 200 },
-    "text": { "type": "string", "maxLength": 20000 },
+    "nullableIsodate": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/isodate"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 20000
+    },
+    "shortString": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "text": {
+      "type": "string",
+      "maxLength": 20000
+    },
     "stringArray": {
       "type": "array",
       "maxItems": 200,
-      "items": { "type": "string", "maxLength": 2000 }
+      "items": {
+        "type": "string",
+        "maxLength": 2000
+      }
     },
-    "nullableInteger": { "type": ["integer", "null"], "minimum": 0, "maximum": 1000000000 },
-    "nullableNumber": { "type": ["number", "null"], "minimum": 0, "maximum": 1000000000 },
-    "platform": { "enum": ["youtube-shorts", "instagram-reels", "tiktok"] },
+    "nullableInteger": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000
+    },
+    "nullableNumber": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1000000000
+    },
+    "platform": {
+      "enum": [
+        "youtube-shorts",
+        "instagram-reels",
+        "tiktok"
+      ]
+    },
     "objective": {
       "enum": [
         "discovery",
@@ -80,8 +181,21 @@
         "feedback-gathering"
       ]
     },
-    "difficulty": { "enum": ["easy", "moderate", "challenging"] },
-    "budget": { "enum": ["minimal", "low", "moderate", "high"] },
+    "difficulty": {
+      "enum": [
+        "easy",
+        "moderate",
+        "challenging"
+      ]
+    },
+    "budget": {
+      "enum": [
+        "minimal",
+        "low",
+        "moderate",
+        "high"
+      ]
+    },
     "filming_method": {
       "enum": [
         "live-action",
@@ -92,8 +206,21 @@
         "hybrid"
       ]
     },
-    "face_visibility": { "enum": ["required", "optional", "none"] },
-    "campaign_stage": { "enum": ["pre-release", "release-week", "post-release", "evergreen"] },
+    "face_visibility": {
+      "enum": [
+        "required",
+        "optional",
+        "none"
+      ]
+    },
+    "campaign_stage": {
+      "enum": [
+        "pre-release",
+        "release-week",
+        "post-release",
+        "evergreen"
+      ]
+    },
     "workflow_status": {
       "enum": [
         "idea",
@@ -107,7 +234,14 @@
         "archived"
       ]
     },
-    "release_status": { "enum": ["unreleased", "upcoming", "released", "archived"] },
+    "release_status": {
+      "enum": [
+        "unreleased",
+        "upcoming",
+        "released",
+        "archived"
+      ]
+    },
     "tone": {
       "enum": [
         "conversational",
@@ -120,49 +254,113 @@
         "storytelling"
       ]
     },
-    "confidence": { "enum": ["low", "medium", "high"] },
+    "confidence": {
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
     "manifest": {
       "type": "object",
-      "required": ["name", "created_at"],
+      "required": [
+        "name",
+        "created_at"
+      ],
       "additionalProperties": false,
       "properties": {
-        "name": { "type": "string", "minLength": 1, "maxLength": 200 },
-        "description": { "$ref": "#/$defs/nullableString" },
-        "created_at": { "$ref": "#/$defs/isodate" },
-        "author": { "$ref": "#/$defs/nullableString" },
-        "schema_version": { "type": "string" },
-        "exported_by": { "$ref": "#/$defs/nullableString" },
-        "record_counts": { "type": "object", "additionalProperties": { "type": "integer" } },
-        "notes": { "$ref": "#/$defs/nullableString" }
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "description": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "created_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "author": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "exported_by": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "record_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        },
+        "notes": {
+          "$ref": "#/$defs/nullableString"
+        }
       }
     },
     "duration_range": {
       "type": "object",
-      "required": ["min", "max"],
+      "required": [
+        "min",
+        "max"
+      ],
       "additionalProperties": false,
       "properties": {
-        "min": { "type": "integer", "minimum": 1, "maximum": 600 },
-        "max": { "type": "integer", "minimum": 1, "maximum": 600 }
+        "min": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 600
+        },
+        "max": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 600
+        }
       }
     },
     "audio_section": {
       "type": "object",
-      "required": ["label"],
+      "required": [
+        "label"
+      ],
       "additionalProperties": false,
       "properties": {
-        "label": { "$ref": "#/$defs/shortString" },
-        "timestamp": { "$ref": "#/$defs/nullableString" },
-        "note": { "$ref": "#/$defs/nullableString" }
+        "label": {
+          "$ref": "#/$defs/shortString"
+        },
+        "timestamp": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "note": {
+          "$ref": "#/$defs/nullableString"
+        }
       }
     },
     "example_metadata": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "tone": { "anyOf": [{ "$ref": "#/$defs/tone" }, { "type": "null" }] },
-        "caption_example": { "$ref": "#/$defs/nullableString" },
-        "title_example": { "$ref": "#/$defs/nullableString" },
-        "hashtag_examples": { "$ref": "#/$defs/stringArray" }
+        "tone": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/tone"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "caption_example": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "title_example": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "hashtag_examples": {
+          "$ref": "#/$defs/stringArray"
+        }
       }
     },
     "preset": {
@@ -188,143 +386,340 @@
       ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/$defs/shortString" },
-        "title": { "$ref": "#/$defs/shortString" },
-        "summary": { "$ref": "#/$defs/text" },
-        "description": { "$ref": "#/$defs/text" },
+        "id": {
+          "$ref": "#/$defs/shortString"
+        },
+        "title": {
+          "$ref": "#/$defs/shortString"
+        },
+        "summary": {
+          "$ref": "#/$defs/text"
+        },
+        "description": {
+          "$ref": "#/$defs/text"
+        },
         "objectives": {
           "type": "array",
           "minItems": 1,
           "maxItems": 10,
-          "items": { "$ref": "#/$defs/objective" }
+          "items": {
+            "$ref": "#/$defs/objective"
+          }
         },
         "secondary_objectives": {
           "type": "array",
           "maxItems": 10,
-          "items": { "$ref": "#/$defs/objective" }
+          "items": {
+            "$ref": "#/$defs/objective"
+          }
         },
         "platforms": {
           "type": "array",
           "minItems": 1,
           "maxItems": 3,
-          "items": { "$ref": "#/$defs/platform" }
+          "items": {
+            "$ref": "#/$defs/platform"
+          }
         },
-        "duration_seconds": { "$ref": "#/$defs/duration_range" },
-        "difficulty": { "$ref": "#/$defs/difficulty" },
-        "budget": { "$ref": "#/$defs/budget" },
+        "duration_seconds": {
+          "$ref": "#/$defs/duration_range"
+        },
+        "difficulty": {
+          "$ref": "#/$defs/difficulty"
+        },
+        "budget": {
+          "$ref": "#/$defs/budget"
+        },
         "filming_methods": {
           "type": "array",
           "minItems": 1,
           "maxItems": 6,
-          "items": { "$ref": "#/$defs/filming_method" }
+          "items": {
+            "$ref": "#/$defs/filming_method"
+          }
         },
-        "face_visibility": { "$ref": "#/$defs/face_visibility" },
-        "equipment": { "$ref": "#/$defs/stringArray" },
-        "tags": { "$ref": "#/$defs/stringArray" },
-        "genre_tags": { "$ref": "#/$defs/stringArray" },
-        "mood_tags": { "$ref": "#/$defs/stringArray" },
-        "campaign_stage": { "$ref": "#/$defs/campaign_stage" },
-        "song_context_required": { "$ref": "#/$defs/nullableString" },
+        "face_visibility": {
+          "$ref": "#/$defs/face_visibility"
+        },
+        "equipment": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "tags": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "genre_tags": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "mood_tags": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "campaign_stage": {
+          "$ref": "#/$defs/campaign_stage"
+        },
+        "song_context_required": {
+          "$ref": "#/$defs/nullableString"
+        },
         "hook_examples": {
           "type": "array",
           "minItems": 1,
           "maxItems": 10,
-          "items": { "type": "string", "minLength": 1, "maxLength": 2000 }
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
         },
         "execution_steps": {
           "type": "array",
           "minItems": 1,
           "maxItems": 30,
-          "items": { "type": "string", "minLength": 1, "maxLength": 2000 }
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
         },
         "shot_list": {
           "type": "array",
           "minItems": 1,
           "maxItems": 40,
-          "items": { "type": "string", "minLength": 1, "maxLength": 2000 }
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
         },
-        "on_screen_text": { "$ref": "#/$defs/stringArray" },
-        "audio_guidance": { "$ref": "#/$defs/nullableString" },
-        "editing_notes": { "$ref": "#/$defs/nullableString" },
+        "on_screen_text": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "audio_guidance": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "editing_notes": {
+          "$ref": "#/$defs/nullableString"
+        },
         "cta_examples": {
           "type": "array",
           "minItems": 1,
           "maxItems": 10,
-          "items": { "type": "string", "minLength": 1, "maxLength": 2000 }
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
         },
-        "variations": { "$ref": "#/$defs/stringArray" },
-        "common_mistakes": { "$ref": "#/$defs/stringArray" },
-        "accessibility_notes": { "$ref": "#/$defs/nullableString" },
+        "variations": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "common_mistakes": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "accessibility_notes": {
+          "$ref": "#/$defs/nullableString"
+        },
         "example_metadata": {
-          "anyOf": [{ "$ref": "#/$defs/example_metadata" }, { "type": "null" }]
+          "anyOf": [
+            {
+              "$ref": "#/$defs/example_metadata"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
-        "estimated_production_minutes": { "$ref": "#/$defs/nullableInteger" },
-        "is_favorite": { "type": "boolean" },
-        "is_user_created": { "type": "boolean" },
-        "is_archived": { "type": "boolean" },
-        "source_preset_id": { "$ref": "#/$defs/nullableString" },
-        "usage_count": { "type": "integer", "minimum": 0 },
-        "is_demo": { "type": "boolean" },
-        "custom_note": { "$ref": "#/$defs/nullableString" },
-        "created_at": { "$ref": "#/$defs/isodate" },
-        "updated_at": { "$ref": "#/$defs/isodate" },
-        "schema_version": { "type": "string" },
-        "preset_version": { "type": "string" }
+        "estimated_production_minutes": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "is_favorite": {
+          "type": "boolean"
+        },
+        "is_user_created": {
+          "type": "boolean"
+        },
+        "is_archived": {
+          "type": "boolean"
+        },
+        "source_preset_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "usage_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "is_demo": {
+          "type": "boolean"
+        },
+        "custom_note": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "created_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "updated_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "schema_version": {
+          "type": "string"
+        },
+        "preset_version": {
+          "type": "string"
+        }
       }
     },
     "song": {
       "type": "object",
-      "required": ["id", "title"],
+      "required": [
+        "id",
+        "title"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/$defs/shortString" },
-        "title": { "$ref": "#/$defs/shortString" },
-        "artist": { "$ref": "#/$defs/nullableString" },
-        "genre": { "$ref": "#/$defs/nullableString" },
-        "subgenre": { "$ref": "#/$defs/nullableString" },
-        "moods": { "$ref": "#/$defs/stringArray" },
-        "language": { "$ref": "#/$defs/nullableString" },
-        "description": { "$ref": "#/$defs/nullableString" },
-        "lyrics": { "$ref": "#/$defs/nullableString" },
-        "themes": { "$ref": "#/$defs/stringArray" },
-        "target_audience": { "$ref": "#/$defs/nullableString" },
-        "intended_listener_response": { "$ref": "#/$defs/nullableString" },
-        "strongest_lyrics": { "$ref": "#/$defs/stringArray" },
+        "id": {
+          "$ref": "#/$defs/shortString"
+        },
+        "title": {
+          "$ref": "#/$defs/shortString"
+        },
+        "artist": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "genre": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "subgenre": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "moods": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "language": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "description": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "lyrics": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "themes": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "target_audience": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "intended_listener_response": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "strongest_lyrics": {
+          "$ref": "#/$defs/stringArray"
+        },
         "audio_sections": {
           "type": "array",
           "maxItems": 40,
-          "items": { "$ref": "#/$defs/audio_section" }
+          "items": {
+            "$ref": "#/$defs/audio_section"
+          }
         },
         "bpm": {
-          "anyOf": [{ "type": "number", "minimum": 20, "maximum": 400 }, { "type": "null" }]
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 20,
+              "maximum": 400
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
-        "musical_key": { "$ref": "#/$defs/nullableString" },
-        "release_status": { "$ref": "#/$defs/release_status" },
-        "release_date": { "$ref": "#/$defs/nullableIsodate" },
-        "cover_art_ref": { "$ref": "#/$defs/nullableString" },
-        "streaming_url": { "$ref": "#/$defs/nullableString" },
-        "music_video_url": { "$ref": "#/$defs/nullableString" },
-        "persona_notes": { "$ref": "#/$defs/nullableString" },
-        "visual_identity_notes": { "$ref": "#/$defs/nullableString" },
-        "production_constraints": { "$ref": "#/$defs/nullableString" },
-        "equipment": { "$ref": "#/$defs/stringArray" },
-        "budget": { "anyOf": [{ "$ref": "#/$defs/budget" }, { "type": "null" }] },
-        "filming_locations": { "$ref": "#/$defs/stringArray" },
+        "musical_key": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "release_status": {
+          "$ref": "#/$defs/release_status"
+        },
+        "release_date": {
+          "$ref": "#/$defs/nullableIsodate"
+        },
+        "cover_art_ref": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "streaming_url": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "music_video_url": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "persona_notes": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "visual_identity_notes": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "production_constraints": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "equipment": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "budget": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/budget"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "filming_locations": {
+          "$ref": "#/$defs/stringArray"
+        },
         "face_visibility": {
-          "anyOf": [{ "$ref": "#/$defs/face_visibility" }, { "type": "null" }]
+          "anyOf": [
+            {
+              "$ref": "#/$defs/face_visibility"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
-        "animation_capability": { "type": ["boolean", "null"] },
-        "posting_frequency": { "$ref": "#/$defs/nullableString" },
-        "campaign_notes": { "$ref": "#/$defs/nullableString" },
-        "is_demo": { "type": "boolean" },
-        "created_at": { "$ref": "#/$defs/isodate" },
-        "updated_at": { "$ref": "#/$defs/isodate" },
-        "schema_version": { "type": "string" }
+        "animation_capability": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "posting_frequency": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "campaign_notes": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "is_demo": {
+          "type": "boolean"
+        },
+        "created_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "updated_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "schema_version": {
+          "type": "string"
+        }
       }
     },
     "rubric_component": {
       "type": "object",
-      "required": ["key", "label", "score", "weight", "explanation"],
+      "required": [
+        "key",
+        "label",
+        "score",
+        "weight",
+        "explanation"
+      ],
       "additionalProperties": false,
       "properties": {
         "key": {
@@ -337,37 +732,81 @@
             "distinctiveness"
           ]
         },
-        "label": { "$ref": "#/$defs/shortString" },
-        "score": { "type": "number", "minimum": 0, "maximum": 100 },
-        "weight": { "type": "number", "minimum": 0, "maximum": 1 },
-        "explanation": { "$ref": "#/$defs/text" }
+        "label": {
+          "$ref": "#/$defs/shortString"
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "explanation": {
+          "$ref": "#/$defs/text"
+        }
       }
     },
     "readiness": {
       "type": "object",
-      "required": ["score", "confidence", "components", "rubric_version", "disclaimer"],
+      "required": [
+        "score",
+        "confidence",
+        "components",
+        "rubric_version",
+        "disclaimer"
+      ],
       "additionalProperties": false,
       "properties": {
-        "score": { "type": "number", "minimum": 0, "maximum": 100 },
-        "confidence": { "$ref": "#/$defs/confidence" },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
         "components": {
           "type": "array",
           "minItems": 6,
           "maxItems": 6,
-          "items": { "$ref": "#/$defs/rubric_component" }
+          "items": {
+            "$ref": "#/$defs/rubric_component"
+          }
         },
-        "rubric_version": { "type": "string" },
-        "disclaimer": { "$ref": "#/$defs/text" }
+        "rubric_version": {
+          "type": "string"
+        },
+        "disclaimer": {
+          "$ref": "#/$defs/text"
+        }
       }
     },
     "improvement": {
       "type": "object",
-      "required": ["area", "suggestion", "impact"],
+      "required": [
+        "area",
+        "suggestion",
+        "impact"
+      ],
       "additionalProperties": false,
       "properties": {
-        "area": { "$ref": "#/$defs/shortString" },
-        "suggestion": { "$ref": "#/$defs/text" },
-        "impact": { "enum": ["high", "medium", "low"] }
+        "area": {
+          "$ref": "#/$defs/shortString"
+        },
+        "suggestion": {
+          "$ref": "#/$defs/text"
+        },
+        "impact": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        }
       }
     },
     "coach_assessment": {
@@ -391,38 +830,78 @@
       ],
       "additionalProperties": false,
       "properties": {
-        "summary": { "$ref": "#/$defs/text" },
-        "strengths": { "$ref": "#/$defs/stringArray" },
-        "weaknesses": { "$ref": "#/$defs/stringArray" },
-        "hook_assessment": { "$ref": "#/$defs/text" },
-        "song_fit": { "$ref": "#/$defs/text" },
-        "audience_fit": { "$ref": "#/$defs/text" },
-        "feasibility": { "$ref": "#/$defs/text" },
-        "pacing_suggestions": { "$ref": "#/$defs/stringArray" },
+        "summary": {
+          "$ref": "#/$defs/text"
+        },
+        "strengths": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "weaknesses": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "hook_assessment": {
+          "$ref": "#/$defs/text"
+        },
+        "song_fit": {
+          "$ref": "#/$defs/text"
+        },
+        "audience_fit": {
+          "$ref": "#/$defs/text"
+        },
+        "feasibility": {
+          "$ref": "#/$defs/text"
+        },
+        "pacing_suggestions": {
+          "$ref": "#/$defs/stringArray"
+        },
         "improvements": {
           "type": "array",
           "maxItems": 20,
-          "items": { "$ref": "#/$defs/improvement" }
+          "items": {
+            "$ref": "#/$defs/improvement"
+          }
         },
-        "revised_concept": { "$ref": "#/$defs/text" },
-        "alternative_concept": { "$ref": "#/$defs/nullableString" },
+        "revised_concept": {
+          "$ref": "#/$defs/text"
+        },
+        "alternative_concept": {
+          "$ref": "#/$defs/nullableString"
+        },
         "recommended_platforms": {
           "type": "array",
           "maxItems": 3,
           "items": {
             "type": "object",
-            "required": ["platform", "reason"],
+            "required": [
+              "platform",
+              "reason"
+            ],
             "additionalProperties": false,
             "properties": {
-              "platform": { "$ref": "#/$defs/platform" },
-              "reason": { "$ref": "#/$defs/text" }
+              "platform": {
+                "$ref": "#/$defs/platform"
+              },
+              "reason": {
+                "$ref": "#/$defs/text"
+              }
             }
           }
         },
-        "next_steps": { "$ref": "#/$defs/stringArray" },
-        "readiness": { "$ref": "#/$defs/readiness" },
-        "source": { "enum": ["ai", "local-heuristic"] },
-        "generated_at": { "$ref": "#/$defs/isodate" }
+        "next_steps": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "readiness": {
+          "$ref": "#/$defs/readiness"
+        },
+        "source": {
+          "enum": [
+            "ai",
+            "local-heuristic"
+          ]
+        },
+        "generated_at": {
+          "$ref": "#/$defs/isodate"
+        }
       }
     },
     "idea_snapshot": {
@@ -440,147 +919,416 @@
       ],
       "additionalProperties": false,
       "properties": {
-        "title": { "type": "string" },
-        "concept_description": { "type": "string" },
-        "hook": { "type": "string" },
-        "scene_sequence": { "$ref": "#/$defs/stringArray" },
-        "shot_list": { "$ref": "#/$defs/stringArray" },
-        "on_screen_text": { "$ref": "#/$defs/stringArray" },
-        "editing_notes": { "type": "string" },
-        "call_to_action": { "type": "string" },
-        "audio_section": { "type": "string" }
+        "title": {
+          "type": "string"
+        },
+        "concept_description": {
+          "type": "string"
+        },
+        "hook": {
+          "type": "string"
+        },
+        "scene_sequence": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "shot_list": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "on_screen_text": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "editing_notes": {
+          "type": "string"
+        },
+        "call_to_action": {
+          "type": "string"
+        },
+        "audio_section": {
+          "type": "string"
+        }
       }
     },
     "idea_version": {
       "type": "object",
-      "required": ["id", "label", "created_at", "snapshot"],
+      "required": [
+        "id",
+        "label",
+        "created_at",
+        "snapshot"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/$defs/shortString" },
-        "label": { "$ref": "#/$defs/shortString" },
-        "created_at": { "$ref": "#/$defs/isodate" },
-        "snapshot": { "$ref": "#/$defs/idea_snapshot" }
+        "id": {
+          "$ref": "#/$defs/shortString"
+        },
+        "label": {
+          "$ref": "#/$defs/shortString"
+        },
+        "created_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "snapshot": {
+          "$ref": "#/$defs/idea_snapshot"
+        },
+        "readiness_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "readiness_source": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "local-heuristic",
+            "ai",
+            null
+          ]
+        }
       }
     },
     "content_idea": {
       "type": "object",
-      "required": ["id", "title", "concept_description", "status", "created_at", "updated_at"],
+      "required": [
+        "id",
+        "title",
+        "concept_description",
+        "status",
+        "created_at",
+        "updated_at"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/$defs/shortString" },
-        "title": { "$ref": "#/$defs/shortString" },
-        "song_id": { "$ref": "#/$defs/nullableString" },
-        "source_preset_id": { "$ref": "#/$defs/nullableString" },
-        "mode": { "enum": ["use-as-is", "customized", "from-scratch"] },
-        "concept_description": { "$ref": "#/$defs/text" },
-        "hook": { "type": "string", "maxLength": 2000 },
-        "intended_audience": { "$ref": "#/$defs/nullableString" },
-        "scene_sequence": { "$ref": "#/$defs/stringArray" },
-        "shot_list": { "$ref": "#/$defs/stringArray" },
-        "on_screen_text": { "$ref": "#/$defs/stringArray" },
-        "audio_section": { "$ref": "#/$defs/nullableString" },
-        "editing_notes": { "$ref": "#/$defs/nullableString" },
-        "call_to_action": { "$ref": "#/$defs/nullableString" },
-        "platforms": { "type": "array", "maxItems": 3, "items": { "$ref": "#/$defs/platform" } },
-        "estimated_production_minutes": { "$ref": "#/$defs/nullableInteger" },
-        "status": { "$ref": "#/$defs/workflow_status" },
-        "scheduled_date": { "$ref": "#/$defs/nullableIsodate" },
-        "campaign_id": { "$ref": "#/$defs/nullableString" },
-        "notes": { "$ref": "#/$defs/nullableString" },
+        "id": {
+          "$ref": "#/$defs/shortString"
+        },
+        "title": {
+          "$ref": "#/$defs/shortString"
+        },
+        "song_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "source_preset_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "mode": {
+          "enum": [
+            "use-as-is",
+            "customized",
+            "from-scratch"
+          ]
+        },
+        "concept_description": {
+          "$ref": "#/$defs/text"
+        },
+        "hook": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "intended_audience": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "scene_sequence": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "shot_list": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "on_screen_text": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "audio_section": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "editing_notes": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "call_to_action": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "platforms": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/platform"
+          }
+        },
+        "estimated_production_minutes": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "status": {
+          "$ref": "#/$defs/workflow_status"
+        },
+        "scheduled_date": {
+          "$ref": "#/$defs/nullableIsodate"
+        },
+        "campaign_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "notes": {
+          "$ref": "#/$defs/nullableString"
+        },
         "coach_assessment": {
-          "anyOf": [{ "$ref": "#/$defs/coach_assessment" }, { "type": "null" }]
+          "anyOf": [
+            {
+              "$ref": "#/$defs/coach_assessment"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "versions": {
           "type": "array",
           "maxItems": 50,
-          "items": { "$ref": "#/$defs/idea_version" }
+          "items": {
+            "$ref": "#/$defs/idea_version"
+          }
         },
-        "is_demo": { "type": "boolean" },
-        "created_at": { "$ref": "#/$defs/isodate" },
-        "updated_at": { "$ref": "#/$defs/isodate" },
-        "schema_version": { "type": "string" }
+        "is_demo": {
+          "type": "boolean"
+        },
+        "created_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "updated_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "schema_version": {
+          "type": "string"
+        }
       }
     },
     "hashtag": {
       "type": "object",
-      "required": ["tag"],
+      "required": [
+        "tag"
+      ],
       "additionalProperties": false,
       "properties": {
-        "tag": { "$ref": "#/$defs/shortString" },
-        "reason": { "$ref": "#/$defs/nullableString" }
+        "tag": {
+          "$ref": "#/$defs/shortString"
+        },
+        "reason": {
+          "$ref": "#/$defs/nullableString"
+        }
       }
     },
     "metadata_package": {
       "type": "object",
-      "required": ["id", "platform", "tone", "title", "caption", "created_at", "updated_at"],
+      "required": [
+        "id",
+        "platform",
+        "tone",
+        "title",
+        "caption",
+        "created_at",
+        "updated_at"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/$defs/shortString" },
-        "content_idea_id": { "$ref": "#/$defs/nullableString" },
-        "song_id": { "$ref": "#/$defs/nullableString" },
-        "platform": { "$ref": "#/$defs/platform" },
-        "tone": { "$ref": "#/$defs/tone" },
-        "title": { "$ref": "#/$defs/text" },
-        "caption": { "$ref": "#/$defs/text" },
-        "description": { "$ref": "#/$defs/nullableString" },
-        "search_phrases": { "$ref": "#/$defs/stringArray" },
-        "hashtags": { "type": "array", "maxItems": 60, "items": { "$ref": "#/$defs/hashtag" } },
-        "call_to_action": { "$ref": "#/$defs/nullableString" },
-        "pinned_comment": { "$ref": "#/$defs/nullableString" },
-        "thumbnail_concept": { "$ref": "#/$defs/nullableString" },
-        "opening_overlay": { "$ref": "#/$defs/nullableString" },
-        "alternative_hooks": { "$ref": "#/$defs/stringArray" },
-        "suggested_duration_seconds": { "$ref": "#/$defs/nullableInteger" },
-        "recommended_excerpt": { "$ref": "#/$defs/nullableString" },
-        "accessibility_notes": { "$ref": "#/$defs/nullableString" },
-        "rationale": { "$ref": "#/$defs/nullableString" },
-        "source": { "enum": ["ai", "local-template", "manual"] },
-        "status": { "enum": ["draft", "final"] },
-        "is_demo": { "type": "boolean" },
-        "created_at": { "$ref": "#/$defs/isodate" },
-        "updated_at": { "$ref": "#/$defs/isodate" },
-        "schema_version": { "type": "string" }
+        "id": {
+          "$ref": "#/$defs/shortString"
+        },
+        "content_idea_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "song_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "platform": {
+          "$ref": "#/$defs/platform"
+        },
+        "tone": {
+          "$ref": "#/$defs/tone"
+        },
+        "title": {
+          "$ref": "#/$defs/text"
+        },
+        "caption": {
+          "$ref": "#/$defs/text"
+        },
+        "description": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "search_phrases": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "hashtags": {
+          "type": "array",
+          "maxItems": 60,
+          "items": {
+            "$ref": "#/$defs/hashtag"
+          }
+        },
+        "call_to_action": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "pinned_comment": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "thumbnail_concept": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "opening_overlay": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "alternative_hooks": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "suggested_duration_seconds": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "recommended_excerpt": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "accessibility_notes": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "rationale": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "source": {
+          "enum": [
+            "ai",
+            "local-template",
+            "manual"
+          ]
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "final"
+          ]
+        },
+        "is_demo": {
+          "type": "boolean"
+        },
+        "created_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "updated_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "schema_version": {
+          "type": "string"
+        }
       }
     },
     "campaign": {
       "type": "object",
-      "required": ["id", "name", "created_at", "updated_at"],
+      "required": [
+        "id",
+        "name",
+        "created_at",
+        "updated_at"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/$defs/shortString" },
-        "name": { "$ref": "#/$defs/shortString" },
-        "song_id": { "$ref": "#/$defs/nullableString" },
-        "description": { "$ref": "#/$defs/nullableString" },
-        "start_date": { "$ref": "#/$defs/nullableIsodate" },
-        "end_date": { "$ref": "#/$defs/nullableIsodate" },
-        "posting_cadence_days": { "$ref": "#/$defs/nullableInteger" },
-        "stage": { "$ref": "#/$defs/campaign_stage" },
-        "status": { "enum": ["active", "paused", "complete"] },
-        "is_demo": { "type": "boolean" },
-        "created_at": { "$ref": "#/$defs/isodate" },
-        "updated_at": { "$ref": "#/$defs/isodate" },
-        "schema_version": { "type": "string" }
+        "id": {
+          "$ref": "#/$defs/shortString"
+        },
+        "name": {
+          "$ref": "#/$defs/shortString"
+        },
+        "song_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "description": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "start_date": {
+          "$ref": "#/$defs/nullableIsodate"
+        },
+        "end_date": {
+          "$ref": "#/$defs/nullableIsodate"
+        },
+        "posting_cadence_days": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "stage": {
+          "$ref": "#/$defs/campaign_stage"
+        },
+        "status": {
+          "enum": [
+            "active",
+            "paused",
+            "complete"
+          ]
+        },
+        "is_demo": {
+          "type": "boolean"
+        },
+        "created_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "updated_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "schema_version": {
+          "type": "string"
+        }
       }
     },
     "planned_post": {
       "type": "object",
-      "required": ["id", "platform", "scheduled_date", "status", "title", "created_at", "updated_at"],
+      "required": [
+        "id",
+        "platform",
+        "scheduled_date",
+        "status",
+        "title",
+        "created_at",
+        "updated_at"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/$defs/shortString" },
-        "content_idea_id": { "$ref": "#/$defs/nullableString" },
-        "song_id": { "$ref": "#/$defs/nullableString" },
-        "campaign_id": { "$ref": "#/$defs/nullableString" },
-        "metadata_package_id": { "$ref": "#/$defs/nullableString" },
-        "platform": { "$ref": "#/$defs/platform" },
-        "scheduled_date": { "$ref": "#/$defs/isodate" },
-        "status": { "$ref": "#/$defs/workflow_status" },
-        "title": { "$ref": "#/$defs/shortString" },
-        "notes": { "$ref": "#/$defs/nullableString" },
-        "is_demo": { "type": "boolean" },
-        "created_at": { "$ref": "#/$defs/isodate" },
-        "updated_at": { "$ref": "#/$defs/isodate" },
-        "schema_version": { "type": "string" }
+        "id": {
+          "$ref": "#/$defs/shortString"
+        },
+        "content_idea_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "song_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "campaign_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "metadata_package_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "platform": {
+          "$ref": "#/$defs/platform"
+        },
+        "scheduled_date": {
+          "$ref": "#/$defs/isodate"
+        },
+        "status": {
+          "$ref": "#/$defs/workflow_status"
+        },
+        "title": {
+          "$ref": "#/$defs/shortString"
+        },
+        "notes": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "is_demo": {
+          "type": "boolean"
+        },
+        "created_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "updated_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "schema_version": {
+          "type": "string"
+        }
       }
     },
     "trend_record": {
@@ -597,89 +1345,241 @@
       ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/$defs/shortString" },
-        "name": { "$ref": "#/$defs/shortString" },
-        "platform": { "type": "string", "minLength": 1, "maxLength": 100 },
-        "description": { "$ref": "#/$defs/text" },
-        "source_name": { "$ref": "#/$defs/shortString" },
-        "source_url": { "$ref": "#/$defs/nullableString" },
-        "source_timestamp": { "$ref": "#/$defs/nullableIsodate" },
-        "observed_at": { "$ref": "#/$defs/isodate" },
-        "geography": { "$ref": "#/$defs/nullableString" },
-        "keywords": { "$ref": "#/$defs/stringArray" },
-        "evidence": { "$ref": "#/$defs/text" },
-        "song_id": { "$ref": "#/$defs/nullableString" },
-        "relevance_notes": { "$ref": "#/$defs/nullableString" },
-        "suggested_adaptation": { "$ref": "#/$defs/nullableString" },
-        "confidence": { "$ref": "#/$defs/confidence" },
-        "review_date": { "$ref": "#/$defs/nullableIsodate" },
-        "is_demo": { "type": "boolean" },
-        "created_at": { "$ref": "#/$defs/isodate" },
-        "schema_version": { "type": "string" }
+        "id": {
+          "$ref": "#/$defs/shortString"
+        },
+        "name": {
+          "$ref": "#/$defs/shortString"
+        },
+        "platform": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "description": {
+          "$ref": "#/$defs/text"
+        },
+        "source_name": {
+          "$ref": "#/$defs/shortString"
+        },
+        "source_url": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "source_timestamp": {
+          "$ref": "#/$defs/nullableIsodate"
+        },
+        "observed_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "geography": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "keywords": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "evidence": {
+          "$ref": "#/$defs/text"
+        },
+        "song_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "relevance_notes": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "suggested_adaptation": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "review_date": {
+          "$ref": "#/$defs/nullableIsodate"
+        },
+        "is_demo": {
+          "type": "boolean"
+        },
+        "created_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "schema_version": {
+          "type": "string"
+        }
       }
     },
     "performance_record": {
       "type": "object",
-      "required": ["id", "platform", "created_at", "updated_at"],
+      "required": [
+        "id",
+        "platform",
+        "created_at",
+        "updated_at"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/$defs/shortString" },
-        "song_id": { "$ref": "#/$defs/nullableString" },
-        "content_idea_id": { "$ref": "#/$defs/nullableString" },
-        "planned_post_id": { "$ref": "#/$defs/nullableString" },
-        "platform": { "$ref": "#/$defs/platform" },
-        "post_url": { "$ref": "#/$defs/nullableString" },
-        "published_on": { "$ref": "#/$defs/nullableIsodate" },
-        "views": { "$ref": "#/$defs/nullableInteger" },
-        "likes": { "$ref": "#/$defs/nullableInteger" },
-        "comments": { "$ref": "#/$defs/nullableInteger" },
-        "shares": { "$ref": "#/$defs/nullableInteger" },
-        "saves": { "$ref": "#/$defs/nullableInteger" },
-        "avg_watch_time_seconds": { "$ref": "#/$defs/nullableNumber" },
-        "completion_rate": {
-          "anyOf": [{ "type": "number", "minimum": 0, "maximum": 100 }, { "type": "null" }]
+        "id": {
+          "$ref": "#/$defs/shortString"
         },
-        "profile_visits": { "$ref": "#/$defs/nullableInteger" },
-        "link_clicks": { "$ref": "#/$defs/nullableInteger" },
-        "followers_attributed": { "$ref": "#/$defs/nullableInteger" },
-        "notes": { "$ref": "#/$defs/nullableString" },
-        "collected_on": { "$ref": "#/$defs/nullableIsodate" },
-        "is_demo": { "type": "boolean" },
-        "created_at": { "$ref": "#/$defs/isodate" },
-        "updated_at": { "$ref": "#/$defs/isodate" },
-        "schema_version": { "type": "string" }
+        "song_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "content_idea_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "planned_post_id": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "platform": {
+          "$ref": "#/$defs/platform"
+        },
+        "post_url": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "published_on": {
+          "$ref": "#/$defs/nullableIsodate"
+        },
+        "views": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "likes": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "comments": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "shares": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "saves": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "avg_watch_time_seconds": {
+          "$ref": "#/$defs/nullableNumber"
+        },
+        "completion_rate": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "profile_visits": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "link_clicks": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "followers_attributed": {
+          "$ref": "#/$defs/nullableInteger"
+        },
+        "notes": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "collected_on": {
+          "$ref": "#/$defs/nullableIsodate"
+        },
+        "is_demo": {
+          "type": "boolean"
+        },
+        "created_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "updated_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "schema_version": {
+          "type": "string"
+        }
       }
     },
     "preferences": {
       "type": "object",
-      "required": ["artist_name", "default_tone", "posting_cadence_days"],
+      "required": [
+        "artist_name",
+        "default_tone",
+        "posting_cadence_days"
+      ],
       "additionalProperties": false,
       "properties": {
-        "id": { "type": "string", "enum": ["preferences"] },
-        "artist_name": { "type": "string", "maxLength": 200 },
-        "persona": { "type": "string", "maxLength": 4000 },
-        "preferred_genres": { "$ref": "#/$defs/stringArray" },
-        "preferred_moods": { "$ref": "#/$defs/stringArray" },
+        "id": {
+          "type": "string",
+          "enum": [
+            "preferences"
+          ]
+        },
+        "artist_name": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "persona": {
+          "type": "string",
+          "maxLength": 4000
+        },
+        "preferred_genres": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "preferred_moods": {
+          "$ref": "#/$defs/stringArray"
+        },
         "preferred_platforms": {
           "type": "array",
           "maxItems": 3,
-          "items": { "$ref": "#/$defs/platform" }
+          "items": {
+            "$ref": "#/$defs/platform"
+          }
         },
-        "budget": { "anyOf": [{ "$ref": "#/$defs/budget" }, { "type": "null" }] },
-        "equipment": { "$ref": "#/$defs/stringArray" },
+        "budget": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/budget"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "equipment": {
+          "$ref": "#/$defs/stringArray"
+        },
         "filming_preferences": {
           "type": "array",
           "maxItems": 6,
-          "items": { "$ref": "#/$defs/filming_method" }
+          "items": {
+            "$ref": "#/$defs/filming_method"
+          }
         },
-        "visual_style": { "type": "string", "maxLength": 2000 },
-        "default_tone": { "$ref": "#/$defs/tone" },
-        "language": { "type": "string", "maxLength": 100 },
-        "posting_cadence_days": { "type": "integer", "minimum": 1, "maximum": 60 },
-        "use_local_analysis": { "type": "boolean" },
-        "onboarding_complete": { "type": "boolean" },
-        "updated_at": { "$ref": "#/$defs/isodate" },
-        "schema_version": { "type": "string" }
+        "visual_style": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "default_tone": {
+          "$ref": "#/$defs/tone"
+        },
+        "language": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "posting_cadence_days": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60
+        },
+        "use_local_analysis": {
+          "type": "boolean"
+        },
+        "onboarding_complete": {
+          "type": "boolean"
+        },
+        "updated_at": {
+          "$ref": "#/$defs/isodate"
+        },
+        "schema_version": {
+          "type": "string"
+        }
       }
     }
   }

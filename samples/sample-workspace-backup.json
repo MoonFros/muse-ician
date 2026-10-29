@@ -4,7 +4,7 @@
   "manifest": {
     "name": "muse-ician sample workspace (demo data)",
     "description": "A complete backup of this browser’s muse-ician workspace, including preferences.",
-    "created_at": "2026-10-29T22:52:58.723Z",
+    "created_at": "2026-10-29T23:35:41.297Z",
     "author": null,
     "schema_version": "1.0.0",
     "exported_by": "muse-ician 1.0.0",
@@ -47,7 +47,7 @@
     "posting_cadence_days": 3,
     "use_local_analysis": true,
     "onboarding_complete": true,
-    "updated_at": "2026-10-29T22:52:58.723Z",
+    "updated_at": "2026-10-29T23:35:41.297Z",
     "schema_version": "1.0.0"
   },
   "presets": [
@@ -1021,8 +1021,8 @@
       "posting_frequency": "3 posts per week",
       "campaign_notes": "Demo campaign spans 15 days from today.",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -1164,12 +1164,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T22:52:58.707Z"
+        "generated_at": "2026-10-29T23:35:41.276Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -1308,12 +1308,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T22:52:58.721Z"
+        "generated_at": "2026-10-29T23:35:41.295Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -1453,12 +1453,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T22:52:58.721Z"
+        "generated_at": "2026-10-29T23:35:41.295Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -1598,12 +1598,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T22:52:58.721Z"
+        "generated_at": "2026-10-29T23:35:41.296Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -1742,12 +1742,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T22:52:58.722Z"
+        "generated_at": "2026-10-29T23:35:41.296Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -1891,12 +1891,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T22:52:58.722Z"
+        "generated_at": "2026-10-29T23:35:41.296Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2038,12 +2038,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T22:52:58.722Z"
+        "generated_at": "2026-10-29T23:35:41.297Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2182,12 +2182,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T22:52:58.722Z"
+        "generated_at": "2026-10-29T23:35:41.297Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -2249,8 +2249,8 @@
       "source": "local-template",
       "status": "draft",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.720Z",
-      "updated_at": "2026-10-29T22:52:58.720Z",
+      "created_at": "2026-10-29T23:35:41.294Z",
+      "updated_at": "2026-10-29T23:35:41.294Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2306,8 +2306,8 @@
       "source": "local-template",
       "status": "draft",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.721Z",
-      "updated_at": "2026-10-29T22:52:58.721Z",
+      "created_at": "2026-10-29T23:35:41.295Z",
+      "updated_at": "2026-10-29T23:35:41.295Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2359,8 +2359,8 @@
       "source": "local-template",
       "status": "draft",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.721Z",
-      "updated_at": "2026-10-29T22:52:58.721Z",
+      "created_at": "2026-10-29T23:35:41.295Z",
+      "updated_at": "2026-10-29T23:35:41.295Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2420,8 +2420,8 @@
       "source": "local-template",
       "status": "draft",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.721Z",
-      "updated_at": "2026-10-29T22:52:58.721Z",
+      "created_at": "2026-10-29T23:35:41.296Z",
+      "updated_at": "2026-10-29T23:35:41.296Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -2437,8 +2437,8 @@
       "stage": "post-release",
       "status": "active",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -2455,8 +2455,8 @@
       "title": "Low Tide — introduction for first-time listeners",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2471,8 +2471,8 @@
       "title": "The coat on the wrong hook",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2487,8 +2487,8 @@
       "title": "Why the bridge is a phone recording",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2503,8 +2503,8 @@
       "title": "POV: you are fine until this song comes on",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2519,8 +2519,8 @@
       "title": "Voice memo vs final mix",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2535,8 +2535,8 @@
       "title": "Four bass notes carry the chorus",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2551,8 +2551,8 @@
       "title": "What does this line mean to you?",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2567,8 +2567,8 @@
       "title": "A comment picked this video",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -2594,8 +2594,8 @@
       "notes": "Sample record so the journal has data to compare. These are not real analytics.",
       "collected_on": "2026-10-31",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2618,8 +2618,8 @@
       "notes": "Sample record. Numbers were invented for the demo and are labelled as demo data.",
       "collected_on": "2026-11-01",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2642,8 +2642,8 @@
       "notes": "Sample record. Demo data only.",
       "collected_on": "2026-10-28",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.705Z",
-      "updated_at": "2026-10-29T22:52:58.705Z",
+      "created_at": "2026-10-29T23:35:41.275Z",
+      "updated_at": "2026-10-29T23:35:41.275Z",
       "schema_version": "1.0.0"
     }
   ]

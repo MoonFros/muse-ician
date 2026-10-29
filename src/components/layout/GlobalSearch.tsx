@@ -4,6 +4,17 @@ import { Icon, type IconName } from '../ui/Icons';
 import { PLATFORM_LABELS } from '../../lib/types';
 import { useWorkspace } from '../../state/workspace';
 import { truncate } from '../../lib/utils';
+import { matchCommands, type Command } from '../../lib/commands';
+
+interface PaletteItem {
+  key: string;
+  kind: 'Command' | SearchResult['kind'];
+  title: string;
+  subtitle: string;
+  to: string;
+  icon: IconName;
+  group: string;
+}
 
 interface SearchResult {
   id: string;
@@ -30,6 +41,10 @@ export function GlobalSearch({ open, onClose }: { open: boolean; onClose: () => 
     }
     return undefined;
   }, [open]);
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [query]);
 
   const results = useMemo<SearchResult[]>(() => {
     const term = query.trim().toLowerCase();
@@ -101,9 +116,31 @@ export function GlobalSearch({ open, onClose }: { open: boolean; onClose: () => 
 
   if (!open) return null;
 
-  const go = (result: SearchResult | undefined) => {
-    if (!result) return;
-    navigate(result.to);
+  const commands: Command[] = matchCommands(query).slice(0, query.trim() ? 6 : 17);
+  const items: PaletteItem[] = [
+    ...commands.map((command) => ({
+      key: `command-${command.id}`,
+      kind: 'Command' as const,
+      title: command.label,
+      subtitle: command.hint,
+      to: command.to,
+      icon: command.icon,
+      group: command.group,
+    })),
+    ...results.map((result) => ({
+      key: `result-${result.kind}-${result.id}`,
+      kind: result.kind,
+      title: result.title,
+      subtitle: result.subtitle,
+      to: result.to,
+      icon: result.icon,
+      group: 'Records' as const,
+    })),
+  ];
+
+  const go = (item: PaletteItem | undefined) => {
+    if (!item) return;
+    navigate(item.to);
     onClose();
   };
 
@@ -113,7 +150,7 @@ export function GlobalSearch({ open, onClose }: { open: boolean; onClose: () => 
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="Search muse-ician"
+        aria-label="Command palette"
         className="relative z-10 w-full max-w-xl animate-pop-in overflow-hidden rounded-3xl border border-white/[0.12] bg-[#0a0a14]/95 shadow-[0_40px_120px_-40px_rgba(0,0,0,1)] backdrop-blur-2xl"
         onKeyDown={(event) => {
           if (event.key === 'Escape') {
@@ -122,7 +159,7 @@ export function GlobalSearch({ open, onClose }: { open: boolean; onClose: () => 
           }
           if (event.key === 'ArrowDown') {
             event.preventDefault();
-            setActiveIndex((index) => Math.min(results.length - 1, index + 1));
+            setActiveIndex((index) => Math.min(items.length - 1, index + 1));
           }
           if (event.key === 'ArrowUp') {
             event.preventDefault();
@@ -130,7 +167,7 @@ export function GlobalSearch({ open, onClose }: { open: boolean; onClose: () => 
           }
           if (event.key === 'Enter') {
             event.preventDefault();
-            go(results[activeIndex]);
+            go(items[activeIndex]);
           }
         }}
       >
@@ -140,20 +177,19 @@ export function GlobalSearch({ open, onClose }: { open: boolean; onClose: () => 
             ref={inputRef}
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search presets, songs, ideas, packages…"
-            aria-label="Search presets, songs, ideas and packages"
+            placeholder="Search, or jump to an action…"
+            aria-label="Search records and commands"
             className="w-full border-0 bg-transparent py-4 text-sm text-slate-text placeholder:text-slate-faint focus:outline-none"
           />
-          <button type="button" onClick={onClose} className="kbd" aria-label="Close search">
-            Esc
-          </button>
+          <div className="flex shrink-0 items-center gap-1.5">
+            <span className="kbd">↑↓</span>
+            <button type="button" onClick={onClose} className="kbd" aria-label="Close command palette">
+              Esc
+            </button>
+          </div>
         </div>
-        <div className="max-h-[52vh] overflow-y-auto p-2 scroll-thin">
-          {!query.trim() ? (
-            <p className="px-3 py-6 text-center text-xs text-slate-faint">
-              Type to search. Matches titles, descriptions, tags, hooks, genres and moods.
-            </p>
-          ) : results.length === 0 ? (
+        <div className="max-h-[56vh] overflow-y-auto p-2 scroll-thin">
+          {items.length === 0 ? (
             <div className="px-3 py-6 text-center">
               <p className="text-sm text-slate-text">No matches for “{query.trim()}”</p>
               <p className="mt-1 text-xs text-slate-faint">
@@ -162,29 +198,38 @@ export function GlobalSearch({ open, onClose }: { open: boolean; onClose: () => 
             </div>
           ) : (
             <ul className="space-y-0.5">
-              {results.map((result, index) => (
-                <li key={`${result.kind}-${result.id}`}>
-                  <button
-                    type="button"
-                    onClick={() => go(result)}
-                    onMouseEnter={() => setActiveIndex(index)}
-                    className={`flex w-full items-start gap-3 rounded-xl px-3 py-2 text-left transition-colors ${
-                      index === activeIndex ? 'bg-accent-dim/60 shadow-[inset_0_0_0_1px_rgba(123,107,255,0.3)]' : 'hover:bg-white/[0.04]'
-                    }`}
-                  >
-                    <Icon name={result.icon} size={15} className="mt-0.5 shrink-0 text-accent-soft" />
-                    <span className="min-w-0 flex-1">
-                      <span className="flex items-baseline gap-2">
-                        <span className="truncate text-sm text-slate-text">{result.title}</span>
-                        <span className="shrink-0 text-2xs uppercase tracking-wide text-slate-faint">
-                          {result.kind}
+              {items.map((item, index) => {
+                const showGroup = index === 0 || items[index - 1]!.group !== item.group;
+                return (
+                  <li key={item.key}>
+                    {showGroup ? (
+                      <p className="px-3 pb-1 pt-2.5 text-3xs font-semibold uppercase tracking-[0.16em] text-slate-faint/80">
+                        {item.group}
+                      </p>
+                    ) : null}
+                    <button
+                      type="button"
+                      onClick={() => go(item)}
+                      onMouseEnter={() => setActiveIndex(index)}
+                      className={`flex w-full items-start gap-3 rounded-xl px-3 py-2 text-left transition-colors ${
+                        index === activeIndex ? 'bg-accent-dim/60 shadow-[inset_0_0_0_1px_rgba(123,107,255,0.3)]' : 'hover:bg-white/[0.04]'
+                      }`}
+                    >
+                      <Icon name={item.icon} size={15} className="mt-0.5 shrink-0 text-accent-soft" />
+                      <span className="min-w-0 flex-1">
+                        <span className="flex items-baseline gap-2">
+                          <span className="truncate text-sm text-slate-text">{item.title}</span>
+                          <span className="shrink-0 text-2xs uppercase tracking-wide text-slate-faint">
+                            {item.kind === 'Command' ? '' : item.kind}
+                          </span>
                         </span>
+                        <span className="mt-0.5 block truncate text-xs text-slate-faint">{item.subtitle}</span>
                       </span>
-                      <span className="mt-0.5 block truncate text-xs text-slate-faint">{result.subtitle}</span>
-                    </span>
-                  </button>
-                </li>
-              ))}
+                      {index === activeIndex ? <span className="kbd mt-0.5 shrink-0">↵</span> : null}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           )}
         </div>

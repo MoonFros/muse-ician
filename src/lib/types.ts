@@ -347,6 +347,10 @@ export interface IdeaVersion {
   label: string;
   created_at: ISODate;
   snapshot: IdeaSnapshot;
+  /** Readiness score captured with this version, if a review had been run. */
+  readiness_score?: number | null;
+  /** Which engine produced `readiness_score`. */
+  readiness_source?: 'local-heuristic' | 'ai' | null;
 }
 
 export interface IdeaSnapshot {

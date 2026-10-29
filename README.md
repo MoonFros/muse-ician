@@ -36,14 +36,21 @@ It is an application, not a landing page. Everything described below is implemen
 | --- | --- |
 | **Preset library** | 30 original, editable video formats with hooks, shot lists, execution steps, CTA examples, common mistakes and accessibility notes. Create, edit, duplicate, favourite, archive, export and import your own. |
 | **Songs** | Song records with lyrics, themes, strongest lines, audio sections, release status/date, equipment, constraints and persona notes. Everything else can link to a song. |
-| **Ideas** | Any preset becomes an editable idea tied to a real song. Idea workspace with plan, coach and version-history tabs. |
+| **Ideas** | Any preset becomes an editable idea tied to a real song. Idea workspace with plan, coach, A/B variant, reuse and version tabs. |
 | **Creative coach** | A transparent 0–100 readiness score from six weighted components, always available offline, plus an optional AI review that never overwrites your original text. |
 | **Filming plan** | Scene sequence, shot list, on-screen text, audio section, editing notes, CTA, estimated production time. |
-| **Metadata studio** | Separate YouTube Shorts, Instagram Reels and TikTok packages — title, caption, description, search phrases, hashtags with reasons, pinned comment, cover concept, accessibility notes. |
-| **Content calendar** | Month / week / list views, drag-to-move posts, nine workflow statuses, filters, cadence control, and warnings for duplicate or overdue posts. |
+| **Metadata studio** | Separate YouTube Shorts, Instagram Reels and TikTok packages — title, caption, description, search phrases, hashtags with reasons, pinned comment, cover concept, accessibility notes. **Batch mode** builds packages for many ideas at once and exports a spreadsheet-safe CSV. |
+| **Content calendar** | Month / week / list views, drag-to-move posts (or Alt + ←/→ on a focused post), nine workflow statuses, filters, cadence control, and warnings for duplicate, clashing (3+ on one day) or overdue posts. |
+| **Series planner** | Turn one preset into a 3–5 part arc. Four arc shapes, distinct job per part, saved as ideas plus calendar entries in one campaign. |
+| **Release runway** | Works backwards from a song's release date: seed → build → tease → launch → sustain, with the real starter preset behind each step and a one-click "add missing steps to calendar". |
 | **Campaign planner** | Generates a multi-week plan from the preset library for one song; every date and order stays editable. |
-| **Performance journal** | Typed-in results compared against your own median, with observed/perceived language kept separate and honest caveats. |
-| **JSON interchange** | Versioned schema, validation with a preview, duplicate-ID strategies, real downloadable `example.json`, `muse-ician.schema.json`, starter pack and sample backups. |
+| **Performance journal** | Typed-in results compared against your own median, with observed/perceived language kept separate and honest caveats. Comparatives group by platform, preset, song or objective and refuse to rank anything under three posts. |
+| **JSON interchange** | Versioned schema, validation with a preview, duplicate-ID strategies, real downloadable `example.json`, `muse-ician.schema.json`, starter pack and sample backups. A per-collection **merge review** shows exactly what a collaborator's file would add, conflict with or skip, with a copyable report. |
+| **A/B variant lab** | Generates hook and caption options, scores them on clarity, curiosity, song specificity, length fit and CTA strength, and explains the score. Applying a variant is an explicit action. |
+| **Reuse engine** | One finished idea becomes an X post, Story sequence, carousel, email, newsletter section, community post and lyric card — every draft traceable to the idea and song it came from. |
+| **Readiness history** | Every saved review is stored against the version it graded, with a trend line and a plain-language delta. |
+| **Command palette** | ⌘K / Ctrl-K or `/` opens records *and* actions (add a song, plan a campaign, build a series, import, export, settings). |
+| **Installable / offline** | Web app manifest, service worker, shortcuts and a share target. Installed, the whole local-first app works offline; only AI and live trends need the network. |
 | **Demo mode** | Sample campaign, clearly labelled `Demo data`, removable in one click from the dashboard or Settings. |
 
 Nothing in the app publishes to a social platform, edits video, or claims to know your analytics.
@@ -236,6 +243,29 @@ The Import / Export page builds a prompt containing the schema rules, your chose
 
 The browser never holds a key. `/api/ai` proxies to the provider with a server-side key and returns validated JSON, or an explicit error code.
 
+### Quick start with an OpenAI key
+
+1. Create a key at <https://platform.openai.com/api-keys> (a low-budget or free-tier key is enough — every action is one short request).
+2. Add these to **Vercel → Project → Settings → Environment Variables** (Production *and* Preview), or to a `.env` file at the repo root for `npm run dev`:
+
+   ```dotenv
+   AI_PROVIDER=openai
+   AI_API_KEY=sk-...
+   AI_MODEL=gpt-4o-mini
+   ```
+
+3. Redeploy (or restart `npm run dev`).
+4. Open **Settings → Connect OpenAI** and press **Test connection**. It sends one small request and reports the real result, so "configured" is never just a label. `https://<your-app>.vercel.app/api/status` shows the same truth.
+
+| Model | When to use it |
+| --- | --- |
+| `gpt-4o-mini` | Cheapest sensible default for coaching notes, captions and idea generation. |
+| `gpt-4.1-mini` | Slightly stronger reasoning, still inexpensive. |
+| `gpt-4o` | Best quality here; only worth it if you review ideas often. |
+| `o4-mini` | Reasoning model — slower, so raise `AI_TIMEOUT_MS` to `60000`. |
+
+Never prefix a key with `VITE_`: those variables are inlined into the public JavaScript bundle. The app has no field for entering a key on purpose — anything typed into a browser field is readable by anyone with access to that browser, and this app ships as static files.
+
 | Variable | Purpose |
 | --- | --- |
 | `AI_PROVIDER` | `openai`, `openai-compatible`, `anthropic` or `mock` |
@@ -345,7 +375,7 @@ hard-coded.
 | `npm run artifacts` | Regenerate `public/example.json`, the schema copy and `samples/*.json`, validating each one |
 | `npm run check` | Typecheck + tests + build |
 
-The test suite (**12 files, 79 tests**) covers:
+The test suite (**13 files, 109 tests**) covers:
 
 | Suite | What it proves |
 | --- | --- |
@@ -361,6 +391,7 @@ The test suite (**12 files, 79 tests**) covers:
 | `tests/accessibility.test.tsx` | Dialog Escape + focus return, toast live region, skip link, named icon-only links |
 | `tests/app.test.tsx` | Route smoke test with one real `<h1>` per page |
 | `tests/journey.test.tsx` | End-to-end journey: add a song, build an idea from a preset, log a result |
+| `tests/features.test.ts` | Variant scoring, reuse drafts, series arcs, runway order, comparatives gating, readiness history, CSV formula escaping, merge review, command palette, calendar clash warnings |
 
 The build also splits vendor code into separate chunks (`react`, `storage`) so the first paint does not download everything at once.
 
@@ -373,10 +404,12 @@ If JavaScript is disabled the app shows a plain-language notice instead of a bla
 ```
 src/
   components/       UI primitives, forms, layout, preset card
-  pages/            one file per route (13 routes)
+  pages/            one file per route (15 routes)
   lib/              domain logic: types, analysis, metadata templates, trends,
                     insights, campaign planner, import planning, validation,
-                    interchange (export builders + AI prompt), AI schemas
+                    interchange (export builders + AI prompt), variants (A/B
+                    scoring), reuse, series, runway, comparatives, history,
+                    batch (CSV), merge (collaborator diff), commands, AI schemas
   state/workspace   React context: load, persist, CRUD, demo data, integrations
   storage/          IndexedDB → localStorage → memory repository + defaults
   data/             seed presets, demo bundle
@@ -385,7 +418,8 @@ api/
   status.ts ai.ts trends.ts
   _lib/             http helpers, provider adapters, prompt specifications
 samples/            generated, validated example packs and backups
-public/             example.json, schema copy, favicon
+public/             example.json, schema copy, favicon, icons,
+                    manifest.webmanifest, sw.js
 tests/              Vitest suites
 ```
 
@@ -408,6 +442,9 @@ Key decisions:
 - AI availability depends entirely on your own provider credentials and budget.
 - Platform limits were verified in October 2026 and can change; the interface tells you to re-check before publishing.
 - Trend data is only as good as the provider or observation you give it.
+- Variant scores, the readiness rubric and the runway ordering are editorial heuristics. None of them predicts reach.
+- Install-to-home-screen needs a production build over HTTPS, so it is not testable in `npm run dev`.
+- The share target accepts `title`/`text`/`link` query parameters and pre-fills a song draft; it does not import audio.
 
 ---
 

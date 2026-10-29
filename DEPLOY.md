@@ -48,7 +48,10 @@ mandatory environment variables. With zero env vars the app runs in **local mode
    `vercel.json` was not picked up (check that you pushed it).
 
 4. Environment variables (optional — expand **Environment Variables** only if you
-   want AI or live trends):
+   want AI or live trends). For an OpenAI key the two lines that matter are
+   `AI_PROVIDER=openai` and `AI_API_KEY=sk-...`; add `AI_MODEL=gpt-4o-mini` for the
+   cheapest sensible default. Set them for **Production and Preview**, then
+   redeploy — Vercel does not rebuild when you only add a variable.
 
    ```dotenv
    AI_PROVIDER=openai            # openai | anthropic | custom (OpenAI-compatible)
@@ -141,11 +144,26 @@ ship to production — on Vercel the functions are compiled from `api/`.
 | `/api/ai` returns 429 `rate_limited` | Provider quota; the UI shows this message and keeps working without AI |
 | `/api/trends` returns 501 | No `TREND_PROVIDER_URL`. Trends are intentionally not fabricated |
 | Blank page after deploy | Assets 404 — the output directory must be `dist`, not `build` |
+| Install button never appears | `beforeinstallprompt` needs HTTPS, a production build and a reachable `/sw.js`. It will not appear on `npm run dev` |
+| `/sw.js` serves the old app | Bump `CACHE_VERSION` in `public/sw.js`; the old cache is deleted on activate |
+| `/api/ai` returns 401 or 403 | The key is wrong, revoked or has no credit — the message comes from your provider, not from muse-ician |
 | `npm ci` fails | `package-lock.json` out of date relative to `package.json`; run `npm install` and commit the lockfile |
 
 ---
 
-## 7. Deploying somewhere that is not Vercel
+## 7. After the first deploy
+
+- Open **Settings → Connect OpenAI** and press **Test connection**. It sends one
+  small request through `/api/ai` and reports the real result.
+- The app is installable from the browser's "Install app" / "Add to Home Screen"
+  action. The service worker caches the shell, so the preset library, ideas,
+  rubric, metadata, calendar and journal keep working offline.
+- Nothing is published, scheduled or posted by the deployment. Calendar rows are
+  planning records; the social platforms never see this app.
+
+---
+
+## 8. Deploying somewhere that is not Vercel
 
 The frontend is plain static output (`dist/`) and can go on Netlify, Cloudflare
 Pages, GitHub Pages or S3. Two caveats:

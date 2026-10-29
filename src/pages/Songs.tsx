@@ -13,13 +13,28 @@ export default function SongsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [formOpen, setFormOpen] = useState(false);
   const [query, setQuery] = useState('');
+  const [shared, setShared] = useState<{ title?: string; streamingUrl?: string } | undefined>(undefined);
   const [status, setStatus] = useState('');
 
   useEffect(() => {
-    if (searchParams.get('new') === '1') {
+    const sharedTitle = searchParams.get('title');
+    const sharedText = searchParams.get('text');
+    const sharedLink = searchParams.get('link');
+    const fromShare = Boolean(sharedTitle || sharedLink || searchParams.get('share') === '1');
+
+    if (searchParams.get('new') === '1' || fromShare) {
+      // PWA share target: a title/text/link from another app becomes a song draft.
+      if (fromShare) {
+        const guessTitle = (sharedTitle || sharedText || '').split(/[\n·—-]/)[0]?.trim() ?? '';
+        setShared({ title: guessTitle.slice(0, 120), streamingUrl: sharedLink ?? undefined });
+      }
       setFormOpen(true);
       const next = new URLSearchParams(searchParams);
       next.delete('new');
+      next.delete('title');
+      next.delete('text');
+      next.delete('link');
+      next.delete('share');
       setSearchParams(next, { replace: true });
     }
   }, [searchParams, setSearchParams]);
@@ -189,7 +204,14 @@ export default function SongsPage() {
         press an AI action, and the prompt preview lists exactly what is included.
       </p>
 
-      <SongFormModal open={formOpen} onClose={() => setFormOpen(false)} />
+      <SongFormModal
+        open={formOpen}
+        onClose={() => {
+          setFormOpen(false);
+          setShared(undefined);
+        }}
+        initial={shared}
+      />
     </div>
   );
 }

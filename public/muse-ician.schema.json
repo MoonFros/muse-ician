@@ -969,6 +969,25 @@
         },
         "snapshot": {
           "$ref": "#/$defs/idea_snapshot"
+        },
+        "readiness_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "readiness_source": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "local-heuristic",
+            "ai",
+            null
+          ]
         }
       }
     },

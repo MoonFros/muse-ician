@@ -9,6 +9,16 @@ import './index.css';
 const container = document.getElementById('root');
 if (!container) throw new Error('Root element #root is missing from index.html');
 
+// The service worker is only registered in production builds: a dev-mode worker
+// would cache Vite's module graph and fight hot reload.
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch((error) => {
+      console.warn('Service worker registration failed', error);
+    });
+  });
+}
+
 createRoot(container).render(
   <StrictMode>
     <BrowserRouter>

@@ -4,7 +4,7 @@
   "manifest": {
     "name": "Example Music Content Pack",
     "description": "A sample pack demonstrating the muse-ician import format: one manifest, one preset, one song, one content idea and one metadata package. Every value is placeholder data.",
-    "created_at": "2026-10-29T22:52:58.084Z",
+    "created_at": "2026-10-29T23:35:40.695Z",
     "author": "Example Author",
     "schema_version": "1.0.0",
     "exported_by": "muse-ician 1.0.0",
@@ -22,8 +22,8 @@
   },
   "presets": [
     {
-      "created_at": "2026-10-29T22:52:58.084Z",
-      "updated_at": "2026-10-29T22:52:58.084Z",
+      "created_at": "2026-10-29T23:35:40.695Z",
+      "updated_at": "2026-10-29T23:35:40.695Z",
       "schema_version": "1.0.0",
       "preset_version": "1.0.0",
       "is_favorite": false,
@@ -196,8 +196,8 @@
       "posting_frequency": "3 posts per week",
       "campaign_notes": "PLACEHOLDER campaign note.",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.084Z",
-      "updated_at": "2026-10-29T22:52:58.084Z",
+      "created_at": "2026-10-29T23:35:40.695Z",
+      "updated_at": "2026-10-29T23:35:40.695Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -240,8 +240,8 @@
       "coach_assessment": null,
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.084Z",
-      "updated_at": "2026-10-29T22:52:58.084Z",
+      "created_at": "2026-10-29T23:35:40.695Z",
+      "updated_at": "2026-10-29T23:35:40.695Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -285,8 +285,8 @@
       "source": "manual",
       "status": "draft",
       "is_demo": true,
-      "created_at": "2026-10-29T22:52:58.084Z",
-      "updated_at": "2026-10-29T22:52:58.084Z",
+      "created_at": "2026-10-29T23:35:40.695Z",
+      "updated_at": "2026-10-29T23:35:40.695Z",
       "schema_version": "1.0.0"
     }
   ],
