@@ -31,6 +31,8 @@ describe('routing', () => {
     ['/coach', /evaluate before you film/i],
     ['/metadata', /publishing packages/i],
     ['/calendar', /plan what goes out/i],
+    ['/series', /one idea, several parts/i],
+    ['/runway', /work backwards from the release/i],
     ['/journal', /results you recorded yourself/i],
     ['/trends', /only assess what you can attribute/i],
     ['/import-export', /move your work in and out/i],
