@@ -49,7 +49,8 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 5173,
-    strictPort: false,
+    // The preview proxy expects 5173 exactly; fail loudly instead of drifting to 5174.
+    strictPort: true,
     allowedHosts: true,
   },
   preview: {
