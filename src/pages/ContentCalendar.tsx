@@ -36,6 +36,7 @@ const PLATFORM_COLORS: Record<Platform, string> = {
   'youtube-shorts': 'border-danger/40 bg-danger/10 text-danger',
   'instagram-reels': 'border-accent/40 bg-accent-dim text-accent-soft',
   tiktok: 'border-ok/40 bg-ok/10 text-ok',
+  'youtube-long': 'border-warm/40 bg-warm/10 text-warm',
 };
 
 export default function ContentCalendarPage() {

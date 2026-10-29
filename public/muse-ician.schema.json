@@ -164,8 +164,10 @@
       "enum": [
         "youtube-shorts",
         "instagram-reels",
-        "tiktok"
-      ]
+        "tiktok",
+        "youtube-long"
+      ],
+      "description": "Distribution surface. youtube-long is long-form (visualisers, lyric videos, sessions, breakdowns) and carries chapter/metadata rules of its own."
     },
     "objective": {
       "enum": [
@@ -311,12 +313,12 @@
         "min": {
           "type": "integer",
           "minimum": 1,
-          "maximum": 600
+          "maximum": 3600
         },
         "max": {
           "type": "integer",
           "minimum": 1,
-          "maximum": 600
+          "maximum": 3600
         }
       }
     },

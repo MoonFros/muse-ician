@@ -165,7 +165,15 @@ export function LogoMark({ size = 32, className = '' }: { size?: number; classNa
 
 export function PlatformGlyph({ platform, size = 16 }: { platform: string; size?: number }) {
   const label =
-    platform === 'youtube-shorts' ? 'YT' : platform === 'instagram-reels' ? 'IG' : platform === 'tiktok' ? 'TT' : '–';
+    platform === 'youtube-long'
+      ? 'YT'
+      : platform === 'youtube-shorts'
+        ? 'YT'
+        : platform === 'instagram-reels'
+          ? 'IG'
+          : platform === 'tiktok'
+            ? 'TT'
+            : '–';
   return (
     <span
       aria-hidden="true"

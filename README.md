@@ -34,12 +34,12 @@ It is an application, not a landing page. Everything described below is implemen
 
 | Area | Behaviour |
 | --- | --- |
-| **Preset library** | 30 original, editable video formats with hooks, shot lists, execution steps, CTA examples, common mistakes and accessibility notes. Create, edit, duplicate, favourite, archive, export and import your own. |
+| **Preset library** | 35 original, editable video formats — 30 short-form plus 5 long-form YouTube formats — with hooks, shot lists, execution steps, CTA examples, common mistakes and accessibility notes. Create, edit, duplicate, favourite, archive, export and import your own. |
 | **Songs** | Song records with lyrics, themes, strongest lines, audio sections, release status/date, equipment, constraints and persona notes. Everything else can link to a song. |
 | **Ideas** | Any preset becomes an editable idea tied to a real song. Idea workspace with plan, coach, A/B variant, reuse and version tabs. |
 | **Creative coach** | A transparent 0–100 readiness score from six weighted components, always available offline, plus an optional AI review that never overwrites your original text. |
 | **Filming plan** | Scene sequence, shot list, on-screen text, audio section, editing notes, CTA, estimated production time. |
-| **Metadata studio** | Separate YouTube Shorts, Instagram Reels and TikTok packages — title, caption, description, search phrases, hashtags with reasons, pinned comment, cover concept, accessibility notes. **Batch mode** builds packages for many ideas at once and exports a spreadsheet-safe CSV. |
+| **Metadata studio** | Separate YouTube Shorts, Instagram Reels, TikTok and **long-form YouTube** packages — title, caption, description, search phrases, hashtags with reasons, pinned comment, cover concept, accessibility notes. **Batch mode** builds packages for many ideas at once and exports a spreadsheet-safe CSV. |
 | **Content calendar** | Month / week / list views, drag-to-move posts (or Alt + ←/→ on a focused post), nine workflow statuses, filters, cadence control, and warnings for duplicate, clashing (3+ on one day) or overdue posts. |
 | **Series planner** | Turn one preset into a 3–5 part arc. Four arc shapes, distinct job per part, saved as ideas plus calendar entries in one campaign. |
 | **Release runway** | Works backwards from a song's release date: seed → build → tease → launch → sustain, with the real starter preset behind each step and a one-click "add missing steps to calendar". |
@@ -102,7 +102,7 @@ npx vercel deploy
 Next action cards computed from your actual data (unfinished ideas, upcoming releases, posts due in the next week, published posts with no recorded result), active campaigns, workflow counts, recently edited ideas, release countdowns, and preference-based preset suggestions. Empty state routes first-time users to the three sensible starting points.
 
 ### Preset library
-- 30 starter presets (`src/data/seedPresets.ts`), each with a distinct creative purpose — not 30 renames of the same idea.
+- 35 starter presets (`src/data/seedPresets.ts` re-exporting `longFormPresets.ts`), each with a distinct creative purpose — not 35 renames of the same idea.
 - Search, sort (recommended, name, recently updated, difficulty, favourite), grid/list views.
 - Filters: platform, objective, difficulty, budget, filming method, equipment, face visibility, duration band, favourites, user-created, archived.
 - Bulk actions: favourite, archive, export, or turn several presets into ideas for one song at once.
@@ -116,8 +116,8 @@ Three tabs — **Plan**, **Coach**, **Versions**.
 - Versions: automatic snapshot before edits (last 25), with restore.
 
 ### Metadata studio
-- One idea → three packages. Generating all three always produces genuinely different copy, not one caption pasted three times.
-- Every field editable; per-field local regenerate; character counters against the platform limit; copy field, copy whole package, export JSON, mark draft/final.
+- One idea → one package per surface (Shorts, Reels, TikTok, long-form YouTube). Generating them all at once always produces genuinely different copy, not one caption pasted around.
+- Every field editable; per-field local regenerate; character counters against the platform limit (long-form surfaces show the description counter and the chapter block); copy field, copy whole package, export JSON, mark draft/final.
 - Hashtags appear with the reason each was suggested.
 - A visible note states the copy was written from saved fields only, with no live trend data, and that limits change.
 
@@ -172,13 +172,25 @@ Trend Opportunity is a separate score with its own inputs and its own disclaimer
 
 Checked against platform help/creator documentation and public limit trackers in **October 2026**. Platforms change limits without notice, and the UI repeats that warning.
 
-| | YouTube Shorts | Instagram Reels | TikTok |
-| --- | --- | --- | --- |
-| Field called "title" | Short title | On-screen / cover line (no title field) | Opening caption line (no title field) |
-| Title guidance | 100 chars | 125 chars | 100 chars |
-| Caption / description | 5,000 | 2,200 | 2,200 |
-| Visible before "more" | ~100 | ~125 | ~100 |
-| Hashtags suggested / platform maximum | 3 / 15 | 5 / 30 | 4 / 30 |
+| | YouTube Shorts | Instagram Reels | TikTok | YouTube long-form |
+| --- | --- | --- | --- | --- |
+| Field called "title" | Short title | On-screen / cover line (no title field) | Opening caption line (no title field) | The searchable title |
+| Title guidance | 100 chars | 125 chars | 100 chars | 100 chars |
+| Caption / description | 5,000 | 2,200 | 2,200 | 5,000 |
+| Visible before "more" | ~100 | ~125 | ~100 | ~157 |
+| Hashtags suggested / platform maximum | 3 / 15 | 5 / 30 | 4 / 30 | 3 / 15 |
+| Chapters | — | — | — | Required for the list to work: a `0:00` entry, 3+ timestamps, 10s apart |
+| Practical runtime | ≤ 3 min | ≤ 90 s | ≤ 10 min | 2–15 min |
+
+### Long-form YouTube
+
+A visualiser, a full lyric video or a live session is a different craft problem from a 20-second hook: people arrive from search or a playlist and stay for the song. The five long-form starter presets (official visualiser, full lyric video, one-take live session, making-of mini documentary, arrangement breakdown) carry their own runtimes, shot lists and metadata rules.
+
+- The **title** is written as the phrase someone would actually type, with an honest format suffix such as `(Official Visualiser)` or `(Lyric Video)` — never `#shorts #viral`.
+- The **description** is the primary body: a one-line summary, a chapter block, the song/credit block, a listen link that says "add your streaming link" when none is saved, the CTA and up to 15 hashtags.
+- **Chapters** are generated from the timestamps on your song record when you saved them, otherwise from an even split of the estimated runtime across your scene sequence. They are always normalised to YouTube's rules — start at `0:00`, at least three entries, 10 seconds apart — and there is a copy button for the block.
+- The thumbnail concept is a 1280×720 still that survives at 320 px, and the accessibility note asks for a real subtitle file plus a description of the visuals.
+- Nothing is published. These are copy-paste packages.
 
 Also per platform: search phrases, pinned comment, cover/thumbnail concept, opening overlay, three alternative hooks, recommended excerpt, suggested duration, accessibility notes, and a rationale naming exactly which saved fields were used.
 
@@ -214,7 +226,7 @@ Downloadable in the app:
 | --- | --- |
 | `example.json` | A complete, valid template: manifest, one preset, one clearly-placeholder song, one linked idea, one metadata package, plus instructions for an AI tool. |
 | `muse-ician.schema.json` | The JSON Schema every import is validated against. |
-| `starter-preset-pack.json` | All 30 starter presets as a real preset pack. |
+| `starter-preset-pack.json` | All 35 starter presets as a real preset pack. |
 | Workspace backup | Every record plus preferences. |
 | Campaign plan / metadata packages / performance snapshot | Scoped exports. |
 
@@ -375,7 +387,7 @@ hard-coded.
 | `npm run artifacts` | Regenerate `public/example.json`, the schema copy and `samples/*.json`, validating each one |
 | `npm run check` | Typecheck + tests + build |
 
-The test suite (**13 files, 109 tests**) covers:
+The test suite (**14 files, 123 tests**) covers:
 
 | Suite | What it proves |
 | --- | --- |
@@ -384,6 +396,7 @@ The test suite (**13 files, 109 tests**) covers:
 | `tests/import-ui.test.tsx` | Uploading `public/example.json` previews without mutating, then imports; broken JSON changes nothing |
 | `tests/analysis.test.ts` | Readiness rubric weights, bounds and honesty wording |
 | `tests/metadata.test.ts` | Per-platform limits and truncation behaviour |
+| `tests/longform.test.ts` | Long-form YouTube titles, description/chapter blocks and YouTube's 0:00 + 3-entry + 10s chapter rules |
 | `tests/insights.test.ts` | Performance-insight thresholds and small-sample caution |
 | `tests/trends.test.ts` | Freshness levels, empty observations, no invented numbers |
 | `tests/workspace.test.tsx` | Persistence, CRUD and demo-data add/remove through the context |

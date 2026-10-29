@@ -1,4 +1,5 @@
 import type { IconName } from '../components/ui/Icons';
+import { SEED_PRESET_COUNT } from '../data/seedPresets';
 
 export interface NavItem {
   to: string;
@@ -13,7 +14,7 @@ export interface NavItem {
 
 export const PRIMARY_NAV: NavItem[] = [
   { to: '/', label: 'Dashboard', icon: 'dashboard', mobile: true, description: 'Next steps and recent work' },
-  { to: '/library', label: 'Preset library', icon: 'library', mobile: true, description: '30 proven video formats' },
+  { to: '/library', label: 'Preset library', icon: 'library', mobile: true, description: `${SEED_PRESET_COUNT} proven video formats` },
   { to: '/songs', label: 'My songs', icon: 'song', mobile: true, description: 'Songs and their campaigns' },
   { to: '/coach', label: 'Creative coach', icon: 'coach', mobile: true, description: 'Readiness scores and notes' },
   { to: '/metadata', label: 'Metadata studio', icon: 'tag', description: 'Platform-specific publishing copy' },

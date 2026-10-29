@@ -6,6 +6,7 @@ import { Icon } from '../components/ui/Icons';
 import { ConfirmDialog, Modal } from '../components/ui/Modal';
 import { Callout, EmptyState, PageHeader, SearchField, SegmentedControl } from '../components/ui/primitives';
 import { Checkbox, Select } from '../components/ui/forms';
+import { SEED_PRESET_COUNT } from '../data/seedPresets';
 import { PresetCard } from '../components/presets/PresetCard';
 import { PresetFormModal } from '../components/forms/PresetFormModal';
 import { IdeaFromPresetModal } from '../components/forms/IdeaFromPresetModal';
@@ -272,7 +273,7 @@ export default function IdeaLibraryPage() {
       <PageHeader
         eyebrow="Idea Library"
         title="Video concept presets"
-        description="30 starter concepts plus anything you create or import. Each one is a complete execution recipe, not a slogan."
+        description={`${SEED_PRESET_COUNT} starter concepts (short-form and long-form) plus anything you create or import. Each one is a complete execution recipe, not a slogan.`}
         actions={
           <>
             <button
@@ -513,7 +514,7 @@ export default function IdeaLibraryPage() {
           title={data.presets.length === 0 ? 'Your preset library is empty' : 'No presets match those filters'}
           description={
             data.presets.length === 0
-              ? 'Restore the 30 starter presets in Settings, create your own, or import a preset pack.'
+              ? `Restore the ${SEED_PRESET_COUNT} starter presets in Settings, create your own, or import a preset pack.`
               : 'Search and filters work together, so a narrow combination can exclude everything. Clear one or two and try again.'
           }
           actions={

@@ -1,4 +1,5 @@
 import type { IconName } from '../components/ui/Icons';
+import { SEED_PRESET_COUNT } from '../data/seedPresets';
 
 /**
  * Command palette entries.
@@ -30,7 +31,7 @@ export const COMMANDS: Command[] = [
   {
     id: 'cmd-new-idea',
     label: 'Start an idea from the library',
-    hint: 'Browse 30 presets and pick one',
+    hint: `Browse ${SEED_PRESET_COUNT} presets and pick one`,
     icon: 'library',
     to: '/library?pick=1',
     keywords: ['idea', 'preset', 'new', 'create', 'video'],

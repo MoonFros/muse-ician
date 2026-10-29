@@ -9,6 +9,7 @@ import { CampaignPlanModal } from '../components/forms/CampaignPlanModal';
 import { IdeaFromPresetModal } from '../components/forms/IdeaFromPresetModal';
 import type { Preset } from '../lib/types';
 import { WORKFLOW_LABELS } from '../lib/types';
+import { SEED_PRESET_COUNT } from '../data/seedPresets';
 import { daysBetween, formatShortDate, pluralize, relativeTime, toDateKey, truncate } from '../lib/utils';
 
 export default function DashboardPage() {
@@ -71,7 +72,7 @@ export default function DashboardPage() {
     if (data.songs.length && !data.content_ideas.length) {
       actions.push({
         title: 'Turn a preset into a content idea',
-        detail: 'The starter library has 30 concepts you can adapt in a few minutes.',
+        detail: `The starter library has ${SEED_PRESET_COUNT} concepts you can adapt in a few minutes.`,
         to: '/library?pick=1',
         cta: 'Browse library',
       });
@@ -299,7 +300,7 @@ export default function DashboardPage() {
                 ['2. Pick a preset', 'Use it as is or customise it. Preserve your own direction.'],
                 ['3. Coach it', 'Check hook strength, song fit, pacing and feasibility before filming.'],
                 ['4. Write the plan', 'Shot list, on-screen text, audio section and a production estimate.'],
-                ['5. Build metadata', 'Separate YouTube Shorts, Reels and TikTok packages.'],
+                ['5. Build metadata', 'Separate Shorts, Reels, TikTok and long-form YouTube packages.'],
                 ['6. Schedule and log', 'Plan dates, publish manually, then record the numbers you can see.'],
               ].map(([title, body]) => (
                 <li key={title} className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3 transition-colors hover:border-white/[0.12]">

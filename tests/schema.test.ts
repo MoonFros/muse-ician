@@ -29,13 +29,19 @@ describe('committed JSON artifacts', () => {
     expect(result.ok).toBe(true);
   });
 
-  it('starter pack contains the 30 starter presets and needs no songs', async () => {
-    const payload = readJson('samples/starter-preset-pack.json') as { presets: { id: string }[]; songs?: unknown[] };
-    expect(payload.presets).toHaveLength(30);
+  it('starter pack contains all starter presets and needs no songs', async () => {
+    const payload = readJson('samples/starter-preset-pack.json') as {
+      presets: { id: string; platforms: string[] }[];
+      songs?: unknown[];
+    };
+    expect(payload.presets).toHaveLength(SEED_PRESETS.length);
+    expect(SEED_PRESETS.length).toBeGreaterThanOrEqual(35);
     expect(payload.songs ?? []).toHaveLength(0);
+    const longForm = payload.presets.filter((preset) => preset.platforms.includes('youtube-long'));
+    expect(longForm.length).toBeGreaterThanOrEqual(5);
     const result = await validatePayload(payload);
     expect(result.ok).toBe(true);
-    expect(result.counts.presets).toBe(30);
+    expect(result.counts.presets).toBe(SEED_PRESETS.length);
   });
 
   it('example.json contains instructions and clearly placeholder records', () => {

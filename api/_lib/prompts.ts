@@ -16,7 +16,7 @@ export const OPERATIONS = {
       "title": "string, max 80 chars",
       "concept_description": "string, 2-4 sentences, must reference the supplied song",
       "hook": "string, max 140 chars, one concrete opening line",
-      "platforms": ["youtube-shorts" | "instagram-reels" | "tiktok"],
+      "platforms": ["youtube-shorts" | "instagram-reels" | "tiktok" | "youtube-long"],
       "why_it_fits": "string, one sentence referencing the supplied song context",
       "source_preset_id": "string or null — id of a supplied preset this adapts"
     }
@@ -55,7 +55,7 @@ export const OPERATIONS = {
   "improvements": [{ "area": "string", "suggestion": "string", "impact": "high" | "medium" | "low" }],
   "revised_concept": "string — rewrite that preserves the artist's intention",
   "alternative_concept": "string",
-  "recommended_platforms": [{ "platform": "youtube-shorts" | "instagram-reels" | "tiktok", "reason": "string" }],
+  "recommended_platforms": [{ "platform": "youtube-shorts" | "instagram-reels" | "tiktok" | "youtube-long", "reason": "string" }],
   "next_steps": ["string"],
   "readiness": {
     "score": 0,
@@ -91,7 +91,7 @@ export const OPERATIONS = {
     shape: `{
   "platforms": [
     {
-      "platform": "youtube-shorts" | "instagram-reels" | "tiktok",
+      "platform": "youtube-shorts" | "instagram-reels" | "tiktok" | "youtube-long",
       "title": "string",
       "caption": "string",
       "description": "string or null",
@@ -149,7 +149,7 @@ Rules you must follow:
 4. Never promise virality, guaranteed reach, or streaming growth. Do not predict numbers.
 5. Never invent personal stories, lyrics or biographical details. Use only the supplied context; leave unknown fields null.
 6. Preserve the artist's original creative intent when revising. Mark additions clearly as suggestions.
-7. Respect platform differences: Shorts favours searchable titles and clear description context; Reels favours a strong first frame that works muted; TikTok favours a native opening and repeat viewing.
+7. Respect platform differences: Shorts favours searchable titles and clear description context; Reels favours a strong first frame that works muted; TikTok favours a native opening and repeat viewing; youtube-long is long-form (2-15 minutes) where the description carries chapters, credits and links, the title is what someone would search for, and the thumbnail is a 1280x720 still rather than a vertical frame.
 8. Output must be a single JSON object that matches the requested shape exactly. No Markdown fences, no commentary, no extra keys.`;
 
 export function buildMessages(operation: OperationName, context: unknown): { role: 'system' | 'user'; content: string }[] {

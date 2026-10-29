@@ -7,6 +7,7 @@ import { GlobalSearch } from './GlobalSearch';
 import { NAV_ITEMS, sectionForPath } from '../../lib/navigation';
 import { useWorkspace } from '../../state/workspace';
 import { PLATFORM_LABELS } from '../../lib/types';
+import { SEED_PRESET_COUNT } from '../../data/seedPresets';
 
 function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
   const { data, demoRecordCount } = useWorkspace();
@@ -125,7 +126,7 @@ function QuickAddMenu({ onClose }: { onClose: () => void }) {
     },
     {
       label: 'New idea from a preset',
-      description: 'Browse 30 starter concepts',
+      description: `Browse ${SEED_PRESET_COUNT} starter concepts`,
       icon: 'library',
       to: '/library?pick=1',
     },

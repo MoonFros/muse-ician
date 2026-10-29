@@ -6,6 +6,7 @@ import { WorkspaceProvider, useWorkspace } from '../src/state/workspace';
 import { createMemoryRepository } from '../src/storage/repository';
 import { ToastProvider } from '../src/components/ui/Toast';
 import { buildCustomIdea } from '../src/lib/ideas';
+import { SEED_PRESETS } from '../src/data/seedPresets';
 
 type Api = ReturnType<typeof useWorkspace>;
 let api: Api | null = null;
@@ -35,10 +36,10 @@ function wrap(children: ReactNode, repository = createMemoryRepository()) {
 }
 
 describe('workspace persistence', () => {
-  it('seeds the 30 starter presets on first load', async () => {
+  it('seeds every starter preset on first load', async () => {
     render(wrap(<Probe />));
     await waitFor(() => expect(screen.getByTestId('loading')).toHaveTextContent('false'));
-    expect(screen.getByTestId('presets')).toHaveTextContent('30');
+    expect(screen.getByTestId('presets')).toHaveTextContent(String(SEED_PRESETS.length));
   });
 
   it('persists records across a remount with the same storage', async () => {

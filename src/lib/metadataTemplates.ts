@@ -31,6 +31,12 @@ export interface PlatformConvention {
   visibleCaptionHint: number;
   searchable: boolean;
   pinnedComment: boolean;
+  /** Long-form surfaces use the description as the primary body and support chapters. */
+  longForm?: boolean;
+  /** Chapters need the first timestamp at 0:00 and at least three entries. */
+  chapters?: boolean;
+  /** Suggested length range in seconds for this surface. */
+  typicalDuration: { min: number; max: number };
   notes: string;
   sourceNote: string;
 }
@@ -47,6 +53,7 @@ export const PLATFORM_CONVENTIONS: Record<Platform, PlatformConvention> = {
     visibleCaptionHint: 100,
     searchable: true,
     pinnedComment: true,
+    typicalDuration: { min: 15, max: 60 },
     notes:
       'Title carries the search terms; the description is indexed but only its first ~100 characters show above the fold. First three hashtags in the description can appear above the title, and a video with more than 15 hashtags loses hashtag display entirely — so use a few, specific ones.',
     sourceNote: 'YouTube Help / Studio upload limits, verified October 2026: title 100 characters, description 5,000 characters.',
@@ -62,6 +69,7 @@ export const PLATFORM_CONVENTIONS: Record<Platform, PlatformConvention> = {
     visibleCaptionHint: 125,
     searchable: true,
     pinnedComment: true,
+    typicalDuration: { min: 10, max: 90 },
     notes:
       'Reels have no separate title, so this field is the line you burn into the video and/or open the caption with. Only the first ~125 characters show before “more”, and hashtags count inside the 2,200-character caption.',
     sourceNote: 'Instagram Help Centre caption and hashtag limits, verified October 2026: caption 2,200 characters, 30 hashtags per post.',
@@ -77,9 +85,29 @@ export const PLATFORM_CONVENTIONS: Record<Platform, PlatformConvention> = {
     visibleCaptionHint: 100,
     searchable: true,
     pinnedComment: true,
+    typicalDuration: { min: 10, max: 180 },
     notes:
       'TikTok has no title field — the first line of the caption is the hook, and roughly the first 100 characters show in the feed. Captions of about 150–300 characters are the practical range; keywords in the caption are read as search text.',
     sourceNote: 'TikTok Creator documentation and caption limit trackers, verified October 2026: caption 2,200 characters, 30 hashtags.',
+  },
+  'youtube-long': {
+    label: 'YouTube (long-form)',
+    titleLabel: 'Video title',
+    titleLimit: 100,
+    captionLimit: 5000,
+    descriptionLimit: 5000,
+    hashtagTarget: 3,
+    hashtagLimit: 15,
+    visibleCaptionHint: 157,
+    searchable: true,
+    pinnedComment: true,
+    longForm: true,
+    chapters: true,
+    typicalDuration: { min: 120, max: 900 },
+    notes:
+      'Long-form YouTube is searched, not scrolled: the title carries the phrase someone would type, the description is indexed and holds chapters and links. Chapters need a 0:00 entry and at least three timestamps of 10 seconds or more. More than 15 hashtags in the description disables hashtag display entirely.',
+    sourceNote:
+      'YouTube Help / Studio upload limits, verified October 2026: title 100 characters, description 5,000 characters, tags field 500 characters total, chapters require 3+ timestamps starting at 0:00.',
   },
 };
 
@@ -227,7 +255,7 @@ function buildHashtags(
     push('#shorts', 'Helps the video show in YouTube’s Shorts surfaces.');
   } else if (platform === 'instagram-reels') {
     push('#reels', 'Format tag for Instagram Reels.');
-  } else {
+  } else if (platform === 'tiktok') {
     push('#newmusic', 'Common discovery tag for original releases. No guarantee of reach.');
   }
 
@@ -262,11 +290,154 @@ function buildAlternatives(idea: ContentIdea, song: Song | null): string[] {
   return unique(options.filter(Boolean)).slice(0, 3);
 }
 
+/* -------------------------------------------------------------------------- */
+/* Chapters (long-form YouTube only)                                          */
+/* -------------------------------------------------------------------------- */
+
+export interface Chapter {
+  timestamp: string;
+  label: string;
+}
+
+/** Seconds → `m:ss` (or `h:mm:ss` past an hour). */
+export function formatTimestamp(seconds: number): string {
+  const total = Math.max(0, Math.round(seconds));
+  const hours = Math.floor(total / 3600);
+  const minutes = Math.floor((total % 3600) / 60);
+  const secs = total % 60;
+  const pad = (value: number) => String(value).padStart(2, '0');
+  return hours > 0 ? `${hours}:${pad(minutes)}:${pad(secs)}` : `${minutes}:${pad(secs)}`;
+}
+
+/** Parse `mm:ss` / `h:mm:ss` back to seconds, or null when it is not a timestamp. */
+export function parseTimestamp(value: string): number | null {
+  const match = value.trim().match(/^(?:(\d+):)?(\d{1,2}):(\d{2})$/);
+  if (!match) return null;
+  const [, hours, minutes, secs] = match;
+  const total = Number(hours ?? 0) * 3600 + Number(minutes) * 60 + Number(secs);
+  return Number.isFinite(total) ? total : null;
+}
+
+/**
+ * Chapters for a long-form video.
+ *
+ * YouTube only honours a chapter list when it starts at 0:00, has at least
+ * three entries and every entry is at least 10 seconds long, so this builder
+ * enforces those rules rather than emitting something that silently fails.
+ * Timestamps come from your own song notes when you saved them; otherwise the
+ * video is divided evenly and the labels come from the idea's scene sequence.
+ */
+export function buildChapters(input: {
+  idea: ContentIdea;
+  song?: Song | null;
+  preset?: Preset | null;
+  durationSeconds?: number | null;
+}): Chapter[] {
+  const { idea, song } = input;
+  const duration =
+    input.durationSeconds ??
+    (input.preset ? Math.round((input.preset.duration_seconds.min + input.preset.duration_seconds.max) / 2) : 210);
+
+  const fromSong = (song?.audio_sections ?? [])
+    .map((section) => {
+      const seconds = section.timestamp ? parseTimestamp(section.timestamp) : null;
+      return seconds === null ? null : { seconds, label: section.label.trim() };
+    })
+    .filter((entry): entry is { seconds: number; label: string } => Boolean(entry && entry.label))
+    .sort((a, b) => a.seconds - b.seconds);
+
+  const scenes = (idea.scene_sequence ?? [])
+    .map((scene) => scene.replace(/^\d+[.)]\s*/, '').trim())
+    .filter(Boolean);
+  const onScreen = (idea.on_screen_text ?? []).filter(Boolean);
+
+  const fallbackLabels = [
+    'Cold open',
+    ...scenes.slice(0, 5),
+    onScreen[0] ? `“${truncate(onScreen[0], 40)}”` : 'Outro',
+  ];
+
+  const entries: { seconds: number; label: string }[] = [];
+  if (fromSong.length >= 3) {
+    entries.push({ seconds: 0, label: fromSong[0]!.seconds === 0 ? fromSong[0]!.label : 'Intro' });
+    for (const entry of fromSong) {
+      if (entry.seconds === 0) continue;
+      entries.push(entry);
+    }
+  } else {
+    const count = Math.max(4, Math.min(6, fallbackLabels.length));
+    for (let index = 0; index < count; index += 1) {
+      entries.push({
+        seconds: Math.round((duration / count) * index),
+        label: truncate(fallbackLabels[index] ?? `Part ${index + 1}`, 60),
+      });
+    }
+  }
+
+  // Enforce YouTube's rules: start at 0:00, at least 10s apart, unique timestamps.
+  const cleaned: { seconds: number; label: string }[] = [];
+  for (const entry of entries) {
+    const last = cleaned[cleaned.length - 1];
+    if (!last) {
+      cleaned.push({ seconds: 0, label: entry.label });
+      continue;
+    }
+    if (entry.seconds - last.seconds < 10) continue;
+    if (entry.seconds >= duration - 5) continue;
+    cleaned.push(entry);
+  }
+
+  while (cleaned.length < 3) {
+    const index = cleaned.length;
+    const seconds = Math.min(duration - 5, Math.round((duration / 3) * index));
+    if (cleaned.some((entry) => entry.seconds === seconds)) break;
+    cleaned.push({ seconds, label: fallbackLabels[index] ?? `Part ${index + 1}` });
+  }
+
+  return cleaned.map((entry) => ({ timestamp: formatTimestamp(entry.seconds), label: truncate(entry.label, 60) }));
+}
+
+const LONG_FORM_SUFFIXES: { match: RegExp; suffix: string }[] = [
+  { match: /visuali[sz]er/i, suffix: '(Official Visualiser)' },
+  { match: /lyric/i, suffix: '(Lyric Video)' },
+  { match: /live|session|acoustic/i, suffix: '(Live Session)' },
+  { match: /documentary|making|behind/i, suffix: '(Behind the Song)' },
+  { match: /full song|audio|official audio/i, suffix: '(Official Audio)' },
+];
+
+/** A searchable long-form title: the phrase someone would type, plus the format. */
+export function buildLongFormTitle(input: {
+  idea: ContentIdea;
+  song?: Song | null;
+  preset?: Preset | null;
+  limit: number;
+}): string {
+  const { idea, song, preset } = input;
+  const songPart = song ? `${song.title}${song.artist ? ` — ${song.artist}` : ''}` : clean(idea.title);
+  const haystack = `${preset?.title ?? ''} ${preset?.tags?.join(' ') ?? ''} ${idea.title} ${idea.concept_description}`;
+  const suffix = LONG_FORM_SUFFIXES.find((entry) => entry.match.test(haystack))?.suffix ?? '';
+  const candidates = [
+    [songPart, suffix].filter(Boolean).join(' '),
+    [preset?.title, song ? song.title : '', suffix].filter(Boolean).join(' · '),
+    songPart,
+  ];
+  const chosen = candidates.find((candidate) => candidate.trim().length > 0) ?? idea.title;
+  return truncate(chosen.trim(), input.limit);
+}
+
+/** Chapters rendered as the block you paste into a YouTube description. */
+export function chaptersToText(chapters: Chapter[]): string {
+  return chapters.map((chapter) => `${chapter.timestamp} ${chapter.label}`).join('\n');
+}
+
 function defaultCta(platform: Platform, song: Song | null): string {
   if (platform === 'youtube-shorts') {
     return song ? `Full song: ${song.title} — link in the description.` : 'Full version linked in the description.';
   }
   if (platform === 'instagram-reels') return 'Save this if it lands, and tell me which line you would keep.';
+  if (platform === 'youtube-long') {
+    return 'If this is your kind of thing, subscribe for the next one and tell me which section to break down.';
+  }
   return 'Which line would you have kept? Reply and I will answer.';
 }
 
@@ -284,13 +455,22 @@ export function buildLocalMetadata(input: {
   const voice = TONE_VOICE[tone] ?? TONE_VOICE.conversational;
 
   const hook = clean(idea.hook) || clean(idea.title);
-  const title = truncate(hook || idea.title, convention.titleLimit);
+  const title = convention.longForm
+    ? buildLongFormTitle({ idea, song, preset, limit: convention.titleLimit })
+    : truncate(hook || idea.title, convention.titleLimit);
   const cta = clean(idea.call_to_action) || defaultCta(platform, song);
-  const duration = preset
+  const presetDuration = preset
     ? Math.round((preset.duration_seconds.min + preset.duration_seconds.max) / 2)
-    : idea.estimated_production_minutes
-      ? Math.round(idea.estimated_production_minutes / 2)
-      : 30;
+    : null;
+  const duration = convention.longForm
+    ? Math.min(
+        convention.typicalDuration.max,
+        Math.max(convention.typicalDuration.min, presetDuration ?? 210),
+      )
+    : (presetDuration ??
+      (idea.estimated_production_minutes ? Math.round(idea.estimated_production_minutes / 2) : 30));
+
+  const chapters = convention.chapters ? buildChapters({ idea, song, preset, durationSeconds: duration }) : [];
 
   const credit = song
     ? `${song.title}${song.artist ? ` — ${song.artist}` : ''}${song.release_status === 'released' ? '' : ` (${song.release_status?.replace(/_/g, ' ')})`}`
@@ -356,6 +536,37 @@ export function buildLocalMetadata(input: {
         .trim(),
       convention.captionLimit,
     );
+  } else if (platform === 'youtube-long') {
+    // On long-form the description *is* the primary text, so it lives in the
+    // caption field end-to-end (title, links, chapters, credits) and stays
+    // inside YouTube's 5,000-character limit.
+    caption = truncate(
+      [
+        sentence(truncate(clean(preset?.summary ?? idea.concept_description), 200)),
+        sentence(truncate(clean(idea.hook), 160)),
+        '',
+        chapters.length ? 'CHAPTERS' : '',
+        chapters.length ? chaptersToText(chapters) : '',
+        '',
+        'THE SONG',
+        credit,
+        song?.strongest_lyrics?.length ? `“${clean(song.strongest_lyrics[0])}”` : '',
+        song?.themes?.length ? `Themes: ${song.themes.join(', ')}` : '',
+        '',
+        'LISTEN',
+        song?.streaming_url ? song.streaming_url : 'Add your streaming link before publishing.',
+        '',
+        cta,
+        '',
+        buildHashtags(platform, idea, song, preset)
+          .map((tag) => tag.tag)
+          .join(' '),
+      ]
+        .filter((line, index) => line !== '' || index > 2)
+        .join('\n')
+        .trim(),
+      convention.captionLimit,
+    );
   } else {
     caption = truncate(
       [
@@ -371,18 +582,21 @@ export function buildLocalMetadata(input: {
     );
   }
 
-  const openingOverlay =
-    platform === 'instagram-reels' || platform === 'tiktok'
+  const openingOverlay = convention.longForm
+    ? truncate(`${song?.title ?? idea.title}${song?.artist ? ` — ${song.artist}` : ''}`, 60)
+    : platform === 'instagram-reels' || platform === 'tiktok'
       ? truncate(hook, 52)
       : truncate(`${hook} · ${song?.title ?? 'new song'}`, 60);
 
-  const thumbnail =
-    platform === 'youtube-shorts'
+  const thumbnail = convention.longForm
+    ? `Custom 1280×720 thumbnail: the song title in large type over a still from the strongest scene${song?.title ? ` of “${song.title}”` : ''}. Legible at 320 px wide, no more than five words, and consistent with the other videos in this series so the channel reads as one body of work.`
+    : platform === 'youtube-shorts'
       ? `Close crop of the video’s strongest frame with the line “${truncate(hook, 32)}” in the lower third. Keep text under seven words so it survives small thumbnails.`
       : `Cover frame from the ${excerpt.toLowerCase()} shot with “${truncate(hook, 28)}” over the quietest part of the frame.`;
 
-  const pinned =
-    platform === 'youtube-shorts'
+  const pinned = convention.longForm
+    ? `Chapters are in the description. If you only have a minute, start at ${chapters[Math.min(1, chapters.length - 1)]?.timestamp ?? '0:30'} — that is where the song actually begins. What should I break down next?`
+    : platform === 'youtube-shorts'
       ? `If you want the full version — it’s called ${song?.title ?? 'this one'}${song?.artist ? ` by ${song.artist}` : ''}. What should I break down next?`
       : `Which line should I explain next — ${song?.strongest_lyrics?.[0] ? `“${truncate(clean(song.strongest_lyrics[0]), 40)}”` : 'the second verse'} or the one I almost cut?`;
 
@@ -391,15 +605,22 @@ export function buildLocalMetadata(input: {
     'Keep on-screen text at least 24px at 1080×1920 and use a solid backing plate behind thin type.',
     platform === 'youtube-shorts'
       ? 'Write a descriptive title instead of “#shorts #viral”; the description should still read if the audio is off.'
-      : 'Avoid flashing cuts faster than 3 per second, and do not rely on colour alone to carry meaning.',
+      : convention.longForm
+        ? 'Upload a proper subtitle file rather than relying on auto-captions — a visualiser has no speech to caption, so add a description of the visuals for screen-reader users.'
+        : 'Avoid flashing cuts faster than 3 per second, and do not rely on colour alone to carry meaning.',
     `Verify the current ${convention.label} limits before publishing; muse-ician’s guidance was checked October 2026.`,
   ].join(' ');
 
   const rationale = [
     `${convention.label}: ${convention.notes}`,
     `Written only from what you saved — the idea’s hook and concept, the ${song ? `song record “${song.title}”` : 'song fields that are still empty'}, and ${preset ? `the “${preset.title}” preset` : 'no preset'}. No live trend data, view counts or viral predictions were used.`,
-    `Title limit ${convention.titleLimit}, caption limit ${convention.captionLimit.toLocaleString()}, ${pluralize(convention.hashtagTarget, 'hashtag')} recommended (platform maximum ${convention.hashtagLimit}).`,
-  ].join(' ');
+    `Title limit ${convention.titleLimit}, ${convention.longForm ? 'description' : 'caption'} limit ${convention.captionLimit.toLocaleString()}, ${pluralize(convention.hashtagTarget, 'hashtag')} recommended (platform maximum ${convention.hashtagLimit}).`,
+    convention.chapters
+      ? `${pluralize(chapters.length, 'chapter')} generated from ${song?.audio_sections?.length ? 'the timestamps saved on the song record' : 'an even split of the estimated runtime'} — YouTube needs 3+ timestamps starting at 0:00 and every chapter at least 10 seconds long.`
+      : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   return {
     content_idea_id: idea.id,

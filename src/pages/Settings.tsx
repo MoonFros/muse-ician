@@ -19,7 +19,7 @@ import { applyImportPlan, planImport } from '../lib/importPlan';
 import { parseJsonSafely, validatePayload, MAX_IMPORT_BYTES } from '../lib/validation';
 import { buildWorkspaceBackup, downloadPayload } from '../lib/interchange';
 import { APP_VERSION } from '../lib/interchange';
-import { SEED_PRESETS } from '../data/seedPresets';
+import { SEED_PRESETS, SEED_PRESET_COUNT } from '../data/seedPresets';
 import { pluralize, readFileText } from '../lib/utils';
 import { AiSetup } from '../components/settings/AiSetup';
 import { InstallCard } from '../components/pwa/InstallCard';
@@ -489,7 +489,7 @@ export default function SettingsPage() {
           <>
             <p>
               This removes every song, idea, campaign, metadata package and performance record from this browser, plus
-              your preferences. The 30 starter presets are re-added.
+              your preferences. The {SEED_PRESET_COUNT} starter presets are re-added.
             </p>
             <p className="text-danger">This cannot be undone. Export a backup first.</p>
           </>

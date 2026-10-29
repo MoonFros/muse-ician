@@ -426,13 +426,15 @@ const PLATFORM_REASONS: Record<Platform, string> = {
     'Reels favours a strong first frame that works on mute; good when the concept is visual or text-led.',
   tiktok:
     'TikTok favours a native, immediate opening and repeated watch loops; good when the concept has a fast turn.',
+  'youtube-long':
+    'Long-form YouTube rewards searchable titles, chapters and a reason to stay past the first 30 seconds; good when the piece is the destination rather than the hook.',
 };
 
 const PLATFORM_TAGS: Record<'text' | 'performance' | 'story' | 'visual', Platform[]> = {
   text: ['instagram-reels', 'tiktok'],
   performance: ['tiktok', 'instagram-reels'],
-  story: ['youtube-shorts', 'instagram-reels'],
-  visual: ['instagram-reels', 'youtube-shorts'],
+  story: ['youtube-shorts', 'youtube-long'],
+  visual: ['instagram-reels', 'youtube-shorts', 'youtube-long'],
 };
 
 function classifyConcept(idea: ContentIdea, preset?: Preset | null): 'text' | 'performance' | 'story' | 'visual' {

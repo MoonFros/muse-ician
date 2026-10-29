@@ -14,10 +14,12 @@ import {
 } from '../components/ui/primitives';
 import { Field, Select, TextInput } from '../components/ui/forms';
 import type { MetadataPackage, Platform, Tone } from '../lib/types';
-import { PLATFORM_LABELS, PLATFORMS, SCHEMA_VERSION, TONES } from '../lib/types';
+import { PLATFORM_LABELS, PLATFORM_SHORT_LABELS, PLATFORMS, SCHEMA_VERSION, TONES } from '../lib/types';
 import {
   PLATFORM_CONVENTIONS,
+  buildChapters,
   buildLocalMetadata,
+  chaptersToText,
   hashtagsToInput,
   makeMetadataPackage,
   metadataPackageToText,
@@ -219,10 +221,15 @@ export default function MetadataStudioPage() {
         setDraft(draftFromPackage(selected));
         setDirty(false);
       }
-      toast(allPlatforms ? 'Three platform drafts created' : `${PLATFORM_LABELS[platform]} draft created`, {
-        tone: 'success',
-        description: 'Built from your saved idea and song fields. Not trend research, and not AI output.',
-      });
+      toast(
+        allPlatforms
+          ? `${targets.length} platform drafts created`
+          : `${PLATFORM_LABELS[platform]} draft created`,
+        {
+          tone: 'success',
+          description: 'Built from your saved idea and song fields. Not trend research, and not AI output.',
+        },
+      );
     } catch {
       toast('The drafts could not be saved', { tone: 'error' });
     } finally {
@@ -363,6 +370,13 @@ export default function MetadataStudioPage() {
   };
 
   const conventions = PLATFORM_CONVENTIONS[platform];
+  const chapters = useMemo(
+    () =>
+      conventions.chapters && idea
+        ? buildChapters({ idea, song, preset })
+        : [],
+    [conventions.chapters, idea, song, preset],
+  );
   const packagesForIdea = data.metadata_packages.filter((pkg) => pkg.content_idea_id === ideaId);
 
   return (
@@ -370,7 +384,7 @@ export default function MetadataStudioPage() {
       <PageHeader
         eyebrow="Metadata Studio"
         title="Platform-specific publishing packages"
-        description="Three different packages, not one caption copied three times. Written from your saved idea — no invented links, trends or statistics."
+        description="A different package per surface — Shorts, Reels, TikTok and long-form YouTube — not one caption copied around. Written from your saved idea — no invented links, trends or statistics."
         actions={
           <>
             <SegmentedControl
@@ -480,8 +494,7 @@ export default function MetadataStudioPage() {
                       }}
                       options={PLATFORMS.map((value) => ({
                         value,
-                        label:
-                          value === 'youtube-shorts' ? 'Shorts' : value === 'instagram-reels' ? 'Reels' : 'TikTok',
+                        label: PLATFORM_SHORT_LABELS[value],
                       }))}
                     />
                   }
@@ -502,7 +515,7 @@ export default function MetadataStudioPage() {
                         disabled={generating}
                       >
                         <Icon name="sparkle" size={13} />
-                        Generate all three
+                        Generate all {PLATFORMS.length}
                       </button>
                       <button
                         type="button"
@@ -558,7 +571,11 @@ export default function MetadataStudioPage() {
                   <>
                     <SectionCard
                       title="Package content"
-                      description={`${PLATFORM_LABELS[platform]} · character guidance: title ≤ ${conventions.titleLimit}, caption ≤ ${conventions.captionLimit}`}
+                      description={
+                        conventions.longForm
+                          ? `${PLATFORM_LABELS[platform]} · title ≤ ${conventions.titleLimit}, description ≤ ${conventions.captionLimit.toLocaleString()} · ${conventions.chapters ? 'chapters (3+ timestamps, first at 0:00, 10s apart)' : ''}`
+                          : `${PLATFORM_LABELS[platform]} · character guidance: title ≤ ${conventions.titleLimit}, caption ≤ ${conventions.captionLimit}`
+                      }
                       actions={
                         <>
                           <span className="chip">{draft.status}</span>
@@ -573,7 +590,7 @@ export default function MetadataStudioPage() {
                         <div className="flex flex-wrap items-end gap-2">
                           <div className="min-w-0 flex-1">
                             <TextInput
-                              label={platform === 'youtube-shorts' ? 'Title' : 'Opening line'}
+                              label={conventions.titleLabel}
                               value={draft.title}
                               onChange={(event) => updateDraft('title', event.target.value)}
                               hint={`${draft.title.length}/${conventions.titleLimit} characters recommended`}
@@ -587,7 +604,9 @@ export default function MetadataStudioPage() {
 
                         <div>
                           <div className="mb-1.5 flex items-center justify-between">
-                            <span className="field-label mb-0">Caption</span>
+                            <span className="field-label mb-0">
+                              {conventions.longForm ? 'Description' : 'Caption'}
+                            </span>
                             <div className="flex gap-1">
                               <CopyButton text={draft.caption} label="Copy" className="btn-ghost btn-sm" />
                               <button type="button" className="btn-ghost btn-sm" onClick={() => regenerateField('caption')}>
@@ -601,16 +620,50 @@ export default function MetadataStudioPage() {
                             value={draft.caption}
                             onChange={(event) => updateDraft('caption', event.target.value)}
                           />
-                          <p className="mt-1 text-2xs text-slate-faint">
-                            {draft.caption.split(/\n/)[0]?.length ?? 0} characters in the first line ·{' '}
-                            {draft.caption.length} total
-                          </p>
+                          {conventions.longForm ? (
+                            <div className="mt-2 space-y-2">
+                              <p className="text-2xs text-slate-faint">
+                                {draft.caption.length.toLocaleString()} of{' '}
+                                {conventions.captionLimit.toLocaleString()} recommended · first{' '}
+                                {conventions.visibleCaptionHint} characters show before “more”
+                              </p>
+                              {chapters.length > 0 ? (
+                                <div className="rounded-lg border border-line bg-surface-raised/60 p-2.5">
+                                  <div className="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+                                    <span className="field-label mb-0">Chapter block</span>
+                                    <CopyButton
+                                      text={chaptersToText(chapters)}
+                                      label="Copy chapters"
+                                      className="btn-ghost btn-sm"
+                                    />
+                                  </div>
+                                  <pre className="overflow-x-auto text-2xs text-slate">{
+                                    chaptersToText(chapters)
+                                  }</pre>
+                                  <p className="mt-1 text-2xs text-slate-faint">
+                                    Paste into the description. YouTube needs a 0:00 entry, at least three
+                                    timestamps and 10 seconds between each.
+                                  </p>
+                                </div>
+                              ) : null}
+                            </div>
+                          ) : (
+                            <p className="mt-1 text-2xs text-slate-faint">
+                              {draft.caption.split(/\n/)[0]?.length ?? 0} characters in the first line ·{' '}
+                              {draft.caption.length} total
+                            </p>
+                          )}
                         </div>
 
                         <div>
                           <div className="mb-1.5 flex items-center justify-between">
                             <span className="field-label mb-0">
-                              Description {platform !== 'youtube-shorts' ? '(optional)' : ''}
+                              Description{' '}
+                              {conventions.longForm
+                                ? '(paste the same block here if you keep description and caption separate)'
+                                : platform !== 'youtube-shorts'
+                                  ? '(optional)'
+                                  : ''}
                             </span>
                             <button type="button" className="btn-ghost btn-sm" onClick={() => regenerateField('description')}>
                               Regenerate
@@ -622,9 +675,11 @@ export default function MetadataStudioPage() {
                             value={draft.description}
                             onChange={(event) => updateDraft('description', event.target.value)}
                             placeholder={
-                              platform === 'youtube-shorts'
-                                ? 'Context plus the real song link, if you have one stored'
-                                : 'Optional. Most platforms do not surface a separate description.'
+                              conventions.longForm
+                                ? 'Chapters, credits and links — YouTube shows up to 5,000 characters here'
+                                : platform === 'youtube-shorts'
+                                  ? 'Context plus the real song link, if you have one stored'
+                                  : 'Optional. Most platforms do not surface a separate description.'
                             }
                           />
                         </div>

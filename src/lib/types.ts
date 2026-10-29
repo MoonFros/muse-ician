@@ -10,14 +10,34 @@
 export const SCHEMA_VERSION = '1.0.0';
 export const PRESET_VERSION = '1.0.0';
 
-export const PLATFORMS = ['youtube-shorts', 'instagram-reels', 'tiktok'] as const;
+export const PLATFORMS = ['youtube-shorts', 'instagram-reels', 'tiktok', 'youtube-long'] as const;
 export type Platform = (typeof PLATFORMS)[number];
 
 export const PLATFORM_LABELS: Record<Platform, string> = {
   'youtube-shorts': 'YouTube Shorts',
   'instagram-reels': 'Instagram Reels',
   tiktok: 'TikTok',
+  'youtube-long': 'YouTube (long-form)',
 };
+
+/** Short labels for dense UI (chips, calendar, select options). */
+export const PLATFORM_SHORT_LABELS: Record<Platform, string> = {
+  'youtube-shorts': 'Shorts',
+  'instagram-reels': 'Reels',
+  tiktok: 'TikTok',
+  'youtube-long': 'YouTube',
+};
+
+/**
+ * Long-form and short-form are different disciplines: a visualiser or a
+ * lyric video is a *destination* people sit through, not a hook they scroll
+ * past. Presets and metadata rules branch on this.
+ */
+export const LONG_FORM_PLATFORMS: Platform[] = ['youtube-long'];
+
+export function isLongForm(platform: Platform): boolean {
+  return platform === 'youtube-long';
+}
 
 export const OBJECTIVES = [
   'discovery',

@@ -1,8 +1,13 @@
 import type { Preset } from '../lib/types';
 import { PRESET_VERSION, SCHEMA_VERSION } from '../lib/types';
+import { LONG_FORM_PRESETS_RAW } from './longFormPresets';
 
 /**
- * The 30 starter presets. These are shipped as data (and regenerated into
+ * The starter presets: 30 short-form formats plus 5 long-form YouTube formats
+ * (visualiser, full lyric video, live session, making-of documentary,
+ * arrangement breakdown).
+ *
+ * These are shipped as data (and regenerated into
  * `samples/starter-preset-pack.json` + `public/example.json` by
  * `npm run artifacts`), so the in-app library, the importable pack and the
  * downloadable template can never drift apart.
@@ -13,7 +18,7 @@ const SEED_UPDATED_AT = '2026-09-15T00:00:00Z';
 
 type SeedPreset = Omit<Preset, 'created_at' | 'updated_at' | 'schema_version' | 'preset_version'>;
 
-export const SEED_PRESETS_RAW: SeedPreset[] = [
+const SHORT_FORM_PRESETS_RAW: SeedPreset[] = [
   {
     id: 'preset-relatable-pov',
     title: 'Relatable POV',
@@ -1988,6 +1993,8 @@ export const SEED_PRESETS_RAW: SeedPreset[] = [
     },
   },
 ];
+
+export const SEED_PRESETS_RAW: SeedPreset[] = [...SHORT_FORM_PRESETS_RAW, ...LONG_FORM_PRESETS_RAW];
 
 const SEED_DEFAULTS = {
   created_at: SEED_CREATED_AT,
