@@ -1,0 +1,2650 @@
+{
+  "schema_version": "1.0.0",
+  "export_type": "workspace_backup",
+  "manifest": {
+    "name": "muse-ician sample workspace (demo data)",
+    "description": "A complete backup of this browser’s muse-ician workspace, including preferences.",
+    "created_at": "2026-10-29T22:52:58.723Z",
+    "author": null,
+    "schema_version": "1.0.0",
+    "exported_by": "muse-ician 1.0.0",
+    "notes": "Restore with Import / Export → Workspace backup. Importing never deletes records that are not in the file.",
+    "record_counts": {
+      "presets": 8,
+      "songs": 1,
+      "content_ideas": 8,
+      "metadata_packages": 4,
+      "campaigns": 1,
+      "planned_posts": 8,
+      "trends": 0,
+      "performance_records": 3
+    }
+  },
+  "preferences": {
+    "id": "preferences",
+    "artist_name": "Demo Artist",
+    "persona": "Sample data for exploring muse-ician. Every record is labelled as demo data and can be removed in Settings.",
+    "preferred_genres": [
+      "indie pop"
+    ],
+    "preferred_moods": [
+      "melancholy"
+    ],
+    "preferred_platforms": [
+      "instagram-reels",
+      "tiktok",
+      "youtube-shorts"
+    ],
+    "budget": null,
+    "equipment": [
+      "phone",
+      "phone-tripod"
+    ],
+    "filming_preferences": [],
+    "visual_style": "Muted, natural light, no performance face-on shots.",
+    "default_tone": "conversational",
+    "language": "en",
+    "posting_cadence_days": 3,
+    "use_local_analysis": true,
+    "onboarding_complete": true,
+    "updated_at": "2026-10-29T22:52:58.723Z",
+    "schema_version": "1.0.0"
+  },
+  "presets": [
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Silent setup, song enters late (stronger for TikTok)",
+        "Two-shot split: the situation and the aftermath side by side",
+        "Text-only version over a still photo for zero-budget weeks"
+      ],
+      "common_mistakes": [
+        "Explaining the POV out loud instead of letting the image do it",
+        "Choosing a situation so broad that nobody feels personally seen",
+        "Starting the song too early so the audience has no reason to wait"
+      ],
+      "on_screen_text": [
+        "POV: you are driving home and realise you are the one who changed",
+        "Lyric, lower third, 18 seconds in"
+      ],
+      "secondary_objectives": [
+        "storytelling"
+      ],
+      "genre_tags": [
+        "pop",
+        "r&b",
+        "indie",
+        "hip-hop",
+        "singer-songwriter"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "bittersweet",
+        "hopeful"
+      ],
+      "id": "preset-relatable-pov",
+      "title": "Relatable POV",
+      "summary": "Stage a situation your listeners recognise instantly, then let the song land as the resolution.",
+      "description": "Open inside a small, specific, slightly uncomfortable everyday moment — the 2am text you should not send, the group chat you muted, the drive home after a bad day. Play the situation straight for 3–5 seconds with almost no performance, then cut to the song section that answers the feeling. The power comes from specificity: name a real object, a real time, a real sentence someone said. Broad \"when you are sad\" framing reads as generic; \"reading their message and typing nothing back\" does not.",
+      "objectives": [
+        "discovery",
+        "song-promotion",
+        "audience-engagement"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 12,
+        "max": 25
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "pov",
+        "relatable",
+        "lyrics",
+        "everyday-life"
+      ],
+      "song_context_required": "One lyric or 8–15 second section that resolves or reframes the emotion.",
+      "hook_examples": [
+        "POV: you finally stopped explaining yourself",
+        "POV: the message you typed and deleted at 2am",
+        "POV: you are fine until this song comes on in the car"
+      ],
+      "execution_steps": [
+        "Choose the exact lyric line and note its timestamp in the song.",
+        "Write the situation as one concrete sentence with a real object, time or place in it.",
+        "Film the setup in a single static shot — no smiling at the camera, no explaining.",
+        "Add a two-word overlay in the first second: \"POV:\" plus the situation.",
+        "Cut to the song exactly when the emotion peaks in the lyric, not a beat late.",
+        "Let the clip run 4–6 seconds on the lyric, then hold one beat of silence or room tone before it loops."
+      ],
+      "shot_list": [
+        "Setup: one static shot of the situation (hands, screen, empty seat, doorway)",
+        "Insert: the object that carries the story (phone, receipt, jacket, keys)",
+        "Reaction: cut to your face at the moment the lyric lands",
+        "Payoff: wide shot with the lyric on screen"
+      ],
+      "audio_guidance": "Start with the environment sound for one second, then let the song enter on the downbeat of the chorus. Do not talk over the setup — the silence is the tension.",
+      "editing_notes": "Hard cuts only. Keep total cuts to three. Leave the frame slightly imperfect (a reflection, an unmade bed) — polish kills the recognition.",
+      "cta_examples": [
+        "What would you have done in this situation?",
+        "Save this for the next time you need it."
+      ],
+      "accessibility_notes": "Burned-in captions for the overlay, high contrast text on a dark backing plate, and avoid flashing cuts.",
+      "example_metadata": {
+        "tone": "conversational",
+        "caption_example": "Wrote this line in a parked car outside my flat. It is track 3 on the EP — link in bio if it sounds like your week.",
+        "title_example": "POV: you stopped explaining yourself — new song",
+        "hashtag_examples": [
+          "#pov",
+          "#lyricsthatstick",
+          "#indieartist",
+          "#newmusictiktok"
+        ]
+      },
+      "estimated_production_minutes": 60
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Typewriter reveal on paper",
+        "Handwritten lyric on a mirror or window",
+        "Animated kinetic typography without any footage",
+        "Lyric painted on a wall, camera pulls back to reveal the room"
+      ],
+      "common_mistakes": [
+        "Choosing a lyric that needs the verse to make sense",
+        "Text so small or fast that people cannot read it",
+        "Illustrating the lyric literally and killing the metaphor"
+      ],
+      "on_screen_text": [
+        "I learned to be quiet in rooms that were never mine",
+        "Line 2 of verse 2 — \"Low Tide\""
+      ],
+      "secondary_objectives": [
+        "audience-engagement",
+        "storytelling"
+      ],
+      "genre_tags": [
+        "indie",
+        "alternative",
+        "pop",
+        "singer-songwriter"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "reflective",
+        "hopeful"
+      ],
+      "id": "preset-lyric-that-hits",
+      "title": "The Lyric That Hits",
+      "summary": "Build a short video where one distinctive lyric is the whole event.",
+      "description": "Pick a single line that can stand alone as a sentence. Everything in the video exists to make that line land harder: a slow reveal, a visual metaphor that matches its meaning, and text timing that lets the viewer read before the vocal arrives. Choose the lyric people quote back at you — the one with a specific image or a sharp turn of phrase, not the most repetitive hook.",
+      "objectives": [
+        "discovery",
+        "song-promotion"
+      ],
+      "platforms": [
+        "youtube-shorts",
+        "instagram-reels",
+        "tiktok"
+      ],
+      "duration_seconds": {
+        "min": 8,
+        "max": 20
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text",
+        "animation"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "lyrics",
+        "typography",
+        "storytelling",
+        "minimal"
+      ],
+      "song_context_required": "One self-contained lyric line plus the timestamp where it is sung.",
+      "hook_examples": [
+        "This line took me four months to write",
+        "One lyric from the song, no explanation",
+        "The line nobody has noticed yet"
+      ],
+      "execution_steps": [
+        "Choose one lyric that makes sense without the surrounding verse.",
+        "Plan the visual to support the line rather than illustrate it literally.",
+        "Open with one second of quiet — an empty frame or the lyric typed out.",
+        "Split the lyric into two beats: setup, then the turn of the phrase.",
+        "Time the text so the last word arrives exactly with the vocal.",
+        "Hold the final frame for one second so viewers can screenshot it."
+      ],
+      "shot_list": [
+        "Cold open: still frame or slow pan, no text",
+        "Text beat 1: first half of the lyric",
+        "Text beat 2: the turn of the line, over the musical swell",
+        "Final frame: full lyric, legible, held"
+      ],
+      "audio_guidance": "Use the studio vocal, not a live capture. Start 1.5 seconds before the lyric so the phrase has room to arrive.",
+      "editing_notes": "One typeface, two sizes. Text should appear on the beat of the vocal, not before it. Keep animatics under 200ms.",
+      "cta_examples": [
+        "Which line of the song hits hardest for you?",
+        "Screenshot this one and send it to whoever needs it."
+      ],
+      "accessibility_notes": "Minimum 32px equivalent text in a high-contrast colour, no serif script fonts, avoid text over busy footage.",
+      "example_metadata": {
+        "tone": "minimal",
+        "caption_example": "The last line of the bridge. The whole song lives or dies on this one.",
+        "title_example": "The line I rewrote 11 times",
+        "hashtag_examples": [
+          "#lyricvideo",
+          "#lyricsthatstick",
+          "#indiemusic",
+          "#songwriting"
+        ]
+      },
+      "estimated_production_minutes": 45
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "post-release",
+      "variations": [
+        "Voiceover over studio B-roll instead of talking head",
+        "Screen recording of the session with your voice",
+        "Split screen: early demo on the left, final on the right"
+      ],
+      "common_mistakes": [
+        "Starting with \"so this song is about...\" instead of the decision",
+        "Making it about feelings rather than a concrete choice",
+        "Explaining the whole album in 30 seconds"
+      ],
+      "on_screen_text": [
+        "I almost deleted this bridge",
+        "Voice memo, March 2025"
+      ],
+      "secondary_objectives": [
+        "discovery",
+        "education"
+      ],
+      "genre_tags": [
+        "indie",
+        "pop",
+        "hip-hop",
+        "rock",
+        "electronic"
+      ],
+      "mood_tags": [
+        "reflective",
+        "curious",
+        "warm"
+      ],
+      "id": "preset-behind-the-song",
+      "title": "Behind the Song",
+      "summary": "Tell the real decision, accident or argument that produced this song.",
+      "description": "A 20–40 second talking-head or voiceover piece about one specific choice, not the whole origin story. The winning version names a decision and its consequence: the producer who said cut the second verse, the cheap keyboard that ended up as the lead, the argument that became the pre-chorus. Specificity is the difference between an interesting video and an artist diary entry nobody finishes.",
+      "objectives": [
+        "storytelling",
+        "audience-engagement",
+        "artist-identity"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "youtube-shorts",
+        "tiktok"
+      ],
+      "duration_seconds": {
+        "min": 20,
+        "max": 45
+      },
+      "difficulty": "moderate",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "screen-recording",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "storytelling",
+        "songwriting",
+        "studio",
+        "process"
+      ],
+      "song_context_required": "A true, specific story about the making of the song.",
+      "hook_examples": [
+        "I nearly cut the best part of this song",
+        "This song only exists because a session got cancelled",
+        "The producer wanted a different chorus. I said no for two weeks."
+      ],
+      "execution_steps": [
+        "Write one sentence: the decision, the alternative, and why you refused it.",
+        "Record the story in 25–35 seconds — no intro, start on the decision.",
+        "Cut any sentence that only sets up the story (three takes will show you which ones).",
+        "Show the evidence: session file, voice memo, scribbled lyric, plugin screenshot.",
+        "Land the story, then play 4 seconds of the actual moment it produced."
+      ],
+      "shot_list": [
+        "Talking head, mid-shot, looking slightly off camera",
+        "Insert: DAW session or voice memo timestamp",
+        "Insert: the lyric page or notebook",
+        "Final 4 seconds: the song moment the story earned"
+      ],
+      "audio_guidance": "Phone mic close to the mouth, room treated with a duvet if possible. Duck the instrumental to -20dB under your voice and lift it for the final four seconds.",
+      "editing_notes": "Subtitles are mandatory. Jump-cut between sentences to keep pace. Keep one silence before the payoff line.",
+      "cta_examples": [
+        "What should I explain next — the drums or the falsetto?",
+        "Full breakdown of this track is pinned on my profile."
+      ],
+      "accessibility_notes": "Hard-code subtitles; keep the talking head lit well enough to read lips; avoid music louder than -18dB under speech.",
+      "example_metadata": {
+        "tone": "storytelling",
+        "caption_example": "The bridge you hear was take one, recorded on a phone at 3am. I never got it that honest again, so I kept the phone take.",
+        "title_example": "Why the bridge in this song is a phone recording",
+        "hashtag_examples": [
+          "#behindthesong",
+          "#songwritingprocess",
+          "#musicproducer",
+          "#bedroompop"
+        ]
+      },
+      "estimated_production_minutes": 90
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "post-release",
+      "variations": [
+        "Lyrics side by side, same melody",
+        "Loop the demo three times before the reveal",
+        "Producer/artist duet format: you react to your own demo"
+      ],
+      "common_mistakes": [
+        "Choosing a demo that already sounds finished",
+        "Not labelling which version is which",
+        "Letting the demo run so long people swipe away before the reveal"
+      ],
+      "on_screen_text": [
+        "March 2024 — voice memo",
+        "September 2026 — final mix"
+      ],
+      "secondary_objectives": [
+        "behind-the-scenes",
+        "artist-identity"
+      ],
+      "genre_tags": [
+        "pop",
+        "electronic",
+        "hip-hop",
+        "indie",
+        "rock"
+      ],
+      "mood_tags": [
+        "nostalgic",
+        "curious",
+        "energetic"
+      ],
+      "id": "preset-unfinished-version",
+      "title": "The Unfinished Version",
+      "summary": "Play the rough voice memo next to the finished production and let the gap do the talking.",
+      "description": "A before/after built from material you already own. The voice memo does not need to be good — it needs to be recognisably the same song with less polish. The turn is the transition: cut on the same word, same drum hit, or same vocal phrase so the listener hears the production arrive rather than being told about it.",
+      "objectives": [
+        "audience-engagement",
+        "storytelling",
+        "song-promotion"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 35
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "screen-recording",
+        "static-text",
+        "hybrid"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "demo",
+        "before-after",
+        "production",
+        "process"
+      ],
+      "song_context_required": "A voice memo of the song plus the corresponding finished section.",
+      "hook_examples": [
+        "Voice memo vs the final mix",
+        "This was recorded on a broken phone in 2023",
+        "Same lyric, two years apart"
+      ],
+      "execution_steps": [
+        "Find the matching phrase in both the demo and the final version.",
+        "Align both clips so the transition happens on the same word.",
+        "Label the two sides with dates so the difference is undeniable.",
+        "Cut to the finished version on a downbeat for maximum impact.",
+        "Add one line of context — what changed and why."
+      ],
+      "shot_list": [
+        "Screen capture of voice memo with visible date",
+        "Same section from the finished mix",
+        "Optional: you reacting in the corner"
+      ],
+      "audio_guidance": "Normalise both clips to similar loudness so the comparison is about production, not volume. Keep the demo slightly quieter to feel smaller.",
+      "editing_notes": "Hard cut at the join. Do not crossfade — the jolt is the point. Keep the whole clip under 30 seconds.",
+      "cta_examples": [
+        "Which version do you prefer? Be honest.",
+        "Full song out now — demo version is on Patreon."
+      ],
+      "accessibility_notes": "Caption both sections and state the dates in text, not only in audio.",
+      "example_metadata": {
+        "tone": "storytelling",
+        "caption_example": "The voice memo is from a night I almost scrapped the song. The finished version came nine months later.",
+        "title_example": "Voice memo vs final mix",
+        "hashtag_examples": [
+          "#beforeandafter",
+          "#voicememo",
+          "#musicproduction",
+          "#newmusic"
+        ]
+      },
+      "estimated_production_minutes": 35
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "release-week",
+      "variations": [
+        "Text-card version for quiet, low-effort release days",
+        "Multi-song version for an EP or album",
+        "Carousel-style introduction across a series of posts"
+      ],
+      "common_mistakes": [
+        "Talking for 10 seconds before any music plays",
+        "Saying \"link in bio\" without naming the platform-specific destination",
+        "Listing every streaming service out loud"
+      ],
+      "on_screen_text": [
+        "Out now — \"Song Title\"",
+        "For anyone who stayed too long"
+      ],
+      "secondary_objectives": [
+        "artist-identity"
+      ],
+      "genre_tags": [
+        "pop",
+        "indie",
+        "hip-hop",
+        "r&b",
+        "folk"
+      ],
+      "mood_tags": [
+        "direct",
+        "welcoming",
+        "warm"
+      ],
+      "id": "preset-direct-introduction",
+      "title": "Direct Song Introduction",
+      "summary": "Introduce the song, say who it is for, play the strongest excerpt, and tell people where to find it.",
+      "description": "The straightest concept in the library, and the one most artists execute badly. It works when it is short and specific: what the song is, who it is for, one line of why it exists, then the excerpt. No throat-clearing, no \"link in bio\" before anyone has heard a note. Useful as a pinned post and as a launch-day post.",
+      "objectives": [
+        "song-promotion",
+        "discovery"
+      ],
+      "platforms": [
+        "youtube-shorts",
+        "instagram-reels",
+        "tiktok"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 35
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "introduction",
+        "launch",
+        "accessible",
+        "pinned"
+      ],
+      "song_context_required": "A strong 8–15 second excerpt and one sentence of context.",
+      "hook_examples": [
+        "This song is for anyone who stayed too long",
+        "New song out today — here is the part worth hearing",
+        "If you liked \"Previous Song\", start at 0:48 of this one"
+      ],
+      "execution_steps": [
+        "Write the \"who is this for\" sentence and cut it to under 12 words.",
+        "Lead with the excerpt, not with the announcement.",
+        "Put the song title on screen in the first two seconds.",
+        "Add one line of context after the excerpt, not before.",
+        "Close with one clear destination: profile, saved playlist, streaming link."
+      ],
+      "shot_list": [
+        "Opening frame with song title and artist name",
+        "Performance or visual for the excerpt",
+        "Talking head or text card with the context line",
+        "Closing frame with where to listen"
+      ],
+      "audio_guidance": "Start on the vocal, not on a cold intro. If the song has a long intro, start the clip 3 seconds before the first line.",
+      "editing_notes": "Front-load the music. Put the announcement text over the audio instead of speaking it.",
+      "cta_examples": [
+        "Full song is on my profile and streaming everywhere.",
+        "Save this, then tell me which line you related to."
+      ],
+      "accessibility_notes": "Include the song title, artist name and platform destination as on-screen text, and caption all speech.",
+      "estimated_production_minutes": 25,
+      "example_metadata": {
+        "tone": "direct",
+        "caption_example": "\"Low Tide\" is out now. It is about the year I spent waiting for someone to change their mind. Full song on my profile.",
+        "title_example": "New song: Low Tide",
+        "hashtag_examples": [
+          "#newmusic",
+          "#outnow",
+          "#indiemusic",
+          "#songrelease"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "post-release",
+      "variations": [
+        "Guess the instrument before the label appears",
+        "Flatten the whole mix to show how much processing is doing",
+        "Harmony stack soloed a cappella"
+      ],
+      "common_mistakes": [
+        "Isolating an element with no audible payoff",
+        "Skipping the full mix reveal",
+        "Explaining technical terms without translating them"
+      ],
+      "on_screen_text": [
+        "Bass only",
+        "Bass + drums",
+        "Everything"
+      ],
+      "secondary_objectives": [
+        "audience-engagement",
+        "discovery"
+      ],
+      "genre_tags": [
+        "electronic",
+        "pop",
+        "hip-hop",
+        "r&b",
+        "rock"
+      ],
+      "mood_tags": [
+        "analytical",
+        "playful",
+        "curious"
+      ],
+      "id": "preset-song-dissected",
+      "title": "Song Dissected",
+      "summary": "Isolate one element of the mix — vocals, drums, bass, harmony — then drop the full track back in.",
+      "description": "A production-forward concept that rewards repeat viewing. Mute everything except one layer, name what the viewer is hearing, then bring the full mix back so the contrast lands. Works with a session screenshot, a waveform, or simply a labelled audio clip — no video footage strictly required.",
+      "objectives": [
+        "education",
+        "behind-the-scenes",
+        "song-promotion"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 40
+      },
+      "difficulty": "moderate",
+      "budget": "minimal",
+      "filming_methods": [
+        "screen-recording",
+        "static-text",
+        "hybrid"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "computer",
+        "editing-software"
+      ],
+      "tags": [
+        "production",
+        "mixing",
+        "stems",
+        "education"
+      ],
+      "song_context_required": "Access to stems or at least isolated elements of the mix.",
+      "hook_examples": [
+        "This is what the bass is doing under the whole chorus",
+        "There are 14 vocal layers here. Listen.",
+        "The drums are the reason this chorus feels huge"
+      ],
+      "execution_steps": [
+        "Choose the element that carries the most surprise.",
+        "Play it isolated for 4–6 seconds with the label on screen.",
+        "Add one more element at a time — two at most.",
+        "Drop the full mix on the strongest downbeat.",
+        "Explain in one sentence what that element is doing."
+      ],
+      "shot_list": [
+        "Screen capture of the session with one track soloed",
+        "Waveform or stem graphic",
+        "Full mix at the payoff"
+      ],
+      "audio_guidance": "Watch loudness jumps — normalise each stage so the reveal does not just sound louder. Small room, good speakers or headphones.",
+      "editing_notes": "Synchronise cuts to the beat. Label every solo clearly within the first half-second of it playing.",
+      "cta_examples": [
+        "Which layer do you want to hear isolated next?",
+        "Producer breakdowns in this series are saved to my highlights."
+      ],
+      "accessibility_notes": "Assume many viewers listen on phone speakers — label the element in text and add a short description of what to listen for.",
+      "estimated_production_minutes": 90,
+      "example_metadata": {
+        "tone": "direct",
+        "caption_example": "Four bass notes carry the whole chorus. Listen to it alone, then with everything on top.",
+        "title_example": "What the bass is actually doing",
+        "hashtag_examples": [
+          "#musicproduction",
+          "#mixingtips",
+          "#producer",
+          "#beatmaking"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Hide the lyric until the last second, then reveal",
+        "Series: three lines, three videos, one per week",
+        "Follow-up video revealing your original meaning"
+      ],
+      "common_mistakes": [
+        "Explaining the lyric in the same video",
+        "Choosing a line with only one possible meaning",
+        "Ignoring the comments after asking for them"
+      ],
+      "on_screen_text": [
+        "What does this mean to you?",
+        "Line from verse one"
+      ],
+      "secondary_objectives": [
+        "song-promotion"
+      ],
+      "genre_tags": [
+        "indie",
+        "pop",
+        "alternative",
+        "r&b"
+      ],
+      "mood_tags": [
+        "curious",
+        "reflective",
+        "mysterious"
+      ],
+      "id": "preset-one-line-interpretation",
+      "title": "One-Line Interpretation Challenge",
+      "summary": "Show one lyric and ask viewers what they think it means — collect the best replies for a follow-up.",
+      "description": "A deliberately open-ended lyric becomes a conversation. Do not explain your own meaning in the first video; that is the follow-up. Present the line big and legible, give people ten seconds of the song underneath it, and ask a question that invites interpretation rather than agreement.",
+      "objectives": [
+        "audience-engagement",
+        "community-building",
+        "discovery"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 10,
+        "max": 25
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "static-text",
+        "live-action",
+        "animation"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "lyrics",
+        "interpretation",
+        "comments",
+        "engagement"
+      ],
+      "song_context_required": "An ambiguous lyric that works without context.",
+      "hook_examples": [
+        "Tell me what this line means to you",
+        "What does this lyric make you picture?",
+        "I wrote this line about one thing. Everyone thinks it is about something else."
+      ],
+      "execution_steps": [
+        "Pick a lyric with more than one reasonable reading.",
+        "Set it as large text on a simple background.",
+        "Run 8–12 seconds of the relevant section underneath.",
+        "Ask one clear question at the end, on screen and in the caption.",
+        "Pin your favourite interpretation and reply to it."
+      ],
+      "shot_list": [
+        "Static text card",
+        "Optional slow zoom on the text",
+        "Optional performance cut behind the text"
+      ],
+      "audio_guidance": "Keep the vocal audible — the delivery is part of the meaning.",
+      "editing_notes": "Hold the text for at least four seconds. No busy backgrounds behind type.",
+      "cta_examples": [
+        "Comment your interpretation. I will pin my favourite.",
+        "There is no wrong answer here."
+      ],
+      "accessibility_notes": "This format is naturally caption-first — keep type large, high contrast, and keep the question visible for the full duration.",
+      "estimated_production_minutes": 20,
+      "example_metadata": {
+        "tone": "mysterious",
+        "caption_example": "I wrote this about my hometown. Somebody in the comments said it was about their dad, and now I cannot unhear it.",
+        "title_example": "What does this lyric mean to you?",
+        "hashtag_examples": [
+          "#lyrics",
+          "#musicquestion",
+          "#indieartist",
+          "#songmeaning"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Poll between two comment requests",
+        "Series with a numbered episode format",
+        "Fulfilling a critical comment thoughtfully"
+      ],
+      "common_mistakes": [
+        "Inventing or editing the comment",
+        "Taking three videos to finally answer the request",
+        "Choosing a request that promotes nothing you actually made"
+      ],
+      "on_screen_text": [
+        "You asked for this",
+        "Requested by a commenter"
+      ],
+      "secondary_objectives": [
+        "song-promotion",
+        "artist-identity"
+      ],
+      "genre_tags": [
+        "pop",
+        "indie",
+        "hip-hop",
+        "r&b",
+        "rock"
+      ],
+      "mood_tags": [
+        "warm",
+        "collaborative",
+        "playful"
+      ],
+      "id": "preset-comment-chooses-next",
+      "title": "A Comment Chooses the Next Video",
+      "summary": "Let a real audience comment decide your next concept, and show the decision being made.",
+      "description": "A community-driven series format. Take a genuine comment — a request, a question, a critique — and make the video that answers it, crediting the person who asked. This is one of the most reliable ways to build return viewers, because it proves their comments change what you make. Never fabricate the comment.",
+      "objectives": [
+        "community-building",
+        "audience-engagement",
+        "discovery"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 40
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "community",
+        "series",
+        "comments",
+        "requests"
+      ],
+      "song_context_required": "A real comment that suggests a follow-up video.",
+      "hook_examples": [
+        "Somebody asked for this, so here it is",
+        "This video exists because of a comment",
+        "You picked this one. Here is the result."
+      ],
+      "execution_steps": [
+        "Choose a real comment you can satisfy in one clip.",
+        "Show the comment (username visible only with permission).",
+        "Deliver exactly what was asked, without padding.",
+        "Credit the commenter by name or handle in the caption.",
+        "Ask for the next request at the end."
+      ],
+      "shot_list": [
+        "Comment screenshot or read-out",
+        "The requested content itself",
+        "Optional thank-you to camera"
+      ],
+      "audio_guidance": "Match the audio to the request — if they asked for an acoustic version, no studio mix.",
+      "editing_notes": "Keep the comment visible for at least two seconds. Deliver the request in the first half of the clip.",
+      "cta_examples": [
+        "What should I make next? Genuine suggestions only.",
+        "Drop a request and I will pick one this week."
+      ],
+      "accessibility_notes": "Describe the comment in text as well as image, and caption your response.",
+      "estimated_production_minutes": 45,
+      "example_metadata": {
+        "tone": "conversational",
+        "caption_example": "Someone asked what the song sounds like without the production. Here it is, one take, no effects.",
+        "title_example": "You asked for this version",
+        "hashtag_examples": [
+          "#requested",
+          "#musiccommunity",
+          "#artistsoftiktok",
+          "#singersongwriter"
+        ]
+      }
+    }
+  ],
+  "songs": [
+    {
+      "id": "demo-song-low-tide",
+      "title": "Low Tide (demo record)",
+      "artist": "Demo Artist",
+      "genre": "indie pop",
+      "subgenre": "bedroom pop",
+      "moods": [
+        "melancholy",
+        "hopeful"
+      ],
+      "language": "en",
+      "description": "Sample song record created by muse-ician’s demo mode, inspired by the example in the seed preset library. Replace it with a real song when you are ready.",
+      "lyrics": "I keep your coat on the wrong hook\nI learned to be quiet in rooms that were never mine",
+      "themes": [
+        "leaving a shared home",
+        "outgrowing a friendship"
+      ],
+      "target_audience": "Listeners in their twenties who follow independent singer-songwriters.",
+      "intended_listener_response": "Recognition rather than sadness.",
+      "strongest_lyrics": [
+        "I keep your coat on the wrong hook"
+      ],
+      "audio_sections": [
+        {
+          "label": "Verse 2",
+          "timestamp": "0:48",
+          "note": "Quietest moment before the chorus"
+        },
+        {
+          "label": "Final chorus",
+          "timestamp": "2:10",
+          "note": "Full arrangement"
+        }
+      ],
+      "bpm": 92,
+      "musical_key": "D major",
+      "release_status": "released",
+      "release_date": "2026-10-24",
+      "streaming_url": null,
+      "persona_notes": "Quiet, specific, unsentimental.",
+      "visual_identity_notes": "Muted greens, film grain, empty rooms.",
+      "production_constraints": "One phone, one room, no crew.",
+      "equipment": [
+        "phone",
+        "phone-tripod",
+        "editing-software"
+      ],
+      "budget": "minimal",
+      "filming_locations": [
+        "hallway",
+        "parked car"
+      ],
+      "face_visibility": "optional",
+      "animation_capability": false,
+      "posting_frequency": "3 posts per week",
+      "campaign_notes": "Demo campaign spans 15 days from today.",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "content_ideas": [
+    {
+      "id": "demo-idea-1",
+      "title": "Low Tide — introduction for first-time listeners",
+      "song_id": "demo-song-low-tide",
+      "source_preset_id": "preset-direct-introduction",
+      "mode": "customized",
+      "concept_description": "Open on the song title card for one second, cut straight to the pre-chorus performed to camera, then a single sentence about who the song is for. Close on the song name and where to hear it.",
+      "hook": "This song is for anyone who waited for someone to change their mind",
+      "intended_audience": "Listeners who found one song and want to know what the artist is about.",
+      "scene_sequence": [
+        "Opening frame with song title and artist name",
+        "Performance or visual for the excerpt",
+        "Talking head or text card with the context line"
+      ],
+      "shot_list": [
+        "Opening frame with song title and artist name",
+        "Performance or visual for the excerpt",
+        "Talking head or text card with the context line",
+        "Closing frame with where to listen"
+      ],
+      "on_screen_text": [
+        "Out now — \"Song Title\"",
+        "For anyone who stayed too long"
+      ],
+      "audio_section": "Verse 2 (0:48–1:02)",
+      "editing_notes": "Two cuts, both on the beat. Hold the final frame for one second.",
+      "call_to_action": "Full song is on my profile and streaming everywhere.",
+      "platforms": [
+        "youtube-shorts",
+        "instagram-reels",
+        "tiktok"
+      ],
+      "estimated_production_minutes": 25,
+      "status": "published",
+      "scheduled_date": "2026-10-29",
+      "campaign_id": "demo-campaign-low-tide",
+      "notes": "Demo record — safe to delete.",
+      "coach_assessment": {
+        "summary": "Low Tide — introduction for first-time listeners: Open on the song title card for one second, cut straight to the pre-chorus performed to camera, then a single sentence about who the song is for. Close on the song name and where to hear it. Readiness 81/100 (high confidence).",
+        "strengths": [
+          "Concept & song fit: linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written.",
+          "Audience relevance: the intended viewer is named; the song record names an audience; described as a group of people rather than a demographic label; there is a next step for that viewer.",
+          "Visual progression & payoff: editing notes mention timing; 3 scenes give the clip movement.",
+          "Feasibility with your resources: your listed equipment covers this preset; an estimated 25 minutes fits a single session.",
+          "Distinctiveness: this is your own adaptation, not the template verbatim; the concept description goes beyond the preset summary; the hook is your own rather than a preset example."
+        ],
+        "weaknesses": [
+          "No component scored below 55. The remaining risk is execution, not planning."
+        ],
+        "hook_assessment": "\"This song is for anyone who waited for someone to change their mind\" — scored 65/100. Hook is 67 characters; a readable length for a first frame; uses a recognisable opening pattern; no concrete detail (a time, object or quoted line would sharpen it).",
+        "song_fit": "Linked to \"Low Tide (demo record)\" (melancholy, hopeful). Themes on record: leaving a shared home, outgrowing a friendship. Scored 80/100.",
+        "audience_fit": "You have named the viewer as: Listeners who found one song and want to know what the artist is about. Scored 95/100.",
+        "feasibility": "your listed equipment covers this preset; an estimated 25 minutes fits a single session. Scored 90/100.",
+        "pacing_suggestions": [
+          "Keep the 3-beat structure but put the payoff in the last quarter of the clip.",
+          "Shoot the payoff shot first while the light and your energy are best.",
+          "Let the strongest 2 seconds of the audio happen at the moment the visual changes."
+        ],
+        "improvements": [
+          {
+            "area": "Hook",
+            "suggestion": "Rewrite the opening line so a stranger can picture one specific thing — a time, an object, or a quoted sentence — within two seconds.",
+            "impact": "high"
+          }
+        ],
+        "revised_concept": "Open on the song title card for one second, cut straight to the pre-chorus performed to camera, then a single sentence about who the song is for. Close on the song name and where to hear it.\nOpening (0–2s): This song is for anyone who waited for someone to change their mind.\nBeats: 1) Opening frame with song title and artist name 2) Performance or visual for the excerpt 3) Talking head or text card with the context line\nAudio: Verse 2 (0:48–1:02).\nEdit: Two cuts, both on the beat. Hold the final frame for one second.\nClose: Full song is on my profile and streaming everywhere.",
+        "alternative_concept": "Text-card version for quiet, low-effort release days",
+        "recommended_platforms": [
+          {
+            "platform": "youtube-shorts",
+            "reason": "Shorts rewards a clear title and a searchable topic; good when the concept explains something about the song."
+          },
+          {
+            "platform": "instagram-reels",
+            "reason": "Reels favours a strong first frame that works on mute; good when the concept is visual or text-led."
+          },
+          {
+            "platform": "tiktok",
+            "reason": "TikTok favours a native, immediate opening and repeated watch loops; good when the concept has a fast turn."
+          }
+        ],
+        "next_steps": [
+          "Save this version so you can restore it later.",
+          "Generate the platform packages in Metadata Studio using the same section and hook.",
+          "Put the idea on a date in Content Calendar so it leaves the backlog."
+        ],
+        "readiness": {
+          "score": 81,
+          "confidence": "high",
+          "components": [
+            {
+              "key": "hook",
+              "label": "Opening clarity & hook strength",
+              "weight": 0.25,
+              "score": 65,
+              "explanation": "Hook is 67 characters; a readable length for a first frame; uses a recognisable opening pattern; no concrete detail (a time, object or quoted line would sharpen it)."
+            },
+            {
+              "key": "song_fit",
+              "label": "Concept & song fit",
+              "weight": 0.2,
+              "score": 80,
+              "explanation": "linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written."
+            },
+            {
+              "key": "audience",
+              "label": "Audience relevance",
+              "weight": 0.15,
+              "score": 95,
+              "explanation": "the intended viewer is named; the song record names an audience; described as a group of people rather than a demographic label; there is a next step for that viewer."
+            },
+            {
+              "key": "visual_progression",
+              "label": "Visual progression & payoff",
+              "weight": 0.15,
+              "score": 80,
+              "explanation": "editing notes mention timing; 3 scenes give the clip movement."
+            },
+            {
+              "key": "feasibility",
+              "label": "Feasibility with your resources",
+              "weight": 0.15,
+              "score": 90,
+              "explanation": "your listed equipment covers this preset; an estimated 25 minutes fits a single session."
+            },
+            {
+              "key": "distinctiveness",
+              "label": "Distinctiveness",
+              "weight": 0.1,
+              "score": 85,
+              "explanation": "this is your own adaptation, not the template verbatim; the concept description goes beyond the preset summary; the hook is your own rather than a preset example."
+            }
+          ],
+          "rubric_version": "local-rubric-1.0.0",
+          "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
+        },
+        "source": "local-heuristic",
+        "generated_at": "2026-10-29T22:52:58.707Z"
+      },
+      "versions": [],
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-idea-2",
+      "title": "The coat on the wrong hook",
+      "song_id": "demo-song-low-tide",
+      "source_preset_id": "preset-lyric-that-hits",
+      "mode": "customized",
+      "concept_description": "Show the empty coat hook in the hallway, type the lyric in two beats, and time the last word to the vocal. Hold the finished frame so it can be screenshotted.",
+      "hook": "This line took four months to write",
+      "intended_audience": "People who have recently left a shared home.",
+      "scene_sequence": [
+        "Cold open: still frame or slow pan, no text",
+        "Text beat 1: first half of the lyric",
+        "Text beat 2: the turn of the line, over the musical swell"
+      ],
+      "shot_list": [
+        "Cold open: still frame or slow pan, no text",
+        "Text beat 1: first half of the lyric",
+        "Text beat 2: the turn of the line, over the musical swell",
+        "Final frame: full lyric, legible, held"
+      ],
+      "on_screen_text": [
+        "I learned to be quiet in rooms that were never mine",
+        "Line 2 of verse 2 — \"Low Tide\""
+      ],
+      "audio_section": "Verse 2 (0:48–1:02)",
+      "editing_notes": "Two cuts, both on the beat. Hold the final frame for one second.",
+      "call_to_action": "Which line of the song hits hardest for you?",
+      "platforms": [
+        "youtube-shorts",
+        "instagram-reels",
+        "tiktok"
+      ],
+      "estimated_production_minutes": 45,
+      "status": "published",
+      "scheduled_date": "2026-10-30",
+      "campaign_id": "demo-campaign-low-tide",
+      "notes": "Demo record — safe to delete.",
+      "coach_assessment": {
+        "summary": "The coat on the wrong hook: Show the empty coat hook in the hallway, type the lyric in two beats, and time the last word to the vocal. Hold the finished frame so it can be screenshotted. Readiness 78/100 (high confidence).",
+        "strengths": [
+          "Concept & song fit: linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written.",
+          "Audience relevance: the intended viewer is named; the song record names an audience; described as a group of people rather than a demographic label; there is a next step for that viewer.",
+          "Visual progression & payoff: editing notes mention timing; 3 scenes give the clip movement.",
+          "Distinctiveness: this is your own adaptation, not the template verbatim; the concept description goes beyond the preset summary; the hook is your own rather than a preset example."
+        ],
+        "weaknesses": [
+          "No component scored below 55. The remaining risk is execution, not planning."
+        ],
+        "hook_assessment": "\"This line took four months to write\" — scored 65/100. Hook is 35 characters; a readable length for a first frame; uses a recognisable opening pattern; no concrete detail (a time, object or quoted line would sharpen it).",
+        "song_fit": "Linked to \"Low Tide (demo record)\" (melancholy, hopeful). Themes on record: leaving a shared home, outgrowing a friendship. Scored 80/100.",
+        "audience_fit": "You have named the viewer as: People who have recently left a shared home. Scored 95/100.",
+        "feasibility": "your listed equipment covers this preset; the preset offers animation, which you marked as unavailable; an estimated 45 minutes fits a single session. Scored 70/100.",
+        "pacing_suggestions": [
+          "Keep the 3-beat structure but put the payoff in the last quarter of the clip.",
+          "Shoot the payoff shot first while the light and your energy are best.",
+          "Let the strongest 2 seconds of the audio happen at the moment the visual changes."
+        ],
+        "improvements": [
+          {
+            "area": "Hook",
+            "suggestion": "Rewrite the opening line so a stranger can picture one specific thing — a time, an object, or a quoted sentence — within two seconds.",
+            "impact": "high"
+          }
+        ],
+        "revised_concept": "Show the empty coat hook in the hallway, type the lyric in two beats, and time the last word to the vocal. Hold the finished frame so it can be screenshotted.\nOpening (0–2s): This line took four months to write.\nBeats: 1) Cold open: still frame or slow pan, no text 2) Text beat 1: first half of the lyric 3) Text beat 2: the turn of the line, over the musical swell\nAudio: Verse 2 (0:48–1:02).\nEdit: Two cuts, both on the beat. Hold the final frame for one second.\nClose: Which line of the song hits hardest for you?",
+        "alternative_concept": "Typewriter reveal on paper",
+        "recommended_platforms": [
+          {
+            "platform": "youtube-shorts",
+            "reason": "Shorts rewards a clear title and a searchable topic; good when the concept explains something about the song."
+          },
+          {
+            "platform": "instagram-reels",
+            "reason": "Reels favours a strong first frame that works on mute; good when the concept is visual or text-led."
+          },
+          {
+            "platform": "tiktok",
+            "reason": "TikTok favours a native, immediate opening and repeated watch loops; good when the concept has a fast turn."
+          }
+        ],
+        "next_steps": [
+          "Save this version so you can restore it later.",
+          "Generate the platform packages in Metadata Studio using the same section and hook.",
+          "Put the idea on a date in Content Calendar so it leaves the backlog."
+        ],
+        "readiness": {
+          "score": 78,
+          "confidence": "high",
+          "components": [
+            {
+              "key": "hook",
+              "label": "Opening clarity & hook strength",
+              "weight": 0.25,
+              "score": 65,
+              "explanation": "Hook is 35 characters; a readable length for a first frame; uses a recognisable opening pattern; no concrete detail (a time, object or quoted line would sharpen it)."
+            },
+            {
+              "key": "song_fit",
+              "label": "Concept & song fit",
+              "weight": 0.2,
+              "score": 80,
+              "explanation": "linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written."
+            },
+            {
+              "key": "audience",
+              "label": "Audience relevance",
+              "weight": 0.15,
+              "score": 95,
+              "explanation": "the intended viewer is named; the song record names an audience; described as a group of people rather than a demographic label; there is a next step for that viewer."
+            },
+            {
+              "key": "visual_progression",
+              "label": "Visual progression & payoff",
+              "weight": 0.15,
+              "score": 80,
+              "explanation": "editing notes mention timing; 3 scenes give the clip movement."
+            },
+            {
+              "key": "feasibility",
+              "label": "Feasibility with your resources",
+              "weight": 0.15,
+              "score": 70,
+              "explanation": "your listed equipment covers this preset; the preset offers animation, which you marked as unavailable; an estimated 45 minutes fits a single session."
+            },
+            {
+              "key": "distinctiveness",
+              "label": "Distinctiveness",
+              "weight": 0.1,
+              "score": 85,
+              "explanation": "this is your own adaptation, not the template verbatim; the concept description goes beyond the preset summary; the hook is your own rather than a preset example."
+            }
+          ],
+          "rubric_version": "local-rubric-1.0.0",
+          "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
+        },
+        "source": "local-heuristic",
+        "generated_at": "2026-10-29T22:52:58.721Z"
+      },
+      "versions": [],
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-idea-3",
+      "title": "Why the bridge is a phone recording",
+      "song_id": "demo-song-low-tide",
+      "source_preset_id": "preset-behind-the-song",
+      "mode": "customized",
+      "concept_description": "Explain the decision to keep the phone recording instead of the studio take, show the file timestamp, then play the four seconds that survived.",
+      "hook": "The bridge you hear is a phone memo from 3am",
+      "intended_audience": "Songwriters and listeners who like knowing how records are made.",
+      "scene_sequence": [
+        "Talking head, mid-shot, looking slightly off camera",
+        "Insert: DAW session or voice memo timestamp",
+        "Insert: the lyric page or notebook"
+      ],
+      "shot_list": [
+        "Talking head, mid-shot, looking slightly off camera",
+        "Insert: DAW session or voice memo timestamp",
+        "Insert: the lyric page or notebook",
+        "Final 4 seconds: the song moment the story earned"
+      ],
+      "on_screen_text": [
+        "I almost deleted this bridge",
+        "Voice memo, March 2025"
+      ],
+      "audio_section": "Verse 2 (0:48–1:02)",
+      "editing_notes": "Two cuts, both on the beat. Hold the final frame for one second.",
+      "call_to_action": "What should I explain next — the drums or the falsetto?",
+      "platforms": [
+        "instagram-reels",
+        "youtube-shorts",
+        "tiktok"
+      ],
+      "estimated_production_minutes": 90,
+      "status": "editing",
+      "scheduled_date": "2026-11-01",
+      "campaign_id": "demo-campaign-low-tide",
+      "notes": "Demo record — safe to delete.",
+      "coach_assessment": {
+        "summary": "Why the bridge is a phone recording: Explain the decision to keep the phone recording instead of the studio take, show the file timestamp, then play the four seconds that survived. Readiness 82/100 (high confidence).",
+        "strengths": [
+          "Concept & song fit: linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written.",
+          "Audience relevance: the intended viewer is named; the song record names an audience; described as a group of people rather than a demographic label; there is a next step for that viewer.",
+          "Visual progression & payoff: editing notes mention timing; 3 scenes give the clip movement.",
+          "Feasibility with your resources: your listed equipment covers this preset; an estimated 90 minutes fits a single session.",
+          "Distinctiveness: this is your own adaptation, not the template verbatim; the concept description goes beyond the preset summary; the hook is your own rather than a preset example."
+        ],
+        "weaknesses": [
+          "No component scored below 55. The remaining risk is execution, not planning."
+        ],
+        "hook_assessment": "\"The bridge you hear is a phone memo from 3am\" — scored 70/100. Hook is 44 characters; a readable length for a first frame; contains a concrete detail rather than a mood.",
+        "song_fit": "Linked to \"Low Tide (demo record)\" (melancholy, hopeful). Themes on record: leaving a shared home, outgrowing a friendship. Scored 80/100.",
+        "audience_fit": "You have named the viewer as: Songwriters and listeners who like knowing how records are made. Scored 95/100.",
+        "feasibility": "your listed equipment covers this preset; an estimated 90 minutes fits a single session. Scored 90/100.",
+        "pacing_suggestions": [
+          "Keep the 3-beat structure but put the payoff in the last quarter of the clip.",
+          "Shoot the payoff shot first while the light and your energy are best.",
+          "Let the strongest 2 seconds of the audio happen at the moment the visual changes."
+        ],
+        "improvements": [
+          {
+            "area": "Next check",
+            "suggestion": "The plan is specific enough to film. Shoot the first three seconds as a test before committing to the full edit.",
+            "impact": "low"
+          }
+        ],
+        "revised_concept": "Explain the decision to keep the phone recording instead of the studio take, show the file timestamp, then play the four seconds that survived.\nOpening (0–2s): The bridge you hear is a phone memo from 3am.\nBeats: 1) Talking head, mid-shot, looking slightly off camera 2) Insert: DAW session or voice memo timestamp 3) Insert: the lyric page or notebook\nAudio: Verse 2 (0:48–1:02).\nEdit: Two cuts, both on the beat. Hold the final frame for one second.\nClose: What should I explain next — the drums or the falsetto?",
+        "alternative_concept": "Voiceover over studio B-roll instead of talking head",
+        "recommended_platforms": [
+          {
+            "platform": "instagram-reels",
+            "reason": "Reels favours a strong first frame that works on mute; good when the concept is visual or text-led."
+          },
+          {
+            "platform": "youtube-shorts",
+            "reason": "Shorts rewards a clear title and a searchable topic; good when the concept explains something about the song."
+          },
+          {
+            "platform": "tiktok",
+            "reason": "TikTok favours a native, immediate opening and repeated watch loops; good when the concept has a fast turn."
+          }
+        ],
+        "next_steps": [
+          "Save this version so you can restore it later.",
+          "Generate the platform packages in Metadata Studio using the same section and hook.",
+          "Put the idea on a date in Content Calendar so it leaves the backlog."
+        ],
+        "readiness": {
+          "score": 82,
+          "confidence": "high",
+          "components": [
+            {
+              "key": "hook",
+              "label": "Opening clarity & hook strength",
+              "weight": 0.25,
+              "score": 70,
+              "explanation": "Hook is 44 characters; a readable length for a first frame; contains a concrete detail rather than a mood."
+            },
+            {
+              "key": "song_fit",
+              "label": "Concept & song fit",
+              "weight": 0.2,
+              "score": 80,
+              "explanation": "linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written."
+            },
+            {
+              "key": "audience",
+              "label": "Audience relevance",
+              "weight": 0.15,
+              "score": 95,
+              "explanation": "the intended viewer is named; the song record names an audience; described as a group of people rather than a demographic label; there is a next step for that viewer."
+            },
+            {
+              "key": "visual_progression",
+              "label": "Visual progression & payoff",
+              "weight": 0.15,
+              "score": 80,
+              "explanation": "editing notes mention timing; 3 scenes give the clip movement."
+            },
+            {
+              "key": "feasibility",
+              "label": "Feasibility with your resources",
+              "weight": 0.15,
+              "score": 90,
+              "explanation": "your listed equipment covers this preset; an estimated 90 minutes fits a single session."
+            },
+            {
+              "key": "distinctiveness",
+              "label": "Distinctiveness",
+              "weight": 0.1,
+              "score": 85,
+              "explanation": "this is your own adaptation, not the template verbatim; the concept description goes beyond the preset summary; the hook is your own rather than a preset example."
+            }
+          ],
+          "rubric_version": "local-rubric-1.0.0",
+          "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
+        },
+        "source": "local-heuristic",
+        "generated_at": "2026-10-29T22:52:58.721Z"
+      },
+      "versions": [],
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-idea-4",
+      "title": "POV: you are fine until this song comes on",
+      "song_id": "demo-song-low-tide",
+      "source_preset_id": "preset-relatable-pov",
+      "mode": "customized",
+      "concept_description": "Film a static shot from the passenger seat, song entering when the chorus line lands, then cut to the reaction shot.",
+      "hook": "POV: you are fine until this song comes on in the car",
+      "intended_audience": "Listeners who use music to finally feel something after a long week.",
+      "scene_sequence": [
+        "Setup: one static shot of the situation (hands, screen, empty seat, doorway)",
+        "Insert: the object that carries the story (phone, receipt, jacket, keys)",
+        "Reaction: cut to your face at the moment the lyric lands"
+      ],
+      "shot_list": [
+        "Setup: one static shot of the situation (hands, screen, empty seat, doorway)",
+        "Insert: the object that carries the story (phone, receipt, jacket, keys)",
+        "Reaction: cut to your face at the moment the lyric lands",
+        "Payoff: wide shot with the lyric on screen"
+      ],
+      "on_screen_text": [
+        "POV: you are driving home and realise you are the one who changed",
+        "Lyric, lower third, 18 seconds in"
+      ],
+      "audio_section": "Verse 2 (0:48–1:02)",
+      "editing_notes": "Two cuts, both on the beat. Hold the final frame for one second.",
+      "call_to_action": "What would you have done in this situation?",
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "estimated_production_minutes": 60,
+      "status": "filming",
+      "scheduled_date": "2026-11-03",
+      "campaign_id": "demo-campaign-low-tide",
+      "notes": "Demo record — safe to delete.",
+      "coach_assessment": {
+        "summary": "POV: you are fine until this song comes on: Film a static shot from the passenger seat, song entering when the chorus line lands, then cut to the reaction shot. Readiness 82/100 (high confidence).",
+        "strengths": [
+          "Opening clarity & hook strength: Hook is 53 characters; a readable length for a first frame; uses a recognisable opening pattern; contains a concrete detail rather than a mood.",
+          "Concept & song fit: linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written.",
+          "Audience relevance: the intended viewer is named; the song record names an audience; described as a group of people rather than a demographic label; there is a next step for that viewer.",
+          "Visual progression & payoff: editing notes mention timing; 3 scenes give the clip movement.",
+          "Feasibility with your resources: your listed equipment covers this preset; an estimated 60 minutes fits a single session."
+        ],
+        "weaknesses": [
+          "No component scored below 55. The remaining risk is execution, not planning."
+        ],
+        "hook_assessment": "\"POV: you are fine until this song comes on in the car\" — scored 80/100. Hook is 53 characters; a readable length for a first frame; uses a recognisable opening pattern; contains a concrete detail rather than a mood.",
+        "song_fit": "Linked to \"Low Tide (demo record)\" (melancholy, hopeful). Themes on record: leaving a shared home, outgrowing a friendship. Scored 80/100.",
+        "audience_fit": "You have named the viewer as: Listeners who use music to finally feel something after a long week. Scored 95/100.",
+        "feasibility": "your listed equipment covers this preset; an estimated 60 minutes fits a single session. Scored 90/100.",
+        "pacing_suggestions": [
+          "Keep the 3-beat structure but put the payoff in the last quarter of the clip.",
+          "Shoot the payoff shot first while the light and your energy are best.",
+          "Let the strongest 2 seconds of the audio happen at the moment the visual changes."
+        ],
+        "improvements": [
+          {
+            "area": "Distinctiveness",
+            "suggestion": "Change one element that is yours alone — a location no one else has, a specific object, or a line only you could write. Keep the underlying format.",
+            "impact": "medium"
+          }
+        ],
+        "revised_concept": "Film a static shot from the passenger seat, song entering when the chorus line lands, then cut to the reaction shot.\nOpening (0–2s): POV: you are fine until this song comes on in the car.\nBeats: 1) Setup: one static shot of the situation (hands, screen, empty seat, doorway) 2) Insert: the object that carries the story (phone, receipt, jacket, keys) 3) Reaction: cut to your face at the moment the lyric lands\nAudio: Verse 2 (0:48–1:02).\nEdit: Two cuts, both on the beat. Hold the final frame for one second.\nClose: What would you have done in this situation?",
+        "alternative_concept": "Silent setup, song enters late (stronger for TikTok)",
+        "recommended_platforms": [
+          {
+            "platform": "instagram-reels",
+            "reason": "Reels favours a strong first frame that works on mute; good when the concept is visual or text-led."
+          },
+          {
+            "platform": "tiktok",
+            "reason": "TikTok favours a native, immediate opening and repeated watch loops; good when the concept has a fast turn."
+          },
+          {
+            "platform": "youtube-shorts",
+            "reason": "Shorts rewards a clear title and a searchable topic; good when the concept explains something about the song."
+          }
+        ],
+        "next_steps": [
+          "Save this version so you can restore it later.",
+          "Generate the platform packages in Metadata Studio using the same section and hook.",
+          "Put the idea on a date in Content Calendar so it leaves the backlog."
+        ],
+        "readiness": {
+          "score": 82,
+          "confidence": "high",
+          "components": [
+            {
+              "key": "hook",
+              "label": "Opening clarity & hook strength",
+              "weight": 0.25,
+              "score": 80,
+              "explanation": "Hook is 53 characters; a readable length for a first frame; uses a recognisable opening pattern; contains a concrete detail rather than a mood."
+            },
+            {
+              "key": "song_fit",
+              "label": "Concept & song fit",
+              "weight": 0.2,
+              "score": 80,
+              "explanation": "linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written."
+            },
+            {
+              "key": "audience",
+              "label": "Audience relevance",
+              "weight": 0.15,
+              "score": 95,
+              "explanation": "the intended viewer is named; the song record names an audience; described as a group of people rather than a demographic label; there is a next step for that viewer."
+            },
+            {
+              "key": "visual_progression",
+              "label": "Visual progression & payoff",
+              "weight": 0.15,
+              "score": 80,
+              "explanation": "editing notes mention timing; 3 scenes give the clip movement."
+            },
+            {
+              "key": "feasibility",
+              "label": "Feasibility with your resources",
+              "weight": 0.15,
+              "score": 90,
+              "explanation": "your listed equipment covers this preset; an estimated 60 minutes fits a single session."
+            },
+            {
+              "key": "distinctiveness",
+              "label": "Distinctiveness",
+              "weight": 0.1,
+              "score": 65,
+              "explanation": "this is your own adaptation, not the template verbatim."
+            }
+          ],
+          "rubric_version": "local-rubric-1.0.0",
+          "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
+        },
+        "source": "local-heuristic",
+        "generated_at": "2026-10-29T22:52:58.721Z"
+      },
+      "versions": [],
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-idea-5",
+      "title": "Voice memo vs final mix",
+      "song_id": "demo-song-low-tide",
+      "source_preset_id": "preset-unfinished-version",
+      "mode": "customized",
+      "concept_description": "Play the same phrase from the 2025 voice memo and the final mix, cut on the same word, label both with dates.",
+      "hook": "The voice memo is nine months older than the finished song",
+      "intended_audience": "Producers and bedroom-pop listeners curious about process.",
+      "scene_sequence": [
+        "Screen capture of voice memo with visible date",
+        "Same section from the finished mix",
+        "Optional: you reacting in the corner"
+      ],
+      "shot_list": [
+        "Screen capture of voice memo with visible date",
+        "Same section from the finished mix",
+        "Optional: you reacting in the corner"
+      ],
+      "on_screen_text": [
+        "March 2024 — voice memo",
+        "September 2026 — final mix"
+      ],
+      "audio_section": "Verse 2 (0:48–1:02)",
+      "editing_notes": "Two cuts, both on the beat. Hold the final frame for one second.",
+      "call_to_action": "Which version do you prefer? Be honest.",
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "estimated_production_minutes": 35,
+      "status": "scripted",
+      "scheduled_date": "2026-11-05",
+      "campaign_id": "demo-campaign-low-tide",
+      "notes": "Demo record — safe to delete.",
+      "coach_assessment": {
+        "summary": "Voice memo vs final mix: Play the same phrase from the 2025 voice memo and the final mix, cut on the same word, label both with dates. Readiness 75/100 (high confidence).",
+        "strengths": [
+          "Concept & song fit: linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written.",
+          "Audience relevance: the intended viewer is named; the song record names an audience; there is a next step for that viewer.",
+          "Visual progression & payoff: editing notes mention timing; 3 scenes give the clip movement.",
+          "Feasibility with your resources: your listed equipment covers this preset; an estimated 35 minutes fits a single session.",
+          "Distinctiveness: this is your own adaptation, not the template verbatim; the hook is your own rather than a preset example."
+        ],
+        "weaknesses": [
+          "No component scored below 55. The remaining risk is execution, not planning."
+        ],
+        "hook_assessment": "\"The voice memo is nine months older than the finished song\" — scored 55/100. Hook is 58 characters; a readable length for a first frame; no concrete detail (a time, object or quoted line would sharpen it).",
+        "song_fit": "Linked to \"Low Tide (demo record)\" (melancholy, hopeful). Themes on record: leaving a shared home, outgrowing a friendship. Scored 80/100.",
+        "audience_fit": "You have named the viewer as: Producers and bedroom-pop listeners curious about process. Scored 85/100.",
+        "feasibility": "your listed equipment covers this preset; an estimated 35 minutes fits a single session. Scored 90/100.",
+        "pacing_suggestions": [
+          "Keep the 3-beat structure but put the payoff in the last quarter of the clip.",
+          "Plan at least four shots so you have material to cut against.",
+          "Let the strongest 2 seconds of the audio happen at the moment the visual changes."
+        ],
+        "improvements": [
+          {
+            "area": "Hook",
+            "suggestion": "Rewrite the opening line so a stranger can picture one specific thing — a time, an object, or a quoted sentence — within two seconds.",
+            "impact": "high"
+          }
+        ],
+        "revised_concept": "Play the same phrase from the 2025 voice memo and the final mix, cut on the same word, label both with dates.\nOpening (0–2s): The voice memo is nine months older than the finished song.\nBeats: 1) Screen capture of voice memo with visible date 2) Same section from the finished mix 3) Optional: you reacting in the corner\nAudio: Verse 2 (0:48–1:02).\nEdit: Two cuts, both on the beat. Hold the final frame for one second.\nClose: Which version do you prefer? Be honest.",
+        "alternative_concept": "Lyrics side by side, same melody",
+        "recommended_platforms": [
+          {
+            "platform": "instagram-reels",
+            "reason": "Reels favours a strong first frame that works on mute; good when the concept is visual or text-led."
+          },
+          {
+            "platform": "tiktok",
+            "reason": "TikTok favours a native, immediate opening and repeated watch loops; good when the concept has a fast turn."
+          },
+          {
+            "platform": "youtube-shorts",
+            "reason": "Shorts rewards a clear title and a searchable topic; good when the concept explains something about the song."
+          }
+        ],
+        "next_steps": [
+          "Save this version so you can restore it later.",
+          "Generate the platform packages in Metadata Studio using the same section and hook.",
+          "Put the idea on a date in Content Calendar so it leaves the backlog."
+        ],
+        "readiness": {
+          "score": 75,
+          "confidence": "high",
+          "components": [
+            {
+              "key": "hook",
+              "label": "Opening clarity & hook strength",
+              "weight": 0.25,
+              "score": 55,
+              "explanation": "Hook is 58 characters; a readable length for a first frame; no concrete detail (a time, object or quoted line would sharpen it)."
+            },
+            {
+              "key": "song_fit",
+              "label": "Concept & song fit",
+              "weight": 0.2,
+              "score": 80,
+              "explanation": "linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written."
+            },
+            {
+              "key": "audience",
+              "label": "Audience relevance",
+              "weight": 0.15,
+              "score": 85,
+              "explanation": "the intended viewer is named; the song record names an audience; there is a next step for that viewer."
+            },
+            {
+              "key": "visual_progression",
+              "label": "Visual progression & payoff",
+              "weight": 0.15,
+              "score": 75,
+              "explanation": "editing notes mention timing; 3 scenes give the clip movement."
+            },
+            {
+              "key": "feasibility",
+              "label": "Feasibility with your resources",
+              "weight": 0.15,
+              "score": 90,
+              "explanation": "your listed equipment covers this preset; an estimated 35 minutes fits a single session."
+            },
+            {
+              "key": "distinctiveness",
+              "label": "Distinctiveness",
+              "weight": 0.1,
+              "score": 75,
+              "explanation": "this is your own adaptation, not the template verbatim; the hook is your own rather than a preset example."
+            }
+          ],
+          "rubric_version": "local-rubric-1.0.0",
+          "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
+        },
+        "source": "local-heuristic",
+        "generated_at": "2026-10-29T22:52:58.722Z"
+      },
+      "versions": [],
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-idea-6",
+      "title": "Four bass notes carry the chorus",
+      "song_id": "demo-song-low-tide",
+      "source_preset_id": "preset-song-dissected",
+      "mode": "customized",
+      "concept_description": "Solo the bass, add drums, then reveal the full mix on the downbeat. Label each stage on screen.",
+      "hook": "Four bass notes are doing all the work in this chorus",
+      "intended_audience": "Producers and music students.",
+      "scene_sequence": [
+        "Screen capture of the session with one track soloed",
+        "Waveform or stem graphic",
+        "Full mix at the payoff"
+      ],
+      "shot_list": [
+        "Screen capture of the session with one track soloed",
+        "Waveform or stem graphic",
+        "Full mix at the payoff"
+      ],
+      "on_screen_text": [
+        "Bass only",
+        "Bass + drums",
+        "Everything"
+      ],
+      "audio_section": "Verse 2 (0:48–1:02)",
+      "editing_notes": "Two cuts, both on the beat. Hold the final frame for one second.",
+      "call_to_action": "Which layer do you want to hear isolated next?",
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "estimated_production_minutes": 90,
+      "status": "planning",
+      "scheduled_date": "2026-11-07",
+      "campaign_id": "demo-campaign-low-tide",
+      "notes": "Demo record — safe to delete.",
+      "coach_assessment": {
+        "summary": "Four bass notes carry the chorus: Solo the bass, add drums, then reveal the full mix on the downbeat. Label each stage on screen. Readiness 70/100 (high confidence).",
+        "strengths": [
+          "Concept & song fit: linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written.",
+          "Audience relevance: the intended viewer is named; the song record names an audience; there is a next step for that viewer.",
+          "Visual progression & payoff: editing notes mention timing; 3 scenes give the clip movement.",
+          "Distinctiveness: this is your own adaptation, not the template verbatim; the hook is your own rather than a preset example."
+        ],
+        "weaknesses": [
+          "No component scored below 55. The remaining risk is execution, not planning."
+        ],
+        "hook_assessment": "\"Four bass notes are doing all the work in this chorus\" — scored 55/100. Hook is 53 characters; a readable length for a first frame; no concrete detail (a time, object or quoted line would sharpen it).",
+        "song_fit": "Linked to \"Low Tide (demo record)\" (melancholy, hopeful). Themes on record: leaving a shared home, outgrowing a friendship. Scored 80/100.",
+        "audience_fit": "You have named the viewer as: Producers and music students. Scored 85/100.",
+        "feasibility": "missing from your equipment list: computer; an estimated 90 minutes fits a single session. Scored 55/100.",
+        "pacing_suggestions": [
+          "Keep the 3-beat structure but put the payoff in the last quarter of the clip.",
+          "Plan at least four shots so you have material to cut against.",
+          "Let the strongest 2 seconds of the audio happen at the moment the visual changes."
+        ],
+        "improvements": [
+          {
+            "area": "Hook",
+            "suggestion": "Rewrite the opening line so a stranger can picture one specific thing — a time, an object, or a quoted sentence — within two seconds.",
+            "impact": "high"
+          },
+          {
+            "area": "Feasibility",
+            "suggestion": "Cut one requirement rather than adding one: shoot in a single location, use the equipment you already listed, and cap the edit at three cuts.",
+            "impact": "high"
+          }
+        ],
+        "revised_concept": "Solo the bass, add drums, then reveal the full mix on the downbeat. Label each stage on screen.\nOpening (0–2s): Four bass notes are doing all the work in this chorus.\nBeats: 1) Screen capture of the session with one track soloed 2) Waveform or stem graphic 3) Full mix at the payoff\nAudio: Verse 2 (0:48–1:02).\nEdit: Two cuts, both on the beat. Hold the final frame for one second.\nClose: Which layer do you want to hear isolated next?",
+        "alternative_concept": "Guess the instrument before the label appears",
+        "recommended_platforms": [
+          {
+            "platform": "tiktok",
+            "reason": "TikTok favours a native, immediate opening and repeated watch loops; good when the concept has a fast turn."
+          },
+          {
+            "platform": "instagram-reels",
+            "reason": "Reels favours a strong first frame that works on mute; good when the concept is visual or text-led."
+          },
+          {
+            "platform": "youtube-shorts",
+            "reason": "Shorts rewards a clear title and a searchable topic; good when the concept explains something about the song."
+          }
+        ],
+        "next_steps": [
+          "Save this version so you can restore it later.",
+          "Generate the platform packages in Metadata Studio using the same section and hook.",
+          "Put the idea on a date in Content Calendar so it leaves the backlog."
+        ],
+        "readiness": {
+          "score": 70,
+          "confidence": "high",
+          "components": [
+            {
+              "key": "hook",
+              "label": "Opening clarity & hook strength",
+              "weight": 0.25,
+              "score": 55,
+              "explanation": "Hook is 53 characters; a readable length for a first frame; no concrete detail (a time, object or quoted line would sharpen it)."
+            },
+            {
+              "key": "song_fit",
+              "label": "Concept & song fit",
+              "weight": 0.2,
+              "score": 80,
+              "explanation": "linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written."
+            },
+            {
+              "key": "audience",
+              "label": "Audience relevance",
+              "weight": 0.15,
+              "score": 85,
+              "explanation": "the intended viewer is named; the song record names an audience; there is a next step for that viewer."
+            },
+            {
+              "key": "visual_progression",
+              "label": "Visual progression & payoff",
+              "weight": 0.15,
+              "score": 75,
+              "explanation": "editing notes mention timing; 3 scenes give the clip movement."
+            },
+            {
+              "key": "feasibility",
+              "label": "Feasibility with your resources",
+              "weight": 0.15,
+              "score": 55,
+              "explanation": "missing from your equipment list: computer; an estimated 90 minutes fits a single session."
+            },
+            {
+              "key": "distinctiveness",
+              "label": "Distinctiveness",
+              "weight": 0.1,
+              "score": 75,
+              "explanation": "this is your own adaptation, not the template verbatim; the hook is your own rather than a preset example."
+            }
+          ],
+          "rubric_version": "local-rubric-1.0.0",
+          "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
+        },
+        "source": "local-heuristic",
+        "generated_at": "2026-10-29T22:52:58.722Z"
+      },
+      "versions": [],
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-idea-7",
+      "title": "What does this line mean to you?",
+      "song_id": "demo-song-low-tide",
+      "source_preset_id": "preset-one-line-interpretation",
+      "mode": "customized",
+      "concept_description": "Show the lyric on a plain background with the verse underneath, ask one question, and pin the best answer.",
+      "hook": "Tell me what this line means to you",
+      "intended_audience": "Comment-heavy listeners who like analysing lyrics.",
+      "scene_sequence": [
+        "Static text card",
+        "Optional slow zoom on the text",
+        "Optional performance cut behind the text"
+      ],
+      "shot_list": [
+        "Static text card",
+        "Optional slow zoom on the text",
+        "Optional performance cut behind the text"
+      ],
+      "on_screen_text": [
+        "What does this mean to you?",
+        "Line from verse one"
+      ],
+      "audio_section": "Verse 2 (0:48–1:02)",
+      "editing_notes": "Two cuts, both on the beat. Hold the final frame for one second.",
+      "call_to_action": "Comment your interpretation. I will pin my favourite.",
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "estimated_production_minutes": 20,
+      "status": "planning",
+      "scheduled_date": "2026-11-09",
+      "campaign_id": "demo-campaign-low-tide",
+      "notes": "Demo record — safe to delete.",
+      "coach_assessment": {
+        "summary": "What does this line mean to you?: Show the lyric on a plain background with the verse underneath, ask one question, and pin the best answer. Readiness 72/100 (high confidence).",
+        "strengths": [
+          "Concept & song fit: linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written.",
+          "Audience relevance: the intended viewer is named; the song record names an audience; described as a group of people rather than a demographic label; there is a next step for that viewer.",
+          "Visual progression & payoff: editing notes mention timing; 3 scenes give the clip movement."
+        ],
+        "weaknesses": [
+          "No component scored below 55. The remaining risk is execution, not planning."
+        ],
+        "hook_assessment": "\"Tell me what this line means to you\" — scored 55/100. Hook is 35 characters; a readable length for a first frame; no concrete detail (a time, object or quoted line would sharpen it).",
+        "song_fit": "Linked to \"Low Tide (demo record)\" (melancholy, hopeful). Themes on record: leaving a shared home, outgrowing a friendship. Scored 80/100.",
+        "audience_fit": "You have named the viewer as: Comment-heavy listeners who like analysing lyrics. Scored 95/100.",
+        "feasibility": "your listed equipment covers this preset; the preset offers animation, which you marked as unavailable; an estimated 20 minutes fits a single session. Scored 70/100.",
+        "pacing_suggestions": [
+          "Keep the 3-beat structure but put the payoff in the last quarter of the clip.",
+          "Plan at least four shots so you have material to cut against.",
+          "Let the strongest 2 seconds of the audio happen at the moment the visual changes."
+        ],
+        "improvements": [
+          {
+            "area": "Hook",
+            "suggestion": "Rewrite the opening line so a stranger can picture one specific thing — a time, an object, or a quoted sentence — within two seconds.",
+            "impact": "high"
+          },
+          {
+            "area": "Distinctiveness",
+            "suggestion": "Change one element that is yours alone — a location no one else has, a specific object, or a line only you could write. Keep the underlying format.",
+            "impact": "medium"
+          }
+        ],
+        "revised_concept": "Show the lyric on a plain background with the verse underneath, ask one question, and pin the best answer.\nOpening (0–2s): Tell me what this line means to you.\nBeats: 1) Static text card 2) Optional slow zoom on the text 3) Optional performance cut behind the text\nAudio: Verse 2 (0:48–1:02).\nEdit: Two cuts, both on the beat. Hold the final frame for one second.\nClose: Comment your interpretation. I will pin my favourite.",
+        "alternative_concept": "Hide the lyric until the last second, then reveal",
+        "recommended_platforms": [
+          {
+            "platform": "tiktok",
+            "reason": "TikTok favours a native, immediate opening and repeated watch loops; good when the concept has a fast turn."
+          },
+          {
+            "platform": "instagram-reels",
+            "reason": "Reels favours a strong first frame that works on mute; good when the concept is visual or text-led."
+          },
+          {
+            "platform": "youtube-shorts",
+            "reason": "Shorts rewards a clear title and a searchable topic; good when the concept explains something about the song."
+          }
+        ],
+        "next_steps": [
+          "Save this version so you can restore it later.",
+          "Generate the platform packages in Metadata Studio using the same section and hook.",
+          "Put the idea on a date in Content Calendar so it leaves the backlog."
+        ],
+        "readiness": {
+          "score": 72,
+          "confidence": "high",
+          "components": [
+            {
+              "key": "hook",
+              "label": "Opening clarity & hook strength",
+              "weight": 0.25,
+              "score": 55,
+              "explanation": "Hook is 35 characters; a readable length for a first frame; no concrete detail (a time, object or quoted line would sharpen it)."
+            },
+            {
+              "key": "song_fit",
+              "label": "Concept & song fit",
+              "weight": 0.2,
+              "score": 80,
+              "explanation": "linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written."
+            },
+            {
+              "key": "audience",
+              "label": "Audience relevance",
+              "weight": 0.15,
+              "score": 95,
+              "explanation": "the intended viewer is named; the song record names an audience; described as a group of people rather than a demographic label; there is a next step for that viewer."
+            },
+            {
+              "key": "visual_progression",
+              "label": "Visual progression & payoff",
+              "weight": 0.15,
+              "score": 75,
+              "explanation": "editing notes mention timing; 3 scenes give the clip movement."
+            },
+            {
+              "key": "feasibility",
+              "label": "Feasibility with your resources",
+              "weight": 0.15,
+              "score": 70,
+              "explanation": "your listed equipment covers this preset; the preset offers animation, which you marked as unavailable; an estimated 20 minutes fits a single session."
+            },
+            {
+              "key": "distinctiveness",
+              "label": "Distinctiveness",
+              "weight": 0.1,
+              "score": 65,
+              "explanation": "this is your own adaptation, not the template verbatim."
+            }
+          ],
+          "rubric_version": "local-rubric-1.0.0",
+          "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
+        },
+        "source": "local-heuristic",
+        "generated_at": "2026-10-29T22:52:58.722Z"
+      },
+      "versions": [],
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-idea-8",
+      "title": "A comment picked this video",
+      "song_id": "demo-song-low-tide",
+      "source_preset_id": "preset-comment-chooses-next",
+      "mode": "customized",
+      "concept_description": "Show the comment, perform the requested acoustic verse, and ask for the next request.",
+      "hook": "Someone asked for the acoustic version, so here it is",
+      "intended_audience": "Return viewers who want to steer the next post.",
+      "scene_sequence": [
+        "Comment screenshot or read-out",
+        "The requested content itself",
+        "Optional thank-you to camera"
+      ],
+      "shot_list": [
+        "Comment screenshot or read-out",
+        "The requested content itself",
+        "Optional thank-you to camera"
+      ],
+      "on_screen_text": [
+        "You asked for this",
+        "Requested by a commenter"
+      ],
+      "audio_section": "Verse 2 (0:48–1:02)",
+      "editing_notes": "Two cuts, both on the beat. Hold the final frame for one second.",
+      "call_to_action": "What should I make next? Genuine suggestions only.",
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "estimated_production_minutes": 45,
+      "status": "idea",
+      "scheduled_date": "2026-11-12",
+      "campaign_id": "demo-campaign-low-tide",
+      "notes": "Demo record — safe to delete.",
+      "coach_assessment": {
+        "summary": "A comment picked this video: Show the comment, perform the requested acoustic verse, and ask for the next request. Readiness 75/100 (high confidence).",
+        "strengths": [
+          "Concept & song fit: linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written.",
+          "Audience relevance: the intended viewer is named; the song record names an audience; there is a next step for that viewer.",
+          "Visual progression & payoff: editing notes mention timing; 3 scenes give the clip movement.",
+          "Feasibility with your resources: your listed equipment covers this preset; an estimated 45 minutes fits a single session.",
+          "Distinctiveness: this is your own adaptation, not the template verbatim; the hook is your own rather than a preset example."
+        ],
+        "weaknesses": [
+          "No component scored below 55. The remaining risk is execution, not planning."
+        ],
+        "hook_assessment": "\"Someone asked for the acoustic version, so here it is\" — scored 55/100. Hook is 53 characters; a readable length for a first frame; no concrete detail (a time, object or quoted line would sharpen it).",
+        "song_fit": "Linked to \"Low Tide (demo record)\" (melancholy, hopeful). Themes on record: leaving a shared home, outgrowing a friendship. Scored 80/100.",
+        "audience_fit": "You have named the viewer as: Return viewers who want to steer the next post. Scored 85/100.",
+        "feasibility": "your listed equipment covers this preset; an estimated 45 minutes fits a single session. Scored 90/100.",
+        "pacing_suggestions": [
+          "Keep the 3-beat structure but put the payoff in the last quarter of the clip.",
+          "Plan at least four shots so you have material to cut against.",
+          "Let the strongest 2 seconds of the audio happen at the moment the visual changes."
+        ],
+        "improvements": [
+          {
+            "area": "Hook",
+            "suggestion": "Rewrite the opening line so a stranger can picture one specific thing — a time, an object, or a quoted sentence — within two seconds.",
+            "impact": "high"
+          }
+        ],
+        "revised_concept": "Show the comment, perform the requested acoustic verse, and ask for the next request.\nOpening (0–2s): Someone asked for the acoustic version, so here it is.\nBeats: 1) Comment screenshot or read-out 2) The requested content itself 3) Optional thank-you to camera\nAudio: Verse 2 (0:48–1:02).\nEdit: Two cuts, both on the beat. Hold the final frame for one second.\nClose: What should I make next? Genuine suggestions only.",
+        "alternative_concept": "Poll between two comment requests",
+        "recommended_platforms": [
+          {
+            "platform": "tiktok",
+            "reason": "TikTok favours a native, immediate opening and repeated watch loops; good when the concept has a fast turn."
+          },
+          {
+            "platform": "instagram-reels",
+            "reason": "Reels favours a strong first frame that works on mute; good when the concept is visual or text-led."
+          },
+          {
+            "platform": "youtube-shorts",
+            "reason": "Shorts rewards a clear title and a searchable topic; good when the concept explains something about the song."
+          }
+        ],
+        "next_steps": [
+          "Save this version so you can restore it later.",
+          "Generate the platform packages in Metadata Studio using the same section and hook.",
+          "Put the idea on a date in Content Calendar so it leaves the backlog."
+        ],
+        "readiness": {
+          "score": 75,
+          "confidence": "high",
+          "components": [
+            {
+              "key": "hook",
+              "label": "Opening clarity & hook strength",
+              "weight": 0.25,
+              "score": 55,
+              "explanation": "Hook is 53 characters; a readable length for a first frame; no concrete detail (a time, object or quoted line would sharpen it)."
+            },
+            {
+              "key": "song_fit",
+              "label": "Concept & song fit",
+              "weight": 0.2,
+              "score": 80,
+              "explanation": "linked to \"Low Tide (demo record)\"; the song has documented themes; uses a specific audio section (Verse 2 (0:48–1:02)); the concept could be about any song as written."
+            },
+            {
+              "key": "audience",
+              "label": "Audience relevance",
+              "weight": 0.15,
+              "score": 85,
+              "explanation": "the intended viewer is named; the song record names an audience; there is a next step for that viewer."
+            },
+            {
+              "key": "visual_progression",
+              "label": "Visual progression & payoff",
+              "weight": 0.15,
+              "score": 75,
+              "explanation": "editing notes mention timing; 3 scenes give the clip movement."
+            },
+            {
+              "key": "feasibility",
+              "label": "Feasibility with your resources",
+              "weight": 0.15,
+              "score": 90,
+              "explanation": "your listed equipment covers this preset; an estimated 45 minutes fits a single session."
+            },
+            {
+              "key": "distinctiveness",
+              "label": "Distinctiveness",
+              "weight": 0.1,
+              "score": 75,
+              "explanation": "this is your own adaptation, not the template verbatim; the hook is your own rather than a preset example."
+            }
+          ],
+          "rubric_version": "local-rubric-1.0.0",
+          "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
+        },
+        "source": "local-heuristic",
+        "generated_at": "2026-10-29T22:52:58.722Z"
+      },
+      "versions": [],
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "metadata_packages": [
+    {
+      "id": "demo-meta-1",
+      "content_idea_id": "demo-idea-1",
+      "song_id": "demo-song-low-tide",
+      "platform": "instagram-reels",
+      "tone": "emotional",
+      "title": "This song is for anyone who waited for someone to change their mind",
+      "caption": "This song is for anyone who waited for someone to change their mind\n\nOpen on the song title card for one second, cut straight to the pre-chorus performed to camera, then a single sentence about who the song is for. Close on the song name and where to hear it.\n“I keep your coat on the wrong hook”\nExcerpt: Verse 2 (0:48–1:02).\nFull song is on my profile and streaming everywhere.\nSong: Low Tide (demo record) — Demo Artist.\nMade with: Two cuts, both on the beat. Hold the final frame for one second.",
+      "description": null,
+      "search_phrases": [
+        "Low Tide (demo record)",
+        "Low Tide (demo record) Demo Artist",
+        "Low Tide (demo record) lyrics",
+        "indie pop bedroom pop",
+        "melancholy indie pop",
+        "direct song introduction video",
+        "This song is for anyone who waited",
+        "leaving a shared home"
+      ],
+      "hashtags": [
+        {
+          "tag": "#indiepop",
+          "reason": "Genre you saved on “Low Tide (demo record)”."
+        },
+        {
+          "tag": "#bedroompop",
+          "reason": "Subgenre from the song record."
+        },
+        {
+          "tag": "#melancholy",
+          "reason": "Mood you saved for this song — describes the feel, not a claim about reach."
+        },
+        {
+          "tag": "#lowtidedemorecord",
+          "reason": "Your own song title, so a search for it can find this post."
+        },
+        {
+          "tag": "#pop",
+          "reason": "Genre tag from the “Direct Song Introduction” preset."
+        }
+      ],
+      "call_to_action": "Full song is on my profile and streaming everywhere.",
+      "pinned_comment": "Which line should I explain next — “I keep your coat on the wrong hook” or the one I almost cut?",
+      "thumbnail_concept": "Cover frame from the verse 2 (0:48–1:02) shot with “This song is for anyone who…” over the quietest part of the frame.",
+      "opening_overlay": "This song is for anyone who waited for someone to c…",
+      "alternative_hooks": [
+        "“I keep your coat on the wrong hook”",
+        "The line in Low Tide (demo record) that took the longest to write",
+        "Open on the song title card for one second, cut straight to the pre-c…"
+      ],
+      "suggested_duration_seconds": 25,
+      "recommended_excerpt": "Verse 2 (0:48–1:02)",
+      "accessibility_notes": "Burn in or upload subtitles for every spoken or sung line. Keep on-screen text at least 24px at 1080×1920 and use a solid backing plate behind thin type. Avoid flashing cuts faster than 3 per second, and do not rely on colour alone to carry meaning. Verify the current Instagram Reels limits before publishing; muse-ician’s guidance was checked October 2026.",
+      "rationale": "Instagram Reels: Reels have no separate title, so this field is the line you burn into the video and/or open the caption with. Only the first ~125 characters show before “more”, and hashtags count inside the 2,200-character caption. Written only from what you saved — the idea’s hook and concept, the song record “Low Tide (demo record)”, and the “Direct Song Introduction” preset. No live trend data, view counts or viral predictions were used. Title limit 125, caption limit 2,200, 5 hashtags recommended (platform maximum 30).",
+      "source": "local-template",
+      "status": "draft",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.720Z",
+      "updated_at": "2026-10-29T22:52:58.720Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-meta-2",
+      "content_idea_id": "demo-idea-2",
+      "song_id": "demo-song-low-tide",
+      "platform": "tiktok",
+      "tone": "conversational",
+      "title": "This line took four months to write",
+      "caption": "This line took four months to write Show the empty coat hook in the hallway, type the lyric in two beats, and time the last word to the vocal. Hold the finished frame so it can be screenshotted. “I keep your coat on the wrong hook” Song: Low Tide (demo record) — Demo Artist. Which line of the song hits hardest for you?",
+      "description": null,
+      "search_phrases": [
+        "Low Tide (demo record)",
+        "Low Tide (demo record) Demo Artist",
+        "Low Tide (demo record) lyrics",
+        "indie pop bedroom pop",
+        "melancholy indie pop",
+        "the lyric that hits video",
+        "This line took four months to write",
+        "leaving a shared home"
+      ],
+      "hashtags": [
+        {
+          "tag": "#indiepop",
+          "reason": "Genre you saved on “Low Tide (demo record)”."
+        },
+        {
+          "tag": "#bedroompop",
+          "reason": "Subgenre from the song record."
+        },
+        {
+          "tag": "#melancholy",
+          "reason": "Mood you saved for this song — describes the feel, not a claim about reach."
+        },
+        {
+          "tag": "#lowtidedemorecord",
+          "reason": "Your own song title, so a search for it can find this post."
+        }
+      ],
+      "call_to_action": "Which line of the song hits hardest for you?",
+      "pinned_comment": "Which line should I explain next — “I keep your coat on the wrong hook” or the one I almost cut?",
+      "thumbnail_concept": "Cover frame from the verse 2 (0:48–1:02) shot with “This line took four months…” over the quietest part of the frame.",
+      "opening_overlay": "This line took four months to write",
+      "alternative_hooks": [
+        "“I keep your coat on the wrong hook”",
+        "The line in Low Tide (demo record) that took the longest to write",
+        "Show the empty coat hook in the hallway, type the lyric in two beats,…"
+      ],
+      "suggested_duration_seconds": 14,
+      "recommended_excerpt": "Verse 2 (0:48–1:02)",
+      "accessibility_notes": "Burn in or upload subtitles for every spoken or sung line. Keep on-screen text at least 24px at 1080×1920 and use a solid backing plate behind thin type. Avoid flashing cuts faster than 3 per second, and do not rely on colour alone to carry meaning. Verify the current TikTok limits before publishing; muse-ician’s guidance was checked October 2026.",
+      "rationale": "TikTok: TikTok has no title field — the first line of the caption is the hook, and roughly the first 100 characters show in the feed. Captions of about 150–300 characters are the practical range; keywords in the caption are read as search text. Written only from what you saved — the idea’s hook and concept, the song record “Low Tide (demo record)”, and the “The Lyric That Hits” preset. No live trend data, view counts or viral predictions were used. Title limit 100, caption limit 2,200, 4 hashtags recommended (platform maximum 30).",
+      "source": "local-template",
+      "status": "draft",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.721Z",
+      "updated_at": "2026-10-29T22:52:58.721Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-meta-3",
+      "content_idea_id": "demo-idea-3",
+      "song_id": "demo-song-low-tide",
+      "platform": "youtube-shorts",
+      "tone": "emotional",
+      "title": "The bridge you hear is a phone memo from 3am",
+      "caption": "The part I keep coming back to:\nExplain the decision to keep the phone recording instead of the studio take, show the file timestamp, then play the four seconds that survived.\nSample song record created by muse-ician’s demo mode, inspired by the example in the seed preset library. Replace it with a real song when you are ready.\nExcerpt: Verse 2 (0:48–1:02).\nWhat should I explain next — the drums or the falsetto?\nSong: Low Tide (demo record) — Demo Artist.\nStreaming link: add yours before publishing.\nWritten with muse-ician. No trend data was used, and no reach is promised.",
+      "description": "The bridge you hear is a phone memo from 3am.\nExplain the decision to keep the phone recording instead of the studio take, show the file timestamp, then play the four seconds that survived.\nSong: Low Tide (demo record) — Demo Artist\nExcerpt: Verse 2 (0:48–1:02)\nThemes: leaving a shared home, outgrowing a friendship\nCaptions and on-screen text: turn on subtitles so the video works muted.\nAdd your streaming link here if you have one.",
+      "search_phrases": [
+        "Low Tide (demo record)",
+        "Low Tide (demo record) Demo Artist",
+        "Low Tide (demo record) lyrics",
+        "indie pop bedroom pop",
+        "melancholy indie pop",
+        "behind the song video",
+        "The bridge you hear is a phone",
+        "leaving a shared home"
+      ],
+      "hashtags": [
+        {
+          "tag": "#indiepop",
+          "reason": "Genre you saved on “Low Tide (demo record)”."
+        },
+        {
+          "tag": "#bedroompop",
+          "reason": "Subgenre from the song record."
+        },
+        {
+          "tag": "#melancholy",
+          "reason": "Mood you saved for this song — describes the feel, not a claim about reach."
+        }
+      ],
+      "call_to_action": "What should I explain next — the drums or the falsetto?",
+      "pinned_comment": "If you want the full version — it’s called Low Tide (demo record) by Demo Artist. What should I break down next?",
+      "thumbnail_concept": "Close crop of the video’s strongest frame with the line “The bridge you hear is a phone…” in the lower third. Keep text under seven words so it survives small thumbnails.",
+      "opening_overlay": "The bridge you hear is a phone memo from 3am · Low Tide (de…",
+      "alternative_hooks": [
+        "“I keep your coat on the wrong hook”",
+        "The line in Low Tide (demo record) that took the longest to write",
+        "Explain the decision to keep the phone recording instead of the studi…"
+      ],
+      "suggested_duration_seconds": 33,
+      "recommended_excerpt": "Verse 2 (0:48–1:02)",
+      "accessibility_notes": "Burn in or upload subtitles for every spoken or sung line. Keep on-screen text at least 24px at 1080×1920 and use a solid backing plate behind thin type. Write a descriptive title instead of “#shorts #viral”; the description should still read if the audio is off. Verify the current YouTube Shorts limits before publishing; muse-ician’s guidance was checked October 2026.",
+      "rationale": "YouTube Shorts: Title carries the search terms; the description is indexed but only its first ~100 characters show above the fold. First three hashtags in the description can appear above the title, and a video with more than 15 hashtags loses hashtag display entirely — so use a few, specific ones. Written only from what you saved — the idea’s hook and concept, the song record “Low Tide (demo record)”, and the “Behind the Song” preset. No live trend data, view counts or viral predictions were used. Title limit 100, caption limit 5,000, 3 hashtags recommended (platform maximum 15).",
+      "source": "local-template",
+      "status": "draft",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.721Z",
+      "updated_at": "2026-10-29T22:52:58.721Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-meta-4",
+      "content_idea_id": "demo-idea-4",
+      "song_id": "demo-song-low-tide",
+      "platform": "instagram-reels",
+      "tone": "conversational",
+      "title": "POV: you are fine until this song comes on in the car",
+      "caption": "POV: you are fine until this song comes on in the car\n\nFilm a static shot from the passenger seat, song entering when the chorus line lands, then cut to the reaction shot.\n“I keep your coat on the wrong hook”\nExcerpt: Verse 2 (0:48–1:02).\nWhat would you have done in this situation?\nSong: Low Tide (demo record) — Demo Artist.\nMade with: Two cuts, both on the beat. Hold the final frame for one second.",
+      "description": null,
+      "search_phrases": [
+        "Low Tide (demo record)",
+        "Low Tide (demo record) Demo Artist",
+        "Low Tide (demo record) lyrics",
+        "indie pop bedroom pop",
+        "melancholy indie pop",
+        "relatable pov video",
+        "POV: you are fine until this song",
+        "leaving a shared home"
+      ],
+      "hashtags": [
+        {
+          "tag": "#indiepop",
+          "reason": "Genre you saved on “Low Tide (demo record)”."
+        },
+        {
+          "tag": "#bedroompop",
+          "reason": "Subgenre from the song record."
+        },
+        {
+          "tag": "#melancholy",
+          "reason": "Mood you saved for this song — describes the feel, not a claim about reach."
+        },
+        {
+          "tag": "#lowtidedemorecord",
+          "reason": "Your own song title, so a search for it can find this post."
+        },
+        {
+          "tag": "#pop",
+          "reason": "Genre tag from the “Relatable POV” preset."
+        }
+      ],
+      "call_to_action": "What would you have done in this situation?",
+      "pinned_comment": "Which line should I explain next — “I keep your coat on the wrong hook” or the one I almost cut?",
+      "thumbnail_concept": "Cover frame from the verse 2 (0:48–1:02) shot with “POV: you are fine until thi…” over the quietest part of the frame.",
+      "opening_overlay": "POV: you are fine until this song comes on in the c…",
+      "alternative_hooks": [
+        "“I keep your coat on the wrong hook”",
+        "The line in Low Tide (demo record) that took the longest to write",
+        "Film a static shot from the passenger seat, song entering when the ch…"
+      ],
+      "suggested_duration_seconds": 19,
+      "recommended_excerpt": "Verse 2 (0:48–1:02)",
+      "accessibility_notes": "Burn in or upload subtitles for every spoken or sung line. Keep on-screen text at least 24px at 1080×1920 and use a solid backing plate behind thin type. Avoid flashing cuts faster than 3 per second, and do not rely on colour alone to carry meaning. Verify the current Instagram Reels limits before publishing; muse-ician’s guidance was checked October 2026.",
+      "rationale": "Instagram Reels: Reels have no separate title, so this field is the line you burn into the video and/or open the caption with. Only the first ~125 characters show before “more”, and hashtags count inside the 2,200-character caption. Written only from what you saved — the idea’s hook and concept, the song record “Low Tide (demo record)”, and the “Relatable POV” preset. No live trend data, view counts or viral predictions were used. Title limit 125, caption limit 2,200, 5 hashtags recommended (platform maximum 30).",
+      "source": "local-template",
+      "status": "draft",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.721Z",
+      "updated_at": "2026-10-29T22:52:58.721Z",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "demo-campaign-low-tide",
+      "name": "Low Tide — 15 day demo campaign",
+      "song_id": "demo-song-low-tide",
+      "description": "Sample 15-day plan built from the starter preset library. Adjust the dates, frequency or order in Content Calendar.",
+      "start_date": "2026-10-29",
+      "end_date": "2026-11-12",
+      "posting_cadence_days": 2,
+      "stage": "post-release",
+      "status": "active",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "planned_posts": [
+    {
+      "id": "demo-post-1",
+      "content_idea_id": "demo-idea-1",
+      "song_id": "demo-song-low-tide",
+      "campaign_id": "demo-campaign-low-tide",
+      "metadata_package_id": "demo-meta-1",
+      "platform": "instagram-reels",
+      "scheduled_date": "2026-10-29",
+      "status": "published",
+      "title": "Low Tide — introduction for first-time listeners",
+      "notes": "Demo planned post.",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-post-2",
+      "content_idea_id": "demo-idea-2",
+      "song_id": "demo-song-low-tide",
+      "campaign_id": "demo-campaign-low-tide",
+      "metadata_package_id": "demo-meta-2",
+      "platform": "tiktok",
+      "scheduled_date": "2026-10-30",
+      "status": "published",
+      "title": "The coat on the wrong hook",
+      "notes": "Demo planned post.",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-post-3",
+      "content_idea_id": "demo-idea-3",
+      "song_id": "demo-song-low-tide",
+      "campaign_id": "demo-campaign-low-tide",
+      "metadata_package_id": "demo-meta-3",
+      "platform": "youtube-shorts",
+      "scheduled_date": "2026-11-01",
+      "status": "editing",
+      "title": "Why the bridge is a phone recording",
+      "notes": "Demo planned post.",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-post-4",
+      "content_idea_id": "demo-idea-4",
+      "song_id": "demo-song-low-tide",
+      "campaign_id": "demo-campaign-low-tide",
+      "metadata_package_id": "demo-meta-4",
+      "platform": "instagram-reels",
+      "scheduled_date": "2026-11-03",
+      "status": "filming",
+      "title": "POV: you are fine until this song comes on",
+      "notes": "Demo planned post.",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-post-5",
+      "content_idea_id": "demo-idea-5",
+      "song_id": "demo-song-low-tide",
+      "campaign_id": "demo-campaign-low-tide",
+      "metadata_package_id": null,
+      "platform": "tiktok",
+      "scheduled_date": "2026-11-05",
+      "status": "scripted",
+      "title": "Voice memo vs final mix",
+      "notes": "Demo planned post.",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-post-6",
+      "content_idea_id": "demo-idea-6",
+      "song_id": "demo-song-low-tide",
+      "campaign_id": "demo-campaign-low-tide",
+      "metadata_package_id": null,
+      "platform": "youtube-shorts",
+      "scheduled_date": "2026-11-07",
+      "status": "planning",
+      "title": "Four bass notes carry the chorus",
+      "notes": "Demo planned post.",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-post-7",
+      "content_idea_id": "demo-idea-7",
+      "song_id": "demo-song-low-tide",
+      "campaign_id": "demo-campaign-low-tide",
+      "metadata_package_id": null,
+      "platform": "instagram-reels",
+      "scheduled_date": "2026-11-09",
+      "status": "planning",
+      "title": "What does this line mean to you?",
+      "notes": "Demo planned post.",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-post-8",
+      "content_idea_id": "demo-idea-8",
+      "song_id": "demo-song-low-tide",
+      "campaign_id": "demo-campaign-low-tide",
+      "metadata_package_id": null,
+      "platform": "tiktok",
+      "scheduled_date": "2026-11-12",
+      "status": "idea",
+      "title": "A comment picked this video",
+      "notes": "Demo planned post.",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "trends": [],
+  "performance_records": [
+    {
+      "id": "demo-perf-1",
+      "song_id": "demo-song-low-tide",
+      "content_idea_id": "demo-idea-1",
+      "platform": "instagram-reels",
+      "post_url": null,
+      "published_on": "2026-10-29",
+      "views": 1840,
+      "likes": 143,
+      "comments": 21,
+      "shares": 12,
+      "saves": 58,
+      "avg_watch_time_seconds": 11.2,
+      "completion_rate": 46,
+      "profile_visits": 62,
+      "link_clicks": 18,
+      "followers_attributed": 9,
+      "notes": "Sample record so the journal has data to compare. These are not real analytics.",
+      "collected_on": "2026-10-31",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-perf-2",
+      "song_id": "demo-song-low-tide",
+      "content_idea_id": "demo-idea-2",
+      "platform": "tiktok",
+      "post_url": null,
+      "published_on": "2026-10-30",
+      "views": 6420,
+      "likes": 512,
+      "comments": 74,
+      "shares": 39,
+      "saves": 96,
+      "avg_watch_time_seconds": 9.4,
+      "completion_rate": 38,
+      "profile_visits": 121,
+      "link_clicks": 24,
+      "followers_attributed": 31,
+      "notes": "Sample record. Numbers were invented for the demo and are labelled as demo data.",
+      "collected_on": "2026-11-01",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    },
+    {
+      "id": "demo-perf-3",
+      "song_id": "demo-song-low-tide",
+      "content_idea_id": "demo-idea-3",
+      "platform": "youtube-shorts",
+      "post_url": null,
+      "published_on": "2026-10-26",
+      "views": 910,
+      "likes": 64,
+      "comments": 9,
+      "shares": 4,
+      "saves": 12,
+      "avg_watch_time_seconds": null,
+      "completion_rate": null,
+      "profile_visits": 11,
+      "link_clicks": 3,
+      "followers_attributed": 2,
+      "notes": "Sample record. Demo data only.",
+      "collected_on": "2026-10-28",
+      "is_demo": true,
+      "created_at": "2026-10-29T22:52:58.705Z",
+      "updated_at": "2026-10-29T22:52:58.705Z",
+      "schema_version": "1.0.0"
+    }
+  ]
+}

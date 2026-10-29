@@ -1,0 +1,3420 @@
+{
+  "schema_version": "1.0.0",
+  "export_type": "preset_pack",
+  "manifest": {
+    "name": "muse-ician starter preset pack",
+    "description": "30 video concept presets exported from muse-ician.",
+    "created_at": "2026-10-29T22:52:58.695Z",
+    "author": null,
+    "schema_version": "1.0.0",
+    "exported_by": "muse-ician 1.0.0",
+    "notes": "Import this file from Import / Export → Preset pack. Record ids are preserved, so re-importing updates the same presets if you choose \"replace\".",
+    "record_counts": {
+      "presets": 30
+    }
+  },
+  "presets": [
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Silent setup, song enters late (stronger for TikTok)",
+        "Two-shot split: the situation and the aftermath side by side",
+        "Text-only version over a still photo for zero-budget weeks"
+      ],
+      "common_mistakes": [
+        "Explaining the POV out loud instead of letting the image do it",
+        "Choosing a situation so broad that nobody feels personally seen",
+        "Starting the song too early so the audience has no reason to wait"
+      ],
+      "on_screen_text": [
+        "POV: you are driving home and realise you are the one who changed",
+        "Lyric, lower third, 18 seconds in"
+      ],
+      "secondary_objectives": [
+        "storytelling"
+      ],
+      "genre_tags": [
+        "pop",
+        "r&b",
+        "indie",
+        "hip-hop",
+        "singer-songwriter"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "bittersweet",
+        "hopeful"
+      ],
+      "id": "preset-relatable-pov",
+      "title": "Relatable POV",
+      "summary": "Stage a situation your listeners recognise instantly, then let the song land as the resolution.",
+      "description": "Open inside a small, specific, slightly uncomfortable everyday moment — the 2am text you should not send, the group chat you muted, the drive home after a bad day. Play the situation straight for 3–5 seconds with almost no performance, then cut to the song section that answers the feeling. The power comes from specificity: name a real object, a real time, a real sentence someone said. Broad \"when you are sad\" framing reads as generic; \"reading their message and typing nothing back\" does not.",
+      "objectives": [
+        "discovery",
+        "song-promotion",
+        "audience-engagement"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 12,
+        "max": 25
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "pov",
+        "relatable",
+        "lyrics",
+        "everyday-life"
+      ],
+      "song_context_required": "One lyric or 8–15 second section that resolves or reframes the emotion.",
+      "hook_examples": [
+        "POV: you finally stopped explaining yourself",
+        "POV: the message you typed and deleted at 2am",
+        "POV: you are fine until this song comes on in the car"
+      ],
+      "execution_steps": [
+        "Choose the exact lyric line and note its timestamp in the song.",
+        "Write the situation as one concrete sentence with a real object, time or place in it.",
+        "Film the setup in a single static shot — no smiling at the camera, no explaining.",
+        "Add a two-word overlay in the first second: \"POV:\" plus the situation.",
+        "Cut to the song exactly when the emotion peaks in the lyric, not a beat late.",
+        "Let the clip run 4–6 seconds on the lyric, then hold one beat of silence or room tone before it loops."
+      ],
+      "shot_list": [
+        "Setup: one static shot of the situation (hands, screen, empty seat, doorway)",
+        "Insert: the object that carries the story (phone, receipt, jacket, keys)",
+        "Reaction: cut to your face at the moment the lyric lands",
+        "Payoff: wide shot with the lyric on screen"
+      ],
+      "audio_guidance": "Start with the environment sound for one second, then let the song enter on the downbeat of the chorus. Do not talk over the setup — the silence is the tension.",
+      "editing_notes": "Hard cuts only. Keep total cuts to three. Leave the frame slightly imperfect (a reflection, an unmade bed) — polish kills the recognition.",
+      "cta_examples": [
+        "What would you have done in this situation?",
+        "Save this for the next time you need it."
+      ],
+      "accessibility_notes": "Burned-in captions for the overlay, high contrast text on a dark backing plate, and avoid flashing cuts.",
+      "example_metadata": {
+        "tone": "conversational",
+        "caption_example": "Wrote this line in a parked car outside my flat. It is track 3 on the EP — link in bio if it sounds like your week.",
+        "title_example": "POV: you stopped explaining yourself — new song",
+        "hashtag_examples": [
+          "#pov",
+          "#lyricsthatstick",
+          "#indieartist",
+          "#newmusictiktok"
+        ]
+      },
+      "estimated_production_minutes": 60
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Vertical performance with the instrumental playing out loud (live feel)",
+        "Sitting on a floor with headphones in — no instrument",
+        "One-take with a single lyric overlay at the emotional peak"
+      ],
+      "common_mistakes": [
+        "Lip-syncing to a studio mix instead of performing",
+        "Choosing a section you cannot sustain so the take falls apart",
+        "Over-filtering the face until it looks like an ad"
+      ],
+      "on_screen_text": [
+        "One take, no edit",
+        "The original bridge"
+      ],
+      "secondary_objectives": [
+        "audience-engagement"
+      ],
+      "genre_tags": [
+        "soul",
+        "pop",
+        "indie",
+        "folk",
+        "r&b"
+      ],
+      "mood_tags": [
+        "intimate",
+        "honest",
+        "emotional"
+      ],
+      "id": "preset-raw-performance",
+      "title": "Raw Performance",
+      "summary": "One memorable section performed straight to camera with a single light and no edits.",
+      "description": "The concept with the highest trust-to-effort ratio: you perform 10–20 seconds of the song directly into the lens. No lip-sync mismatch, no costume changes, no trend choreography — just an honest, unpolished take that shows a stranger what you actually sound like. The credibility comes from imperfection: one room, one lamp, one take. Use the strongest vocal moment, the one where your delivery changes, not the most technically difficult section.",
+      "objectives": [
+        "song-promotion",
+        "artist-identity",
+        "discovery"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 10,
+        "max": 30
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action"
+      ],
+      "face_visibility": "required",
+      "equipment": [
+        "phone",
+        "phone-tripod"
+      ],
+      "tags": [
+        "performance",
+        "live-vocal",
+        "authenticity",
+        "acoustic"
+      ],
+      "song_context_required": "One rehearsal-ready section you can deliver comfortably in a single take.",
+      "hook_examples": [
+        "This is the part of the song I sing differently live",
+        "No autotune, no edit, one take",
+        "Performing the bridge the way it was originally written"
+      ],
+      "execution_steps": [
+        "Rehearse the exact 15-second window three times so you know where it starts and ends.",
+        "Set the phone slightly above eye level, one lamp or window behind you.",
+        "Record 3 takes without stopping, then pick the one with the best emotional delivery — not the cleanest vocal.",
+        "Trim the first and last half-second so it loops cleanly.",
+        "Add captions of the key lyric only; leave the rest to the performance."
+      ],
+      "shot_list": [
+        "Medium close-up, one take",
+        "Optional insert: hands on instrument or mic"
+      ],
+      "audio_guidance": "Record the vocal live into the phone mic with the instrumental at low volume in headphones. A slightly roomy, imperfect capture reads as more honest than a studio mix.",
+      "editing_notes": "No colour grade, no transitions, no zoom punches. If you must cut, cut only dead air at the start.",
+      "cta_examples": [
+        "Full song is called \"Name it\" — it is on my profile.",
+        "Would you want an acoustic version of this?"
+      ],
+      "accessibility_notes": "Add captions of the full lyric so Deaf and hard-of-hearing viewers get the words, not just the sound.",
+      "example_metadata": {
+        "tone": "direct",
+        "caption_example": "Third take, small room, one lamp. The studio version has three harmonies — this one has none.",
+        "title_example": "One take of my favourite bridge",
+        "hashtag_examples": [
+          "#onetake",
+          "#livesession",
+          "#originalsong",
+          "#singersongwriter"
+        ]
+      },
+      "estimated_production_minutes": 25
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Typewriter reveal on paper",
+        "Handwritten lyric on a mirror or window",
+        "Animated kinetic typography without any footage",
+        "Lyric painted on a wall, camera pulls back to reveal the room"
+      ],
+      "common_mistakes": [
+        "Choosing a lyric that needs the verse to make sense",
+        "Text so small or fast that people cannot read it",
+        "Illustrating the lyric literally and killing the metaphor"
+      ],
+      "on_screen_text": [
+        "I learned to be quiet in rooms that were never mine",
+        "Line 2 of verse 2 — \"Low Tide\""
+      ],
+      "secondary_objectives": [
+        "audience-engagement",
+        "storytelling"
+      ],
+      "genre_tags": [
+        "indie",
+        "alternative",
+        "pop",
+        "singer-songwriter"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "reflective",
+        "hopeful"
+      ],
+      "id": "preset-lyric-that-hits",
+      "title": "The Lyric That Hits",
+      "summary": "Build a short video where one distinctive lyric is the whole event.",
+      "description": "Pick a single line that can stand alone as a sentence. Everything in the video exists to make that line land harder: a slow reveal, a visual metaphor that matches its meaning, and text timing that lets the viewer read before the vocal arrives. Choose the lyric people quote back at you — the one with a specific image or a sharp turn of phrase, not the most repetitive hook.",
+      "objectives": [
+        "discovery",
+        "song-promotion"
+      ],
+      "platforms": [
+        "youtube-shorts",
+        "instagram-reels",
+        "tiktok"
+      ],
+      "duration_seconds": {
+        "min": 8,
+        "max": 20
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text",
+        "animation"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "lyrics",
+        "typography",
+        "storytelling",
+        "minimal"
+      ],
+      "song_context_required": "One self-contained lyric line plus the timestamp where it is sung.",
+      "hook_examples": [
+        "This line took me four months to write",
+        "One lyric from the song, no explanation",
+        "The line nobody has noticed yet"
+      ],
+      "execution_steps": [
+        "Choose one lyric that makes sense without the surrounding verse.",
+        "Plan the visual to support the line rather than illustrate it literally.",
+        "Open with one second of quiet — an empty frame or the lyric typed out.",
+        "Split the lyric into two beats: setup, then the turn of the phrase.",
+        "Time the text so the last word arrives exactly with the vocal.",
+        "Hold the final frame for one second so viewers can screenshot it."
+      ],
+      "shot_list": [
+        "Cold open: still frame or slow pan, no text",
+        "Text beat 1: first half of the lyric",
+        "Text beat 2: the turn of the line, over the musical swell",
+        "Final frame: full lyric, legible, held"
+      ],
+      "audio_guidance": "Use the studio vocal, not a live capture. Start 1.5 seconds before the lyric so the phrase has room to arrive.",
+      "editing_notes": "One typeface, two sizes. Text should appear on the beat of the vocal, not before it. Keep animatics under 200ms.",
+      "cta_examples": [
+        "Which line of the song hits hardest for you?",
+        "Screenshot this one and send it to whoever needs it."
+      ],
+      "accessibility_notes": "Minimum 32px equivalent text in a high-contrast colour, no serif script fonts, avoid text over busy footage.",
+      "example_metadata": {
+        "tone": "minimal",
+        "caption_example": "The last line of the bridge. The whole song lives or dies on this one.",
+        "title_example": "The line I rewrote 11 times",
+        "hashtag_examples": [
+          "#lyricvideo",
+          "#lyricsthatstick",
+          "#indiemusic",
+          "#songwriting"
+        ]
+      },
+      "estimated_production_minutes": 45
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "post-release",
+      "variations": [
+        "Voiceover over studio B-roll instead of talking head",
+        "Screen recording of the session with your voice",
+        "Split screen: early demo on the left, final on the right"
+      ],
+      "common_mistakes": [
+        "Starting with \"so this song is about...\" instead of the decision",
+        "Making it about feelings rather than a concrete choice",
+        "Explaining the whole album in 30 seconds"
+      ],
+      "on_screen_text": [
+        "I almost deleted this bridge",
+        "Voice memo, March 2025"
+      ],
+      "secondary_objectives": [
+        "discovery",
+        "education"
+      ],
+      "genre_tags": [
+        "indie",
+        "pop",
+        "hip-hop",
+        "rock",
+        "electronic"
+      ],
+      "mood_tags": [
+        "reflective",
+        "curious",
+        "warm"
+      ],
+      "id": "preset-behind-the-song",
+      "title": "Behind the Song",
+      "summary": "Tell the real decision, accident or argument that produced this song.",
+      "description": "A 20–40 second talking-head or voiceover piece about one specific choice, not the whole origin story. The winning version names a decision and its consequence: the producer who said cut the second verse, the cheap keyboard that ended up as the lead, the argument that became the pre-chorus. Specificity is the difference between an interesting video and an artist diary entry nobody finishes.",
+      "objectives": [
+        "storytelling",
+        "audience-engagement",
+        "artist-identity"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "youtube-shorts",
+        "tiktok"
+      ],
+      "duration_seconds": {
+        "min": 20,
+        "max": 45
+      },
+      "difficulty": "moderate",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "screen-recording",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "storytelling",
+        "songwriting",
+        "studio",
+        "process"
+      ],
+      "song_context_required": "A true, specific story about the making of the song.",
+      "hook_examples": [
+        "I nearly cut the best part of this song",
+        "This song only exists because a session got cancelled",
+        "The producer wanted a different chorus. I said no for two weeks."
+      ],
+      "execution_steps": [
+        "Write one sentence: the decision, the alternative, and why you refused it.",
+        "Record the story in 25–35 seconds — no intro, start on the decision.",
+        "Cut any sentence that only sets up the story (three takes will show you which ones).",
+        "Show the evidence: session file, voice memo, scribbled lyric, plugin screenshot.",
+        "Land the story, then play 4 seconds of the actual moment it produced."
+      ],
+      "shot_list": [
+        "Talking head, mid-shot, looking slightly off camera",
+        "Insert: DAW session or voice memo timestamp",
+        "Insert: the lyric page or notebook",
+        "Final 4 seconds: the song moment the story earned"
+      ],
+      "audio_guidance": "Phone mic close to the mouth, room treated with a duvet if possible. Duck the instrumental to -20dB under your voice and lift it for the final four seconds.",
+      "editing_notes": "Subtitles are mandatory. Jump-cut between sentences to keep pace. Keep one silence before the payoff line.",
+      "cta_examples": [
+        "What should I explain next — the drums or the falsetto?",
+        "Full breakdown of this track is pinned on my profile."
+      ],
+      "accessibility_notes": "Hard-code subtitles; keep the talking head lit well enough to read lips; avoid music louder than -18dB under speech.",
+      "example_metadata": {
+        "tone": "storytelling",
+        "caption_example": "The bridge you hear was take one, recorded on a phone at 3am. I never got it that honest again, so I kept the phone take.",
+        "title_example": "Why the bridge in this song is a phone recording",
+        "hashtag_examples": [
+          "#behindthesong",
+          "#songwritingprocess",
+          "#musicproducer",
+          "#bedroompop"
+        ]
+      },
+      "estimated_production_minutes": 90
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "pre-release",
+      "variations": [
+        "One location, two timelines intercut",
+        "Animated illustrated version using the same storyboard",
+        "Loop-friendly: last frame matches the first frame"
+      ],
+      "common_mistakes": [
+        "Trying to tell a five-act story in 45 seconds",
+        "Shooting without a planned last frame",
+        "Using a section with no dynamic change so the video feels flat"
+      ],
+      "on_screen_text": [
+        "A short film for \"Song Title\"",
+        "shot on a phone, one afternoon"
+      ],
+      "secondary_objectives": [
+        "storytelling"
+      ],
+      "genre_tags": [
+        "alternative",
+        "indie",
+        "electronic",
+        "r&b"
+      ],
+      "mood_tags": [
+        "cinematic",
+        "dreamy",
+        "bittersweet"
+      ],
+      "id": "preset-mini-music-video",
+      "title": "Mini Music Video",
+      "summary": "A 30–60 second visual story with a beginning, a turn and a last frame that recontextualises the song.",
+      "description": "Not a trailer — a small complete story in three shots. A character wants something, gets a version of it, and the last frame changes the reading of the lyric you are using. Constraint is a feature: one location, one or two characters, no dialogue. Plan the final frame first, then work backwards so every shot earns that image.",
+      "objectives": [
+        "song-promotion",
+        "artist-identity",
+        "discovery"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "youtube-shorts",
+        "tiktok"
+      ],
+      "duration_seconds": {
+        "min": 30,
+        "max": 60
+      },
+      "difficulty": "challenging",
+      "budget": "low",
+      "filming_methods": [
+        "live-action",
+        "hybrid",
+        "animation"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "phone-tripod",
+        "editing-software",
+        "external-light"
+      ],
+      "tags": [
+        "cinematic",
+        "narrative",
+        "short-film",
+        "visual-story"
+      ],
+      "song_context_required": "A 30–55 second section with an emotional arc — usually verse into chorus.",
+      "hook_examples": [
+        "We shot this in my aunt’s kitchen in one afternoon",
+        "A 45-second film for a 3-minute song",
+        "The last frame is the reason this video exists"
+      ],
+      "execution_steps": [
+        "Nail the final image in one sentence before planning anything else.",
+        "Build a three-beat storyboard: want, attempt, consequence.",
+        "Scout one location you can shoot in daylight and one after dark.",
+        "Shoot the last frame first while you still have energy and light.",
+        "Cut to the song so the chorus hits on the consequence shot.",
+        "Keep dialogue out; let the lyric carry the words."
+      ],
+      "shot_list": [
+        "Establishing: character alone in a specific space",
+        "Action: hands doing something purposeful",
+        "Turn: an unexpected detail in the frame",
+        "Consequence: reaction, wide shot, or empty space",
+        "Final frame: the image that reframes the lyric"
+      ],
+      "audio_guidance": "Use a section that changes energy. Put the biggest sonic moment on the turn — do not start on the chorus.",
+      "editing_notes": "Match cut on movement between beats 1 and 2. Colour grade for one temperature. Never exceed 8 shots at this length.",
+      "cta_examples": [
+        "Full film is on my profile — song is \"Title\".",
+        "Would you watch a longer version of this?"
+      ],
+      "accessibility_notes": "Include captions; avoid strobing light effects; if the story relies on a colour cue, describe it in on-screen text.",
+      "example_metadata": {
+        "tone": "cinematic",
+        "caption_example": "One kitchen, one afternoon, one phone. The last shot was the only one we planned in advance.",
+        "title_example": "A 45-second film for my new single",
+        "hashtag_examples": [
+          "#shortfilm",
+          "#musicvideo",
+          "#shotoniphone",
+          "#indiefilm"
+        ]
+      },
+      "estimated_production_minutes": 300
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "post-release",
+      "variations": [
+        "Lyrics side by side, same melody",
+        "Loop the demo three times before the reveal",
+        "Producer/artist duet format: you react to your own demo"
+      ],
+      "common_mistakes": [
+        "Choosing a demo that already sounds finished",
+        "Not labelling which version is which",
+        "Letting the demo run so long people swipe away before the reveal"
+      ],
+      "on_screen_text": [
+        "March 2024 — voice memo",
+        "September 2026 — final mix"
+      ],
+      "secondary_objectives": [
+        "behind-the-scenes",
+        "artist-identity"
+      ],
+      "genre_tags": [
+        "pop",
+        "electronic",
+        "hip-hop",
+        "indie",
+        "rock"
+      ],
+      "mood_tags": [
+        "nostalgic",
+        "curious",
+        "energetic"
+      ],
+      "id": "preset-unfinished-version",
+      "title": "The Unfinished Version",
+      "summary": "Play the rough voice memo next to the finished production and let the gap do the talking.",
+      "description": "A before/after built from material you already own. The voice memo does not need to be good — it needs to be recognisably the same song with less polish. The turn is the transition: cut on the same word, same drum hit, or same vocal phrase so the listener hears the production arrive rather than being told about it.",
+      "objectives": [
+        "audience-engagement",
+        "storytelling",
+        "song-promotion"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 35
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "screen-recording",
+        "static-text",
+        "hybrid"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "demo",
+        "before-after",
+        "production",
+        "process"
+      ],
+      "song_context_required": "A voice memo of the song plus the corresponding finished section.",
+      "hook_examples": [
+        "Voice memo vs the final mix",
+        "This was recorded on a broken phone in 2023",
+        "Same lyric, two years apart"
+      ],
+      "execution_steps": [
+        "Find the matching phrase in both the demo and the final version.",
+        "Align both clips so the transition happens on the same word.",
+        "Label the two sides with dates so the difference is undeniable.",
+        "Cut to the finished version on a downbeat for maximum impact.",
+        "Add one line of context — what changed and why."
+      ],
+      "shot_list": [
+        "Screen capture of voice memo with visible date",
+        "Same section from the finished mix",
+        "Optional: you reacting in the corner"
+      ],
+      "audio_guidance": "Normalise both clips to similar loudness so the comparison is about production, not volume. Keep the demo slightly quieter to feel smaller.",
+      "editing_notes": "Hard cut at the join. Do not crossfade — the jolt is the point. Keep the whole clip under 30 seconds.",
+      "cta_examples": [
+        "Which version do you prefer? Be honest.",
+        "Full song out now — demo version is on Patreon."
+      ],
+      "accessibility_notes": "Caption both sections and state the dates in text, not only in audio.",
+      "example_metadata": {
+        "tone": "storytelling",
+        "caption_example": "The voice memo is from a night I almost scrapped the song. The finished version came nine months later.",
+        "title_example": "Voice memo vs final mix",
+        "hashtag_examples": [
+          "#beforeandafter",
+          "#voicememo",
+          "#musicproduction",
+          "#newmusic"
+        ]
+      },
+      "estimated_production_minutes": 35
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Two-part series: opinion then a rebuttal video",
+        "Green-screen over your own Spotify analytics (only with real numbers)",
+        "Duet-friendly version that leaves space for a reply"
+      ],
+      "common_mistakes": [
+        "Picking a \"hot take\" you do not actually believe",
+        "Never getting to the evidence",
+        "Punching down at other artists instead of at an idea"
+      ],
+      "on_screen_text": [
+        "Unpopular opinion:",
+        "Here is how I did it instead"
+      ],
+      "secondary_objectives": [
+        "education",
+        "song-promotion"
+      ],
+      "genre_tags": [
+        "pop",
+        "hip-hop",
+        "rock",
+        "electronic",
+        "indie"
+      ],
+      "mood_tags": [
+        "confident",
+        "playful",
+        "provocative"
+      ],
+      "id": "preset-unpopular-opinion",
+      "title": "The Unpopular Opinion",
+      "summary": "State a defensible opinion about music or your scene, then prove it with your own song.",
+      "description": "A talking-head piece built on one opinion you genuinely hold and can defend in 15 seconds. It needs to be arguable but not inflammatory — think \"hooks are getting shorter because of the skip button\" rather than takes designed to start fights. Then connect the opinion to a specific choice in your song so the video promotes the music without becoming an ad.",
+      "objectives": [
+        "discovery",
+        "audience-engagement",
+        "artist-identity"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 40
+      },
+      "difficulty": "moderate",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action"
+      ],
+      "face_visibility": "required",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "opinion",
+        "commentary",
+        "talking-head",
+        "discussion"
+      ],
+      "song_context_required": "A choice in your song that demonstrates the opinion.",
+      "hook_examples": [
+        "Unpopular opinion: your chorus is too long",
+        "Nobody wants to hear this but bridges are dying",
+        "Most artists are mixing for headphones and it shows"
+      ],
+      "execution_steps": [
+        "Write the opinion as a sentence with a \"because\" clause.",
+        "Add one piece of evidence from your own work.",
+        "Record the take as one continuous shot, no intro pleasantries.",
+        "Cut to the example from your song in the final 6 seconds.",
+        "End with a question that invites disagreement instead of agreement."
+      ],
+      "shot_list": [
+        "Talking head medium shot",
+        "Insert: your DAW, waveform or lyric sheet as evidence",
+        "Performance clip of the example section"
+      ],
+      "audio_guidance": "Voice-first. Music only under the final six seconds. Do not bury the opinion under a loud backing track.",
+      "editing_notes": "Remove every pause longer than 300ms. One hard cut between the opinion and the evidence.",
+      "cta_examples": [
+        "Tell me I am wrong in the comments.",
+        "What is your unpopular music opinion?"
+      ],
+      "accessibility_notes": "Hard-code captions and keep the frame steady — a lot of viewers watch muted with captions on.",
+      "estimated_production_minutes": 40,
+      "example_metadata": {
+        "tone": "direct",
+        "caption_example": "I cut my own chorus by eight bars after this realisation. The full song is on my page if you want to hear what that sounds like.",
+        "title_example": "Unpopular opinion: your chorus is too long",
+        "hashtag_examples": [
+          "#unpopularopinion",
+          "#musicproduction",
+          "#songwritingtips",
+          "#artistsoftiktok"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "pre-release",
+      "variations": [
+        "Blind test with the artists names hidden",
+        "Poll-style overlay with two options",
+        "Follow-up video revealing the winning version and the comment that changed your mind"
+      ],
+      "common_mistakes": [
+        "Asking \"what do you think\" with no specific decision",
+        "Playing clips too short for the listener to form an opinion",
+        "Ignoring the replies after asking"
+      ],
+      "on_screen_text": [
+        "A or B?",
+        "Answer with one word"
+      ],
+      "secondary_objectives": [
+        "song-promotion"
+      ],
+      "genre_tags": [
+        "pop",
+        "r&b",
+        "indie",
+        "electronic"
+      ],
+      "mood_tags": [
+        "curious",
+        "warm",
+        "collaborative"
+      ],
+      "id": "preset-ask-for-feedback",
+      "title": "Ask for Listener Feedback",
+      "summary": "Ask one specific, answerable question about your song and use the replies as your next content.",
+      "description": "Weak feedback requests (\"thoughts?\") produce weak comments. This concept asks a narrow question that a stranger can answer in five words: which of two choruses, is the second verse too quiet, does the harmony work. Show exactly the part you are asking about, keep the clip short, and be ready to actually use the replies — which makes the follow-up video.",
+      "objectives": [
+        "feedback-gathering",
+        "audience-engagement",
+        "community-building"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 12,
+        "max": 30
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "screen-recording",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone"
+      ],
+      "tags": [
+        "feedback",
+        "community",
+        "crowdsourcing",
+        "engagement"
+      ],
+      "song_context_required": "Two clear alternatives or one debatable section.",
+      "hook_examples": [
+        "Chorus A or chorus B — I genuinely cannot decide",
+        "Does this harmony sound wrong to you or is it just me?",
+        "I need 20 honest opinions on this mix"
+      ],
+      "execution_steps": [
+        "Choose the specific decision you actually want input on.",
+        "Play version A, label it on screen, then version B with the same label style.",
+        "State the question in text as well as speech.",
+        "Ask for a one-word answer so replying is effortless.",
+        "Reply to the first ten comments and screenshot the best ones."
+      ],
+      "shot_list": [
+        "Direct-to-camera question",
+        "Screen capture or performance of version A",
+        "Screen capture or performance of version B",
+        "Closing frame with the question repeated"
+      ],
+      "audio_guidance": "Keep both versions the same length and loudness so the comparison is fair. Fade, do not cut, between them.",
+      "editing_notes": "Label versions clearly with big text. Hold each for at least three seconds so people can judge.",
+      "cta_examples": [
+        "Comment A or B — no explanation needed.",
+        "Save this and tell me in a week which one you still remember."
+      ],
+      "accessibility_notes": "Caption the question, and accept answers as text in comments rather than requiring voice or video replies.",
+      "estimated_production_minutes": 30,
+      "example_metadata": {
+        "tone": "conversational",
+        "caption_example": "Chorus A is the one I wrote first. Chorus B is the one my producer fought for. I am still not sure.",
+        "title_example": "Chorus A or chorus B?",
+        "hashtag_examples": [
+          "#musicfeedback",
+          "#producerlife",
+          "#newmusic",
+          "#indieartist"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "post-release",
+      "variations": [
+        "Loop pedal build",
+        "A cappella harmony stack recorded four times",
+        "Genre flip: the song as a country ballad"
+      ],
+      "common_mistakes": [
+        "Changing only the tempo and calling it a new version",
+        "Playing a section too short to show the reinterpretation",
+        "Announcing the version at the end instead of the start"
+      ],
+      "on_screen_text": [
+        "Same song, minor key",
+        "Acoustic version — no drums"
+      ],
+      "secondary_objectives": [
+        "discovery",
+        "storytelling"
+      ],
+      "genre_tags": [
+        "pop",
+        "rock",
+        "r&b",
+        "folk",
+        "electronic"
+      ],
+      "mood_tags": [
+        "intimate",
+        "stripped",
+        "warm"
+      ],
+      "id": "preset-alternate-version",
+      "title": "Alternate Version",
+      "summary": "Reinterpret your own song in a genuinely different arrangement — and let people hear the song twice.",
+      "description": "Take the song somewhere it does not normally go: stripped guitar, a cappella stack, a slow piano reduction, a drum-and-bass flip. The version must change the emotional reading, not just the instrumentation, otherwise it is a remix of the same idea. Announce the constraint in the first second so the audience knows what they are hearing.",
+      "objectives": [
+        "song-promotion",
+        "artist-identity",
+        "audience-engagement"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 40
+      },
+      "difficulty": "moderate",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "instrument",
+        "editing-software"
+      ],
+      "tags": [
+        "acoustic",
+        "alternate-version",
+        "live",
+        "arrangement"
+      ],
+      "song_context_required": "One section you can convincingly re-arrange.",
+      "hook_examples": [
+        "Same song, but as a lullaby",
+        "Playing the chorus in a minor key to see what happens",
+        "The a cappella version nobody asked for"
+      ],
+      "execution_steps": [
+        "Choose the arrangement change and write it down in one sentence.",
+        "Rehearse the new version until the new chords feel natural.",
+        "Open with the constraint stated on screen, then perform immediately.",
+        "Show one shot of setup or instrument prep so it reads as real.",
+        "End on the most surprising chord of the new arrangement."
+      ],
+      "shot_list": [
+        "Wide setup shot with instrument",
+        "Close performance take",
+        "Detail: hands or pedal work"
+      ],
+      "audio_guidance": "Record the alternate version properly — a bad capture undermines the whole concept. Phone in a quiet room is fine if the instrument is close.",
+      "editing_notes": "Minimal editing. One static angle with a slow push-in is enough. Let the arrangement be the event.",
+      "cta_examples": [
+        "Want the full alternate version? Comment \"lullaby\".",
+        "Original is on streaming — which version is better?"
+      ],
+      "accessibility_notes": "Caption lyrics and, if the arrangement is the point, name the change in text as well as audio.",
+      "estimated_production_minutes": 75,
+      "example_metadata": {
+        "tone": "emotional",
+        "caption_example": "I rewrote this in a minor key on a rainy Sunday and now it sounds like a different person wrote it. Original and alternate are both on my page.",
+        "title_example": "Same song, minor key",
+        "hashtag_examples": [
+          "#acousticversion",
+          "#alternateversion",
+          "#coverstyle",
+          "#livesession"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "release-week",
+      "variations": [
+        "Text-card version for quiet, low-effort release days",
+        "Multi-song version for an EP or album",
+        "Carousel-style introduction across a series of posts"
+      ],
+      "common_mistakes": [
+        "Talking for 10 seconds before any music plays",
+        "Saying \"link in bio\" without naming the platform-specific destination",
+        "Listing every streaming service out loud"
+      ],
+      "on_screen_text": [
+        "Out now — \"Song Title\"",
+        "For anyone who stayed too long"
+      ],
+      "secondary_objectives": [
+        "artist-identity"
+      ],
+      "genre_tags": [
+        "pop",
+        "indie",
+        "hip-hop",
+        "r&b",
+        "folk"
+      ],
+      "mood_tags": [
+        "direct",
+        "welcoming",
+        "warm"
+      ],
+      "id": "preset-direct-introduction",
+      "title": "Direct Song Introduction",
+      "summary": "Introduce the song, say who it is for, play the strongest excerpt, and tell people where to find it.",
+      "description": "The straightest concept in the library, and the one most artists execute badly. It works when it is short and specific: what the song is, who it is for, one line of why it exists, then the excerpt. No throat-clearing, no \"link in bio\" before anyone has heard a note. Useful as a pinned post and as a launch-day post.",
+      "objectives": [
+        "song-promotion",
+        "discovery"
+      ],
+      "platforms": [
+        "youtube-shorts",
+        "instagram-reels",
+        "tiktok"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 35
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "introduction",
+        "launch",
+        "accessible",
+        "pinned"
+      ],
+      "song_context_required": "A strong 8–15 second excerpt and one sentence of context.",
+      "hook_examples": [
+        "This song is for anyone who stayed too long",
+        "New song out today — here is the part worth hearing",
+        "If you liked \"Previous Song\", start at 0:48 of this one"
+      ],
+      "execution_steps": [
+        "Write the \"who is this for\" sentence and cut it to under 12 words.",
+        "Lead with the excerpt, not with the announcement.",
+        "Put the song title on screen in the first two seconds.",
+        "Add one line of context after the excerpt, not before.",
+        "Close with one clear destination: profile, saved playlist, streaming link."
+      ],
+      "shot_list": [
+        "Opening frame with song title and artist name",
+        "Performance or visual for the excerpt",
+        "Talking head or text card with the context line",
+        "Closing frame with where to listen"
+      ],
+      "audio_guidance": "Start on the vocal, not on a cold intro. If the song has a long intro, start the clip 3 seconds before the first line.",
+      "editing_notes": "Front-load the music. Put the announcement text over the audio instead of speaking it.",
+      "cta_examples": [
+        "Full song is on my profile and streaming everywhere.",
+        "Save this, then tell me which line you related to."
+      ],
+      "accessibility_notes": "Include the song title, artist name and platform destination as on-screen text, and caption all speech.",
+      "estimated_production_minutes": 25,
+      "example_metadata": {
+        "tone": "direct",
+        "caption_example": "\"Low Tide\" is out now. It is about the year I spent waiting for someone to change their mind. Full song on my profile.",
+        "title_example": "New song: Low Tide",
+        "hashtag_examples": [
+          "#newmusic",
+          "#outnow",
+          "#indiemusic",
+          "#songrelease"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "post-release",
+      "variations": [
+        "Read the old file name and session date on camera",
+        "Dramatised: pretend to delete it, then cut to the release",
+        "Producer POV of the same story"
+      ],
+      "common_mistakes": [
+        "Making the story about being discouraged in general",
+        "Forgetting to play any of the song",
+        "Turning it into an inspirational speech"
+      ],
+      "on_screen_text": [
+        "I deleted this song twice",
+        "Version 3 is out now"
+      ],
+      "secondary_objectives": [
+        "song-promotion",
+        "behind-the-scenes"
+      ],
+      "genre_tags": [
+        "indie",
+        "pop",
+        "singer-songwriter",
+        "hip-hop"
+      ],
+      "mood_tags": [
+        "vulnerable",
+        "hopeful",
+        "honest"
+      ],
+      "id": "preset-almost-deleted",
+      "title": "The Song I Almost Deleted",
+      "summary": "Tell the story of nearly abandoning a track — and the one detail that saved it.",
+      "description": "The near-death story is far more engaging than a success story, because every creator recognises it. The structure is tight: the moment of quitting, the specific reason you did not, and the part of the finished song that only exists because you kept going. Do not moralise at the end; let the song do that.",
+      "objectives": [
+        "storytelling",
+        "artist-identity",
+        "audience-engagement"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 20,
+        "max": 45
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "hybrid"
+      ],
+      "face_visibility": "required",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "storytelling",
+        "vulnerability",
+        "process",
+        "persistence"
+      ],
+      "song_context_required": "A true story about almost scrapping the song.",
+      "hook_examples": [
+        "I deleted this song twice. This is the third version.",
+        "The file was in my trash folder for four months",
+        "My least favourite song of mine is the one people like most"
+      ],
+      "execution_steps": [
+        "Open with the near-deletion moment, not with context.",
+        "Name what specifically made you want to quit — one detail, not a mood.",
+        "Name the person, comment or accident that changed your mind.",
+        "Play the section that survived.",
+        "End without a lesson. One line, then the song."
+      ],
+      "shot_list": [
+        "Delivering the story direct to camera",
+        "Insert: trash folder, old file name, or timestamped session",
+        "Performance of the surviving section"
+      ],
+      "audio_guidance": "Record voice cleanly, cut the instrumental under the story, then let it arrive fully for the performance.",
+      "editing_notes": "Two or three shots maximum. The story carries it; do not decorate it.",
+      "cta_examples": [
+        "What song of yours almost did not make it?",
+        "Tell me if version 3 was worth it."
+      ],
+      "accessibility_notes": "Caption everything; convey emotion with words as well as vocal tone.",
+      "estimated_production_minutes": 45,
+      "example_metadata": {
+        "tone": "emotional",
+        "caption_example": "I quit this song twice. The version you hear started as a 40-second voice note I sent to a friend at 4am.",
+        "title_example": "The song I almost deleted",
+        "hashtag_examples": [
+          "#songwriter",
+          "#behindthemusic",
+          "#newmusic",
+          "#independentartist"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "post-release",
+      "variations": [
+        "Guess the instrument before the label appears",
+        "Flatten the whole mix to show how much processing is doing",
+        "Harmony stack soloed a cappella"
+      ],
+      "common_mistakes": [
+        "Isolating an element with no audible payoff",
+        "Skipping the full mix reveal",
+        "Explaining technical terms without translating them"
+      ],
+      "on_screen_text": [
+        "Bass only",
+        "Bass + drums",
+        "Everything"
+      ],
+      "secondary_objectives": [
+        "audience-engagement",
+        "discovery"
+      ],
+      "genre_tags": [
+        "electronic",
+        "pop",
+        "hip-hop",
+        "r&b",
+        "rock"
+      ],
+      "mood_tags": [
+        "analytical",
+        "playful",
+        "curious"
+      ],
+      "id": "preset-song-dissected",
+      "title": "Song Dissected",
+      "summary": "Isolate one element of the mix — vocals, drums, bass, harmony — then drop the full track back in.",
+      "description": "A production-forward concept that rewards repeat viewing. Mute everything except one layer, name what the viewer is hearing, then bring the full mix back so the contrast lands. Works with a session screenshot, a waveform, or simply a labelled audio clip — no video footage strictly required.",
+      "objectives": [
+        "education",
+        "behind-the-scenes",
+        "song-promotion"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 40
+      },
+      "difficulty": "moderate",
+      "budget": "minimal",
+      "filming_methods": [
+        "screen-recording",
+        "static-text",
+        "hybrid"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "computer",
+        "editing-software"
+      ],
+      "tags": [
+        "production",
+        "mixing",
+        "stems",
+        "education"
+      ],
+      "song_context_required": "Access to stems or at least isolated elements of the mix.",
+      "hook_examples": [
+        "This is what the bass is doing under the whole chorus",
+        "There are 14 vocal layers here. Listen.",
+        "The drums are the reason this chorus feels huge"
+      ],
+      "execution_steps": [
+        "Choose the element that carries the most surprise.",
+        "Play it isolated for 4–6 seconds with the label on screen.",
+        "Add one more element at a time — two at most.",
+        "Drop the full mix on the strongest downbeat.",
+        "Explain in one sentence what that element is doing."
+      ],
+      "shot_list": [
+        "Screen capture of the session with one track soloed",
+        "Waveform or stem graphic",
+        "Full mix at the payoff"
+      ],
+      "audio_guidance": "Watch loudness jumps — normalise each stage so the reveal does not just sound louder. Small room, good speakers or headphones.",
+      "editing_notes": "Synchronise cuts to the beat. Label every solo clearly within the first half-second of it playing.",
+      "cta_examples": [
+        "Which layer do you want to hear isolated next?",
+        "Producer breakdowns in this series are saved to my highlights."
+      ],
+      "accessibility_notes": "Assume many viewers listen on phone speakers — label the element in text and add a short description of what to listen for.",
+      "estimated_production_minutes": 90,
+      "example_metadata": {
+        "tone": "direct",
+        "caption_example": "Four bass notes carry the whole chorus. Listen to it alone, then with everything on top.",
+        "title_example": "What the bass is actually doing",
+        "hashtag_examples": [
+          "#musicproduction",
+          "#mixingtips",
+          "#producer",
+          "#beatmaking"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "release-week",
+      "variations": [
+        "Mirror-staged hallway shot, no split screen",
+        "Two characters in one continuous take with a whip pan",
+        "Animated vs live-action contrast between sides"
+      ],
+      "common_mistakes": [
+        "Making the two sides visually similar so the concept is invisible",
+        "Splitting the frame mid-phrase and breaking the illusion",
+        "No stated point of view on which side is which"
+      ],
+      "on_screen_text": [
+        "Both of these are me",
+        "Which one do you believe?"
+      ],
+      "secondary_objectives": [
+        "song-promotion"
+      ],
+      "genre_tags": [
+        "pop",
+        "r&b",
+        "alternative",
+        "hip-hop"
+      ],
+      "mood_tags": [
+        "conflicted",
+        "intense",
+        "playful"
+      ],
+      "id": "preset-two-sides-of-me",
+      "title": "Two Sides of Me",
+      "summary": "Portray two conflicting internal voices with a split screen, outfit switch, or character change.",
+      "description": "The song probably contains a contradiction — wanting someone back and wanting to be free, confidence and doubt. This concept makes that contradiction visible. A split screen, a mirrored frame, or a hard cut between two versions of you, each performing the same lyric with a different intent. Keep the two visual identities unmistakably different.",
+      "objectives": [
+        "artist-identity",
+        "storytelling",
+        "audience-engagement"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 35
+      },
+      "difficulty": "moderate",
+      "budget": "low",
+      "filming_methods": [
+        "live-action",
+        "hybrid"
+      ],
+      "face_visibility": "required",
+      "equipment": [
+        "phone",
+        "phone-tripod",
+        "editing-software",
+        "external-light"
+      ],
+      "tags": [
+        "split-screen",
+        "persona",
+        "duality",
+        "performance"
+      ],
+      "song_context_required": "A lyric with an internal contradiction.",
+      "hook_examples": [
+        "There are two people in this song and both of them are me",
+        "Left side is who I was. Right side is who I became.",
+        "Singing the same line twice, meaning two opposite things"
+      ],
+      "execution_steps": [
+        "Choose the contradictory lyric and write what each side wants.",
+        "Design two distinct looks — light, colour, framing or costume.",
+        "Lock the camera and film each side in the same position.",
+        "Split the frame or hard-cut on the beat, never mid-word.",
+        "End on one side winning — or neither."
+      ],
+      "shot_list": [
+        "Locked-off frame, look A",
+        "Locked-off frame, look B",
+        "Split-screen composite",
+        "Final single-frame ending"
+      ],
+      "audio_guidance": "Use one continuous vocal take where possible; if you record two, match phrasing so the split feels like one person.",
+      "editing_notes": "Match exposure between the two sides. Align the mouth movement precisely or the effect collapses.",
+      "cta_examples": [
+        "Which side wins for you?",
+        "Tell me which version of the song you would keep."
+      ],
+      "accessibility_notes": "Describe the visual concept in text so the meaning is clear without relying on colour differences alone.",
+      "estimated_production_minutes": 120,
+      "example_metadata": {
+        "tone": "mysterious",
+        "caption_example": "One of these sings it like they mean it. The other sings it like they are convincing themselves.",
+        "title_example": "Two sides of the same song",
+        "hashtag_examples": [
+          "#splitscreen",
+          "#duality",
+          "#visualart",
+          "#newmusic"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "pre-release",
+      "variations": [
+        "One-character version played entirely in a single room",
+        "Period-styled scene in black and white",
+        "Animated storyboard version"
+      ],
+      "common_mistakes": [
+        "Casting the scene as a literal illustration of the lyric",
+        "Too many locations for a 30-second clip",
+        "Using dialogue that fights the song"
+      ],
+      "on_screen_text": [
+        "A scene for \"Song Title\"",
+        "No dialogue"
+      ],
+      "secondary_objectives": [
+        "discovery"
+      ],
+      "genre_tags": [
+        "indie",
+        "alternative",
+        "r&b",
+        "folk"
+      ],
+      "mood_tags": [
+        "cinematic",
+        "melancholy",
+        "tense"
+      ],
+      "id": "preset-movie-scene",
+      "title": "If This Song Were a Movie Scene",
+      "summary": "Shoot a small cinematic scene where the song is the score, not the subject.",
+      "description": "Treat the song as a soundtrack to a fictional moment: a break-up in a car park, a goodbye at a train station, someone choosing not to send a message. The scene should make sense silently; the song adds the emotion. This is the concept that most resembles a real music video and the one that benefits most from planning.",
+      "objectives": [
+        "song-promotion",
+        "artist-identity",
+        "storytelling"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "youtube-shorts",
+        "tiktok"
+      ],
+      "duration_seconds": {
+        "min": 20,
+        "max": 50
+      },
+      "difficulty": "challenging",
+      "budget": "low",
+      "filming_methods": [
+        "live-action",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "phone-tripod",
+        "external-light",
+        "editing-software"
+      ],
+      "tags": [
+        "cinematic",
+        "narrative",
+        "film",
+        "scene"
+      ],
+      "song_context_required": "A section of the song with a clear emotional tone.",
+      "hook_examples": [
+        "If this song was a scene in a film",
+        "The scene this song was written for",
+        "No dialogue. Just this."
+      ],
+      "execution_steps": [
+        "Write the scene in three lines: who, where, what changes.",
+        "Choose one location you can control for an hour.",
+        "Storyboard four shots maximum and shoot in order.",
+        "Shoot one wide, one medium, one insert, one reaction.",
+        "Decide whether the scene ends happily — the ambiguity is often stronger.",
+        "Cut to the song so the emotional peak of the scene matches the chorus."
+      ],
+      "shot_list": [
+        "Wide: location and distance between characters",
+        "Medium: the moment of decision",
+        "Insert: hands, keys, ticket, phone",
+        "Reaction: face after the choice"
+      ],
+      "audio_guidance": "Strip any vocals if the song is loud enough to compete with the image; or keep the vocal if the lyric tells the inner story.",
+      "editing_notes": "Hold shots longer than feels comfortable. Use natural light. Avoid transitions — cut on action.",
+      "cta_examples": [
+        "Would you watch a full version?",
+        "Tell me which scene this song should soundtrack next."
+      ],
+      "accessibility_notes": "Add captions for any dialogue and describe key visual information in on-screen text or the caption.",
+      "estimated_production_minutes": 240,
+      "example_metadata": {
+        "tone": "cinematic",
+        "caption_example": "Two people, one car park, no dialogue. The song is called \"Low Tide\" and it is out Friday.",
+        "title_example": "The scene this song was written for",
+        "hashtag_examples": [
+          "#cinematic",
+          "#filmmaking",
+          "#musicscene",
+          "#indiemusic"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Hide the lyric until the last second, then reveal",
+        "Series: three lines, three videos, one per week",
+        "Follow-up video revealing your original meaning"
+      ],
+      "common_mistakes": [
+        "Explaining the lyric in the same video",
+        "Choosing a line with only one possible meaning",
+        "Ignoring the comments after asking for them"
+      ],
+      "on_screen_text": [
+        "What does this mean to you?",
+        "Line from verse one"
+      ],
+      "secondary_objectives": [
+        "song-promotion"
+      ],
+      "genre_tags": [
+        "indie",
+        "pop",
+        "alternative",
+        "r&b"
+      ],
+      "mood_tags": [
+        "curious",
+        "reflective",
+        "mysterious"
+      ],
+      "id": "preset-one-line-interpretation",
+      "title": "One-Line Interpretation Challenge",
+      "summary": "Show one lyric and ask viewers what they think it means — collect the best replies for a follow-up.",
+      "description": "A deliberately open-ended lyric becomes a conversation. Do not explain your own meaning in the first video; that is the follow-up. Present the line big and legible, give people ten seconds of the song underneath it, and ask a question that invites interpretation rather than agreement.",
+      "objectives": [
+        "audience-engagement",
+        "community-building",
+        "discovery"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 10,
+        "max": 25
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "static-text",
+        "live-action",
+        "animation"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "lyrics",
+        "interpretation",
+        "comments",
+        "engagement"
+      ],
+      "song_context_required": "An ambiguous lyric that works without context.",
+      "hook_examples": [
+        "Tell me what this line means to you",
+        "What does this lyric make you picture?",
+        "I wrote this line about one thing. Everyone thinks it is about something else."
+      ],
+      "execution_steps": [
+        "Pick a lyric with more than one reasonable reading.",
+        "Set it as large text on a simple background.",
+        "Run 8–12 seconds of the relevant section underneath.",
+        "Ask one clear question at the end, on screen and in the caption.",
+        "Pin your favourite interpretation and reply to it."
+      ],
+      "shot_list": [
+        "Static text card",
+        "Optional slow zoom on the text",
+        "Optional performance cut behind the text"
+      ],
+      "audio_guidance": "Keep the vocal audible — the delivery is part of the meaning.",
+      "editing_notes": "Hold the text for at least four seconds. No busy backgrounds behind type.",
+      "cta_examples": [
+        "Comment your interpretation. I will pin my favourite.",
+        "There is no wrong answer here."
+      ],
+      "accessibility_notes": "This format is naturally caption-first — keep type large, high contrast, and keep the question visible for the full duration.",
+      "estimated_production_minutes": 20,
+      "example_metadata": {
+        "tone": "mysterious",
+        "caption_example": "I wrote this about my hometown. Somebody in the comments said it was about their dad, and now I cannot unhear it.",
+        "title_example": "What does this lyric mean to you?",
+        "hashtag_examples": [
+          "#lyrics",
+          "#musicquestion",
+          "#indieartist",
+          "#songmeaning"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Paper cut-out stop-motion",
+        "Single-frame illustration with a slow pan",
+        "Whiteboard drawing filmed from above",
+        "Digital animation loop for a lyric snippet"
+      ],
+      "common_mistakes": [
+        "Attempting a full animation in one video",
+        "Low-contrast pencil work that disappears on phone screens",
+        "Revealing the final image too early"
+      ],
+      "on_screen_text": [
+        "Drawing the line I could not sing",
+        "Line 3, verse 2"
+      ],
+      "secondary_objectives": [
+        "storytelling"
+      ],
+      "genre_tags": [
+        "indie",
+        "pop",
+        "electronic",
+        "alternative",
+        "lo-fi"
+      ],
+      "mood_tags": [
+        "dreamy",
+        "playful",
+        "melancholy"
+      ],
+      "id": "preset-animate-the-lyrics",
+      "title": "Animate the Lyrics",
+      "summary": "Turn one lyric into a drawing, comic panel, or stop-motion sequence — animation capability optional.",
+      "description": "A visual interpretation of the lyric rather than a typographic one. Paper cut-outs filmed on a phone, a simple frame-by-frame drawing, a comic panel pan, or a digital animation if you have the tools. The concept needs only one strong image, not a fully animated video; a single drawing revealed in three stages is enough.",
+      "objectives": [
+        "song-promotion",
+        "artist-identity",
+        "discovery"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 10,
+        "max": 30
+      },
+      "difficulty": "moderate",
+      "budget": "minimal",
+      "filming_methods": [
+        "animation",
+        "static-text",
+        "hybrid"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "animation",
+        "illustration",
+        "lyrics",
+        "visual-art"
+      ],
+      "song_context_required": "A lyric with strong visual imagery.",
+      "hook_examples": [
+        "I drew the lyric instead of writing it",
+        "One line, three drawings",
+        "Stop-motion made from my notebook"
+      ],
+      "execution_steps": [
+        "Sketch the single image the lyric suggests.",
+        "Break it into three reveal stages: outline, shape, colour.",
+        "Film each stage or draw frame-by-frame into the edit.",
+        "Time the final stage to the vocal phrase.",
+        "Keep the loop seamless if the clip is under 15 seconds."
+      ],
+      "shot_list": [
+        "Paper or tablet with the drawing in progress",
+        "Reveal stage 2",
+        "Completed image with lyric text"
+      ],
+      "audio_guidance": "Animation favours the quietest, most intimate part of the song. Avoid the loudest chorus unless the drawing is equally bold.",
+      "editing_notes": "Reveal on the beat. If using stop-motion, shoot in consistent light — flicker will be obvious.",
+      "cta_examples": [
+        "Should I animate the whole song?",
+        "Which line should I draw next?"
+      ],
+      "accessibility_notes": "Include the lyric as text, not only as an image — descriptions of the drawing help viewers who cannot see it clearly.",
+      "estimated_production_minutes": 180,
+      "example_metadata": {
+        "tone": "emotional",
+        "caption_example": "Three drawings for one line. The second one took the longest because I could not get the hands right.",
+        "title_example": "I drew the lyric instead of writing it",
+        "hashtag_examples": [
+          "#animation",
+          "#illustration",
+          "#lyricart",
+          "#stopmotion"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "post-release",
+      "variations": [
+        "Three drafts, one final line",
+        "Show a line you cut entirely and explain why",
+        "Producer and writer reacting to the old draft together"
+      ],
+      "common_mistakes": [
+        "Faking a worse original draft to make the final look better",
+        "Explaining the change in abstractions instead of the actual word choice",
+        "Never playing the final line in context"
+      ],
+      "on_screen_text": [
+        "Draft: \"I am sad without you\"",
+        "Final: \"I keep your coat on the wrong hook\""
+      ],
+      "secondary_objectives": [
+        "song-promotion",
+        "behind-the-scenes"
+      ],
+      "genre_tags": [
+        "singer-songwriter",
+        "indie",
+        "folk",
+        "pop",
+        "hip-hop"
+      ],
+      "mood_tags": [
+        "reflective",
+        "honest",
+        "thoughtful"
+      ],
+      "id": "preset-original-vs-final-lyric",
+      "title": "Original Lyric vs Final Lyric",
+      "summary": "Show the first draft of a lyric and explain the exact reason it changed.",
+      "description": "A writing-room concept for people who want to be seen as songwriters, not just singers. The contrast has to be a real improvement with a clear reason: a cliché removed, an image made specific, a syllable cut so the vowel could open. Show both versions on screen and let the viewer hear only the final one.",
+      "objectives": [
+        "storytelling",
+        "education",
+        "artist-identity"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 40
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "static-text",
+        "live-action",
+        "screen-recording"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "songwriting",
+        "lyrics",
+        "drafting",
+        "process"
+      ],
+      "song_context_required": "A real early draft of a lyric plus the final version.",
+      "hook_examples": [
+        "The first version of this line was embarrassing",
+        "One word made this lyric work",
+        "Draft one vs the version that made the song"
+      ],
+      "execution_steps": [
+        "Photograph or type out the original draft line.",
+        "Show the final version directly beneath it.",
+        "State the reason for the change in one sentence.",
+        "Play the final lyric in context.",
+        "Ask viewers which version they would have kept."
+      ],
+      "shot_list": [
+        "Notebook page with the original line",
+        "Text comparison card",
+        "Performance of the final line"
+      ],
+      "audio_guidance": "Play the song only after the comparison is clear. Speech first, music second.",
+      "editing_notes": "Large, legible type. Reveal the final line after the draft has been on screen for two seconds.",
+      "cta_examples": [
+        "Which version would you keep?",
+        "Want more of these writing breakdowns?"
+      ],
+      "accessibility_notes": "Always show both versions as text; do not rely on speaking the comparison alone.",
+      "estimated_production_minutes": 30,
+      "example_metadata": {
+        "tone": "storytelling",
+        "caption_example": "Draft one said the feeling. Draft four said the image. The image is the reason the song works.",
+        "title_example": "Original lyric vs final lyric",
+        "hashtag_examples": [
+          "#songwriting",
+          "#lyricwriting",
+          "#writersoftiktok",
+          "#indiemusic"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Walking one-take through your neighbourhood",
+        "One take with a moving camera on a skateboard or wheelchair",
+        "One take, but you have to change instruments halfway"
+      ],
+      "common_mistakes": [
+        "Secretly stitching takes and calling it one take",
+        "Choosing a section that requires a pedal or loop you cannot hit live",
+        "Starting the take before the camera is rolling"
+      ],
+      "on_screen_text": [
+        "One take, no edits",
+        "Take 13"
+      ],
+      "secondary_objectives": [
+        "discovery"
+      ],
+      "genre_tags": [
+        "soul",
+        "pop",
+        "rock",
+        "folk",
+        "r&b"
+      ],
+      "mood_tags": [
+        "intimate",
+        "tense",
+        "honest"
+      ],
+      "id": "preset-one-take-challenge",
+      "title": "The One-Take Challenge",
+      "summary": "A genuine single take, no cuts, with the tension of knowing it could fall apart.",
+      "description": "Different from Raw Performance because the concept is the restriction itself: one continuous take, camera moving or static, no edits at all. The appeal is the risk. Announce the rule, perform the section, and let a small imperfection stay in. If you fail, a failed take can be the better post.",
+      "objectives": [
+        "audience-engagement",
+        "artist-identity",
+        "song-promotion"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 45
+      },
+      "difficulty": "moderate",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action"
+      ],
+      "face_visibility": "required",
+      "equipment": [
+        "phone",
+        "phone-tripod",
+        "instrument"
+      ],
+      "tags": [
+        "one-take",
+        "performance",
+        "challenge",
+        "live"
+      ],
+      "song_context_required": "A section you can perform live in one pass.",
+      "hook_examples": [
+        "One take. If I mess up, it stays in.",
+        "No cuts, no punch-ins, no second chances",
+        "Take 12 was the good one. This is take 13."
+      ],
+      "execution_steps": [
+        "Choose the section and rehearse it in full three times.",
+        "State the rule on screen in the first second.",
+        "Start recording and do not stop until the section ends.",
+        "Keep the best take, including any small mistake you can live with.",
+        "If every take fails, post the failure with a straight caption."
+      ],
+      "shot_list": [
+        "Single continuous shot — movement only if you can hold it steady"
+      ],
+      "audio_guidance": "Record audio and video together for honesty. Put the phone close enough that the vocal does not fight the instrumental.",
+      "editing_notes": "Trim the head and tail only. No colour, no captions baked at the expense of the take.",
+      "cta_examples": [
+        "Count the mistakes. Be nice.",
+        "Should I try this in one take on camera next time?"
+      ],
+      "accessibility_notes": "Caption the lyric; shake-free framing helps viewers who read lips.",
+      "estimated_production_minutes": 40,
+      "example_metadata": {
+        "tone": "direct",
+        "caption_example": "One take, one room, no edits. The second verse is where it usually falls apart.",
+        "title_example": "One take, no edits",
+        "hashtag_examples": [
+          "#onetake",
+          "#livemusic",
+          "#singing",
+          "#artistcheck"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Series: \"a song for every part of the day\"",
+        "Silent first three seconds of the situation, then the song enters",
+        "Commentary version explaining why you wrote it for that moment"
+      ],
+      "common_mistakes": [
+        "Naming a mood (\"for sad days\") instead of a situation",
+        "Making the scene unrealistically aesthetic for the everyday moment claimed",
+        "Not naming the song anywhere"
+      ],
+      "on_screen_text": [
+        "For the walk home after a late shift",
+        "Song: \"Title\""
+      ],
+      "secondary_objectives": [
+        "artist-identity"
+      ],
+      "genre_tags": [
+        "lo-fi",
+        "indie",
+        "pop",
+        "r&b",
+        "electronic"
+      ],
+      "mood_tags": [
+        "calm",
+        "nostalgic",
+        "bittersweet",
+        "hopeful"
+      ],
+      "id": "preset-soundtrack-for-situation",
+      "title": "Soundtrack for a Specific Situation",
+      "summary": "Attach the song to one highly specific everyday situation so listeners know when to play it.",
+      "description": "This is positioning, not storytelling. Instead of describing the song, you name the moment it belongs in: the walk to a shift that starts at 6am, the hour after a job interview, the last ten minutes of a long drive. Specific situations get saved, shared and re-used because the viewer now has an instruction for your song.",
+      "objectives": [
+        "discovery",
+        "song-promotion",
+        "audience-engagement"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 10,
+        "max": 25
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text",
+        "hybrid"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "situational",
+        "playlist",
+        "mood",
+        "everyday"
+      ],
+      "song_context_required": "A section that matches a concrete everyday moment.",
+      "hook_examples": [
+        "Play this on the bus home after a shift you did not want",
+        "For the ten minutes before you send the message",
+        "This is a Sunday-evening song, not a Friday-night one"
+      ],
+      "execution_steps": [
+        "Write the situation as a time and a place, not an emotion.",
+        "Film it in one shot with the song playing as if it is the scene soundtrack.",
+        "Put the situation in text on the first frame.",
+        "Keep the audio at the volume it would be in real life.",
+        "End on the moment the scene resolves."
+      ],
+      "shot_list": [
+        "One establishing shot of the situation",
+        "Detail insert",
+        "Optional walking or transit shot"
+      ],
+      "audio_guidance": "Blend the song with real environment sound. It should feel like it is playing in the scene, not over it.",
+      "editing_notes": "One scene, one mood. Do not add a second location — specificity beats variety here.",
+      "cta_examples": [
+        "What is your version of this moment?",
+        "Save this for your next late shift."
+      ],
+      "accessibility_notes": "Describe the situation in text so the positioning works with sound off.",
+      "estimated_production_minutes": 35,
+      "example_metadata": {
+        "tone": "minimal",
+        "caption_example": "Not a Friday song. For the walk home when the day did not go how you planned.",
+        "title_example": "A song for the walk home",
+        "hashtag_examples": [
+          "#songsfor",
+          "#playlist",
+          "#latewalk",
+          "#moodmusic"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "pre-release",
+      "variations": [
+        "Two songs, one snippet — guess which",
+        "Guess the year the song was written",
+        "Blind guess with no performance, audio only over a still"
+      ],
+      "common_mistakes": [
+        "Revealing the meaning in the caption",
+        "Picking a section so vague that nobody can form a guess",
+        "Never posting the follow-up reveal"
+      ],
+      "on_screen_text": [
+        "Guess what this song is about",
+        "Prize: the demo"
+      ],
+      "secondary_objectives": [
+        "song-promotion"
+      ],
+      "genre_tags": [
+        "indie",
+        "pop",
+        "r&b",
+        "alternative"
+      ],
+      "mood_tags": [
+        "mysterious",
+        "curious",
+        "playful"
+      ],
+      "id": "preset-guess-the-meaning",
+      "title": "Guess the Song’s Meaning",
+      "summary": "Play a snippet, withhold the story, and let viewers build their own interpretation first.",
+      "description": "A curiosity-driven format built on deliberately missing information. Play the section without saying what inspired it, then invite guesses. The reveal becomes a second video, which means one idea produces two posts and a comment thread. Only use this when you are comfortable with interpretations that differ from yours.",
+      "objectives": [
+        "audience-engagement",
+        "discovery",
+        "community-building"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 12,
+        "max": 30
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "static-text",
+        "live-action",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone"
+      ],
+      "tags": [
+        "mystery",
+        "guessing",
+        "interpretation",
+        "comments"
+      ],
+      "song_context_required": "An evocative section that does not give away the subject.",
+      "hook_examples": [
+        "Nobody has guessed what this song is about",
+        "This song is about a very specific thing. Guess.",
+        "First person to guess gets the unreleased demo"
+      ],
+      "execution_steps": [
+        "Choose the section that hints at the story without naming it.",
+        "Write a single-sentence prompt: \"guess what this is about\".",
+        "Play the clip and keep your own commentary out of it.",
+        "Reply to guesses with neutral encouragement — do not reveal.",
+        "Post the reveal as a follow-up featuring the best wrong guess."
+      ],
+      "shot_list": [
+        "Performance or visual of the section",
+        "Text card with the prompt",
+        "Optional: you reacting to guesses"
+      ],
+      "audio_guidance": "Start mid-phrase so the listener arrives in the middle of the story — no intro.",
+      "editing_notes": "Keep it under 20 seconds so the comments stay the main event.",
+      "cta_examples": [
+        "Guess in the comments. I will reveal tomorrow.",
+        "Closest guess gets pinned."
+      ],
+      "accessibility_notes": "Caption the prompt and the lyric snippet; guesses should work as text comments.",
+      "estimated_production_minutes": 25,
+      "example_metadata": {
+        "tone": "mysterious",
+        "caption_example": "Three people have guessed correctly out of about 400. I will pin the reveal on Friday.",
+        "title_example": "Guess what this song is about",
+        "hashtag_examples": [
+          "#guessthesong",
+          "#songmeaning",
+          "#newmusic",
+          "#indieartist"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "release-week",
+      "variations": [
+        "Reaction from a stranger with permission",
+        "Musician reacts to the production only",
+        "Parent, sibling or childhood friend version"
+      ],
+      "common_mistakes": [
+        "Coaching or re-shooting the reaction",
+        "Filming someone without explicit consent",
+        "Playing a section with nothing to react to"
+      ],
+      "on_screen_text": [
+        "Never heard it before",
+        "First listen, unedited"
+      ],
+      "secondary_objectives": [
+        "community-building"
+      ],
+      "genre_tags": [
+        "pop",
+        "r&b",
+        "indie",
+        "hip-hop",
+        "rock"
+      ],
+      "mood_tags": [
+        "warm",
+        "honest",
+        "energetic"
+      ],
+      "id": "preset-first-listen-reaction",
+      "title": "Genuine First-Listen Reaction",
+      "summary": "Film a willing listener hearing the song for the first time — no coaching, no retakes.",
+      "description": "A social-proof concept that only works if it is real. Find someone who has never heard the track, get their permission, tell them nothing except what they are about to hear, and film their face. Use a section with a clear turn so there is something to react to. The most valuable moment is usually their comment afterwards, not their expression.",
+      "objectives": [
+        "song-promotion",
+        "audience-engagement",
+        "discovery"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 20,
+        "max": 45
+      },
+      "difficulty": "moderate",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action"
+      ],
+      "face_visibility": "required",
+      "equipment": [
+        "phone",
+        "headphones"
+      ],
+      "tags": [
+        "reaction",
+        "social-proof",
+        "first-listen",
+        "listening"
+      ],
+      "song_context_required": "A section with an obvious moment to react to.",
+      "hook_examples": [
+        "I played my new song to someone who had never heard me sing",
+        "First listen, no context, no coaching",
+        "My friend heard the bridge for the first time here"
+      ],
+      "execution_steps": [
+        "Ask for filmed consent before recording anything.",
+        "Tell the listener only the genre and that it is unreleased.",
+        "Start recording before the music starts.",
+        "Use headphones so the mic picks up their reaction, not the track.",
+        "Film their comment immediately after — unedited is better.",
+        "Blend the song in under their reaction so viewers hear what they heard."
+      ],
+      "shot_list": [
+        "Listener putting headphones on",
+        "Reaction during the song",
+        "Post-listen comment",
+        "Optional: your face watching them"
+      ],
+      "audio_guidance": "Balance the phone mic (the reaction) against a clean copy of the song. Keep the song at 40% under their voice.",
+      "editing_notes": "Cut anything that feels coached. Keep the pause before their first word — that silence is the credibility.",
+      "cta_examples": [
+        "Would you react to the next one?",
+        "What did you hear first — the drums or the vocal?"
+      ],
+      "accessibility_notes": "Caption the listener’s words. If the reaction is purely facial, describe it in the caption and on-screen text.",
+      "estimated_production_minutes": 60,
+      "example_metadata": {
+        "tone": "conversational",
+        "caption_example": "She did not know I made music until two minutes before this. Her face at the second chorus is the whole reason I finished the song.",
+        "title_example": "Her first listen to my unreleased song",
+        "hashtag_examples": [
+          "#firstlisten",
+          "#reaction",
+          "#newmusic",
+          "#unsignedartist"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "pre-release",
+      "variations": [
+        "Two titles, one vote",
+        "Naming the whole EP from five snippets",
+        "Artist-picked vs comment-picked title comparison"
+      ],
+      "common_mistakes": [
+        "Already having a title and pretending otherwise",
+        "Never following up on the winning suggestion",
+        "Using a snippet you intend to change heavily"
+      ],
+      "on_screen_text": [
+        "Working title: Untitled 4",
+        "Name it"
+      ],
+      "secondary_objectives": [
+        "song-promotion"
+      ],
+      "genre_tags": [
+        "pop",
+        "electronic",
+        "hip-hop",
+        "indie"
+      ],
+      "mood_tags": [
+        "playful",
+        "collaborative",
+        "bright"
+      ],
+      "id": "preset-name-this-song",
+      "title": "Name This Song",
+      "summary": "Let the audience title an untitled snippet and use the best suggestion for real.",
+      "description": "A collaborative format that turns viewers into a small focus group. Only use a piece of music you are genuinely happy to preview, and only if you are open to using a suggested title — otherwise it reads as engagement bait. Credit the winning suggestion in the follow-up.",
+      "objectives": [
+        "community-building",
+        "audience-engagement",
+        "discovery"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 12,
+        "max": 30
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone"
+      ],
+      "tags": [
+        "crowdsourcing",
+        "naming",
+        "community",
+        "preview"
+      ],
+      "song_context_required": "An unreleased or untitled snippet you are comfortable previewing.",
+      "hook_examples": [
+        "This song does not have a name yet. Help.",
+        "Best title in the comments becomes the real one",
+        "I have been calling this \"Untitled 4\" for a year"
+      ],
+      "execution_steps": [
+        "State clearly that the title is genuinely undecided.",
+        "Play the snippet twice — once for feel, once for the hook.",
+        "Set a rule: one title per comment, no explaining.",
+        "Reply to ten suggestions and shortlist three publicly.",
+        "Follow up with the winning title and thank the person by name."
+      ],
+      "shot_list": [
+        "Text card with the working title",
+        "Snippet performance or visual",
+        "Closing frame asking for names"
+      ],
+      "audio_guidance": "Play the most melodic 10 seconds — the part that suggests a title.",
+      "editing_notes": "Keep the full clip under 20 seconds; the comments need to be the destination.",
+      "cta_examples": [
+        "Drop one title in the comments.",
+        "Which of these three is best?"
+      ],
+      "accessibility_notes": "Put the request in text as well as speech so silent viewers can participate.",
+      "estimated_production_minutes": 20,
+      "example_metadata": {
+        "tone": "funny",
+        "caption_example": "I have called this \"Untitled 4\" for eleven months. Best comment by Sunday becomes the real title.",
+        "title_example": "This song needs a name",
+        "hashtag_examples": [
+          "#namethissong",
+          "#producer",
+          "#newmusic",
+          "#musiccommunity"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "pre-release",
+      "variations": [
+        "Palette reveal with the artwork emerging from colour swatches",
+        "Photo session outtakes leading to the final image",
+        "Artist explains typography choice in 15 seconds"
+      ],
+      "common_mistakes": [
+        "Showing only the finished artwork with no process",
+        "Explaining the concept in abstract art-school language",
+        "Hiding the release date"
+      ],
+      "on_screen_text": [
+        "Rejected cover #2",
+        "Final — out Friday"
+      ],
+      "secondary_objectives": [
+        "song-promotion",
+        "storytelling"
+      ],
+      "genre_tags": [
+        "pop",
+        "indie",
+        "electronic",
+        "r&b",
+        "alternative"
+      ],
+      "mood_tags": [
+        "artistic",
+        "dreamy",
+        "confident"
+      ],
+      "id": "preset-visual-identity",
+      "title": "Build the Visual Identity",
+      "summary": "Reveal how the artwork, palette and visual motifs of the song were made.",
+      "description": "A design-forward post showing the visual world around the song: the unfinished cover sketch, the rejected colourway, the reference board, the typography tests. Useful for pre-release, because it builds anticipation before anyone has heard the full track and positions the artist as a deliberate image-maker.",
+      "objectives": [
+        "artist-identity",
+        "behind-the-scenes",
+        "audience-engagement"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 40
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "screen-recording",
+        "live-action",
+        "hybrid"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "artwork",
+        "design",
+        "identity",
+        "visual"
+      ],
+      "song_context_required": "Artwork, palette or visual references associated with the song.",
+      "hook_examples": [
+        "How the cover art for this song happened",
+        "Three rejected cover ideas and why they failed",
+        "The photo that became the whole visual world of this EP"
+      ],
+      "execution_steps": [
+        "Pick three artefacts: an early sketch, a rejected option, the final artwork.",
+        "Screen record or film them in sequence with the song underneath.",
+        "Explain one design decision in a single sentence — palette, font, or crop.",
+        "Show the final artwork full-frame at the end with the release date.",
+        "Keep the tone matter-of-fact; let the designs carry it."
+      ],
+      "shot_list": [
+        "Rough sketch or moodboard",
+        "Rejected colourway",
+        "Final artwork full frame"
+      ],
+      "audio_guidance": "Use a low-key section of the song or an instrumental so the explanation stays audible.",
+      "editing_notes": "Cuts on the beat. Let the final artwork sit on screen for the last two seconds.",
+      "cta_examples": [
+        "Which cover would you have chosen?",
+        "Want the full design breakdown?"
+      ],
+      "accessibility_notes": "Describe the artwork in words in the caption — image descriptions are also useful discoverability text.",
+      "estimated_production_minutes": 50,
+      "example_metadata": {
+        "tone": "minimal",
+        "caption_example": "Cover #2 was the one everyone liked. Cover #4 is the one that sounded like the record.",
+        "title_example": "How this cover art happened",
+        "hashtag_examples": [
+          "#artwork",
+          "#designprocess",
+          "#albumcover",
+          "#visualidentity"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "pre-release",
+      "variations": [
+        "Three different first frames, same body",
+        "Three different hooks for the same visual",
+        "Blind test posted as a poll"
+      ],
+      "common_mistakes": [
+        "Making versions so similar that no choice is meaningful",
+        "Unequal audio between versions",
+        "Never acting on the answer"
+      ],
+      "on_screen_text": [
+        "Edit 1 — fast cuts",
+        "Edit 2 — long take",
+        "Edit 3 — text first"
+      ],
+      "secondary_objectives": [
+        "song-promotion",
+        "artist-identity"
+      ],
+      "genre_tags": [
+        "pop",
+        "electronic",
+        "hip-hop",
+        "indie"
+      ],
+      "mood_tags": [
+        "playful",
+        "experimental",
+        "confident"
+      ],
+      "id": "preset-three-edits-one-song",
+      "title": "Three Edits, One Song",
+      "summary": "Test three different openings or visual treatments using the same audio excerpt.",
+      "description": "A deliberate experiment format. Same ten seconds of audio, three different visual approaches: fast cuts, one long take, text-first. Presenting all three in one video lets the audience choose, and gives you real viewer preference data. It also produces three standalone clips for later posts.",
+      "objectives": [
+        "audience-engagement",
+        "discovery",
+        "feedback-gathering"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 20,
+        "max": 45
+      },
+      "difficulty": "challenging",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "hybrid",
+        "static-text"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "experiment",
+        "editing",
+        "testing",
+        "format"
+      ],
+      "song_context_required": "One strong 8–12 second excerpt.",
+      "hook_examples": [
+        "Same audio, three different videos. Which one works?",
+        "I edited the same clip three ways",
+        "Three openings, one song — pick a winner"
+      ],
+      "execution_steps": [
+        "Choose one excerpt and keep it identical in all three cuts.",
+        "Plan three genuinely different treatments, not three filters.",
+        "Label each version on screen with a number.",
+        "Put the strongest version first; do not save it for last.",
+        "Post the winner as a standalone clip a few days later."
+      ],
+      "shot_list": [
+        "Version 1: e.g. three fast cuts",
+        "Version 2: e.g. one static long take",
+        "Version 3: e.g. text-first with a late visual reveal"
+      ],
+      "audio_guidance": "Keep the audio identical across versions; only the visuals change.",
+      "editing_notes": "Give each version equal time on screen. Do not let the labelling eat the runtime.",
+      "cta_examples": [
+        "Which edit? 1, 2 or 3.",
+        "Comment the number, not the reason."
+      ],
+      "accessibility_notes": "Label versions with both numbers and words, and caption the audio once per version.",
+      "estimated_production_minutes": 150,
+      "example_metadata": {
+        "tone": "conversational",
+        "caption_example": "Same ten seconds, three edits. I will post whichever wins on Friday and tell you what the numbers were.",
+        "title_example": "Three edits, one song",
+        "hashtag_examples": [
+          "#videoediting",
+          "#contentcreator",
+          "#musicianlife",
+          "#editingtips"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "pre-release",
+      "variations": [
+        "Silent version with type-only introduction",
+        "One-line persona statement repeated as a hook",
+        "Ask-me-anything follow-up"
+      ],
+      "common_mistakes": [
+        "Listing genre labels instead of a point of view",
+        "Explaining your whole biography",
+        "No clear visual identity to match the words"
+      ],
+      "on_screen_text": [
+        "Artist name",
+        "What I make"
+      ],
+      "secondary_objectives": [
+        "song-promotion"
+      ],
+      "genre_tags": [
+        "pop",
+        "indie",
+        "hip-hop",
+        "electronic",
+        "r&b"
+      ],
+      "mood_tags": [
+        "confident",
+        "warm",
+        "mysterious"
+      ],
+      "id": "preset-meet-the-artist",
+      "title": "Meet the Artist Persona",
+      "summary": "Introduce the creative identity behind the music — visual style, values, and what you are not.",
+      "description": "A short, confident introduction for people who found a song before they found the artist. Structure it as three specifics rather than a biography: what you make, what you care about, what you refuse to do. Specificity creates a character; adjectives do not. Pair with one strong visual that shows the aesthetic you are claiming.",
+      "objectives": [
+        "artist-identity",
+        "discovery",
+        "community-building"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 40
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "introduction",
+        "persona",
+        "identity",
+        "brand"
+      ],
+      "song_context_required": "A sense of your persona and visual world.",
+      "hook_examples": [
+        "I make songs for people who leave the party early",
+        "Three things that are always true in my music",
+        "This is what my music looks like before you hear it"
+      ],
+      "execution_steps": [
+        "Write three specifics: what you make, what you care about, what you refuse.",
+        "Choose one visual motif and repeat it in every shot.",
+        "Film the three lines in three different frames of the same location.",
+        "End on a single strong image with your artist name.",
+        "Keep the music subtle so the words land."
+      ],
+      "shot_list": [
+        "Establishing shot with the visual motif",
+        "Direct-to-camera line one",
+        "Insert of the motif",
+        "Final portrait with artist name"
+      ],
+      "audio_guidance": "Low instrumental bed under speech, or a single sustained note from the song.",
+      "editing_notes": "No more than three cuts. The last frame should be screenshot-worthy.",
+      "cta_examples": [
+        "What should I make next?",
+        "Start here — this is track one."
+      ],
+      "accessibility_notes": "Caption all speech; include the artist name and genre as text for searchability.",
+      "estimated_production_minutes": 60,
+      "example_metadata": {
+        "tone": "direct",
+        "caption_example": "I write quiet songs about loud feelings. No features, no remixes, no rush. New single Friday.",
+        "title_example": "Meet the artist",
+        "hashtag_examples": [
+          "#meettheartist",
+          "#artistintro",
+          "#independentartist",
+          "#newartist"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "release-week",
+      "variations": [
+        "Outfit change on the switch",
+        "Room lighting flips from day to night",
+        "Animation style changes from sketch to polished",
+        "Loop made so the end cuts back to the start"
+      ],
+      "common_mistakes": [
+        "Cutting a beat early or late",
+        "Making the pre-switch section too long",
+        "Adding so many effects the musical moment is lost"
+      ],
+      "on_screen_text": [
+        "Wait for it",
+        "0:47"
+      ],
+      "secondary_objectives": [
+        "artist-identity"
+      ],
+      "genre_tags": [
+        "hip-hop",
+        "electronic",
+        "pop",
+        "r&b",
+        "alternative"
+      ],
+      "mood_tags": [
+        "intense",
+        "energetic",
+        "surprising"
+      ],
+      "id": "preset-beat-switch",
+      "title": "Unexpected Beat Switch",
+      "summary": "Build a visual transition around the exact moment the song changes energy.",
+      "description": "The clip is a delivery system for one moment: the beat switch, the drop, the key change, the moment the drums enter. Everything before it exists to make it hit. This is the most loopable concept in the library — if the transition is clean, viewers will watch it three times without noticing.",
+      "objectives": [
+        "song-promotion",
+        "discovery",
+        "audience-engagement"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 8,
+        "max": 20
+      },
+      "difficulty": "moderate",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "animation",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "beat-switch",
+        "transition",
+        "drop",
+        "loop"
+      ],
+      "song_context_required": "A clear, timestamped energy change in the song.",
+      "hook_examples": [
+        "Wait for the beat switch",
+        "The song changes at 0:47 and nobody is ready",
+        "This drop is why I made the whole track"
+      ],
+      "execution_steps": [
+        "Find the exact timestamp of the change and note the frame.",
+        "Film two visually distinct setups: before and after.",
+        "Align the cut to the frame the beat lands on.",
+        "Use one matching element (pose, colour, or object) to bridge the cut.",
+        "End within four seconds of the drop so the loop feels abrupt."
+      ],
+      "shot_list": [
+        "Setup A: restrained, still, cool tones",
+        "Match element (hands, door, light)",
+        "Setup B: high energy, warm tones, movement"
+      ],
+      "audio_guidance": "Do not fade — the transition is the content. Start 3 seconds before the change.",
+      "editing_notes": "Frame-accurate cut. Add a one-frame flash or whip on the transition only if it does not hide the musical moment.",
+      "cta_examples": [
+        "Watch the switch again.",
+        "Full song has three of these."
+      ],
+      "accessibility_notes": "Include on-screen text naming the moment; flash effects should be subtle or avoided (photosensitivity).",
+      "estimated_production_minutes": 120,
+      "example_metadata": {
+        "tone": "mysterious",
+        "caption_example": "The switch is at 0:47. If you listen to one part of this song, listen to that one.",
+        "title_example": "Wait for the beat switch",
+        "hashtag_examples": [
+          "#beatswitch",
+          "#drop",
+          "#producer",
+          "#hiphop"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Silent version with numbered steps as text",
+        "Three props, three looks",
+        "Recreate an expensive music video shot for free"
+      ],
+      "common_mistakes": [
+        "Hiding the real constraints to look more professional",
+        "Spending the whole video on setup and none on the result",
+        "Claiming a cost that is not accurate"
+      ],
+      "on_screen_text": [
+        "Total spend: 0",
+        "Setup vs result"
+      ],
+      "secondary_objectives": [
+        "behind-the-scenes",
+        "song-promotion"
+      ],
+      "genre_tags": [
+        "indie",
+        "pop",
+        "electronic",
+        "hip-hop",
+        "alternative"
+      ],
+      "mood_tags": [
+        "resourceful",
+        "warm",
+        "playful"
+      ],
+      "id": "preset-zero-budget-video",
+      "title": "Zero-Budget Music Video",
+      "summary": "Show how you made an effective video with what you already own — and prove it with the result.",
+      "description": "A process-plus-proof concept. Name the constraints out loud (one phone, one lamp, a bedroom), show the unglamorous setup, then let the finished footage do the convincing. This concept builds enormous goodwill because it is directly useful to other artists, and it doubles as a making-of for your own release.",
+      "objectives": [
+        "education",
+        "artist-identity",
+        "discovery"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 20,
+        "max": 50
+      },
+      "difficulty": "moderate",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "household-materials",
+        "editing-software"
+      ],
+      "tags": [
+        "budget",
+        "tutorial",
+        "diy",
+        "filmmaking"
+      ],
+      "song_context_required": "Footage of a low-budget shoot you have actually done.",
+      "hook_examples": [
+        "This music video cost nothing",
+        "One phone, one lamp, one bedsheet",
+        "How to shoot a video in a bedroom that does not look like a bedroom"
+      ],
+      "execution_steps": [
+        "Film the ugly setup: the lamp clamped to a chair, the bedsheet backdrop.",
+        "Show one specific technical choice (lighting position, lens, frame rate).",
+        "Cut to the finished result for 8–10 seconds.",
+        "Name the total spend honestly, including \"zero\".",
+        "Offer the setup as something the viewer can copy."
+      ],
+      "shot_list": [
+        "Wide shot of the setup",
+        "Detail: improvised light or backdrop",
+        "Split screen of setup vs result",
+        "Finished footage excerpt"
+      ],
+      "audio_guidance": "The finished footage should be the loudest part. Keep the tutorial narration dry.",
+      "editing_notes": "Keep setup shots short. Spend most of the runtime on the finished look.",
+      "cta_examples": [
+        "Tell me what you are shooting with and I will suggest a setup.",
+        "Save this for your next shoot."
+      ],
+      "accessibility_notes": "Caption the tutorial steps and keep essential setup information in text, not only in speech.",
+      "estimated_production_minutes": 120,
+      "example_metadata": {
+        "tone": "conversational",
+        "caption_example": "Everything here is mine already: phone, one desk lamp, a grey bedsheet. The look is in the framing, not the gear.",
+        "title_example": "How to shoot a music video for free",
+        "hashtag_examples": [
+          "#filmmakingtips",
+          "#budgetfilmmaking",
+          "#phonevideography",
+          "#musician"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "post-release",
+      "variations": [
+        "Multiple commenters, multiple readings",
+        "Two-part: collection of readings, then your answer",
+        "Lyric explained as a comment reply video"
+      ],
+      "common_mistakes": [
+        "Correcting listeners in a dismissive tone",
+        "Showing comments without blurring identities",
+        "Choosing a lyric with only one interpretation"
+      ],
+      "on_screen_text": [
+        "What I meant",
+        "What you heard"
+      ],
+      "secondary_objectives": [
+        "education",
+        "song-promotion"
+      ],
+      "genre_tags": [
+        "indie",
+        "pop",
+        "singer-songwriter",
+        "alternative",
+        "r&b"
+      ],
+      "mood_tags": [
+        "warm",
+        "reflective",
+        "playful"
+      ],
+      "id": "preset-lyric-misunderstood",
+      "title": "The Lyric People Misunderstand",
+      "summary": "Explore the interpretations listeners bring to one lyric — without declaring a single correct reading.",
+      "description": "An interpretation-forward concept with warmth rather than correction. Play the lyric, show the most common misreading, then explain what you actually meant and why the misreading is still interesting. Works best when you genuinely find the other readings valuable; it fails if it becomes a correction video.",
+      "objectives": [
+        "audience-engagement",
+        "storytelling",
+        "community-building"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 40
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "lyrics",
+        "interpretation",
+        "discussion",
+        "meaning"
+      ],
+      "song_context_required": "A lyric with a documented misreading in your comments.",
+      "hook_examples": [
+        "Most people think this line is about a person",
+        "This lyric gets misread constantly and I understand why",
+        "You all heard this line very differently than I wrote it"
+      ],
+      "execution_steps": [
+        "Screenshot a real comment with the alternate reading.",
+        "Play the lyric in context first.",
+        "State the original intention in one sentence.",
+        "Say why the misreading works — genuinely.",
+        "Ask which reading the viewer prefers and let both stand."
+      ],
+      "shot_list": [
+        "Screenshot of the comment",
+        "Performance of the lyric",
+        "Direct-to-camera explanation"
+      ],
+      "audio_guidance": "Play the lyric with full vocal, then drop the music under the explanation.",
+      "editing_notes": "Blur usernames in screenshots unless you have permission to show them.",
+      "cta_examples": [
+        "Which reading do you prefer?",
+        "Tell me what you thought this line meant before this video."
+      ],
+      "accessibility_notes": "Caption the explanation and describe the comment screenshot in text.",
+      "estimated_production_minutes": 35,
+      "example_metadata": {
+        "tone": "conversational",
+        "caption_example": "I wrote it about a city. About a thousand people have told me it is about a person. Both readings work, and one of them is probably better.",
+        "title_example": "The lyric everyone misreads",
+        "hashtag_examples": [
+          "#lyrics",
+          "#songmeaning",
+          "#indiemusic",
+          "#songwriter"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Poll between two comment requests",
+        "Series with a numbered episode format",
+        "Fulfilling a critical comment thoughtfully"
+      ],
+      "common_mistakes": [
+        "Inventing or editing the comment",
+        "Taking three videos to finally answer the request",
+        "Choosing a request that promotes nothing you actually made"
+      ],
+      "on_screen_text": [
+        "You asked for this",
+        "Requested by a commenter"
+      ],
+      "secondary_objectives": [
+        "song-promotion",
+        "artist-identity"
+      ],
+      "genre_tags": [
+        "pop",
+        "indie",
+        "hip-hop",
+        "r&b",
+        "rock"
+      ],
+      "mood_tags": [
+        "warm",
+        "collaborative",
+        "playful"
+      ],
+      "id": "preset-comment-chooses-next",
+      "title": "A Comment Chooses the Next Video",
+      "summary": "Let a real audience comment decide your next concept, and show the decision being made.",
+      "description": "A community-driven series format. Take a genuine comment — a request, a question, a critique — and make the video that answers it, crediting the person who asked. This is one of the most reliable ways to build return viewers, because it proves their comments change what you make. Never fabricate the comment.",
+      "objectives": [
+        "community-building",
+        "audience-engagement",
+        "discovery"
+      ],
+      "platforms": [
+        "tiktok",
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 15,
+        "max": 40
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "community",
+        "series",
+        "comments",
+        "requests"
+      ],
+      "song_context_required": "A real comment that suggests a follow-up video.",
+      "hook_examples": [
+        "Somebody asked for this, so here it is",
+        "This video exists because of a comment",
+        "You picked this one. Here is the result."
+      ],
+      "execution_steps": [
+        "Choose a real comment you can satisfy in one clip.",
+        "Show the comment (username visible only with permission).",
+        "Deliver exactly what was asked, without padding.",
+        "Credit the commenter by name or handle in the caption.",
+        "Ask for the next request at the end."
+      ],
+      "shot_list": [
+        "Comment screenshot or read-out",
+        "The requested content itself",
+        "Optional thank-you to camera"
+      ],
+      "audio_guidance": "Match the audio to the request — if they asked for an acoustic version, no studio mix.",
+      "editing_notes": "Keep the comment visible for at least two seconds. Deliver the request in the first half of the clip.",
+      "cta_examples": [
+        "What should I make next? Genuine suggestions only.",
+        "Drop a request and I will pick one this week."
+      ],
+      "accessibility_notes": "Describe the comment in text as well as image, and caption your response.",
+      "estimated_production_minutes": 45,
+      "example_metadata": {
+        "tone": "conversational",
+        "caption_example": "Someone asked what the song sounds like without the production. Here it is, one take, no effects.",
+        "title_example": "You asked for this version",
+        "hashtag_examples": [
+          "#requested",
+          "#musiccommunity",
+          "#artistsoftiktok",
+          "#singersongwriter"
+        ]
+      }
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "post-release",
+      "variations": [
+        "Handwritten message on a notepad",
+        "Voiceover over the final shot of the release cycle",
+        "Series of messages, one per track on an EP"
+      ],
+      "common_mistakes": [
+        "Turning the message into a multi-paragraph caption",
+        "Overproducing the visual so the words lose weight",
+        "Saying something you do not actually believe"
+      ],
+      "on_screen_text": [
+        "The message: you were not too much.",
+        "The song is done. So is the chapter."
+      ],
+      "secondary_objectives": [
+        "community-building",
+        "discovery"
+      ],
+      "genre_tags": [
+        "indie",
+        "singer-songwriter",
+        "pop",
+        "r&b",
+        "alternative"
+      ],
+      "mood_tags": [
+        "reflective",
+        "hopeful",
+        "intimate"
+      ],
+      "id": "preset-final-message",
+      "title": "The Song’s Final Message",
+      "summary": "State the one thing you want listeners to take away — then let the song confirm it.",
+      "description": "A closing statement, useful at the end of a release cycle or as a pinned post. Say plainly what the song is asking the listener to walk away with. It must be a single sentence you believe, not a summary of the track. The restraint is the point: one sentence, one image, one excerpt.",
+      "objectives": [
+        "artist-identity",
+        "storytelling",
+        "song-promotion"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "youtube-shorts",
+        "tiktok"
+      ],
+      "duration_seconds": {
+        "min": 12,
+        "max": 30
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "static-text",
+        "live-action",
+        "hybrid"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "closing",
+        "statement",
+        "message",
+        "reflective"
+      ],
+      "song_context_required": "One clear takeaway you can say in a single sentence.",
+      "hook_examples": [
+        "If you take one thing from this song, take this",
+        "The last thing I want to say about this record",
+        "I did not write this song to be sad. I wrote it to be done."
+      ],
+      "execution_steps": [
+        "Write the takeaway in one sentence of under 15 words.",
+        "Film a still, restrained visual that does not compete with the words.",
+        "Put the sentence on screen exactly as you would say it.",
+        "Let the song play for 6–8 seconds after the sentence, no narration.",
+        "End on the sentence repeated once, or on silence."
+      ],
+      "shot_list": [
+        "Still portrait or empty space",
+        "Text card with the sentence",
+        "Song excerpt with slow visual"
+      ],
+      "audio_guidance": "Choose the quietest, most resolved moment of the song. No build to a drop.",
+      "editing_notes": "One cut at most. Silence at the end is stronger than a musical fade.",
+      "cta_examples": [
+        "What did this song mean to you?",
+        "The song is on my profile if you need it today."
+      ],
+      "accessibility_notes": "This concept is text-first by design — ensure the sentence is legible without audio and captioned when spoken.",
+      "estimated_production_minutes": 25,
+      "example_metadata": {
+        "tone": "emotional",
+        "caption_example": "The whole song is one sentence: you were not too much. It took me two years to be able to sing it without flinching.",
+        "title_example": "The last thing I want to say about this song",
+        "hashtag_examples": [
+          "#songmeaning",
+          "#indiemusic",
+          "#songwriter",
+          "#newmusic"
+        ]
+      }
+    }
+  ]
+}
