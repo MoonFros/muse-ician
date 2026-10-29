@@ -152,7 +152,7 @@ export function IdeaFromPresetModal({
                 className={`flex cursor-pointer items-start gap-3 rounded-xl border px-3 py-2.5 transition-colors ${
                   mode === option.value
                     ? 'border-accent/50 bg-accent-dim/40'
-                    : 'border-ink-700 bg-ink-900/40 hover:border-ink-600'
+                    : 'border-white/[0.08] bg-white/[0.02] hover:border-white/[0.10]'
                 }`}
               >
                 <input
@@ -190,7 +190,7 @@ export function IdeaFromPresetModal({
           </Field>
         ) : null}
 
-        <div className="rounded-xl border border-ink-700/70 bg-ink-900/40 px-3 py-2.5 text-xs leading-relaxed text-slate-muted">
+        <div className="rounded-xl border border-white/[0.07] bg-white/[0.02] px-3 py-2.5 text-xs leading-relaxed text-slate-muted">
           <p className="font-medium text-slate-text">Copied into the idea</p>
           <p className="mt-0.5">
             {preset.execution_steps.length} steps · {preset.shot_list.length} shots ·{' '}

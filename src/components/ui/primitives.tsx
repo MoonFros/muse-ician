@@ -25,14 +25,14 @@ export function PageHeader({
   breadcrumbs?: Breadcrumb[];
 }) {
   return (
-    <header className="flex flex-wrap items-start justify-between gap-3 border-b border-ink-700/60 pb-4">
+    <header className="relative flex flex-wrap items-start justify-between gap-4 pb-5">
       <div className="min-w-0">
         {breadcrumbs?.length ? (
-          <nav aria-label="Breadcrumb" className="mb-1.5">
+          <nav aria-label="Breadcrumb" className="mb-2">
             <ol className="flex flex-wrap items-center gap-1.5 text-2xs text-slate-faint">
               {breadcrumbs.map((crumb, index) => (
                 <li key={`${crumb.label}-${index}`} className="flex items-center gap-1.5">
-                  {index > 0 ? <span aria-hidden="true">/</span> : null}
+                  {index > 0 ? <span aria-hidden="true" className="text-white/20">/</span> : null}
                   {crumb.to ? (
                     <Link to={crumb.to} className="rounded hover:text-slate-text">
                       {crumb.label}
@@ -47,13 +47,21 @@ export function PageHeader({
             </ol>
           </nav>
         ) : null}
-        {eyebrow ? <p className="section-title">{eyebrow}</p> : null}
-        <h1 className="mt-1 text-xl font-semibold leading-tight text-white sm:text-2xl">{title}</h1>
+        {eyebrow ? (
+          <p className="flex items-center gap-2 text-2xs font-semibold uppercase tracking-[0.18em] text-slate-faint">
+            <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_2px_rgba(123,107,255,0.7)]" />
+            {eyebrow}
+          </p>
+        ) : null}
+        <h1 className="mt-2 text-[1.6rem] font-semibold leading-[1.15] tracking-[-0.03em] sm:text-4xl">
+          <span className="gradient-text">{title}</span>
+        </h1>
         {description ? (
-          <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-slate-muted">{description}</p>
+          <p className="mt-2.5 max-w-2xl text-sm leading-relaxed text-slate-muted">{description}</p>
         ) : null}
       </div>
       {actions ? <div className="flex flex-wrap items-center gap-2">{actions}</div> : null}
+      <div aria-hidden="true" className="rule-glow absolute inset-x-0 bottom-0" />
     </header>
   );
 }
@@ -76,7 +84,7 @@ export function SectionCard({
   return (
     <Tag className={`surface panel-pad ${className}`}>
       {title || description || actions ? (
-        <div className="mb-3 flex flex-wrap items-start justify-between gap-2">
+        <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
           <div className="min-w-0">
             {title ? <h2 className="text-sm font-semibold text-white">{title}</h2> : null}
             {description ? <p className="mt-0.5 text-xs leading-relaxed text-slate-muted">{description}</p> : null}
@@ -104,16 +112,21 @@ export function EmptyState({
 }) {
   return (
     <div
-      className={`flex flex-col items-center justify-center rounded-xl2 border border-dashed border-ink-600 bg-ink-900/40 text-center ${
-        compact ? 'px-4 py-6' : 'px-6 py-10'
+      className={`relative flex flex-col items-center justify-center overflow-hidden rounded-xl2 border border-dashed border-white/[0.12] text-center ${
+        compact ? 'px-4 py-6' : 'px-6 py-12'
       }`}
+      style={{
+        background:
+          'radial-gradient(120% 100% at 50% 0%, rgba(123,107,255,0.10), rgba(255,255,255,0.01) 55%, transparent 100%)',
+      }}
     >
       <span
-        className={`mb-3 inline-flex items-center justify-center rounded-xl border border-ink-700 bg-ink-850 text-accent-soft ${
-          compact ? 'h-9 w-9' : 'h-11 w-11'
+        className={`mb-3 inline-flex items-center justify-center rounded-2xl border border-white/10 text-accent-soft shadow-glow-sm ${
+          compact ? 'h-9 w-9' : 'h-12 w-12'
         }`}
+        style={{ background: 'linear-gradient(160deg, rgba(123,107,255,0.22), rgba(63,220,255,0.10))' }}
       >
-        <Icon name={icon} size={compact ? 17 : 20} />
+        <Icon name={icon} size={compact ? 17 : 21} />
       </span>
       <h3 className="text-base font-semibold text-white">{title}</h3>
       <p className="mt-1 max-w-md text-sm leading-relaxed text-slate-muted">{description}</p>
@@ -136,16 +149,20 @@ export function Callout({
   action?: ReactNode;
 }) {
   const styles = {
-    info: { wrap: 'border-accent/25 bg-accent-dim/40 text-accent-soft', icon: 'info' as IconName },
-    neutral: { wrap: 'border-ink-600 bg-ink-900/50 text-slate-muted', icon: 'info' as IconName },
-    warn: { wrap: 'border-warn/30 bg-warn/5 text-warn', icon: 'warning' as IconName },
-    warning: { wrap: 'border-warn/30 bg-warn/5 text-warn', icon: 'warning' as IconName },
-    danger: { wrap: 'border-danger/30 bg-danger/5 text-danger', icon: 'warning' as IconName },
-    success: { wrap: 'border-ok/30 bg-ok/5 text-ok', icon: 'check' as IconName },
+    info: { wrap: 'border-accent/30 text-accent-soft', bar: 'from-accent/80 to-aqua/50', icon: 'info' as IconName },
+    neutral: { wrap: 'border-white/10 text-slate-muted', bar: 'from-white/30 to-white/5', icon: 'info' as IconName },
+    warn: { wrap: 'border-warn/30 text-warn', bar: 'from-warn/80 to-warn/20', icon: 'warning' as IconName },
+    warning: { wrap: 'border-warn/30 text-warn', bar: 'from-warn/80 to-warn/20', icon: 'warning' as IconName },
+    danger: { wrap: 'border-danger/30 text-danger', bar: 'from-danger/80 to-danger/20', icon: 'warning' as IconName },
+    success: { wrap: 'border-ok/30 text-ok', bar: 'from-ok/80 to-ok/20', icon: 'check' as IconName },
   }[tone];
 
   return (
-    <div className={`flex items-start gap-3 rounded-xl border px-3.5 py-3 ${styles.wrap}`}>
+    <div
+      className={`relative flex items-start gap-3 overflow-hidden rounded-xl border px-3.5 py-3 ${styles.wrap}`}
+      style={{ background: 'linear-gradient(120deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012))' }}
+    >
+      <span aria-hidden="true" className={`absolute inset-y-0 left-0 w-[3px] bg-gradient-to-b ${styles.bar}`} />
       <Icon name={styles.icon} size={15} className="mt-0.5 shrink-0" />
       <div className="min-w-0 flex-1 text-xs leading-relaxed">
         {title ? <p className="text-sm font-medium text-slate-text">{title}</p> : null}
@@ -251,7 +268,7 @@ export function SegmentedControl<T extends string>({
     <div
       role="tablist"
       aria-label={ariaLabel}
-      className="inline-flex flex-wrap items-center gap-1 rounded-xl border border-ink-700 bg-ink-900/70 p-1"
+      className="inline-flex flex-wrap items-center gap-1 rounded-xl border border-white/[0.08] bg-white/[0.03] p-1 backdrop-blur"
     >
       {options.map((option) => {
         const active = option.value === value;
@@ -262,9 +279,13 @@ export function SegmentedControl<T extends string>({
             role="tab"
             aria-selected={active}
             onClick={() => onChange(option.value)}
-            className={`inline-flex items-center gap-1.5 rounded-lg font-medium transition-colors ${
+            className={`inline-flex items-center gap-1.5 rounded-lg font-medium transition-all duration-200 ease-spring ${
               size === 'sm' ? 'px-2 py-1 text-xs' : 'px-2.5 py-1.5 text-xs'
-            } ${active ? 'bg-ink-700 text-white shadow-panel' : 'text-slate-muted hover:text-slate-text'}`}
+            } ${
+              active
+                ? 'bg-accent-dim text-white shadow-[inset_0_0_0_1px_rgba(123,107,255,0.45)]'
+                : 'text-slate-muted hover:bg-white/[0.04] hover:text-slate-text'
+            }`}
           >
             {option.icon ? <Icon name={option.icon} size={13} /> : null}
             {option.label}
@@ -295,11 +316,12 @@ export function ScoreMeter({
   const resolvedTone =
     tone ?? (numeric === null ? 'accent' : numeric >= 75 ? 'ok' : numeric >= 50 ? 'warn' : 'danger');
   const stroke = {
-    accent: '#a78bfa',
-    ok: '#6ee7b7',
-    warn: '#fbbf24',
-    danger: '#f87171',
+    accent: '#7b6bff',
+    ok: '#4ade9b',
+    warn: '#ffc663',
+    danger: '#ff7a90',
   }[resolvedTone];
+  const gradientId = `score-${resolvedTone}`;
   const radius = size / 2 - 6;
   const circumference = 2 * Math.PI * radius;
   const progress = numeric === null ? 0 : (numeric / 100) * circumference;
@@ -307,18 +329,30 @@ export function ScoreMeter({
   return (
     <div className="flex items-center gap-3">
       <div className="relative shrink-0" style={{ width: size, height: size }}>
-        <svg width={size} height={size} className="-rotate-90" aria-hidden="true">
-          <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="#20202b" strokeWidth={7} />
+        <span
+          aria-hidden="true"
+          className="absolute inset-0 rounded-full opacity-60 blur-xl"
+          style={{ background: `radial-gradient(circle at 50% 50%, ${stroke}33, transparent 70%)` }}
+        />
+        <svg width={size} height={size} className="relative -rotate-90" aria-hidden="true">
+          <defs>
+            <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor={stroke} />
+              <stop offset="100%" stopColor="#3fdcff" />
+            </linearGradient>
+          </defs>
+          <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth={7} />
           <circle
             cx={size / 2}
             cy={size / 2}
             r={radius}
             fill="none"
-            stroke={stroke}
+            stroke={`url(#${gradientId})`}
             strokeWidth={7}
             strokeLinecap="round"
             strokeDasharray={`${progress} ${circumference}`}
-            className="transition-[stroke-dasharray] duration-500"
+            className="transition-[stroke-dasharray] duration-700 ease-spring"
+            style={{ filter: `drop-shadow(0 0 6px ${stroke}66)` }}
           />
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -355,12 +389,21 @@ export function ComponentBar({
         <span className="text-xs text-slate-muted">{label}</span>
         <span className="text-2xs tabular-nums text-slate-faint">{numeric === null ? 'not scored' : Math.round(numeric)}</span>
       </div>
-      <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-ink-700">
+      <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-white/[0.07]">
         <div
-          className={`h-full rounded-full transition-[width] duration-500 ${
-            numeric === null ? 'bg-ink-600' : numeric >= 75 ? 'bg-ok' : numeric >= 50 ? 'bg-warn' : 'bg-danger'
-          }`}
-          style={{ width: `${numeric ?? 0}%` }}
+          className="h-full rounded-full transition-[width] duration-700 ease-spring"
+          style={{
+            width: `${numeric ?? 0}%`,
+            background:
+              numeric === null
+                ? 'rgba(255,255,255,0.12)'
+                : numeric >= 75
+                  ? 'linear-gradient(90deg, #4ade9b, #3fdcff)'
+                  : numeric >= 50
+                    ? 'linear-gradient(90deg, #ffc663, #c6f24e)'
+                    : 'linear-gradient(90deg, #ff7a90, #ffb184)',
+            boxShadow: numeric === null ? 'none' : '0 0 12px -2px rgba(63,220,255,0.5)',
+          }}
         />
       </div>
       {hint ?? explanation ? (
@@ -414,15 +457,15 @@ export function CopyButton({
 }
 
 const STATUS_TONES: Record<WorkflowStatus, string> = {
-  idea: 'border-ink-600 text-slate-muted',
-  planning: 'border-accent/30 text-accent-soft',
-  scripted: 'border-accent/40 text-accent-soft',
-  filming: 'border-warn/30 text-warn',
-  editing: 'border-warn/40 text-warn',
-  'ready-to-publish': 'border-accent/60 text-accent-soft',
-  published: 'border-ok/40 text-ok',
-  reviewed: 'border-ok/30 text-ok',
-  archived: 'border-ink-600 text-slate-faint',
+  idea: 'border-white/10 text-slate-muted',
+  planning: 'border-accent/35 text-accent-soft',
+  scripted: 'border-accent/50 text-accent-soft',
+  filming: 'border-warn/35 text-warn',
+  editing: 'border-warn/50 text-warn',
+  'ready-to-publish': 'border-aqua/50 text-aqua',
+  published: 'border-ok/50 text-ok',
+  reviewed: 'border-ok/35 text-ok',
+  archived: 'border-white/[0.08] text-slate-faint',
 };
 
 export function StatusBadge({ status }: { status: WorkflowStatus }) {
@@ -471,7 +514,11 @@ export function SaveIndicator({
       }
       role="status"
     >
-      <span className={`h-1.5 w-1.5 rounded-full ${resolved.status === 'error' ? 'bg-danger' : 'bg-current'}`} />
+      <span
+        className={`h-1.5 w-1.5 rounded-full ${resolved.status === 'error' ? 'bg-danger' : 'bg-current'} ${
+          resolved.status === 'saving' ? 'animate-pulse' : ''
+        } ${resolved.status === 'saved' ? 'shadow-[0_0_8px_1px_currentColor]' : ''}`}
+      />
       {content.text}
     </span>
   );

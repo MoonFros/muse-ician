@@ -299,7 +299,7 @@ export default function ImportExportPage() {
             ].map((item) => (
               <li
                 key={item.title}
-                className="flex flex-wrap items-start justify-between gap-3 rounded-xl border border-ink-700/60 bg-ink-900/40 px-3.5 py-3"
+                className="flex flex-wrap items-start justify-between gap-3 rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3"
               >
                 <div className="min-w-0">
                   <p className="font-mono text-xs text-slate-text">{item.title}</p>
@@ -409,7 +409,7 @@ export default function ImportExportPage() {
               void handleFile(event.dataTransfer.files?.[0]);
             }}
             className={`rounded-xl border-2 border-dashed px-4 py-8 text-center transition-colors ${
-              dragging ? 'border-accent/60 bg-accent-dim/20' : 'border-ink-600 bg-ink-900/40'
+              dragging ? 'border-accent/60 bg-accent-dim/20' : 'border-white/[0.10] bg-white/[0.02]'
             }`}
           >
             <Icon name="upload" size={22} className="mx-auto text-accent-soft" />
@@ -458,7 +458,7 @@ export default function ImportExportPage() {
 
               <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
                 {Object.entries(validation.counts).map(([collection, count]) => (
-                  <div key={collection} className="rounded-lg border border-ink-700/60 bg-ink-900/40 px-3 py-2">
+                  <div key={collection} className="rounded-lg border border-white/[0.06] bg-white/[0.02] px-3 py-2">
                     <p className="text-2xs uppercase tracking-wide text-slate-faint">
                       {COLLECTION_LABELS[collection as keyof typeof COLLECTION_LABELS]}
                     </p>
@@ -532,7 +532,7 @@ export default function ImportExportPage() {
                       </div>
                     </Field>
                     <div className="space-y-3">
-                      <div className="rounded-lg border border-ink-700/60 bg-ink-900/40 px-3 py-2 text-xs text-slate-muted">
+                      <div className="rounded-lg border border-white/[0.06] bg-white/[0.02] px-3 py-2 text-xs text-slate-muted">
                         <p>
                           <span className="text-slate-text">{plan.conflicts.length}</span> id conflict
                           {plan.conflicts.length === 1 ? '' : 's'} ·{' '}
@@ -567,9 +567,9 @@ export default function ImportExportPage() {
                   ) : null}
 
                   {plan.preview.length ? (
-                    <div className="overflow-hidden rounded-xl border border-ink-700/60">
+                    <div className="overflow-hidden rounded-xl border border-white/[0.06]">
                       <table className="w-full text-left text-xs">
-                        <thead className="bg-ink-900/60 text-2xs uppercase tracking-wide text-slate-faint">
+                        <thead className="bg-white/[0.03] text-2xs uppercase tracking-wide text-slate-faint">
                           <tr>
                             <th className="px-3 py-2 font-medium">Record</th>
                             <th className="px-3 py-2 font-medium">Title</th>
@@ -589,7 +589,7 @@ export default function ImportExportPage() {
                                     item.status === 'new'
                                       ? 'border-ok/30 text-ok'
                                       : item.status === 'skip'
-                                        ? 'border-ink-600 text-slate-faint'
+                                        ? 'border-white/[0.10] text-slate-faint'
                                         : item.status === 'replace'
                                           ? 'border-warn/30 text-warn'
                                           : 'border-accent/30 text-accent-soft'
@@ -603,7 +603,7 @@ export default function ImportExportPage() {
                         </tbody>
                       </table>
                       {plan.preview.length > 40 ? (
-                        <p className="border-t border-ink-700/60 px-3 py-2 text-2xs text-slate-faint">
+                        <p className="border-t border-white/[0.06] px-3 py-2 text-2xs text-slate-faint">
                           Showing 40 of {plan.preview.length} records.
                         </p>
                       ) : null}
@@ -640,7 +640,7 @@ export default function ImportExportPage() {
 
       <SectionCard title="Export" description="Every export is valid JSON with a schema version, timestamp and stable ids.">
         <div className="grid gap-3 sm:grid-cols-2">
-          <div className="rounded-xl border border-ink-700/60 bg-ink-900/40 p-3.5">
+          <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3.5">
             <h3 className="text-sm text-slate-text">Complete workspace backup</h3>
             <p className="mt-1 text-xs leading-relaxed text-slate-muted">
               Every record in this browser, plus preferences. This is the file to keep for yourself.
@@ -660,7 +660,7 @@ export default function ImportExportPage() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-ink-700/60 bg-ink-900/40 p-3.5">
+          <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3.5">
             <h3 className="text-sm text-slate-text">Preset library</h3>
             <p className="mt-1 text-xs leading-relaxed text-slate-muted">
               All active presets (including yours) as a preset pack. Archived presets are excluded.
@@ -686,7 +686,7 @@ export default function ImportExportPage() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-ink-700/60 bg-ink-900/40 p-3.5">
+          <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3.5">
             <h3 className="text-sm text-slate-text">Campaign plan</h3>
             <p className="mt-1 text-xs leading-relaxed text-slate-muted">
               The song, ideas, source presets, planned posts and metadata for one song.
@@ -707,7 +707,7 @@ export default function ImportExportPage() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-ink-700/60 bg-ink-900/40 p-3.5">
+          <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3.5">
             <h3 className="text-sm text-slate-text">Metadata packages</h3>
             <p className="mt-1 text-xs leading-relaxed text-slate-muted">
               Publishing packages as JSON, optionally limited to one idea.
@@ -728,7 +728,7 @@ export default function ImportExportPage() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-ink-700/60 bg-ink-900/40 p-3.5">
+          <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3.5">
             <h3 className="text-sm text-slate-text">Performance snapshot</h3>
             <p className="mt-1 text-xs leading-relaxed text-slate-muted">
               Hand-entered results with the linked songs and ideas, for analysis elsewhere.
@@ -741,7 +741,7 @@ export default function ImportExportPage() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-ink-700/60 bg-ink-900/40 p-3.5">
+          <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3.5">
             <h3 className="text-sm text-slate-text">Single preset</h3>
             <p className="mt-1 text-xs leading-relaxed text-slate-muted">
               Open any preset and use the download icon to export just that record.

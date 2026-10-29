@@ -116,7 +116,7 @@ export default function SongsPage() {
 
             return (
               <li key={song.id}>
-                <article className="flex h-full flex-col rounded-xl2 border border-ink-700/70 bg-ink-850/70 p-4 transition-colors hover:border-ink-600">
+                <article className="flex h-full flex-col rounded-xl2 border border-white/[0.07] bg-white/[0.028] p-4 transition-colors hover:border-white/[0.10]">
                   <div className="flex items-start justify-between gap-2">
                     <div className="min-w-0">
                       <h2 className="truncate text-sm font-semibold text-white">
@@ -144,7 +144,7 @@ export default function SongsPage() {
                     <p className="mt-2.5 text-xs leading-relaxed text-slate-muted">{truncate(song.description, 140)}</p>
                   ) : null}
 
-                  <dl className="mt-3 grid grid-cols-3 gap-2 border-t border-ink-700/60 pt-3 text-2xs text-slate-faint">
+                  <dl className="mt-3 grid grid-cols-3 gap-2 border-t border-white/[0.06] pt-3 text-2xs text-slate-faint">
                     <div>
                       <dt>Ideas</dt>
                       <dd className="mt-0.5 text-sm text-slate-text">

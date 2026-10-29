@@ -70,14 +70,14 @@ export function Menu({
         <div
           role="menu"
           aria-label={label}
-          className={`absolute top-full z-50 mt-1.5 w-52 animate-fade-up overflow-hidden rounded-xl border border-ink-600 bg-ink-850 p-1.5 shadow-lift ${
+          className={`absolute top-full z-50 mt-1.5 w-52 animate-pop-in overflow-hidden rounded-2xl border border-white/[0.10] bg-[#0b0b16]/95 p-1.5 shadow-lift backdrop-blur-xl ${
             align === 'right' ? 'right-0' : 'left-0'
           }`}
           onClick={(event) => event.stopPropagation()}
         >
           {items.map((item, index) => {
             if ('separator' in item) {
-              return <div key={`sep-${index}`} className="my-1 border-t border-ink-700/70" />;
+              return <div key={`sep-${index}`} className="my-1 border-t border-white/[0.07]" />;
             }
             const isFirst = !firstRendered;
             if (!item.disabled) firstRendered = true;
@@ -94,7 +94,7 @@ export function Menu({
                   item.onSelect();
                 }}
                 className={`flex w-full items-start gap-2 rounded-lg px-2.5 py-1.5 text-left text-sm transition-colors disabled:cursor-not-allowed disabled:opacity-40 ${
-                  item.danger ? 'text-danger hover:bg-danger/10' : 'text-slate-muted hover:bg-ink-750 hover:text-slate-text'
+                  item.danger ? 'text-danger hover:bg-danger/10' : 'text-slate-muted hover:bg-white/[0.055] hover:text-slate-text'
                 }`}
               >
                 {item.icon ? <Icon name={item.icon} size={14} className="mt-0.5 shrink-0" /> : null}

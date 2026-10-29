@@ -617,7 +617,7 @@ export default function IdeaWorkspacePage() {
       ) : null}
 
       {dirty ? (
-        <div className="sticky bottom-20 z-30 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-warn/30 bg-ink-800/95 px-3.5 py-2.5 shadow-panel backdrop-blur lg:bottom-4">
+        <div className="sticky bottom-20 z-30 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-warn/30 bg-white/[0.06] px-3.5 py-2.5 shadow-panel backdrop-blur lg:bottom-4">
           <p className="text-xs text-warn">You have unsaved changes.</p>
           <div className="flex gap-2">
             <button
@@ -779,7 +779,7 @@ function CoachTab({
             {showRubric ? 'Hide rubric definition' : 'How is this scored?'}
           </button>
           {showRubric ? (
-            <ul className="mt-2 space-y-2 rounded-lg border border-ink-700/60 bg-ink-900/50 p-3 text-2xs leading-relaxed text-slate-muted">
+            <ul className="mt-2 space-y-2 rounded-lg border border-white/[0.06] bg-white/[0.025] p-3 text-2xs leading-relaxed text-slate-muted">
               {RUBRIC_DEFINITION.map((item) => (
                 <li key={item.key}>
                   <span className="font-medium text-slate-text">
@@ -974,7 +974,7 @@ function CoachTab({
                 {assessment.improvements.map((improvement, index) => (
                   <li
                     key={`${improvement.area}-${index}`}
-                    className="flex flex-wrap items-start justify-between gap-3 rounded-xl border border-ink-700/60 bg-ink-900/40 px-3.5 py-3"
+                    className="flex flex-wrap items-start justify-between gap-3 rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3"
                   >
                     <div className="min-w-0">
                       <p className="flex items-center gap-2 text-sm text-slate-text">
@@ -985,7 +985,7 @@ function CoachTab({
                               ? 'border-danger/30 text-danger'
                               : improvement.impact === 'medium'
                                 ? 'border-warn/30 text-warn'
-                                : 'border-ink-600 text-slate-faint'
+                                : 'border-white/[0.10] text-slate-faint'
                           }`}
                         >
                           {improvement.impact} impact
@@ -1039,7 +1039,7 @@ function CoachTab({
             <ol className="space-y-2 text-sm leading-relaxed text-slate-muted">
               {assessment.next_steps.map((step, index) => (
                 <li key={index} className="flex gap-2.5">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-ink-600 text-2xs text-slate-faint">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-white/[0.10] text-2xs text-slate-faint">
                     {index + 1}
                   </span>
                   {step}

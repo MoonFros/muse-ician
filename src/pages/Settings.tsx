@@ -249,10 +249,10 @@ export default function SettingsPage() {
             }
           >
             <div className="space-y-3">
-              <div className="rounded-xl border border-ink-700/60 bg-ink-900/40 px-3.5 py-3">
+              <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3">
                 <div className="flex items-center justify-between gap-2">
                   <p className="text-sm text-slate-text">AI provider</p>
-                  <span className={`chip ${integrations?.ai.configured ? 'chip-ok' : 'border-ink-600 text-slate-faint'}`}>
+                  <span className={`chip ${integrations?.ai.configured ? 'chip-ok' : 'border-white/[0.10] text-slate-faint'}`}>
                     {integrations?.ai.configured ? (integrations.ai.mock ? 'mock' : 'configured') : 'not configured'}
                   </span>
                 </div>
@@ -269,10 +269,10 @@ export default function SettingsPage() {
                   </p>
                 )}
               </div>
-              <div className="rounded-xl border border-ink-700/60 bg-ink-900/40 px-3.5 py-3">
+              <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3">
                 <div className="flex items-center justify-between gap-2">
                   <p className="text-sm text-slate-text">Trend research</p>
-                  <span className={`chip ${integrations?.trends.configured ? 'chip-ok' : 'border-ink-600 text-slate-faint'}`}>
+                  <span className={`chip ${integrations?.trends.configured ? 'chip-ok' : 'border-white/[0.10] text-slate-faint'}`}>
                     {integrations?.trends.configured ? 'configured' : 'not configured'}
                   </span>
                 </div>
@@ -287,7 +287,7 @@ export default function SettingsPage() {
                   </p>
                 ) : null}
               </div>
-              <div className="rounded-lg border border-ink-700/60 bg-ink-900/30 px-3 py-2.5 text-2xs leading-relaxed text-slate-faint">
+              <div className="rounded-lg border border-white/[0.06] bg-white/[0.015] px-3 py-2.5 text-2xs leading-relaxed text-slate-faint">
                 <p className="font-medium text-slate-muted">Server environment variables</p>
                 <p className="mt-1 font-mono">
                   AI_PROVIDER · AI_API_KEY · AI_MODEL · AI_BASE_URL · AI_TIMEOUT_MS · TREND_PROVIDER_URL ·
@@ -432,7 +432,7 @@ export default function SettingsPage() {
             </p>
           </SectionCard>
 
-          <div className="rounded-xl border border-ink-700/60 bg-ink-900/40 px-3.5 py-3">
+          <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3">
             <Checkbox
               label="Onboarding marked complete"
               hint="Turn this off to see the dashboard's first-run checklist again."

@@ -411,7 +411,7 @@ export default function MetadataStudioPage() {
                       className={`w-full rounded-lg border px-3 py-2 text-left transition-colors ${
                         item.id === ideaId
                           ? 'border-accent/40 bg-accent-dim/30'
-                          : 'border-ink-700/60 bg-ink-850/50 hover:border-ink-600'
+                          : 'border-white/[0.06] bg-white/[0.022] hover:border-white/[0.10]'
                       }`}
                       aria-pressed={item.id === ideaId}
                     >
@@ -425,7 +425,7 @@ export default function MetadataStudioPage() {
                 );
               })}
               {ideas.length === 0 ? (
-                <li className="rounded-lg border border-dashed border-ink-600 px-3 py-4 text-center text-xs text-slate-faint">
+                <li className="rounded-lg border border-dashed border-white/[0.10] px-3 py-4 text-center text-xs text-slate-faint">
                   No ideas match “{query}”.
                 </li>
               ) : null}
@@ -714,7 +714,7 @@ export default function MetadataStudioPage() {
                           />
                         </Field>
 
-                        <div className="flex flex-wrap items-center gap-2 border-t border-ink-700/60 pt-3">
+                        <div className="flex flex-wrap items-center gap-2 border-t border-white/[0.06] pt-3">
                           <button type="button" className="btn-primary btn-sm" onClick={() => saveDraft('draft')} disabled={!dirty}>
                             {dirty ? 'Save draft' : 'Saved'}
                           </button>

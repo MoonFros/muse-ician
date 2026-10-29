@@ -285,7 +285,7 @@ export function SongFormModal({
         </button>
 
         {advanced ? (
-          <div className="space-y-4 rounded-xl border border-ink-700/70 bg-ink-900/40 p-3.5">
+          <div className="space-y-4 rounded-xl border border-white/[0.07] bg-white/[0.02] p-3.5">
             <Field
               label="Lyrics"
               hint="Stored only in this browser. Never sent anywhere unless you copy an AI prompt that includes them."

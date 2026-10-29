@@ -225,7 +225,7 @@ export default function TrendsPage() {
                     <li key={trend.id}>
                       <div
                         className={`rounded-xl border transition-colors ${
-                          active ? 'border-accent/40 bg-accent-dim/20' : 'border-ink-700/70 bg-ink-850/60'
+                          active ? 'border-accent/40 bg-accent-dim/20' : 'border-white/[0.07] bg-white/[0.025]'
                         }`}
                       >
                         <button
@@ -245,12 +245,12 @@ export default function TrendsPage() {
                                     ? 'border-warn/30 text-warn'
                                     : freshness.level === 'stale'
                                       ? 'border-danger/30 text-danger'
-                                      : 'border-ink-600 text-slate-faint'
+                                      : 'border-white/[0.10] text-slate-faint'
                               }`}
                             >
                               {freshness.level === 'unknown' ? 'No date' : `${freshness.days}d old`}
                             </span>
-                            <span className="chip border-ink-600 text-slate-faint">{trend.confidence} confidence</span>
+                            <span className="chip border-white/[0.10] text-slate-faint">{trend.confidence} confidence</span>
                           </span>
                           <span className="mt-1 block text-2xs text-slate-faint">
                             Source: {trend.source_name} · observed {formatShortDate(trend.observed_at)} · added{' '}
@@ -260,7 +260,7 @@ export default function TrendsPage() {
                             {truncate(trend.evidence, 180)}
                           </span>
                         </button>
-                        <div className="flex flex-wrap gap-2 border-t border-ink-700/60 px-3.5 py-2">
+                        <div className="flex flex-wrap gap-2 border-t border-white/[0.06] px-3.5 py-2">
                           {trend.source_url ? (
                             <a
                               href={trend.source_url}
@@ -331,7 +331,7 @@ export default function TrendsPage() {
                   {assessment.reason}
                 </Callout>
               )}
-              <p className="mt-3 border-t border-ink-700/60 pt-3 text-2xs leading-relaxed text-slate-faint">
+              <p className="mt-3 border-t border-white/[0.06] pt-3 text-2xs leading-relaxed text-slate-faint">
                 {assessment.disclaimer}
               </p>
               <div className="mt-3 space-y-2">

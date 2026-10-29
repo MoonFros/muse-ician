@@ -127,6 +127,7 @@ export function Icon({ name, size = 18, className = '', ...rest }: IconProps) {
 }
 
 export function LogoMark({ size = 32, className = '' }: { size?: number; className?: string }) {
+  const id = `logo-${size}`;
   return (
     <svg
       width={size}
@@ -137,10 +138,27 @@ export function LogoMark({ size = 32, className = '' }: { size?: number; classNa
       aria-hidden="true"
       focusable="false"
     >
-      <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="9" fill="#161a22" stroke="#2c3440" />
-      <path d="M8 21V11.5l4.2 6 4.3-6V21" stroke="#8ee6c8" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M21 21V12l4 4.4" stroke="#f2b57c" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="21" cy="10.4" r="1.9" fill="#f2b57c" />
+      <defs>
+        <linearGradient id={`${id}-bg`} x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#161327" />
+          <stop offset="100%" stopColor="#0a0a15" />
+        </linearGradient>
+        <linearGradient id={`${id}-wave`} x1="4" y1="8" x2="28" y2="24" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#b7adff" />
+          <stop offset="55%" stopColor="#7b6bff" />
+          <stop offset="100%" stopColor="#3fdcff" />
+        </linearGradient>
+      </defs>
+      <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="9.5" fill={`url(#${id}-bg)`} stroke="rgba(255,255,255,0.16)" />
+      <path
+        d="M8 21V11.5l4.2 6 4.3-6V21"
+        stroke={`url(#${id}-wave)`}
+        strokeWidth="1.9"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M21 21V12l4 4.4" stroke={`url(#${id}-wave)`} strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="21" cy="10.4" r="1.9" fill="#c6f24e" />
     </svg>
   );
 }
@@ -151,7 +169,7 @@ export function PlatformGlyph({ platform, size = 16 }: { platform: string; size?
   return (
     <span
       aria-hidden="true"
-      className="inline-flex items-center justify-center rounded-md border border-ink-600 bg-ink-800 text-[9px] font-semibold tracking-wide text-slate-muted"
+      className="inline-flex items-center justify-center rounded-md border border-white/[0.10] bg-white/[0.04] text-[9px] font-semibold tracking-wide text-slate-muted"
       style={{ width: size + 8, height: size, fontSize: Math.max(8, size * 0.5) }}
     >
       {label}

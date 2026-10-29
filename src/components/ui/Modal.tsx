@@ -94,7 +94,7 @@ export function Modal({
   return createPortal(
     <div className="fixed inset-0 z-[60] flex items-end justify-center overflow-y-auto p-0 sm:items-center sm:p-6">
       <div
-        className="fixed inset-0 bg-ink-950/80 backdrop-blur-sm"
+        className="fixed inset-0 bg-black/70 backdrop-blur-sm"
         onClick={() => {
           if (!busy) onClose();
         }}
@@ -107,11 +107,12 @@ export function Modal({
         aria-labelledby={titleId}
         aria-describedby={description ? descId : undefined}
         tabIndex={-1}
-        className={`relative z-10 w-full ${SIZES[size]} animate-fade-up overflow-hidden rounded-t-2xl border border-ink-700 bg-ink-850 shadow-lift sm:rounded-xl2`}
+        className={`relative z-10 w-full ${SIZES[size]} animate-pop-in overflow-hidden rounded-t-3xl border border-white/[0.1] bg-[#0b0b16]/95 shadow-[0_40px_120px_-40px_rgba(0,0,0,1)] backdrop-blur-2xl sm:rounded-3xl`}
       >
-        <div className="flex items-start justify-between gap-4 border-b border-ink-700/70 px-4 py-3.5 sm:px-5">
+        <span aria-hidden="true" className="rule-glow block" />
+        <div className="flex items-start justify-between gap-4 border-b border-white/[0.07] px-4 py-4 sm:px-5">
           <div className="min-w-0">
-            <h2 id={titleId} className="text-base font-semibold text-white">
+            <h2 id={titleId} className="text-base font-semibold tracking-[-0.01em] text-white">
               {title}
             </h2>
             {description ? (
@@ -132,7 +133,7 @@ export function Modal({
         </div>
         <div className="max-h-[min(72vh,46rem)] overflow-y-auto px-4 py-4 scroll-thin sm:px-5">{children}</div>
         {footer ? (
-          <div className="flex flex-wrap items-center justify-end gap-2 border-t border-ink-700/70 bg-ink-900/50 px-4 py-3 sm:px-5">
+          <div className="flex flex-wrap items-center justify-end gap-2 border-t border-white/[0.07] bg-white/[0.02] px-4 py-3 sm:px-5">
             {footer}
           </div>
         ) : null}
@@ -235,14 +236,14 @@ export function Sheet({
 
   return createPortal(
     <div className="fixed inset-0 z-[65] lg:hidden">
-      <div className="absolute inset-0 bg-ink-950/80 backdrop-blur-sm" onClick={onClose} aria-hidden="true" />
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={onClose} aria-hidden="true" />
       <div
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className="absolute inset-x-0 bottom-0 max-h-[85vh] animate-fade-up overflow-y-auto rounded-t-2xl border-t border-ink-700 bg-ink-850 px-4 pb-6 pt-4 scroll-thin"
+        className="absolute inset-x-0 bottom-0 max-h-[85vh] animate-fade-up overflow-y-auto rounded-t-2xl border-t border-white/[0.08] bg-[#0b0b16] px-4 pb-6 pt-4 scroll-thin"
       >
-        <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-ink-600" aria-hidden="true" />
+        <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-white/[0.12]" aria-hidden="true" />
         {children}
       </div>
     </div>,

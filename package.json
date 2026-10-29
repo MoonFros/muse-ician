@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "description": "Turn your music into your next idea. A local-first content planning and metadata workspace for independent musicians.",
+  "engines": {
+    "node": ">=20"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",

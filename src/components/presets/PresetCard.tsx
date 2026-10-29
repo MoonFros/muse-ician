@@ -94,7 +94,7 @@ export function PresetCard({
       <span className="chip">{preset.budget} budget</span>
       {preset.is_user_created ? <span className="chip-accent">Yours</span> : null}
       {preset.is_demo ? <span className="chip-warn">Demo</span> : null}
-      {preset.is_archived ? <span className="chip border-ink-600 text-slate-faint">Archived</span> : null}
+      {preset.is_archived ? <span className="chip border-white/[0.10] text-slate-faint">Archived</span> : null}
       {layout !== 'compact' ? (
         <span className="chip">
           <Icon name="clock" size={11} />
@@ -107,14 +107,16 @@ export function PresetCard({
   if (view === 'list' || layout === 'compact') {
     return (
       <li
-        className={`relative flex items-start gap-3 rounded-xl border px-3.5 py-3 transition-colors ${
-          selected ? 'border-accent/50 bg-accent-dim/30' : 'border-ink-700/70 bg-ink-850/70 hover:border-ink-600'
+        className={`relative flex items-start gap-3 rounded-xl border px-3.5 py-3 transition-all duration-200 ease-spring ${
+          selected
+            ? 'border-accent/50 bg-accent-dim/30'
+            : 'border-white/[0.07] bg-white/[0.022] hover:-translate-y-px hover:border-white/[0.16] hover:bg-white/[0.04]'
         }`}
       >
         {onSelect ? (
           <input
             type="checkbox"
-            className="mt-1 h-4 w-4 shrink-0 rounded border-ink-500 bg-ink-900 accent-accent-deep"
+            className="mt-1 h-4 w-4 shrink-0 rounded border-white/[0.16] bg-ink-900 accent-accent-deep"
             checked={Boolean(selected)}
             onChange={(event) => onSelect(preset, event.target.checked)}
             aria-label={`Select ${preset.title}`}
@@ -136,15 +138,26 @@ export function PresetCard({
 
   return (
     <article
-      className={`group relative flex h-full flex-col rounded-xl2 border p-4 transition-colors ${
-        selected ? 'border-accent/50 bg-accent-dim/20' : 'border-ink-700/70 bg-ink-850/70 hover:border-ink-600'
+      className={`group relative flex h-full flex-col overflow-hidden rounded-xl2 border p-4 transition-all duration-300 ease-spring hover:-translate-y-1 ${
+        selected
+          ? 'border-accent/60 bg-accent-dim/25 shadow-glow'
+          : 'border-white/[0.07] bg-white/[0.022] hover:border-white/[0.16] hover:bg-white/[0.04] hover:shadow-lift'
       }`}
     >
+      {/* Top accent line that lights up on hover — the signature interaction. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      />
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-accent/20 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
+      />
       {onSelect ? (
-        <label className="absolute right-3 top-3 z-10 flex h-6 w-6 items-center justify-center rounded-md bg-ink-900/80">
+        <label className="absolute right-3 top-3 z-10 flex h-6 w-6 items-center justify-center rounded-lg bg-black/50 backdrop-blur">
           <input
             type="checkbox"
-            className="h-4 w-4 rounded border-ink-500 bg-ink-900 accent-accent-deep"
+            className="h-4 w-4 rounded border-white/[0.16] bg-ink-900 accent-accent-deep"
             checked={Boolean(selected)}
             onChange={(event) => onSelect(preset, event.target.checked)}
             aria-label={`Select ${preset.title}`}
@@ -154,7 +167,7 @@ export function PresetCard({
       <div className={onSelect ? 'pr-8' : ''}>{header}</div>
       {meta}
       <p className="mt-3 text-2xs leading-relaxed text-slate-faint">{platformLabels.join(' · ')}</p>
-      <div className="mt-3 flex flex-wrap items-center gap-1.5 border-t border-ink-700/60 pt-3">
+      <div className="mt-3 flex flex-wrap items-center gap-1.5 border-t border-white/[0.07] pt-3">
         <Link to={`/library/${preset.id}`} className="btn-secondary btn-sm">
           Details
         </Link>

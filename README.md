@@ -22,6 +22,7 @@ It is an application, not a landing page. Everything described below is implemen
 - [Optional AI provider](#optional-ai-provider)
 - [Optional trend provider](#optional-trend-provider)
 - [Deployment](#deployment)
+- [Design system](#design-system)
 - [Scripts and testing](#scripts-and-testing)
 - [Architecture](#architecture)
 - [Known limitations](#known-limitations)
@@ -283,15 +284,51 @@ Without it, `/api/trends` returns **501 with an explicit reason**. It never fabr
 
 ### Vercel (recommended)
 
-1. Push the repository and import it in Vercel (or run `npx vercel deploy`).
-2. Framework preset: **Vite**. Build command `npm run build`, output `dist` — already set in `vercel.json`.
-3. `/api/*.ts` is deployed as serverless functions; the SPA is served for every other path.
-4. Add any environment variables you want (see above). **None are required.**
-5. Optional: restrict the AI key with provider-side spending limits; the endpoint already rate-limits per client.
+Full walkthrough, env-var tables and troubleshooting: **[DEPLOY.md](./DEPLOY.md)**.
+
+1. Push the repository and import it at <https://vercel.com/new> (or run `vercel` / `vercel --prod`).
+2. Framework preset: **Vite**. Build command `npm run build`, output `dist`, install `npm ci` — already set in `vercel.json`, so the dashboard form is filled in for you.
+3. `/api/*.ts` is deployed as serverless functions (`maxDuration: 60`); the SPA is served for every other path via the rewrite in `vercel.json`.
+4. Add environment variables only if you want AI or live trends. **None are required**; without them the app runs in local mode.
+5. Verify the deploy at `https://<your-app>.vercel.app/api/status` — `configured: false` with a reason is the expected local-mode answer.
+6. Optional: restrict the AI key with provider-side spending limits.
 
 ### Any static host + your own API
 
 The frontend is a static SPA. If you host `/api` elsewhere, point the frontend at it — or simply ship the static build without providers: AI and trend panels will explain that they are unavailable, and everything else keeps working.
+
+---
+
+## Design system
+
+The visual language lives in two files, so every page changes together:
+
+| File | Role |
+| --- | --- |
+| `tailwind.config.js` | Palette, radii, shadows, keyframes and animation timings |
+| `src/index.css` | Base layer (aurora backdrop, film grain, focus rings), component classes (`.surface`, `.btn-*`, `.input`, `.chip`, `.stat-tile`), utilities (`.gradient-text`, `.stagger`) |
+
+- **Palette.** Obsidian (`ink-900 #07070f`) base with a violet → cyan accent ramp
+  (`#7b6bff` → `#3fdcff`) and a lime spark (`#c6f24e`) reserved for momentum and
+  "published" states. Semantic tones stay separate: `ok`, `warn`, `danger`.
+- **Surfaces.** Glass panels (translucent fill + 1px gradient highlight + 18px
+  backdrop blur) instead of flat boxes, and a hairline gradient border drawn with
+  a masked pseudo-element so edges catch light.
+- **Motion.** One shared easing (`ease-spring`, `cubic-bezier(.22,1,.36,1)`),
+  short durations (200–460 ms), a single page-transition fade-up on route change,
+  hover lift on cards, a light sweep across primary buttons, and a slow 30 s
+  aurora drift behind the app. Nothing animates twice, and nothing blocks input.
+- **Typography.** Tight tracking on display headings (`-0.028em`), uppercase
+  0.18em eyebrows, tabular numerals for every statistic.
+- **Reduced motion.** A single `prefers-reduced-motion` block collapses all
+  animation and transition durations to ~0 and stops the aurora drift.
+- **Contrast.** Body text `#f1f2fa` on `#07070f` (≈17:1), muted `#a6abc9` (≈8:1),
+  faint `#787d9f` (≈4.7:1). Accent colours are only used on text at ⩾ 4.5:1 or on
+  non-text decoration.
+
+To retheme, change `accent` / `aqua` / `lime` in `tailwind.config.js` and the
+three `--aurora-*` custom properties in `src/index.css`. Nothing else is
+hard-coded.
 
 ---
 

@@ -180,7 +180,7 @@ export function CampaignPlanModal({
             onChange={setCreateIdeas}
           />
 
-          <div className="rounded-xl border border-ink-700/70 bg-ink-900/40 p-3">
+          <div className="rounded-xl border border-white/[0.07] bg-white/[0.02] p-3">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <p className="text-sm font-medium text-slate-text">Sequence preview</p>
               <p className="text-2xs text-slate-faint">

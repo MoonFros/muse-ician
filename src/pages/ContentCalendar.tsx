@@ -306,8 +306,8 @@ export default function ContentCalendarPage() {
       </SectionCard>
 
       {view === 'month' ? (
-        <div className="overflow-hidden rounded-xl2 border border-ink-700/70 bg-ink-850/50">
-          <div className="grid grid-cols-7 border-b border-ink-700/70 bg-ink-900/60">
+        <div className="overflow-hidden rounded-xl2 border border-white/[0.07] bg-white/[0.022]">
+          <div className="grid grid-cols-7 border-b border-white/[0.07] bg-white/[0.03]">
             {WEEKDAYS.map((day) => (
               <div key={day} className="px-2 py-2 text-center text-2xs uppercase tracking-wide text-slate-faint">
                 <span className="hidden sm:inline">{day}</span>
@@ -330,8 +330,8 @@ export default function ContentCalendarPage() {
                     if (postId) void movePost(postId, day);
                     setDragging(null);
                   }}
-                  className={`min-h-[92px] border-b border-r border-ink-700/50 p-1.5 sm:min-h-[112px] ${
-                    inMonth ? 'bg-ink-850/40' : 'bg-ink-900/40'
+                  className={`min-h-[92px] border-b border-r border-white/[0.05] p-1.5 sm:min-h-[112px] ${
+                    inMonth ? 'bg-white/[0.03]/40' : 'bg-white/[0.02]'
                   } ${isToday ? 'ring-1 ring-inset ring-accent/40' : ''}`}
                 >
                   <div className="mb-1 flex items-center justify-between">
@@ -393,7 +393,7 @@ export default function ContentCalendarPage() {
                   if (postId) void movePost(postId, day);
                   setDragging(null);
                 }}
-                className={`rounded-xl border border-ink-700/60 bg-ink-850/50 p-2 ${
+                className={`rounded-xl border border-white/[0.06] bg-white/[0.022] p-2 ${
                   day === today ? 'ring-1 ring-accent/40' : ''
                 }`}
               >

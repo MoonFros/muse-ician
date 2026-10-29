@@ -114,7 +114,7 @@ export function GlobalSearch({ open, onClose }: { open: boolean; onClose: () => 
         role="dialog"
         aria-modal="true"
         aria-label="Search muse-ician"
-        className="relative z-10 w-full max-w-xl animate-fade-up overflow-hidden rounded-xl2 border border-ink-600 bg-ink-850 shadow-lift"
+        className="relative z-10 w-full max-w-xl animate-pop-in overflow-hidden rounded-3xl border border-white/[0.12] bg-[#0a0a14]/95 shadow-[0_40px_120px_-40px_rgba(0,0,0,1)] backdrop-blur-2xl"
         onKeyDown={(event) => {
           if (event.key === 'Escape') {
             event.stopPropagation();
@@ -134,15 +134,15 @@ export function GlobalSearch({ open, onClose }: { open: boolean; onClose: () => 
           }
         }}
       >
-        <div className="flex items-center gap-2 border-b border-ink-700 px-4">
-          <Icon name="search" size={16} className="text-slate-faint" />
+        <div className="flex items-center gap-2 border-b border-white/[0.08] px-4">
+          <Icon name="search" size={16} className="shrink-0 text-accent-soft" />
           <input
             ref={inputRef}
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search presets, songs, ideas, packages…"
             aria-label="Search presets, songs, ideas and packages"
-            className="w-full border-0 bg-transparent py-3.5 text-sm text-slate-text placeholder:text-slate-faint focus:outline-none"
+            className="w-full border-0 bg-transparent py-4 text-sm text-slate-text placeholder:text-slate-faint focus:outline-none"
           />
           <button type="button" onClick={onClose} className="kbd" aria-label="Close search">
             Esc
@@ -168,8 +168,8 @@ export function GlobalSearch({ open, onClose }: { open: boolean; onClose: () => 
                     type="button"
                     onClick={() => go(result)}
                     onMouseEnter={() => setActiveIndex(index)}
-                    className={`flex w-full items-start gap-3 rounded-lg px-3 py-2 text-left transition-colors ${
-                      index === activeIndex ? 'bg-ink-750' : 'hover:bg-ink-800'
+                    className={`flex w-full items-start gap-3 rounded-xl px-3 py-2 text-left transition-colors ${
+                      index === activeIndex ? 'bg-accent-dim/60 shadow-[inset_0_0_0_1px_rgba(123,107,255,0.3)]' : 'hover:bg-white/[0.04]'
                     }`}
                   >
                     <Icon name={result.icon} size={15} className="mt-0.5 shrink-0 text-accent-soft" />

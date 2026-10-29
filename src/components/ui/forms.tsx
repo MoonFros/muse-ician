@@ -189,7 +189,7 @@ export function Checkbox({ label, checked, onChange, hint, disabled }: CheckboxP
         checked={checked}
         disabled={disabled}
         onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.target.checked)}
-        className="mt-0.5 h-4 w-4 shrink-0 rounded border-ink-500 bg-ink-900 accent-accent-deep"
+        className="mt-0.5 h-4 w-4 shrink-0 rounded border-white/[0.16] bg-ink-900 accent-accent-deep"
       />
       <span className="min-w-0">
         <span className="text-slate-text">{label}</span>
@@ -238,7 +238,7 @@ export function TagListInput({
 
   return (
     <Field label={label} htmlFor={id} hint={hint}>
-      <div className="rounded-xl border border-ink-600 bg-ink-900/80 p-2 focus-within:border-accent/60 focus-within:ring-2 focus-within:ring-accent/25">
+      <div className="rounded-xl border border-white/[0.10] bg-white/[0.03] p-2 focus-within:border-accent/60 focus-within:ring-2 focus-within:ring-accent/25">
         {value.length ? (
           <ul className="mb-2 flex flex-wrap gap-1.5">
             {value.map((item) => (
@@ -271,7 +271,7 @@ export function TagListInput({
             }
           }}
           onBlur={commit}
-          className="w-full border-0 bg-transparent px-1.5 py-1 text-sm text-slate-text placeholder:text-slate-faint/70 focus:outline-none"
+          className="w-full border-0 bg-transparent px-1.5 py-1 text-sm text-slate-text placeholder:text-slate-faint focus:outline-none"
           placeholder={placeholder ?? 'Type and press Enter'}
         />
       </div>
@@ -317,7 +317,7 @@ export function ChoiceChips<T extends string>({
               className={`rounded-full border px-2.5 py-1 text-xs capitalize transition-colors ${
                 selected
                   ? 'border-accent/50 bg-accent-dim text-accent-soft'
-                  : 'border-ink-600 bg-ink-800 text-slate-muted hover:border-ink-500 hover:text-slate-text'
+                  : 'border-white/[0.10] bg-white/[0.04] text-slate-muted hover:border-white/[0.16] hover:text-slate-text'
               }`}
             >
               {option.label}

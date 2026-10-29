@@ -36,7 +36,7 @@ function ListBlock({
           <ol className="space-y-2">
             {items.map((item, index) => (
               <li key={`${item}-${index}`} className="flex gap-2.5 text-sm leading-relaxed text-slate-muted">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-ink-600 text-2xs text-slate-faint">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-white/[0.10] text-2xs text-slate-faint">
                   {index + 1}
                 </span>
                 <span>{item}</span>
@@ -199,7 +199,7 @@ export default function PresetDetailPage() {
           <SectionCard title="The concept">
             <p className="whitespace-pre-line text-sm leading-relaxed text-slate-muted">{preset.description}</p>
             {preset.song_context_required ? (
-              <p className="mt-3 rounded-lg border border-ink-700/60 bg-ink-900/50 px-3 py-2 text-xs text-slate-muted">
+              <p className="mt-3 rounded-lg border border-white/[0.06] bg-white/[0.025] px-3 py-2 text-xs text-slate-muted">
                 <span className="font-medium text-slate-text">Song context needed: </span>
                 {preset.song_context_required}
               </p>
@@ -253,7 +253,7 @@ export default function PresetDetailPage() {
                 ['Equipment', preset.equipment.join(', ') || '—'],
                 ['Campaign stage', preset.campaign_stage],
               ].map(([label, value]) => (
-                <div key={label} className="flex items-start justify-between gap-3 border-b border-ink-700/50 pb-2.5 last:border-0 last:pb-0">
+                <div key={label} className="flex items-start justify-between gap-3 border-b border-white/[0.05] pb-2.5 last:border-0 last:pb-0">
                   <dt className="text-xs text-slate-faint">{label}</dt>
                   <dd className="max-w-[60%] text-right text-xs capitalize text-slate-text">{value}</dd>
                 </div>

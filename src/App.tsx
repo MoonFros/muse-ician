@@ -39,7 +39,7 @@ class AppErrorBoundary extends Component<{ children: ReactNode }, { error: Error
           Your saved work is still in this browser — nothing was deleted. Reload to recover, and if it keeps happening
           export a backup from the Settings page once the app opens again.
         </p>
-        <pre className="max-h-40 w-full overflow-auto rounded-xl border border-ink-700 bg-ink-900/60 p-3 text-left text-2xs text-slate-faint scroll-thin">
+        <pre className="max-h-40 w-full overflow-auto rounded-xl border border-white/[0.08] bg-white/[0.03] p-3 text-left text-2xs text-slate-faint scroll-thin">
           {this.state.error.message}
         </pre>
         <div className="flex gap-2">

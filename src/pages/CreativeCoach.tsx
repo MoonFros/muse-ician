@@ -146,7 +146,7 @@ export default function CreativeCoachPage() {
                     <li key={idea.id}>
                       <div
                         className={`rounded-xl border transition-colors ${
-                          active ? 'border-accent/40 bg-accent-dim/20' : 'border-ink-700/70 bg-ink-850/70'
+                          active ? 'border-accent/40 bg-accent-dim/20' : 'border-white/[0.07] bg-white/[0.028]'
                         }`}
                       >
                         <button
@@ -155,7 +155,7 @@ export default function CreativeCoachPage() {
                           className="flex w-full items-start gap-3 rounded-xl px-3.5 py-3 text-left"
                           aria-pressed={active}
                         >
-                          <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-ink-600 bg-ink-900 text-xs font-semibold text-slate-text">
+                          <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/[0.10] bg-ink-900 text-xs font-semibold text-slate-text">
                             {score.score}
                           </span>
                           <span className="min-w-0 flex-1">
@@ -167,7 +167,7 @@ export default function CreativeCoachPage() {
                                   {idea.coach_assessment.source === 'ai' ? 'AI review' : 'Local review'}
                                 </span>
                               ) : (
-                                <span className="chip border-ink-600 text-slate-faint">Not reviewed</span>
+                                <span className="chip border-white/[0.10] text-slate-faint">Not reviewed</span>
                               )}
                             </span>
                             <span className="mt-0.5 block truncate text-xs text-slate-faint">
@@ -179,7 +179,7 @@ export default function CreativeCoachPage() {
                           </span>
                           <Icon name="chevron-right" size={16} className="mt-1 shrink-0 text-slate-faint" />
                         </button>
-                        <div className="flex flex-wrap items-center gap-2 border-t border-ink-700/60 px-3.5 py-2">
+                        <div className="flex flex-wrap items-center gap-2 border-t border-white/[0.06] px-3.5 py-2">
                           <Link to={`/ideas/${idea.id}?tab=coach`} className="btn-secondary btn-sm">
                             Open coach tab
                           </Link>
@@ -224,7 +224,7 @@ export default function CreativeCoachPage() {
                   ))}
                 </div>
                 {selected.idea.coach_assessment ? (
-                  <div className="mt-4 rounded-lg border border-ink-700/60 bg-ink-900/50 px-3 py-2.5">
+                  <div className="mt-4 rounded-lg border border-white/[0.06] bg-white/[0.025] px-3 py-2.5">
                     <p className="text-2xs uppercase tracking-wide text-slate-faint">Saved review</p>
                     <p className="mt-1 text-xs leading-relaxed text-slate-muted">
                       {truncate(selected.idea.coach_assessment.summary, 220)}
@@ -253,7 +253,7 @@ export default function CreativeCoachPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-3 border-t border-ink-700/60 pt-3 text-2xs leading-relaxed text-slate-faint">
+              <p className="mt-3 border-t border-white/[0.06] pt-3 text-2xs leading-relaxed text-slate-faint">
                 Scores are computed locally from the fields you filled in. Missing information lowers confidence rather
                 than adding points. Nothing here predicts views or virality.
               </p>

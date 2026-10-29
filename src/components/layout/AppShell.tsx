@@ -20,17 +20,24 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
       <Link
         to="/"
         onClick={onNavigate}
-        className="flex items-center gap-3 rounded-lg px-2 py-1 focus-visible:outline-none"
+        className="group flex items-center gap-3 rounded-xl px-2 py-1.5 focus-visible:outline-none"
         aria-label="muse-ician dashboard"
       >
-        <LogoMark size={34} />
-        <span>
-          <span className="block text-[15px] font-semibold tracking-tight text-white">muse-ician</span>
-          <span className="block text-2xs text-slate-faint">Turn your music into your next idea</span>
+        <span className="relative">
+          <span
+            aria-hidden="true"
+            className="absolute -inset-1.5 rounded-2xl bg-accent/25 opacity-70 blur-md transition-opacity duration-300 group-hover:opacity-100"
+          />
+          <LogoMark size={34} className="relative" />
+        </span>
+        <span className="min-w-0">
+          <span className="block text-[15px] font-semibold tracking-[-0.02em] text-white">muse-ician</span>
+          <span className="block truncate text-2xs text-slate-faint">Turn your music into your next idea</span>
         </span>
       </Link>
 
-      <nav aria-label="Main" className="mt-6 flex-1">
+      <nav aria-label="Main" className="mt-7 flex-1">
+        <p className="mb-2 px-2.5 text-3xs font-semibold uppercase tracking-[0.18em] text-slate-faint">Workspace</p>
         <ul className="space-y-0.5">
           {NAV_ITEMS.map((item) => (
             <li key={item.to}>
@@ -39,23 +46,33 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
                 end={item.to === '/'}
                 onClick={onNavigate}
                 className={({ isActive }) =>
-                  `group flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm transition-colors ${
+                  `group relative flex items-center gap-2.5 rounded-xl px-2.5 py-2 text-sm transition-all duration-200 ease-spring ${
                     isActive
-                      ? 'bg-ink-750 text-white'
-                      : 'text-slate-muted hover:bg-ink-800 hover:text-slate-text'
+                      ? 'bg-gradient-to-r from-accent/20 via-accent/[0.08] to-transparent font-medium text-white shadow-[inset_0_0_0_1px_rgba(123,107,255,0.28)]'
+                      : 'text-slate-muted hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-white'
                   }`
                 }
               >
                 {({ isActive }) => (
                   <>
+                    <span
+                      aria-hidden="true"
+                      className={`absolute left-0 h-5 w-[3px] rounded-full bg-gradient-to-b from-accent to-aqua transition-all duration-300 ${
+                        isActive ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    />
                     <Icon
                       name={item.icon}
                       size={17}
-                      className={isActive ? 'text-accent-soft' : 'text-slate-faint group-hover:text-slate-muted'}
+                      className={
+                        isActive
+                          ? 'text-accent-soft drop-shadow-[0_0_6px_rgba(123,107,255,0.8)]'
+                          : 'text-slate-faint transition-colors group-hover:text-slate-muted'
+                      }
                     />
                     <span className="flex-1">{item.label}</span>
                     {item.to === '/library' ? (
-                      <span className="font-mono text-2xs text-slate-faint">
+                      <span className="rounded-md bg-white/[0.06] px-1.5 py-0.5 font-mono text-3xs tabular-nums text-slate-faint">
                         {data.presets.filter((preset) => !preset.is_archived).length}
                       </span>
                     ) : null}
@@ -67,24 +84,22 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
         </ul>
       </nav>
 
-      <div className="mt-4 space-y-2 border-t border-ink-700/70 pt-4">
+      <div className="mt-4 space-y-2 border-t border-white/[0.06] pt-4">
         <dl className="grid grid-cols-2 gap-2 text-2xs text-slate-faint">
-          <div className="rounded-lg border border-ink-700/60 bg-ink-900/60 px-2.5 py-2">
-            <dt>Songs</dt>
-            <dd className="mt-0.5 text-sm text-slate-text">{data.songs.length}</dd>
-          </div>
-          <div className="rounded-lg border border-ink-700/60 bg-ink-900/60 px-2.5 py-2">
-            <dt>Ideas</dt>
-            <dd className="mt-0.5 text-sm text-slate-text">{data.content_ideas.length}</dd>
-          </div>
-          <div className="rounded-lg border border-ink-700/60 bg-ink-900/60 px-2.5 py-2">
-            <dt>Scheduled</dt>
-            <dd className="mt-0.5 text-sm text-slate-text">{scheduled}</dd>
-          </div>
-          <div className="rounded-lg border border-ink-700/60 bg-ink-900/60 px-2.5 py-2">
-            <dt>To review</dt>
-            <dd className="mt-0.5 text-sm text-slate-text">{unreviewed}</dd>
-          </div>
+          {[
+            { label: 'Songs', value: data.songs.length },
+            { label: 'Ideas', value: data.content_ideas.length },
+            { label: 'Scheduled', value: scheduled },
+            { label: 'To review', value: unreviewed },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-xl border border-white/[0.06] bg-white/[0.025] px-2.5 py-2 transition-colors hover:border-white/[0.12]"
+            >
+              <dt>{stat.label}</dt>
+              <dd className="mt-0.5 text-base font-semibold tabular-nums text-white">{stat.value}</dd>
+            </div>
+          ))}
         </dl>
         {demoRecordCount > 0 ? (
           <p className="rounded-lg border border-warn/25 bg-warn/5 px-2.5 py-2 text-2xs leading-relaxed text-warn">
@@ -129,7 +144,7 @@ function QuickAddMenu({ onClose }: { onClose: () => void }) {
   ];
 
   return (
-    <div className="absolute right-0 top-full z-50 mt-2 w-72 animate-fade-up overflow-hidden rounded-xl border border-ink-600 bg-ink-850 p-1.5 shadow-lift">
+    <div className="absolute right-0 top-full z-50 mt-2 w-72 animate-pop-in overflow-hidden rounded-2xl border border-white/[0.1] bg-[#0b0b16]/95 p-1.5 shadow-lift backdrop-blur-xl">
       <p className="px-2.5 py-1.5 text-2xs uppercase tracking-[0.1em] text-slate-faint">Quick add</p>
       <ul>
         {actions.map((action) => (
@@ -140,9 +155,9 @@ function QuickAddMenu({ onClose }: { onClose: () => void }) {
                 navigate(action.to);
                 onClose();
               }}
-              className="flex w-full items-start gap-2.5 rounded-lg px-2.5 py-2 text-left hover:bg-ink-750"
+              className="flex w-full items-start gap-2.5 rounded-xl px-2.5 py-2 text-left transition-colors hover:bg-white/[0.06]"
             >
-              <Icon name={action.icon} size={15} className="mt-0.5 text-accent-soft" />
+              <Icon name={action.icon} size={15} className="mt-0.5 text-accent-soft drop-shadow-[0_0_6px_rgba(123,107,255,0.6)]" />
               <span>
                 <span className="block text-sm text-slate-text">{action.label}</span>
                 <span className="block text-2xs text-slate-faint">{action.description}</span>
@@ -201,25 +216,29 @@ export function AppShell() {
         Skip to content
       </a>
 
-      <aside className="hidden border-r border-ink-700/60 bg-ink-950/40 p-3 lg:sticky lg:top-0 lg:block lg:h-[100dvh]">
+      <aside className="relative hidden border-r border-white/[0.06] bg-[#06060c]/60 p-3 backdrop-blur-xl lg:sticky lg:top-0 lg:block lg:h-[100dvh]">
+        <span aria-hidden="true" className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-accent/30 to-transparent" />
         <SidebarContent />
       </aside>
 
       <div className="flex min-h-[100dvh] min-w-0 flex-col">
-        <header className="sticky top-0 z-40 border-b border-ink-700/60 bg-ink-900/85 backdrop-blur">
-          <div className="flex h-14 items-center gap-3 px-4 sm:px-6 lg:px-8">
+        <header className="sticky top-0 z-40 border-b border-white/[0.06] bg-[#07070f]/70 backdrop-blur-xl">
+          <div className="flex h-16 items-center gap-3 px-4 sm:px-6 lg:px-8">
             <Link to="/" className="lg:hidden" aria-label="muse-ician dashboard">
               <LogoMark size={28} />
             </Link>
             <div className="min-w-0 flex-1">
-              <p className="truncate text-2xs uppercase tracking-[0.12em] text-slate-faint">{meta.section}</p>
-              <p className="truncate text-sm font-medium text-slate-text">{meta.title}</p>
+              <p className="flex items-center gap-2 truncate text-3xs font-semibold uppercase tracking-[0.18em] text-slate-faint">
+                <span aria-hidden="true" className="h-1 w-1 shrink-0 rounded-full bg-aqua shadow-[0_0_8px_2px_rgba(63,220,255,0.6)]" />
+                {meta.section}
+              </p>
+              <p className="mt-0.5 truncate text-sm font-medium text-white">{meta.title}</p>
             </div>
 
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
-              className="hidden items-center gap-2 rounded-lg border border-ink-600 bg-ink-850 px-2.5 py-1.5 text-xs text-slate-faint hover:border-ink-500 hover:text-slate-muted sm:flex"
+              className="group hidden items-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.035] px-2.5 py-1.5 text-xs text-slate-faint transition-all duration-200 hover:border-white/20 hover:bg-white/[0.06] hover:text-slate-text sm:flex"
             >
               <Icon name="search" size={14} />
               Search
@@ -268,7 +287,7 @@ export function AppShell() {
             </div>
           ) : null}
           {integrations && !integrations.ai.configured && !integrations.ai.mock ? (
-            <div className="border-t border-ink-700/60 bg-ink-850/60 px-4 py-1.5 text-2xs text-slate-faint sm:px-6 lg:px-8">
+            <div className="border-t border-white/[0.06] bg-white/[0.025] px-4 py-1.5 text-2xs text-slate-faint sm:px-6 lg:px-8">
               Local mode: AI coaching and live trend research are optional and currently off. Everything else works.
             </div>
           ) : null}
@@ -287,12 +306,14 @@ export function AppShell() {
                 </div>
               </div>
             ) : (
-              <Outlet />
+              <div key={location.pathname} className="animate-fade-up">
+                <Outlet />
+              </div>
             )}
           </div>
         </main>
 
-        <footer className="hidden border-t border-ink-700/50 px-4 py-3 text-2xs text-slate-faint sm:block sm:px-6 lg:px-8">
+        <footer className="hidden border-t border-white/[0.05] px-4 py-3 text-2xs text-slate-faint sm:block sm:px-6 lg:px-8">
           <span>muse-ician v1.0.0 · schema 1.0.0 · </span>
           <span>
             Built for independent musicians. Scores and suggestions are editorial guidance, not predictions of reach.
@@ -303,7 +324,7 @@ export function AppShell() {
       {/* Mobile bottom navigation */}
       <nav
         aria-label="Main mobile navigation"
-        className="fixed inset-x-0 bottom-0 z-40 border-t border-ink-700/70 bg-ink-900/95 pb-[env(safe-area-inset-bottom)] backdrop-blur lg:hidden"
+        className="fixed inset-x-0 bottom-0 z-40 border-t border-white/[0.08] bg-[#07070f]/90 pb-[env(safe-area-inset-bottom)] shadow-[0_-18px_40px_-24px_rgba(0,0,0,0.9)] backdrop-blur-xl lg:hidden"
       >
         <ul className="grid grid-cols-5">
           {mobileItems.map((item) => (
@@ -312,13 +333,31 @@ export function AppShell() {
                 to={item.to}
                 end={item.to === '/'}
                 className={({ isActive }) =>
-                  `flex flex-col items-center gap-0.5 py-2 text-[10px] transition-colors ${
-                    isActive ? 'text-accent-soft' : 'text-slate-faint'
+                  `relative flex flex-col items-center gap-1 py-2.5 text-[10px] transition-colors ${
+                    isActive ? 'text-white' : 'text-slate-faint'
                   }`
                 }
               >
-                <Icon name={item.icon} size={19} />
-                {item.shortLabel}
+                {({ isActive }) => (
+                  <>
+                    <span
+                      aria-hidden="true"
+                      className={`absolute inset-x-4 top-0 h-[2px] rounded-full bg-gradient-to-r from-accent to-aqua transition-opacity duration-300 ${
+                        isActive ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    />
+                    <Icon
+                      name={item.icon}
+                      size={19}
+                      className={
+                        isActive
+                          ? 'text-accent-soft drop-shadow-[0_0_8px_rgba(123,107,255,0.8)]'
+                          : 'text-slate-faint'
+                      }
+                    />
+                    {item.shortLabel}
+                  </>
+                )}
               </NavLink>
             </li>
           ))}
@@ -326,7 +365,7 @@ export function AppShell() {
             <button
               type="button"
               onClick={() => setMoreOpen(true)}
-              className="flex w-full flex-col items-center gap-0.5 py-2 text-[10px] text-slate-faint"
+              className="flex w-full flex-col items-center gap-1 py-2.5 text-[10px] text-slate-faint transition-colors hover:text-slate-muted"
             >
               <Icon name="more" size={19} />
               More
@@ -348,7 +387,7 @@ export function AppShell() {
               <Link
                 to={item.to}
                 onClick={() => setMoreOpen(false)}
-                className="flex items-start gap-3 rounded-lg px-2.5 py-2.5 hover:bg-ink-800"
+                className="flex items-start gap-3 rounded-xl px-2.5 py-2.5 transition-colors hover:bg-white/[0.05]"
               >
                 <Icon name={item.icon} size={17} className="mt-0.5 text-accent-soft" />
                 <span>
@@ -359,7 +398,7 @@ export function AppShell() {
             </li>
           ))}
         </ul>
-        <div className="mt-4 rounded-lg border border-ink-700/70 bg-ink-900/60 px-3 py-2.5">
+        <div className="mt-4 rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 py-2.5">
           <SaveIndicator status={saveState.status} message={saveState.message} at={saveState.at} />
           <p className="mt-2 text-2xs leading-relaxed text-slate-faint">
             Stored in this browser ({storage.backend}). It does not sync between devices.

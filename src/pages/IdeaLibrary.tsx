@@ -363,7 +363,7 @@ export default function IdeaLibraryPage() {
           <div
             id="filters-panel"
             hidden={!showFilters}
-            className="grid gap-2.5 border-t border-ink-700/60 pt-3 sm:grid-cols-2 lg:grid-cols-4"
+            className="grid gap-2.5 border-t border-white/[0.06] pt-3 sm:grid-cols-2 lg:grid-cols-4"
           >
             <Select
               aria-label="Platform"
@@ -486,7 +486,7 @@ export default function IdeaLibraryPage() {
       </div>
 
       {selectedIds.length ? (
-        <div className="sticky top-14 z-30 flex flex-wrap items-center gap-2 rounded-xl border border-accent/30 bg-ink-800/95 px-3.5 py-2.5 shadow-panel backdrop-blur">
+        <div className="sticky top-14 z-30 flex flex-wrap items-center gap-2 rounded-xl border border-accent/30 bg-white/[0.06] px-3.5 py-2.5 shadow-panel backdrop-blur">
           <span className="text-xs text-slate-text">{selectedIds.length} selected</span>
           <button type="button" className="btn-secondary btn-sm" onClick={() => setBulkOpen(true)}>
             Use for a song

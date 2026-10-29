@@ -178,7 +178,7 @@ export default function PerformanceJournalPage() {
                   {summary.observations.map((observation, index) => (
                     <li
                       key={index}
-                      className="rounded-xl border border-ink-700/60 bg-ink-900/40 px-3.5 py-3"
+                      className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3"
                     >
                       <div className="flex flex-wrap items-center gap-2">
                         <span
@@ -190,7 +190,7 @@ export default function PerformanceJournalPage() {
                         >
                           {observation.kind === 'observed' ? 'Observed' : 'Possible explanation'}
                         </span>
-                        <span className="chip border-ink-600 text-slate-faint">
+                        <span className="chip border-white/[0.10] text-slate-faint">
                           {observation.confidence} confidence
                         </span>
                       </div>
@@ -203,7 +203,7 @@ export default function PerformanceJournalPage() {
                   Not enough records yet to say anything useful. Log at least five posts across two formats.
                 </p>
               )}
-              <div className="mt-4 border-t border-ink-700/60 pt-3">
+              <div className="mt-4 border-t border-white/[0.06] pt-3">
                 <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-faint">Limits of this view</h3>
                 <ul className="mt-1.5 space-y-1 text-2xs leading-relaxed text-slate-faint">
                   {summary.caveats.map((caveat) => (
@@ -318,7 +318,7 @@ export default function PerformanceJournalPage() {
               <div className="space-y-3">
                 <ul className="space-y-2">
                   {aiSummary.observations.map((observation, index) => (
-                    <li key={index} className="rounded-lg border border-ink-700/60 bg-ink-900/40 px-3 py-2">
+                    <li key={index} className="rounded-lg border border-white/[0.06] bg-white/[0.02] px-3 py-2">
                       <span
                         className={`chip ${
                           observation.kind === 'observed' ? 'border-accent/30 text-accent-soft' : 'border-warn/30 text-warn'
@@ -375,7 +375,7 @@ export default function PerformanceJournalPage() {
                               ? 'border-ok/30 text-ok'
                               : relative.tone === 'below'
                                 ? 'border-danger/30 text-danger'
-                                : 'border-ink-600 text-slate-faint'
+                                : 'border-white/[0.10] text-slate-faint'
                           }`}
                         >
                           {relative.label}

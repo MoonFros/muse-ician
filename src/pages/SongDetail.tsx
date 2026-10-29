@@ -203,7 +203,7 @@ export default function SongDetailPage() {
             {campaigns.length ? (
               <ul className="space-y-2">
                 {campaigns.map((campaign) => (
-                  <li key={campaign.id} className="rounded-lg border border-ink-700/60 bg-ink-900/40 px-3 py-2">
+                  <li key={campaign.id} className="rounded-lg border border-white/[0.06] bg-white/[0.02] px-3 py-2">
                     <p className="text-sm text-slate-text">{campaign.name}</p>
                     <p className="text-2xs text-slate-faint">
                       {formatShortDate(campaign.start_date)} → {formatShortDate(campaign.end_date)} · every{' '}

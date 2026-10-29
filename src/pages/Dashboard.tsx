@@ -175,6 +175,42 @@ export default function DashboardPage() {
         }
       />
 
+      {hasAnyWork ? (
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {[
+            { label: 'Songs', value: data.songs.length, to: '/songs', tint: 'from-accent/70 to-accent/0' },
+            { label: 'Ideas', value: data.content_ideas.length, to: '/library', tint: 'from-aqua/70 to-aqua/0' },
+            {
+              label: 'Scheduled',
+              value: upcomingPosts.length,
+              to: '/calendar',
+              tint: 'from-lime/60 to-lime/0',
+            },
+            {
+              label: 'Awaiting a result',
+              value: publishedWithoutResults.length,
+              to: '/journal',
+              tint: 'from-warm/70 to-warm/0',
+            },
+          ].map((stat) => (
+            <Link
+              key={stat.label}
+              to={stat.to}
+              className="group stat-tile relative overflow-hidden"
+            >
+              <span
+                aria-hidden="true"
+                className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r ${stat.tint}`}
+              />
+              <p className="text-3xs font-semibold uppercase tracking-[0.16em] text-slate-faint">{stat.label}</p>
+              <p className="mt-1 text-2xl font-semibold tabular-nums tracking-[-0.03em] text-white transition-colors group-hover:text-accent-soft">
+                {stat.value}
+              </p>
+            </Link>
+          ))}
+        </div>
+      ) : null}
+
       {saveState.status === 'error' ? (
         <Callout tone="warning" title="Your last change was not saved">
           {saveState.message} Export a backup from Import / Export before closing this tab.
@@ -182,7 +218,7 @@ export default function DashboardPage() {
       ) : null}
 
       {demoRecordCount > 0 ? (
-        <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-warn/30 bg-warn/5 px-3.5 py-3">
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-warn/30 bg-warn/[0.06] px-3.5 py-3 shadow-[0_18px_50px_-40px_rgba(255,198,99,0.8)]">
           <div className="flex items-start gap-2.5 text-xs text-slate-muted">
             <DemoBadge />
             <p>
@@ -226,7 +262,14 @@ export default function DashboardPage() {
                   icon: 'exchange' as const,
                 },
               ].map((item) => (
-                <div key={item.title} className="rounded-xl border border-ink-700/70 bg-ink-900/50 p-3.5">
+                <div
+                  key={item.title}
+                  className="group relative overflow-hidden rounded-xl border border-white/[0.07] bg-white/[0.025] p-3.5 transition-all duration-300 ease-spring hover:-translate-y-0.5 hover:border-white/[0.15] hover:bg-white/[0.045]"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="absolute -right-8 -top-8 h-20 w-20 rounded-full bg-accent/15 blur-2xl transition-opacity duration-500 group-hover:bg-accent/25"
+                  />
                   <Icon name={item.icon} size={18} className="text-accent-soft" />
                   <h3 className="mt-2 text-sm font-medium text-slate-text">{item.title}</h3>
                   <p className="mt-1 text-xs leading-relaxed text-slate-muted">{item.body}</p>
@@ -235,7 +278,7 @@ export default function DashboardPage() {
                   </Link>
                 </div>
               ))}
-              <div className="rounded-xl border border-dashed border-ink-600 bg-ink-900/30 p-3.5">
+              <div className="rounded-xl border border-dashed border-white/[0.14] bg-white/[0.015] p-3.5 transition-colors hover:border-white/25">
                 <Icon name="wave" size={18} className="text-warn" />
                 <h3 className="mt-2 text-sm font-medium text-slate-text">Create a sample campaign</h3>
                 <p className="mt-1 text-xs leading-relaxed text-slate-muted">
@@ -259,7 +302,7 @@ export default function DashboardPage() {
                 ['5. Build metadata', 'Separate YouTube Shorts, Reels and TikTok packages.'],
                 ['6. Schedule and log', 'Plan dates, publish manually, then record the numbers you can see.'],
               ].map(([title, body]) => (
-                <li key={title} className="rounded-xl border border-ink-700/60 bg-ink-900/40 px-3.5 py-3">
+                <li key={title} className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3 transition-colors hover:border-white/[0.12]">
                   <p className="text-sm font-medium text-slate-text">{title}</p>
                   <p className="mt-1 leading-relaxed">{body}</p>
                 </li>
@@ -279,7 +322,7 @@ export default function DashboardPage() {
                   {nextActions.map((action) => (
                     <li
                       key={action.title}
-                      className="flex flex-wrap items-start justify-between gap-3 rounded-xl border border-ink-700/60 bg-ink-900/40 px-3.5 py-3"
+                      className="flex flex-wrap items-start justify-between gap-3 rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3 transition-all duration-200 hover:border-white/[0.14] hover:bg-white/[0.04]"
                     >
                       <div className="min-w-0">
                         <p className="text-sm text-slate-text">{action.title}</p>
@@ -310,7 +353,7 @@ export default function DashboardPage() {
             >
               <ul className="space-y-2">
                 {recommended.map((preset) => (
-                  <li key={preset.id} className="rounded-xl border border-ink-700/60 bg-ink-900/40 px-3 py-2.5">
+                  <li key={preset.id} className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-2.5 transition-colors hover:border-white/[0.14]">
                     <div className="flex items-start justify-between gap-2">
                       <div className="min-w-0">
                         <Link to={`/library/${preset.id}`} className="text-sm text-slate-text hover:text-accent-soft">
@@ -357,7 +400,7 @@ export default function DashboardPage() {
                         ? daysBetween(today, song.release_date)
                         : null;
                     return (
-                      <li key={song.id} className="rounded-xl border border-ink-700/60 bg-ink-900/40 px-3.5 py-3">
+                      <li key={song.id} className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3 transition-colors hover:border-white/[0.14]">
                         <div className="flex flex-wrap items-baseline justify-between gap-2">
                           <Link to={`/songs/${song.id}`} className="text-sm font-medium text-slate-text hover:text-accent-soft">
                             {song.title}
@@ -366,8 +409,11 @@ export default function DashboardPage() {
                             {ideas.length ? `${done}/${ideas.length} ideas published` : 'No ideas yet'}
                           </span>
                         </div>
-                        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-ink-700">
-                          <div className="h-full rounded-full bg-accent" style={{ width: `${pct}%` }} />
+                        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/[0.07]">
+                          <div
+                            className="h-full rounded-full bg-gradient-to-r from-accent to-aqua transition-[width] duration-700 ease-spring"
+                            style={{ width: `${pct}%`, boxShadow: '0 0 10px -2px rgba(63,220,255,0.6)' }}
+                          />
                         </div>
                         <div className="mt-2 flex flex-wrap items-center gap-2 text-2xs text-slate-faint">
                           {song.genre ? <span>{song.genre}</span> : null}
@@ -407,7 +453,7 @@ export default function DashboardPage() {
                 {(['idea', 'planning', 'scripted', 'filming', 'editing', 'ready-to-publish'] as const).map((status) => {
                   const list = data.content_ideas.filter((idea) => idea.status === status);
                   return (
-                    <div key={status} className="rounded-xl border border-ink-700/60 bg-ink-900/40 p-2.5">
+                    <div key={status} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-2.5 transition-colors hover:border-white/[0.14]">
                       <p className="text-2xs uppercase tracking-[0.08em] text-slate-faint">
                         {WORKFLOW_LABELS[status]}
                       </p>
@@ -512,7 +558,7 @@ export default function DashboardPage() {
             <SectionCard title="Upcoming release dates" description="From your song records only">
               <ul className="grid gap-2 sm:grid-cols-2">
                 {upcomingReleases.map((song) => (
-                  <li key={song.id} className="flex items-center justify-between rounded-xl border border-ink-700/60 bg-ink-900/40 px-3.5 py-2.5">
+                  <li key={song.id} className="flex items-center justify-between rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-2.5">
                     <div className="min-w-0">
                       <Link to={`/songs/${song.id}`} className="text-sm text-slate-text hover:text-accent-soft">
                         {song.title}
@@ -538,7 +584,7 @@ export default function DashboardPage() {
                 },
                 { label: 'Metadata drafts', value: data.metadata_packages.length, to: '/metadata' },
               ].map((item) => (
-                <div key={item.label} className="rounded-xl border border-ink-700/60 bg-ink-900/40 px-3.5 py-3">
+                <div key={item.label} className="rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-3">
                   <dt className="text-2xs uppercase tracking-[0.08em] text-slate-faint">{item.label}</dt>
                   <dd className="mt-1 flex items-baseline gap-2">
                     <span className="text-xl font-semibold text-white">{item.value}</span>
