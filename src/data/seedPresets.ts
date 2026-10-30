@@ -1,11 +1,17 @@
 import type { Preset } from '../lib/types';
 import { PRESET_VERSION, SCHEMA_VERSION } from '../lib/types';
+import { EXPANSION_PRESETS_RAW } from './expansionPresets';
 import { LONG_FORM_PRESETS_RAW } from './longFormPresets';
 
 /**
- * The starter presets: 30 short-form formats plus 5 long-form YouTube formats
+ * The starter presets: 46 short-form formats plus 5 long-form YouTube formats
  * (visualiser, full lyric video, live session, making-of documentary,
  * arrangement breakdown).
+ *
+ * The original 30 short-form formats live in this file; the 16 newer
+ * participation, discovery and atmosphere formats live in
+ * `expansionPresets.ts`, which explains why each one is not a duplicate of an
+ * existing concept.
  *
  * These are shipped as data (and regenerated into
  * `samples/starter-preset-pack.json` + `public/example.json` by
@@ -1994,7 +2000,11 @@ const SHORT_FORM_PRESETS_RAW: SeedPreset[] = [
   },
 ];
 
-export const SEED_PRESETS_RAW: SeedPreset[] = [...SHORT_FORM_PRESETS_RAW, ...LONG_FORM_PRESETS_RAW];
+export const SEED_PRESETS_RAW: SeedPreset[] = [
+  ...SHORT_FORM_PRESETS_RAW,
+  ...EXPANSION_PRESETS_RAW,
+  ...LONG_FORM_PRESETS_RAW,
+];
 
 const SEED_DEFAULTS = {
   created_at: SEED_CREATED_AT,

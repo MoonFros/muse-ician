@@ -34,7 +34,7 @@ It is an application, not a landing page. Everything described below is implemen
 
 | Area | Behaviour |
 | --- | --- |
-| **Preset library** | 35 original, editable video formats — 30 short-form plus 5 long-form YouTube formats — with hooks, shot lists, execution steps, CTA examples, common mistakes and accessibility notes. Create, edit, duplicate, favourite, archive, export and import your own. |
+| **Preset library** | 51 original, editable video formats — 46 short-form plus 5 long-form YouTube formats — with hooks, shot lists, execution steps, CTA examples, common mistakes and accessibility notes. Create, edit, duplicate, favourite, archive, export and import your own. |
 | **Songs** | Song records with lyrics, themes, strongest lines, audio sections, release status/date, equipment, constraints, persona notes and a **song brief**. Everything else can link to a song. |
 | **Local audio analysis** | Open a song, pick your own audio export, and the app decodes and measures it **in the browser**: runtime, peak and average level, dynamic range, tempo, an estimated key, and where the arrangement changes. Nothing is uploaded and no AI or paid service is involved. You review the numbers before anything is written. |
 | **Ideas** | Any preset becomes an editable idea tied to a real song. Idea workspace with plan, coach, A/B variant, reuse and version tabs. |
@@ -103,7 +103,7 @@ npx vercel deploy
 Next action cards computed from your actual data (unfinished ideas, upcoming releases, posts due in the next week, published posts with no recorded result), active campaigns, workflow counts, recently edited ideas, release countdowns, and preference-based preset suggestions. Empty state routes first-time users to the three sensible starting points.
 
 ### Preset library
-- 35 starter presets (`src/data/seedPresets.ts` re-exporting `longFormPresets.ts`), each with a distinct creative purpose — not 35 renames of the same idea.
+- 51 starter presets (`src/data/seedPresets.ts` combining the original 30 short-form formats, the 16 newer formats in `expansionPresets.ts`, and the 5 long-form formats in `longFormPresets.ts`), each with a distinct creative purpose — not 51 renames of the same idea.
 - Search, sort (recommended, name, recently updated, difficulty, favourite), grid/list views.
 - Filters: platform, objective, difficulty, budget, filming method, equipment, face visibility, duration band, favourites, user-created, archived.
 - Bulk actions: favourite, archive, export, or turn several presets into ideas for one song at once.
@@ -258,7 +258,7 @@ Downloadable in the app:
 | --- | --- |
 | `example.json` | A complete, valid template: manifest, one preset, one clearly-placeholder song, one linked idea, one metadata package, plus instructions for an AI tool. |
 | `muse-ician.schema.json` | The JSON Schema every import is validated against. |
-| `starter-preset-pack.json` | All 35 starter presets as a real preset pack. |
+| `starter-preset-pack.json` | All 51 starter presets as a real preset pack. |
 | Workspace backup | Every record plus preferences. |
 | Campaign plan / metadata packages / performance snapshot | Scoped exports. |
 
