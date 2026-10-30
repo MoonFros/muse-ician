@@ -1,0 +1,58 @@
+{
+  "name": "muse-ician — turn your music into your next idea",
+  "short_name": "muse-ician",
+  "description": "Local-first content planning, creative coaching and metadata for independent musicians. Works offline once installed.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "background_color": "#07070f",
+  "theme_color": "#07070f",
+  "orientation": "any",
+  "categories": ["music", "productivity", "entertainment"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Add a song",
+      "short_name": "Add song",
+      "url": "/songs?new=1",
+      "description": "Create a song record"
+    },
+    {
+      "name": "Build a series",
+      "short_name": "Series",
+      "url": "/series",
+      "description": "Turn one preset into a multi-part arc"
+    },
+    {
+      "name": "Content calendar",
+      "short_name": "Calendar",
+      "url": "/calendar",
+      "description": "Plan and track posts"
+    }
+  ],
+  "share_target": {
+    "action": "/songs",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "link"
+    }
+  }
+}

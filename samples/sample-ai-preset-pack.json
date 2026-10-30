@@ -1,0 +1,345 @@
+{
+  "schema_version": "1.0.0",
+  "export_type": "preset_pack",
+  "manifest": {
+    "name": "Sample pack — written in the AI import format",
+    "description": "Three example presets showing the shape an AI tool should return when given the muse-ician import prompt. Import it to see how a pack behaves; nothing here is trend data.",
+    "created_at": "2026-10-30T00:15:22.822Z",
+    "author": "muse-ician sample",
+    "schema_version": "1.0.0",
+    "exported_by": "muse-ician 1.0.0",
+    "notes": "Import this file from Import / Export → Preset pack. Record ids are preserved, so re-importing updates the same presets if you choose \"replace\".",
+    "record_counts": {
+      "presets": 3
+    }
+  },
+  "presets": [
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Silent setup, song enters late (stronger for TikTok)",
+        "Two-shot split: the situation and the aftermath side by side",
+        "Text-only version over a still photo for zero-budget weeks"
+      ],
+      "common_mistakes": [
+        "Explaining the POV out loud instead of letting the image do it",
+        "Choosing a situation so broad that nobody feels personally seen",
+        "Starting the song too early so the audience has no reason to wait"
+      ],
+      "on_screen_text": [
+        "voice note · 2022",
+        "final version",
+        "the line I changed"
+      ],
+      "secondary_objectives": [
+        "storytelling"
+      ],
+      "genre_tags": [
+        "pop",
+        "r&b",
+        "indie",
+        "hip-hop",
+        "singer-songwriter"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "bittersweet",
+        "hopeful"
+      ],
+      "id": "preset-shelf-life",
+      "title": "The demo that almost made the album",
+      "summary": "Play the voice-note version, then the finished mix, and let the difference speak.",
+      "description": "Open on the phone screen showing the original voice note date. Play four seconds of the rough take, cut to the finished chorus, then show the single line you changed. End on the song title card with the release date.",
+      "objectives": [
+        "discovery",
+        "song-promotion",
+        "audience-engagement"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 12,
+        "max": 25
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "archive",
+        "demo",
+        "songwriting"
+      ],
+      "song_context_required": "One lyric or 8–15 second section that resolves or reframes the emotion.",
+      "hook_examples": [
+        "This is the demo I almost deleted in 2022",
+        "You can hear the exact moment I changed the chorus"
+      ],
+      "execution_steps": [
+        "Screen-record the voice note with its date visible.",
+        "Record four seconds of the rough take playing out loud.",
+        "Cut on the beat into the finished chorus.",
+        "Show the old line and the new line as text over the quietest moment.",
+        "End on the song title and where to hear it."
+      ],
+      "shot_list": [
+        "Static shot of the phone screen, date visible.",
+        "Mid shot of you pressing play, out of focus behind the phone.",
+        "Close-up of the notebook line, crossed out and rewritten."
+      ],
+      "audio_guidance": "Start with the environment sound for one second, then let the song enter on the downbeat of the chorus. Do not talk over the setup — the silence is the tension.",
+      "editing_notes": "Hard cuts only. Keep total cuts to three. Leave the frame slightly imperfect (a reflection, an unmade bed) — polish kills the recognition.",
+      "cta_examples": [
+        "Should I post the whole voice note?",
+        "Which version do you prefer?"
+      ],
+      "accessibility_notes": "Burned-in captions for the overlay, high contrast text on a dark backing plate, and avoid flashing cuts.",
+      "example_metadata": {
+        "tone": "conversational",
+        "caption_example": "Wrote this line in a parked car outside my flat. It is track 3 on the EP — link in bio if it sounds like your week.",
+        "title_example": "POV: you stopped explaining yourself — new song",
+        "hashtag_examples": [
+          "#pov",
+          "#lyricsthatstick",
+          "#indieartist",
+          "#newmusictiktok"
+        ]
+      },
+      "estimated_production_minutes": 45
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Silent setup, song enters late (stronger for TikTok)",
+        "Two-shot split: the situation and the aftermath side by side",
+        "Text-only version over a still photo for zero-budget weeks"
+      ],
+      "common_mistakes": [
+        "Explaining the POV out loud instead of letting the image do it",
+        "Choosing a situation so broad that nobody feels personally seen",
+        "Starting the song too early so the audience has no reason to wait"
+      ],
+      "on_screen_text": [
+        "bathroom",
+        "stairwell",
+        "bedroom"
+      ],
+      "secondary_objectives": [
+        "storytelling"
+      ],
+      "genre_tags": [
+        "pop",
+        "r&b",
+        "indie",
+        "hip-hop",
+        "singer-songwriter"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "bittersweet",
+        "hopeful"
+      ],
+      "id": "preset-room-tone",
+      "title": "Same song, three rooms",
+      "summary": "Sing one line in three different rooms to show how space changes a song.",
+      "description": "Film the same eight seconds in a bathroom, a stairwell and a bedroom. Cut between them on the same lyric. Let the reverb carry the point instead of explaining it. Caption the rooms, not the emotion.",
+      "objectives": [
+        "discovery",
+        "song-promotion",
+        "audience-engagement"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "tiktok"
+      ],
+      "duration_seconds": {
+        "min": 12,
+        "max": 25
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text"
+      ],
+      "face_visibility": "optional",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "acoustic",
+        "texture",
+        "performance"
+      ],
+      "song_context_required": "One lyric or 8–15 second section that resolves or reframes the emotion.",
+      "hook_examples": [
+        "Same eight seconds, three rooms",
+        "The stairwell version is the real one"
+      ],
+      "execution_steps": [
+        "Pick one eight-second line that works unaccompanied.",
+        "Film it in three rooms with the phone in the same position.",
+        "Cut on the same word in each take so the rooms swap in time.",
+        "Label each room in small text."
+      ],
+      "shot_list": [
+        "Vertical shot, chest up, bathroom.",
+        "Vertical shot, chest up, stairwell.",
+        "Vertical shot, chest up, bedroom with the lamp on."
+      ],
+      "audio_guidance": "Start with the environment sound for one second, then let the song enter on the downbeat of the chorus. Do not talk over the setup — the silence is the tension.",
+      "editing_notes": "Hard cuts only. Keep total cuts to three. Leave the frame slightly imperfect (a reflection, an unmade bed) — polish kills the recognition.",
+      "cta_examples": [
+        "Which room sounds like the song to you?"
+      ],
+      "accessibility_notes": "Burned-in captions for the overlay, high contrast text on a dark backing plate, and avoid flashing cuts.",
+      "example_metadata": {
+        "tone": "conversational",
+        "caption_example": "Wrote this line in a parked car outside my flat. It is track 3 on the EP — link in bio if it sounds like your week.",
+        "title_example": "POV: you stopped explaining yourself — new song",
+        "hashtag_examples": [
+          "#pov",
+          "#lyricsthatstick",
+          "#indieartist",
+          "#newmusictiktok"
+        ]
+      },
+      "estimated_production_minutes": 30
+    },
+    {
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-09-15T00:00:00Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Typewriter reveal on paper",
+        "Handwritten lyric on a mirror or window",
+        "Animated kinetic typography without any footage",
+        "Lyric painted on a wall, camera pulls back to reveal the room"
+      ],
+      "common_mistakes": [
+        "Choosing a lyric that needs the verse to make sense",
+        "Text so small or fast that people cannot read it",
+        "Illustrating the lyric literally and killing the metaphor"
+      ],
+      "on_screen_text": [
+        "draft 1",
+        "draft 4"
+      ],
+      "secondary_objectives": [
+        "audience-engagement",
+        "storytelling"
+      ],
+      "genre_tags": [
+        "indie",
+        "alternative",
+        "pop",
+        "singer-songwriter"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "reflective",
+        "hopeful"
+      ],
+      "id": "preset-lyric-under-mic",
+      "title": "Write the lyric under the mic",
+      "summary": "Write the line in real time directly under the microphone, then record it.",
+      "description": "Overhead shot of a notebook under the microphone. Write the lyric, cross out two words, write the better version, then record the line. The rewrite is the content; the performance is the payoff.",
+      "objectives": [
+        "discovery",
+        "song-promotion"
+      ],
+      "platforms": [
+        "instagram-reels",
+        "youtube-shorts"
+      ],
+      "duration_seconds": {
+        "min": 8,
+        "max": 20
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text",
+        "animation"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "lyric",
+        "process",
+        "writing"
+      ],
+      "song_context_required": "One self-contained lyric line plus the timestamp where it is sung.",
+      "hook_examples": [
+        "Watch me fix the worst line in this song",
+        "This line took four drafts"
+      ],
+      "execution_steps": [
+        "Set the phone overhead so the page and the mic are both in frame.",
+        "Write the first draft legibly.",
+        "Cross out and rewrite while the audio stays quiet.",
+        "Record the final line straight after the final edit."
+      ],
+      "shot_list": [
+        "Overhead shot of notebook and microphone.",
+        "Close-up of the pen crossing out two words.",
+        "Side shot of you recording the line."
+      ],
+      "audio_guidance": "Use the studio vocal, not a live capture. Start 1.5 seconds before the lyric so the phrase has room to arrive.",
+      "editing_notes": "One typeface, two sizes. Text should appear on the beat of the vocal, not before it. Keep animatics under 200ms.",
+      "cta_examples": [
+        "Which draft would you keep?"
+      ],
+      "accessibility_notes": "Minimum 32px equivalent text in a high-contrast colour, no serif script fonts, avoid text over busy footage.",
+      "example_metadata": {
+        "tone": "minimal",
+        "caption_example": "The last line of the bridge. The whole song lives or dies on this one.",
+        "title_example": "The line I rewrote 11 times",
+        "hashtag_examples": [
+          "#lyricvideo",
+          "#lyricsthatstick",
+          "#indiemusic",
+          "#songwriting"
+        ]
+      },
+      "estimated_production_minutes": 40
+    }
+  ]
+}

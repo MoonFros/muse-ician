@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.0.0",
+  "export_type": "preset_pack",
+  "manifest": {
+    "name": "Example Music Content Pack",
+    "description": "A sample pack demonstrating the muse-ician import format: one manifest, one preset, one song, one content idea and one metadata package. Every value is placeholder data.",
+    "created_at": "2026-10-30T00:15:22.243Z",
+    "author": "Example Author",
+    "schema_version": "1.0.0",
+    "exported_by": "muse-ician 1.0.0",
+    "notes": "HOW TO USE THIS TEMPLATE WITH AN AI TOOL\n\n1. Paste this entire file and the muse-ician schema (muse-ician.schema.json) into your AI tool, or use the \"Copy AI import prompt\" button in the app.\n2. Ask for one or more presets, songs, content ideas or metadata packages that follow this exact structure.\n3. The AI may generate: preset fields (title, summary, description, objectives, platforms, duration_seconds, difficulty, budget, filming_methods, face_visibility, equipment, tags, campaign_stage, hook_examples, execution_steps, shot_list, on_screen_text, audio_guidance, editing_notes, cta_examples, variations, common_mistakes, accessibility_notes, example_metadata), plus song, content_idea and metadata_package fields.\n4. The AI must NOT invent live trends, engagement statistics, view counts, sources, dates for trend evidence, or verified facts about real people. Use null or omit optional fields instead.\n5. Records are linked by id. Content ideas reference songs with song_id and presets with source_preset_id. Metadata packages reference content ideas with content_idea_id. References to ids that do not exist in the file are flagged on import, not invented.\n6. Keep schema_version \"1.0.0\" and a manifest. Return only JSON — no Markdown fences, no commentary.\n7. Placeholder values in this file are marked PLACEHOLDER or is_demo: true. Replace them before using the file for real work.",
+    "record_counts": {
+      "presets": 1,
+      "songs": 1,
+      "content_ideas": 1,
+      "metadata_packages": 1,
+      "campaigns": 0,
+      "planned_posts": 0,
+      "trends": 0,
+      "performance_records": 0
+    }
+  },
+  "presets": [
+    {
+      "created_at": "2026-10-30T00:15:22.243Z",
+      "updated_at": "2026-10-30T00:15:22.243Z",
+      "schema_version": "1.0.0",
+      "preset_version": "1.0.0",
+      "is_favorite": false,
+      "is_user_created": false,
+      "is_archived": false,
+      "usage_count": 0,
+      "campaign_stage": "evergreen",
+      "variations": [
+        "Typewriter reveal on paper",
+        "Handwritten lyric on a mirror or window",
+        "Animated kinetic typography without any footage",
+        "Lyric painted on a wall, camera pulls back to reveal the room"
+      ],
+      "common_mistakes": [
+        "Choosing a lyric that needs the verse to make sense",
+        "Text so small or fast that people cannot read it",
+        "Illustrating the lyric literally and killing the metaphor"
+      ],
+      "on_screen_text": [
+        "I learned to be quiet in rooms that were never mine",
+        "Line 2 of verse 2 — \"Low Tide\""
+      ],
+      "secondary_objectives": [
+        "audience-engagement",
+        "storytelling"
+      ],
+      "genre_tags": [
+        "indie",
+        "alternative",
+        "pop",
+        "singer-songwriter"
+      ],
+      "mood_tags": [
+        "melancholy",
+        "reflective",
+        "hopeful"
+      ],
+      "id": "preset-example-placeholder",
+      "title": "Placeholder preset — copy this shape",
+      "summary": "PLACEHOLDER DATA — one sentence describing the video format. Replace this with a real format before using the pack.",
+      "description": "Pick a single line that can stand alone as a sentence. Everything in the video exists to make that line land harder: a slow reveal, a visual metaphor that matches its meaning, and text timing that lets the viewer read before the vocal arrives. Choose the lyric people quote back at you — the one with a specific image or a sharp turn of phrase, not the most repetitive hook.",
+      "objectives": [
+        "discovery",
+        "song-promotion"
+      ],
+      "platforms": [
+        "youtube-shorts",
+        "instagram-reels",
+        "tiktok"
+      ],
+      "duration_seconds": {
+        "min": 8,
+        "max": 20
+      },
+      "difficulty": "easy",
+      "budget": "minimal",
+      "filming_methods": [
+        "live-action",
+        "static-text",
+        "animation"
+      ],
+      "face_visibility": "none",
+      "equipment": [
+        "phone",
+        "editing-software"
+      ],
+      "tags": [
+        "lyrics",
+        "typography",
+        "storytelling",
+        "minimal"
+      ],
+      "song_context_required": "One self-contained lyric line plus the timestamp where it is sung.",
+      "hook_examples": [
+        "This line took me four months to write",
+        "One lyric from the song, no explanation",
+        "The line nobody has noticed yet"
+      ],
+      "execution_steps": [
+        "Choose one lyric that makes sense without the surrounding verse.",
+        "Plan the visual to support the line rather than illustrate it literally.",
+        "Open with one second of quiet — an empty frame or the lyric typed out.",
+        "Split the lyric into two beats: setup, then the turn of the phrase.",
+        "Time the text so the last word arrives exactly with the vocal.",
+        "Hold the final frame for one second so viewers can screenshot it."
+      ],
+      "shot_list": [
+        "Cold open: still frame or slow pan, no text",
+        "Text beat 1: first half of the lyric",
+        "Text beat 2: the turn of the line, over the musical swell",
+        "Final frame: full lyric, legible, held"
+      ],
+      "audio_guidance": "Use the studio vocal, not a live capture. Start 1.5 seconds before the lyric so the phrase has room to arrive.",
+      "editing_notes": "One typeface, two sizes. Text should appear on the beat of the vocal, not before it. Keep animatics under 200ms.",
+      "cta_examples": [
+        "Which line of the song hits hardest for you?",
+        "Screenshot this one and send it to whoever needs it."
+      ],
+      "accessibility_notes": "Minimum 32px equivalent text in a high-contrast colour, no serif script fonts, avoid text over busy footage.",
+      "example_metadata": {
+        "tone": "minimal",
+        "caption_example": "The last line of the bridge. The whole song lives or dies on this one.",
+        "title_example": "The line I rewrote 11 times",
+        "hashtag_examples": [
+          "#lyricvideo",
+          "#lyricsthatstick",
+          "#indiemusic",
+          "#songwriting"
+        ]
+      },
+      "estimated_production_minutes": 45,
+      "is_demo": true
+    }
+  ],
+  "songs": [
+    {
+      "id": "song-example-placeholder",
+      "title": "Placeholder Song Title",
+      "artist": "Placeholder Artist Name",
+      "genre": "indie pop",
+      "subgenre": "bedroom pop",
+      "moods": [
+        "melancholy",
+        "hopeful"
+      ],
+      "language": "en",
+      "description": "PLACEHOLDER DATA — replace this with a real description. Two sentences about what the song is and how it sounds.",
+      "lyrics": null,
+      "themes": [
+        "leaving a small town",
+        "outgrowing a friendship"
+      ],
+      "target_audience": "Listeners aged 18–30 who follow independent singer-songwriters.",
+      "intended_listener_response": "They should feel recognised rather than sad.",
+      "strongest_lyrics": [
+        "I keep your coat on the wrong hook"
+      ],
+      "song_brief": "PLACEHOLDER DATA — the story behind the song in your own words: what it is about, reference points, and what not to say. Replace this.",
+      "audio_sections": [
+        {
+          "label": "Verse 2",
+          "timestamp": "0:48",
+          "note": "Quietest moment before the chorus"
+        },
+        {
+          "label": "Final chorus",
+          "timestamp": "2:10",
+          "note": "Full arrangement, highest energy"
+        }
+      ],
+      "bpm": 92,
+      "musical_key": "D major",
+      "release_status": "upcoming",
+      "release_date": null,
+      "streaming_url": null,
+      "persona_notes": "Placeholder persona notes. Remove these before using the template for real data.",
+      "visual_identity_notes": "Muted greens, film grain, wide shots of empty rooms.",
+      "production_constraints": "One phone, one room, no crew.",
+      "equipment": [
+        "phone",
+        "phone-tripod",
+        "editing-software"
+      ],
+      "budget": "minimal",
+      "filming_locations": [
+        "bedroom",
+        "local park"
+      ],
+      "face_visibility": "optional",
+      "animation_capability": false,
+      "posting_frequency": "3 posts per week",
+      "campaign_notes": "PLACEHOLDER campaign note.",
+      "is_demo": true,
+      "created_at": "2026-10-30T00:15:22.243Z",
+      "updated_at": "2026-10-30T00:15:22.243Z",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "content_ideas": [
+    {
+      "id": "idea-example-placeholder",
+      "title": "Lyric wall — placeholder idea",
+      "song_id": "song-example-placeholder",
+      "source_preset_id": "preset-example-placeholder",
+      "mode": "use-as-is",
+      "concept_description": "PLACEHOLDER DATA — a short video built around the lyric \"I keep your coat on the wrong hook\". The camera starts on the empty hook, then tilts to the coat, then cuts to the vocal.",
+      "hook": "This line is about the one thing I never moved out",
+      "intended_audience": "Listeners who have recently left a shared home.",
+      "scene_sequence": [
+        "Empty hook on a wall",
+        "Coat still hanging there",
+        "Cut to the sung line"
+      ],
+      "shot_list": [
+        "Static shot of the hook",
+        "Slow tilt to the coat",
+        "Close-up on the vocal take"
+      ],
+      "on_screen_text": [
+        "I keep your coat on the wrong hook"
+      ],
+      "audio_section": "Verse 2 (0:48–1:02)",
+      "editing_notes": "Two cuts, both on the beat. Hold the final frame for one second.",
+      "call_to_action": "What is the thing you never moved out?",
+      "platforms": [
+        "instagram-reels",
+        "tiktok",
+        "youtube-shorts"
+      ],
+      "estimated_production_minutes": 45,
+      "status": "planning",
+      "scheduled_date": null,
+      "campaign_id": null,
+      "notes": "PLACEHOLDER idea. Replace or delete before importing into a real campaign.",
+      "coach_assessment": null,
+      "versions": [],
+      "is_demo": true,
+      "created_at": "2026-10-30T00:15:22.243Z",
+      "updated_at": "2026-10-30T00:15:22.243Z",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "metadata_packages": [
+    {
+      "id": "meta-example-placeholder",
+      "content_idea_id": "idea-example-placeholder",
+      "song_id": "song-example-placeholder",
+      "platform": "instagram-reels",
+      "tone": "emotional",
+      "title": "The thing I never moved out",
+      "caption": "PLACEHOLDER caption. One specific sentence about the line, then one ask.\n\nWhat is the thing you never moved out?",
+      "description": null,
+      "search_phrases": [
+        "indie pop lyrics",
+        "songs about moving out",
+        "bedroom pop"
+      ],
+      "hashtags": [
+        {
+          "tag": "#indiepop",
+          "reason": "Genre term listeners search for"
+        },
+        {
+          "tag": "#lyrics",
+          "reason": "Describes the format of the clip"
+        }
+      ],
+      "call_to_action": "What is the thing you never moved out?",
+      "pinned_comment": "Placeholder pinned comment — ask one answerable question.",
+      "thumbnail_concept": "First frame: the empty hook, with the lyric in the lower third.",
+      "opening_overlay": "I keep your coat on the wrong hook",
+      "alternative_hooks": [
+        "The hook in my hallway is still full",
+        "This line is the whole song"
+      ],
+      "suggested_duration_seconds": 18,
+      "recommended_excerpt": "Verse 2, 0:48–1:02",
+      "accessibility_notes": "Burn in captions; keep the lyric text large enough to read on a phone.",
+      "rationale": "Placeholder rationale. On Reels the opening frame and burned-in text matter more than the caption.",
+      "source": "manual",
+      "status": "draft",
+      "is_demo": true,
+      "created_at": "2026-10-30T00:15:22.243Z",
+      "updated_at": "2026-10-30T00:15:22.243Z",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "campaigns": [],
+  "planned_posts": [],
+  "trends": [],
+  "performance_records": []
+}
