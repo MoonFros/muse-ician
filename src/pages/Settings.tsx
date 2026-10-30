@@ -303,6 +303,25 @@ export default function SettingsPage() {
             </div>
           </SectionCard>
 
+          <SectionCard
+            title="What the AI is allowed to see"
+            description="Only your own text leaves this browser, and only when you press an AI button."
+          >
+            <div className="space-y-3">
+              <Checkbox
+                label="Include the full lyrics when an AI request is sent"
+                hint="Off by default. When it is on, the lyric sheet of the song you are working on is sent with the request, capped at 6,000 characters. Leave it off if the lyrics are unreleased or co-written and you have not cleared it."
+                checked={Boolean(draft.include_lyrics_in_ai)}
+                onChange={(checked) => update('include_lyrics_in_ai', checked)}
+              />
+              <p className="text-2xs leading-relaxed text-slate-faint">
+                The song brief, themes, strongest lines, sections and musical details are always included — they are
+                short. Lyrics are the only large field, which is why they are opt-in. Requests go through the
+                serverless proxy in <span className="font-mono">/api</span>; the key itself is never in the browser.
+              </p>
+            </div>
+          </SectionCard>
+
           <AiSetup />
 
           <InstallCard />

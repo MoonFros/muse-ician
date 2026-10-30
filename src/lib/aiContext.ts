@@ -18,8 +18,17 @@ import type { PerformanceSummary } from './insights';
  * before the user presses an AI action.
  */
 
-export function songContext(song?: Song | null) {
+/** Hard cap on lyric characters sent to a model, even when the user opts in. */
+export const MAX_LYRICS_CHARS = 6000;
+
+export interface SongContextOptions {
+  /** Opt-in (Settings → AI, default off): include the full lyric sheet. */
+  includeLyrics?: boolean;
+}
+
+export function songContext(song?: Song | null, options: SongContextOptions = {}) {
   if (!song) return null;
+  const lyrics = options.includeLyrics ? song.lyrics?.trim() ?? '' : '';
   return {
     title: song.title,
     artist: song.artist,
@@ -31,6 +40,13 @@ export function songContext(song?: Song | null) {
     target_audience: song.target_audience,
     intended_listener_response: song.intended_listener_response,
     strongest_lyrics: song.strongest_lyrics,
+    song_brief: song.song_brief ?? null,
+    ...(lyrics
+      ? {
+          lyrics: lyrics.slice(0, MAX_LYRICS_CHARS),
+          lyrics_truncated: lyrics.length > MAX_LYRICS_CHARS,
+        }
+      : {}),
     audio_sections: song.audio_sections,
     bpm: song.bpm,
     musical_key: song.musical_key,
@@ -70,6 +86,7 @@ export function ideaContext(
   preset: Preset | null | undefined,
   preferences?: UserPreferences | null,
 ) {
+  const songOptions: SongContextOptions = { includeLyrics: Boolean(preferences?.include_lyrics_in_ai) };
   return {
     idea: {
       title: idea.title,
@@ -86,7 +103,7 @@ export function ideaContext(
       estimated_production_minutes: idea.estimated_production_minutes,
       status: idea.status,
     },
-    song: songContext(song),
+    song: songContext(song, songOptions),
     source_preset: presetContext(preset),
     artist_preferences: preferences
       ? {
@@ -107,6 +124,7 @@ export function metadataContext(
   preset: Preset | null | undefined,
   tone: Tone,
   platforms: MetadataPackage['platform'][],
+  preferences?: UserPreferences | null,
 ) {
   return {
     tone,
@@ -120,7 +138,7 @@ export function metadataContext(
       call_to_action: idea.call_to_action,
       scene_sequence: idea.scene_sequence,
     },
-    song: songContext(song),
+    song: songContext(song, { includeLyrics: Boolean(preferences?.include_lyrics_in_ai) }),
     source_preset: preset ? { title: preset.title, platforms: preset.platforms } : null,
     constraints: {
       do_not_invent_trends: true,
@@ -173,7 +191,7 @@ export function trendContext(trend: TrendRecord, song?: Song | null, preferences
       evidence: trend.evidence,
       confidence: trend.confidence,
     },
-    song: songContext(song),
+    song: songContext(song, { includeLyrics: Boolean(preferences?.include_lyrics_in_ai) }),
     artist_preferences: preferences
       ? { filming_preferences: preferences.filming_preferences, visual_style: preferences.visual_style }
       : null,

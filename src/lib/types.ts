@@ -255,6 +255,8 @@ export interface Song {
   music_video_url?: string | null;
   persona_notes?: string | null;
   visual_identity_notes?: string | null;
+  /** The story behind the song in the artist's own words. Sent to the AI when present. */
+  song_brief?: string | null;
   production_constraints?: string | null;
   equipment?: string[];
   budget?: Budget | null;
@@ -543,6 +545,8 @@ export interface UserPreferences {
   language: string;
   posting_cadence_days: number;
   use_local_analysis: boolean;
+  /** Opt-in: send the full lyric sheet to the AI. Off by default. */
+  include_lyrics_in_ai?: boolean;
   onboarding_complete: boolean;
   updated_at: ISODate;
   schema_version?: string;

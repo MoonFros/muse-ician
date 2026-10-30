@@ -658,6 +658,10 @@
         "visual_identity_notes": {
           "$ref": "#/$defs/nullableString"
         },
+        "song_brief": {
+          "$ref": "#/$defs/text",
+          "description": "The story behind the song, in the artist's words. Optional."
+        },
         "production_constraints": {
           "$ref": "#/$defs/nullableString"
         },
@@ -1572,6 +1576,11 @@
         },
         "use_local_analysis": {
           "type": "boolean"
+        },
+        "include_lyrics_in_ai": {
+          "type": "boolean",
+          "default": false,
+          "description": "Opt-in: include the full lyric sheet in AI context. Off by default."
         },
         "onboarding_complete": {
           "type": "boolean"

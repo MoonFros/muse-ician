@@ -216,6 +216,8 @@ export function buildExampleTemplate(templatePreset: Preset): WorkspacePayload {
     target_audience: 'Listeners aged 18–30 who follow independent singer-songwriters.',
     intended_listener_response: 'They should feel recognised rather than sad.',
     strongest_lyrics: ['I keep your coat on the wrong hook'],
+    song_brief:
+      'PLACEHOLDER DATA — the story behind the song in your own words: what it is about, reference points, and what not to say. Replace this.',
     audio_sections: [
       { label: 'Verse 2', timestamp: '0:48', note: 'Quietest moment before the chorus' },
       { label: 'Final chorus', timestamp: '2:10', note: 'Full arrangement, highest energy' },

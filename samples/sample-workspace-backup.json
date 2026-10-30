@@ -4,7 +4,7 @@
   "manifest": {
     "name": "muse-ician sample workspace (demo data)",
     "description": "A complete backup of this browser’s muse-ician workspace, including preferences.",
-    "created_at": "2026-10-29T23:53:07.988Z",
+    "created_at": "2026-10-30T00:15:22.843Z",
     "author": null,
     "schema_version": "1.0.0",
     "exported_by": "muse-ician 1.0.0",
@@ -46,8 +46,9 @@
     "language": "en",
     "posting_cadence_days": 3,
     "use_local_analysis": true,
+    "include_lyrics_in_ai": false,
     "onboarding_complete": true,
-    "updated_at": "2026-10-29T23:53:07.988Z",
+    "updated_at": "2026-10-30T00:15:22.843Z",
     "schema_version": "1.0.0"
   },
   "presets": [
@@ -986,6 +987,7 @@
       "strongest_lyrics": [
         "I keep your coat on the wrong hook"
       ],
+      "song_brief": "Demo brief: written the week the flat was emptied out. Reference points are late-night bedroom pop and a lot of tape hiss. Do not call it a breakup song — it is about the room, not the person.",
       "audio_sections": [
         {
           "label": "Verse 2",
@@ -1001,7 +1003,7 @@
       "bpm": 92,
       "musical_key": "D major",
       "release_status": "released",
-      "release_date": "2026-10-24",
+      "release_date": "2026-10-25",
       "streaming_url": null,
       "persona_notes": "Quiet, specific, unsentimental.",
       "visual_identity_notes": "Muted greens, film grain, empty rooms.",
@@ -1021,8 +1023,8 @@
       "posting_frequency": "3 posts per week",
       "campaign_notes": "Demo campaign spans 15 days from today.",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -1061,7 +1063,7 @@
       ],
       "estimated_production_minutes": 25,
       "status": "published",
-      "scheduled_date": "2026-10-29",
+      "scheduled_date": "2026-10-30",
       "campaign_id": "demo-campaign-low-tide",
       "notes": "Demo record — safe to delete.",
       "coach_assessment": {
@@ -1164,12 +1166,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T23:53:07.972Z"
+        "generated_at": "2026-10-30T00:15:22.825Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -1206,7 +1208,7 @@
       ],
       "estimated_production_minutes": 45,
       "status": "published",
-      "scheduled_date": "2026-10-30",
+      "scheduled_date": "2026-10-31",
       "campaign_id": "demo-campaign-low-tide",
       "notes": "Demo record — safe to delete.",
       "coach_assessment": {
@@ -1308,12 +1310,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T23:53:07.986Z"
+        "generated_at": "2026-10-30T00:15:22.840Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -1350,7 +1352,7 @@
       ],
       "estimated_production_minutes": 90,
       "status": "editing",
-      "scheduled_date": "2026-11-01",
+      "scheduled_date": "2026-11-02",
       "campaign_id": "demo-campaign-low-tide",
       "notes": "Demo record — safe to delete.",
       "coach_assessment": {
@@ -1453,12 +1455,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T23:53:07.987Z"
+        "generated_at": "2026-10-30T00:15:22.841Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -1495,7 +1497,7 @@
       ],
       "estimated_production_minutes": 60,
       "status": "filming",
-      "scheduled_date": "2026-11-03",
+      "scheduled_date": "2026-11-04",
       "campaign_id": "demo-campaign-low-tide",
       "notes": "Demo record — safe to delete.",
       "coach_assessment": {
@@ -1598,12 +1600,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T23:53:07.987Z"
+        "generated_at": "2026-10-30T00:15:22.841Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -1639,7 +1641,7 @@
       ],
       "estimated_production_minutes": 35,
       "status": "scripted",
-      "scheduled_date": "2026-11-05",
+      "scheduled_date": "2026-11-06",
       "campaign_id": "demo-campaign-low-tide",
       "notes": "Demo record — safe to delete.",
       "coach_assessment": {
@@ -1742,12 +1744,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T23:53:07.987Z"
+        "generated_at": "2026-10-30T00:15:22.842Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -1784,7 +1786,7 @@
       ],
       "estimated_production_minutes": 90,
       "status": "planning",
-      "scheduled_date": "2026-11-07",
+      "scheduled_date": "2026-11-08",
       "campaign_id": "demo-campaign-low-tide",
       "notes": "Demo record — safe to delete.",
       "coach_assessment": {
@@ -1891,12 +1893,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T23:53:07.988Z"
+        "generated_at": "2026-10-30T00:15:22.842Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -1932,7 +1934,7 @@
       ],
       "estimated_production_minutes": 20,
       "status": "planning",
-      "scheduled_date": "2026-11-09",
+      "scheduled_date": "2026-11-10",
       "campaign_id": "demo-campaign-low-tide",
       "notes": "Demo record — safe to delete.",
       "coach_assessment": {
@@ -2038,12 +2040,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T23:53:07.988Z"
+        "generated_at": "2026-10-30T00:15:22.842Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2079,7 +2081,7 @@
       ],
       "estimated_production_minutes": 45,
       "status": "idea",
-      "scheduled_date": "2026-11-12",
+      "scheduled_date": "2026-11-13",
       "campaign_id": "demo-campaign-low-tide",
       "notes": "Demo record — safe to delete.",
       "coach_assessment": {
@@ -2182,12 +2184,12 @@
           "disclaimer": "Creative Readiness is a heuristic editorial checklist score, not a measurement and not a prediction of views, reach or streaming growth. It scores how complete and specific your plan is, so treat it as a prompt for revision rather than a guarantee."
         },
         "source": "local-heuristic",
-        "generated_at": "2026-10-29T23:53:07.988Z"
+        "generated_at": "2026-10-30T00:15:22.842Z"
       },
       "versions": [],
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -2249,8 +2251,8 @@
       "source": "local-template",
       "status": "draft",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.986Z",
-      "updated_at": "2026-10-29T23:53:07.986Z",
+      "created_at": "2026-10-30T00:15:22.840Z",
+      "updated_at": "2026-10-30T00:15:22.840Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2306,8 +2308,8 @@
       "source": "local-template",
       "status": "draft",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.986Z",
-      "updated_at": "2026-10-29T23:53:07.986Z",
+      "created_at": "2026-10-30T00:15:22.841Z",
+      "updated_at": "2026-10-30T00:15:22.841Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2359,8 +2361,8 @@
       "source": "local-template",
       "status": "draft",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.987Z",
-      "updated_at": "2026-10-29T23:53:07.987Z",
+      "created_at": "2026-10-30T00:15:22.841Z",
+      "updated_at": "2026-10-30T00:15:22.841Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2420,8 +2422,8 @@
       "source": "local-template",
       "status": "draft",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.987Z",
-      "updated_at": "2026-10-29T23:53:07.987Z",
+      "created_at": "2026-10-30T00:15:22.842Z",
+      "updated_at": "2026-10-30T00:15:22.842Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -2431,14 +2433,14 @@
       "name": "Low Tide — 15 day demo campaign",
       "song_id": "demo-song-low-tide",
       "description": "Sample 15-day plan built from the starter preset library. Adjust the dates, frequency or order in Content Calendar.",
-      "start_date": "2026-10-29",
-      "end_date": "2026-11-12",
+      "start_date": "2026-10-30",
+      "end_date": "2026-11-13",
       "posting_cadence_days": 2,
       "stage": "post-release",
       "status": "active",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -2450,13 +2452,13 @@
       "campaign_id": "demo-campaign-low-tide",
       "metadata_package_id": "demo-meta-1",
       "platform": "instagram-reels",
-      "scheduled_date": "2026-10-29",
+      "scheduled_date": "2026-10-30",
       "status": "published",
       "title": "Low Tide — introduction for first-time listeners",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2466,13 +2468,13 @@
       "campaign_id": "demo-campaign-low-tide",
       "metadata_package_id": "demo-meta-2",
       "platform": "tiktok",
-      "scheduled_date": "2026-10-30",
+      "scheduled_date": "2026-10-31",
       "status": "published",
       "title": "The coat on the wrong hook",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2482,13 +2484,13 @@
       "campaign_id": "demo-campaign-low-tide",
       "metadata_package_id": "demo-meta-3",
       "platform": "youtube-shorts",
-      "scheduled_date": "2026-11-01",
+      "scheduled_date": "2026-11-02",
       "status": "editing",
       "title": "Why the bridge is a phone recording",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2498,13 +2500,13 @@
       "campaign_id": "demo-campaign-low-tide",
       "metadata_package_id": "demo-meta-4",
       "platform": "instagram-reels",
-      "scheduled_date": "2026-11-03",
+      "scheduled_date": "2026-11-04",
       "status": "filming",
       "title": "POV: you are fine until this song comes on",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2514,13 +2516,13 @@
       "campaign_id": "demo-campaign-low-tide",
       "metadata_package_id": null,
       "platform": "tiktok",
-      "scheduled_date": "2026-11-05",
+      "scheduled_date": "2026-11-06",
       "status": "scripted",
       "title": "Voice memo vs final mix",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2530,13 +2532,13 @@
       "campaign_id": "demo-campaign-low-tide",
       "metadata_package_id": null,
       "platform": "youtube-shorts",
-      "scheduled_date": "2026-11-07",
+      "scheduled_date": "2026-11-08",
       "status": "planning",
       "title": "Four bass notes carry the chorus",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2546,13 +2548,13 @@
       "campaign_id": "demo-campaign-low-tide",
       "metadata_package_id": null,
       "platform": "instagram-reels",
-      "scheduled_date": "2026-11-09",
+      "scheduled_date": "2026-11-10",
       "status": "planning",
       "title": "What does this line mean to you?",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2562,13 +2564,13 @@
       "campaign_id": "demo-campaign-low-tide",
       "metadata_package_id": null,
       "platform": "tiktok",
-      "scheduled_date": "2026-11-12",
+      "scheduled_date": "2026-11-13",
       "status": "idea",
       "title": "A comment picked this video",
       "notes": "Demo planned post.",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     }
   ],
@@ -2580,7 +2582,7 @@
       "content_idea_id": "demo-idea-1",
       "platform": "instagram-reels",
       "post_url": null,
-      "published_on": "2026-10-29",
+      "published_on": "2026-10-30",
       "views": 1840,
       "likes": 143,
       "comments": 21,
@@ -2592,10 +2594,10 @@
       "link_clicks": 18,
       "followers_attributed": 9,
       "notes": "Sample record so the journal has data to compare. These are not real analytics.",
-      "collected_on": "2026-10-31",
+      "collected_on": "2026-11-01",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2604,7 +2606,7 @@
       "content_idea_id": "demo-idea-2",
       "platform": "tiktok",
       "post_url": null,
-      "published_on": "2026-10-30",
+      "published_on": "2026-10-31",
       "views": 6420,
       "likes": 512,
       "comments": 74,
@@ -2616,10 +2618,10 @@
       "link_clicks": 24,
       "followers_attributed": 31,
       "notes": "Sample record. Numbers were invented for the demo and are labelled as demo data.",
-      "collected_on": "2026-11-01",
+      "collected_on": "2026-11-02",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     },
     {
@@ -2628,7 +2630,7 @@
       "content_idea_id": "demo-idea-3",
       "platform": "youtube-shorts",
       "post_url": null,
-      "published_on": "2026-10-26",
+      "published_on": "2026-10-27",
       "views": 910,
       "likes": 64,
       "comments": 9,
@@ -2640,10 +2642,10 @@
       "link_clicks": 3,
       "followers_attributed": 2,
       "notes": "Sample record. Demo data only.",
-      "collected_on": "2026-10-28",
+      "collected_on": "2026-10-29",
       "is_demo": true,
-      "created_at": "2026-10-29T23:53:07.970Z",
-      "updated_at": "2026-10-29T23:53:07.970Z",
+      "created_at": "2026-10-30T00:15:22.824Z",
+      "updated_at": "2026-10-30T00:15:22.824Z",
       "schema_version": "1.0.0"
     }
   ]

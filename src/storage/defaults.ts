@@ -18,6 +18,7 @@ export function defaultPreferences(): UserPreferences {
     language: 'en',
     posting_cadence_days: 3,
     use_local_analysis: true,
+    include_lyrics_in_ai: false,
     onboarding_complete: false,
     updated_at: nowIso(),
     schema_version: SCHEMA_VERSION,

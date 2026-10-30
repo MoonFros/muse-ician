@@ -35,7 +35,8 @@ It is an application, not a landing page. Everything described below is implemen
 | Area | Behaviour |
 | --- | --- |
 | **Preset library** | 35 original, editable video formats — 30 short-form plus 5 long-form YouTube formats — with hooks, shot lists, execution steps, CTA examples, common mistakes and accessibility notes. Create, edit, duplicate, favourite, archive, export and import your own. |
-| **Songs** | Song records with lyrics, themes, strongest lines, audio sections, release status/date, equipment, constraints and persona notes. Everything else can link to a song. |
+| **Songs** | Song records with lyrics, themes, strongest lines, audio sections, release status/date, equipment, constraints, persona notes and a **song brief**. Everything else can link to a song. |
+| **Local audio analysis** | Open a song, pick your own audio export, and the app decodes and measures it **in the browser**: runtime, peak and average level, dynamic range, tempo, an estimated key, and where the arrangement changes. Nothing is uploaded and no AI or paid service is involved. You review the numbers before anything is written. |
 | **Ideas** | Any preset becomes an editable idea tied to a real song. Idea workspace with plan, coach, A/B variant, reuse and version tabs. |
 | **Creative coach** | A transparent 0–100 readiness score from six weighted components, always available offline, plus an optional AI review that never overwrites your original text. |
 | **Filming plan** | Scene sequence, shot list, on-screen text, audio section, editing notes, CTA, estimated production time. |
@@ -198,6 +199,36 @@ Source notes live in `PLATFORM_CONVENTIONS` (`src/lib/metadataTemplates.ts`) and
 
 ---
 
+## Giving the AI real context about a song
+
+The AI can never listen to a track — no audio is uploaded and a streaming link is just a string. So the app gives it what can be known honestly, in two ways.
+
+### 1. Measured, on your device
+
+**Songs → open a song → “Listen to the file (on this device)”**. The file is decoded with the Web Audio API in the current tab and never leaves it. The analyser reports:
+
+| Value | How it is produced | How it is described |
+| --- | --- | --- |
+| Runtime, peak dBFS, average dBFS, dynamic range | Measured from the samples | Stated as measured |
+| Tempo | Spectral-flux onset envelope → autocorrelation with 2×/3× harmonic checks and a mild 120 BPM prior | Estimate, rounded, with a confidence word; **withheld entirely** when the beat is too weak to call |
+| Key | 48 windowed FFTs → chroma → Krumhansl–Kessler profile correlation | Estimate; refused when fewer than three pitch classes carry weight (one sustained note cannot imply a mode) |
+| Sections | Level-change detection with a minimum section length, tiered by relative energy | Named by energy (“sparse”, “building”, “full”, “peak”), never “verse” or “chorus” — a level meter cannot know that |
+
+Nothing is written until you press **Apply to song**, empty fields are filled by default, and existing tempo/key/sections are only replaced when you tick **Replace the values already on this song**. The section map feeds the long-form chapter planner and every other place `audio_sections` is used.
+
+Limits, stated in the UI: files up to 48 MB, tempo analysed over the first 120 seconds, no musical understanding beyond levels and pitch classes.
+
+### 2. Written context
+
+Two fields travel with every AI request for that song:
+
+- **Song brief** (Song form, optional) — the story, reference points, and what *not* to say. This is the single highest-value field: it is the difference between “write a caption” and “write a caption for this song”.
+- **Full lyrics** — opt-in in **Settings → What the AI is allowed to see**, off by default, capped at 6,000 characters per request. Themes, strongest lines, sections, brief and musical details are always included because they are short; the lyric sheet is the only large field, which is why it is a switch rather than a default. The song form says exactly this next to the lyrics field.
+
+There is no audio transcription, no lyric scraping and no link resolution: a Spotify or YouTube link is stored and used as a link, never as a source of facts the app has not been given.
+
+---
+
 ## Trends: what muse-ician will and will not do
 
 **Won't:** invent trending sounds, hashtags, formats, view counts or "best time to post" statistics. There is no scraping and no hidden dataset.
@@ -210,7 +241,8 @@ Source notes live in `PLATFORM_CONVENTIONS` (`src/lib/metadataTemplates.ts`) and
 
 - All records live in **IndexedDB** in your browser (`muse-ician` database), with an automatic `localStorage` fallback and a memory-only fallback if both are blocked. Settings shows which backend is live and whether it survives reload.
 - Nothing syncs between devices and there is no account system.
-- Lyrics, notes and constraints stay local. They are sent to an AI provider **only** when you press an AI action, and the prompt preview lists what is included.
+- Lyrics, notes and constraints stay local. They are sent to an AI provider **only** when you press an AI action; full lyrics are sent only if you switch on the opt-in in Settings (default off, capped at 6,000 characters).
+- Audio files are never uploaded. The analysis runs in the tab and the file is discarded when you close the page.
 - Imported JSON is treated strictly as data: no HTML injection, no evaluation, no URL fetching. Size (4 MB) and record-count limits are enforced, and imported text is rendered as text by React.
 - Backup: **Import / export → Export workspace** or **Settings → Export backup**.
 
@@ -387,7 +419,7 @@ hard-coded.
 | `npm run artifacts` | Regenerate `public/example.json`, the schema copy and `samples/*.json`, validating each one |
 | `npm run check` | Typecheck + tests + build |
 
-The test suite (**14 files, 123 tests**) covers:
+The test suite (**16 files, 139 tests**) covers:
 
 | Suite | What it proves |
 | --- | --- |
@@ -396,6 +428,8 @@ The test suite (**14 files, 123 tests**) covers:
 | `tests/import-ui.test.tsx` | Uploading `public/example.json` previews without mutating, then imports; broken JSON changes nothing |
 | `tests/analysis.test.ts` | Readiness rubric weights, bounds and honesty wording |
 | `tests/metadata.test.ts` | Per-platform limits and truncation behaviour |
+| `tests/audio.test.ts` | Signal analysis on synthetic audio: levels, section boundaries, tempo within 2 BPM, key vs. a single note, and the lyrics opt-in gate |
+| `tests/audio-ui.test.tsx` | The analysis card end to end with a stubbed decoder: results shown, nothing written before Apply, honest error when Web Audio is missing |
 | `tests/longform.test.ts` | Long-form YouTube titles, description/chapter blocks and YouTube's 0:00 + 3-entry + 10s chapter rules |
 | `tests/insights.test.ts` | Performance-insight thresholds and small-sample caution |
 | `tests/trends.test.ts` | Freshness levels, empty observations, no invented numbers |
@@ -422,7 +456,8 @@ src/
                     insights, campaign planner, import planning, validation,
                     interchange (export builders + AI prompt), variants (A/B
                     scoring), reuse, series, runway, comparatives, history,
-                    batch (CSV), merge (collaborator diff), commands, AI schemas
+                    batch (CSV), merge (collaborator diff), commands, AI schemas,
+                    audioAnalysis (on-device DSP: levels, tempo, key, sections)
   state/workspace   React context: load, persist, CRUD, demo data, integrations
   storage/          IndexedDB → localStorage → memory repository + defaults
   data/             seed presets, demo bundle

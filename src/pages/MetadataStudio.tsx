@@ -245,7 +245,7 @@ export default function MetadataStudioPage() {
     try {
       const result = await runOperation<Record<string, unknown>>(
         'generate-metadata',
-        metadataContext(idea, song, preset, tone, [platform]),
+        metadataContext(idea, song, preset, tone, [platform], data.preferences),
         { signal: controller.signal },
       );
       if (result.mock) {

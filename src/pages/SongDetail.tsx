@@ -14,6 +14,7 @@ import {
 } from '../components/ui/primitives';
 import { ConfirmDialog } from '../components/ui/Modal';
 import { SongFormModal } from '../components/forms/SongFormModal';
+import { AudioAnalysisCard } from '../components/song/AudioAnalysisCard';
 import { CampaignPlanModal } from '../components/forms/CampaignPlanModal';
 import { daysBetween, formatDate, formatShortDate, toDateKey } from '../lib/utils';
 import { buildCampaignExport, downloadPayload, exportFilename } from '../lib/interchange';
@@ -121,6 +122,12 @@ export default function SongDetailPage() {
         <SectionCard title="Song profile">
           {song.description ? (
             <p className="mb-4 whitespace-pre-line text-sm leading-relaxed text-slate-muted">{song.description}</p>
+          ) : null}
+          {song.song_brief ? (
+            <div className="mb-4">
+              <h3 className="section-title">Song brief</h3>
+              <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-slate-muted">{song.song_brief}</p>
+            </div>
           ) : null}
           <InfoList
             items={[
@@ -355,6 +362,7 @@ export default function SongDetailPage() {
           navigate('/songs');
         }}
       />
+      <AudioAnalysisCard song={song} />
     </div>
   );
 }

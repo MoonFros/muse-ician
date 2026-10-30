@@ -119,6 +119,8 @@ export function buildDemoBundle(presets: Preset[], startDate = toDateKey()): Dem
     target_audience: 'Listeners in their twenties who follow independent singer-songwriters.',
     intended_listener_response: 'Recognition rather than sadness.',
     strongest_lyrics: ['I keep your coat on the wrong hook'],
+    song_brief:
+      'Demo brief: written the week the flat was emptied out. Reference points are late-night bedroom pop and a lot of tape hiss. Do not call it a breakup song — it is about the room, not the person.',
     audio_sections: [
       { label: 'Verse 2', timestamp: '0:48', note: 'Quietest moment before the chorus' },
       { label: 'Final chorus', timestamp: '2:10', note: 'Full arrangement' },

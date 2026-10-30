@@ -25,6 +25,7 @@ interface Draft {
   language: string;
   description: string;
   lyrics: string;
+  song_brief: string;
   themes: string[];
   target_audience: string;
   intended_listener_response: string;
@@ -58,6 +59,7 @@ function toDraft(song: Song | null, defaults: { equipment: string[]; budget: Bud
     language: song?.language ?? defaults.language,
     description: song?.description ?? '',
     lyrics: song?.lyrics ?? '',
+    song_brief: song?.song_brief ?? '',
     themes: song?.themes ?? [],
     target_audience: song?.target_audience ?? '',
     intended_listener_response: song?.intended_listener_response ?? '',
@@ -128,6 +130,7 @@ export function SongFormModal({
       language: draft.language.trim() || null,
       description: draft.description.trim() || null,
       lyrics: draft.lyrics.trim() || null,
+      song_brief: draft.song_brief.trim() || null,
       themes: draft.themes,
       target_audience: draft.target_audience.trim() || null,
       intended_listener_response: draft.intended_listener_response.trim() || null,
@@ -243,6 +246,18 @@ export function SongFormModal({
           />
         </Field>
 
+        <Field
+          label="Song brief"
+          hint="The story, the reference points, what not to say. This is sent to the AI as context, so write it the way you would brief a collaborator."
+        >
+          <TextArea
+            rows={4}
+            value={draft.song_brief}
+            onChange={(event) => update('song_brief', event.target.value)}
+            placeholder="Wrote it the week I moved out. Reference points are early Bon Iver and a lot of tape hiss. Do not call it a breakup song — it is about the flat, not the person."
+          />
+        </Field>
+
         <TagListInput
           label="Themes"
           value={draft.themes}
@@ -296,7 +311,7 @@ export function SongFormModal({
           <div className="space-y-4 rounded-xl border border-white/[0.07] bg-white/[0.02] p-3.5">
             <Field
               label="Lyrics"
-              hint="Stored only in this browser. Never sent anywhere unless you copy an AI prompt that includes them."
+              hint="Stored only in this browser. Sent to the AI only if you switch on “Include the full lyrics” in Settings, or copy a prompt that contains them."
             >
               <TextArea
                 rows={5}

@@ -242,6 +242,7 @@ export default function ImportExportPage() {
             song.moods?.length ? `Moods: ${song.moods.join(', ')}` : '',
             song.themes?.length ? `Themes: ${song.themes.join(', ')}` : '',
             song.description ? `Description: ${song.description}` : '',
+            song.song_brief ? `Brief: ${song.song_brief}` : '',
             song.target_audience ? `Audience: ${song.target_audience}` : '',
             song.production_constraints ? `Constraints: ${song.production_constraints}` : '',
             song.equipment?.length ? `Equipment: ${song.equipment.join(', ')}` : '',
