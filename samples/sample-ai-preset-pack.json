@@ -4,7 +4,7 @@
   "manifest": {
     "name": "Sample pack — written in the AI import format",
     "description": "Three example presets showing the shape an AI tool should return when given the muse-ician import prompt. Import it to see how a pack behaves; nothing here is trend data.",
-    "created_at": "2026-10-30T00:15:22.822Z",
+    "created_at": "2026-10-30T21:08:28.093Z",
     "author": "muse-ician sample",
     "schema_version": "1.0.0",
     "exported_by": "muse-ician 1.0.0",
